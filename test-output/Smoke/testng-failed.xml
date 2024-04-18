@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Smoke]" guice-stage="DEVELOPMENT" verbose="3">
+  <listeners>
+    <listener class-name="Listeners.FrameX_Listeners"/>
+  </listeners>
+  <test thread-count="5" name="LoginTest(failed)" verbose="3">
+    <classes>
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="TC_001_VerifyLogin" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
+          <include name="StartApp"/>
+          <include name="tearDownApp"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+  <test thread-count="5" name="VersionTest(failed)" verbose="3">
+    <classes>
+      <class name="Tests.LoginTest">
+        <methods>
+          <include name="TC_002_Verify_AppVersion" invocation-numbers="0"/>
+          <include name="StartApp"/>
+          <include name="tearDownApp"/>
+        </methods>
+      </class> <!-- Tests.LoginTest -->
+    </classes>
+  </test> <!-- VersionTest(failed) -->
+  <test thread-count="5" name="AttendanceTest(failed)" verbose="3">
+    <classes>
+      <class name="Tests.AttendanceTest">
+        <methods>
+          <include name="TC_001_VerifyAttendance" invocation-numbers="0"/>
+          <include name="TC_002_VerifyImagerequired" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+        </methods>
+      </class> <!-- Tests.AttendanceTest -->
+    </classes>
+  </test> <!-- AttendanceTest(failed) -->
+  <test thread-count="5" name="DownloadcallsTest(failed)" verbose="3">
+    <classes>
+      <class name="Tests.DownloadcallsTest">
+        <methods>
+          <include name="TC_001_VerifyDownloadcalls" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- Tests.DownloadcallsTest -->
+    </classes>
+  </test> <!-- DownloadcallsTest(failed) -->
+</suite> <!-- Failed suite [Smoke] -->

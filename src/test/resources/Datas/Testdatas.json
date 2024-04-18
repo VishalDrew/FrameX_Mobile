@@ -1,0 +1,167 @@
+{
+  "Login": {
+    "User1": {
+      "username": "Abhisdel",
+      "password": "Abhisdel",
+      "project": "jj",
+      "mobileno": "8345667899",
+      "expected": "Call Plan"
+    },
+    "User2": {
+      "username": "arunde",
+      "password": "arundel",
+      "project": "jj",
+      "mobileno": "8345667895",
+      "expectedErrorMessage": "Please Enter a valid UserName and Password and try again....."
+    },
+    "User3": {
+      "username": "arundel",
+      "password": "arunde",
+      "project": "jj",
+      "mobileno": "8345667895",
+      "expectedErrorMessage": "Please Enter a valid UserName and Password and try again....."
+    },
+    "User4": {
+      "username": "arundel",
+      "password": "arundel",
+      "project": "testproj",
+      "mobileno": "8345667895",
+      "expectedErrorMessage": "Please enter a valid Project Name and try again."
+    },
+    "User5": {
+      "username": "arundel",
+      "password": "arundel",
+      "project": "jj",
+      "mobileno": "8345667",
+      "expectedErrorMessage": "Enter a Valid Mobile Number"
+    },
+    "User6": {
+      "username": "",
+      "password": "arundel",
+      "project": "jj",
+      "mobileno": "8345667895",
+      "expectedErrorMessage": "Username is Required"
+    },
+    "User7": {
+      "username": "arundel",
+      "password": "",
+      "project": "jj",
+      "mobileno": "8345667895",
+      "expectedErrorMessage": "Password is Required"
+    },
+    "User8": {
+      "username": "arundel",
+      "password": "arundel",
+      "project": "",
+      "mobileno": "8345667895",
+      "expectedErrorMessage": "Project is Required"
+    },
+    "User9": {
+      "username": "arundel",
+      "password": "arundel",
+      "project": "jj",
+      "mobileno": "",
+      "expectedErrorMessage": "Mobile Number is Required"
+    }
+  },
+  "Attendance": {
+    "Attendance Submission": {
+      "type": "Present",
+      "Image": "True",
+      "expectedMessage": "Your attendance Marked for today as Present"
+    },
+    "Attendancewithoutcapturingimage": {
+      "type": "Present",
+      "Image": "False",
+      "expectedErrorMessage": "Please, Take Photo for submit attendance."
+    }
+  },
+  "Callplan": {
+    "5minutesSync": {
+      "expectedMessage": "You can click after 5 minutes, since it is in Downloading or Uploading Call process."
+    }
+  },
+  "Downloadcalls": {
+    "InvalidTargetID": {
+      "targetid": "00000"
+    },
+    "SubmitButtonValidation": {
+      "ErrorMessage": "Please Add the target"
+    }
+  },
+  "ResourceCenter": {
+    "validatingpptx": {
+      "filename": "Lead 2023 design.pptx"
+    },
+    "validatingmp4": {
+      "filename": "Mobile App Toolkit_free.mp4"
+    },
+    "validatingpdf": {
+      "filename": "NOGST_NOPAN.pdf"
+    },
+    "validatingdocx": {
+      "filename": "redipae.docx"
+    },
+    "validatingjpg": {
+      "filename": "retail-industry-trends.jpg"
+    },
+    "validatingxlsx": {
+      "filename": "Task Target Mapping (29)(1).xlsx"
+    }
+  },
+  "Visitor Login": {
+    "Visitor Upload": {
+      "Visitor": "1",
+      "Visitor Type": "Supervisor",
+      "Visitor Empid": "34567",
+      "Visitor Name": "Test1",
+      "Designation": "Tester",
+      "Remarks": "SampleRemarks",
+      "WellGroomed": "Yes",
+      "Maintained well all categories": "Yes",
+      "Aware about all the targets": "No",
+      "Selfie": "True",
+      "expected message": "Visitor Store Successfully Upload Visitor!"
+    },
+    "Visitor Upload errmsg": {
+      "Visitor Type errmsg": "Enter a Visitor Type",
+      "Visitor Empid errmsg": "Enter a Visitor EmpID",
+      "Visitor Name errmsg": "Enter a Visitor Name",
+      "Designation errmsg": "Enter a Designation",
+      "Remarks errmsg": "Enter a Remarks",
+      "Storeinfo errmsg": "Enter a Store Info",
+      "WellGroomed errmsg": "Enter a Promoter well groomed",
+      "Maintained well all categories errmsg": "Enter a Maintained well all categories",
+      "Aware about all the targets errmsg": "Enter a Aware about all the targets",
+      "Selfie errmsg": "Please, Take a image"
+    }
+  },
+
+
+  "Call Plan": {
+    "Uploaddata1": {
+      "Targetid": "",
+      "Call Type": "upload",
+      "Fields": "Mandatory only"
+    },
+    "Uploaddata2": {
+      "Targetid": "",
+      "Call Type": "upload",
+      "Fields": "Non Mandatory only"
+    },
+    "Uploaddata3": {
+      "Targetid": "",
+      "Call Type": "close",
+      "Fields": "Mandatory only"
+    },
+    "Uploaddata4": {
+      "Targetid": "",
+      "Call Type": "close",
+      "Fields": "Non Mandatory only"
+    }
+  }
+
+
+
+
+}

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="9" total="12" passed="0" failed="0" skipped="3">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-08T13:37:28 IST" name="Smoke Suite" finished-at="2024-04-08T13:37:28 IST" duration-ms="64">
+    <groups>
+      <group name="regression">
+        <method signature="VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@10ec523c]" name="TC_001_Verify_VisitorLogin_Module_Displayed" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_003_Verify_Visitor_Upload()[pri:3, instance:Tests.VisitorLoginTest@10ec523c]" name="TC_003_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
+        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@abbc908]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
+      </group> <!-- regression -->
+      <group name="smoke">
+        <method signature="VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@10ec523c]" name="TC_001_Verify_VisitorLogin_Module_Displayed" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_003_Verify_Visitor_Upload()[pri:3, instance:Tests.VisitorLoginTest@10ec523c]" name="TC_003_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
+        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@abbc908]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2024-04-08T13:37:28 IST" name="Smoke Tests" finished-at="2024-04-08T13:37:28 IST" duration-ms="64">
+      <class name="Tests.VisitorLoginTest">
+        <test-method signature="TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@10ec523c]" started-at="2024-04-08T13:37:28 IST" name="TC_001_Verify_VisitorLogin_Module_Displayed" finished-at="2024-04-08T13:37:28 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
+at Base.TestSetup.StartApp(TestSetup.java:108)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
+at Base.TestSetup.StartApp(TestSetup.java:99)
+... 19 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+... 25 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+... 29 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
+... 34 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_Verify_VisitorLogin_Module_Displayed -->
+        <test-method signature="TC_003_Verify_Visitor_Upload()[pri:3, instance:Tests.VisitorLoginTest@10ec523c]" started-at="2024-04-08T13:37:28 IST" name="TC_003_Verify_Visitor_Upload" finished-at="2024-04-08T13:37:28 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Tests.VisitorLoginTest.TC_003_Verify_Visitor_Upload() on instance Tests.VisitorLoginTest@10ec523c depends on not successfully finished methods 
+[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@10ec523c]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Tests.VisitorLoginTest.TC_003_Verify_Visitor_Upload() on instance Tests.VisitorLoginTest@10ec523c depends on not successfully finished methods 
+[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@10ec523c]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_Verify_Visitor_Upload -->
+      </class> <!-- Tests.VisitorLoginTest -->
+      <class name="Tests.LoginTest">
+        <test-method is-config="true" signature="StartApp()[pri:0, instance:Tests.LoginTest@abbc908]" started-at="2024-04-08T13:37:24 IST" name="StartApp" finished-at="2024-04-08T13:37:28 IST" duration-ms="3818" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
+at Base.TestSetup.StartApp(TestSetup.java:108)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
+at Base.TestSetup.StartApp(TestSetup.java:99)
+... 19 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+... 25 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+... 29 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
+... 34 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StartApp -->
+        <test-method signature="TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@abbc908]" started-at="2024-04-08T13:37:28 IST" name="TC_001_Verify_Login_With_Valid_Credentials" finished-at="2024-04-08T13:37:28 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
+at Base.TestSetup.StartApp(TestSetup.java:108)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
+at Base.TestSetup.StartApp(TestSetup.java:99)
+... 19 more
+Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+... 25 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
+... 29 more
+Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
+at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
+at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
+at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
+... 34 more
+Caused by: java.net.SocketException: Connection reset
+at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
+at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_Verify_Login_With_Valid_Credentials -->
+        <test-method is-config="true" signature="tearDownApp()[pri:0, instance:Tests.LoginTest@abbc908]" started-at="2024-04-08T13:37:28 IST" name="tearDownApp" finished-at="2024-04-08T13:37:32 IST" duration-ms="4053" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownApp -->
+      </class> <!-- Tests.LoginTest -->
+    </test> <!-- Smoke Tests -->
+  </suite> <!-- Smoke Suite -->
+</testng-results>

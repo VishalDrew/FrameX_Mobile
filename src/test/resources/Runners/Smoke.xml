@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite">
+    <listeners>
+        <listener class-name="Listeners.FrameX_Listeners"></listener>
+    </listeners>
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+        <classes>
+        <!--    <class name="Tests.LoginTest" />
+            <class name="Tests.AttendanceTest" />-->
+            <!--<class name="Tests.DownloadcallsTest" />-->
+      <!--      <class name="Tests.VisitorLoginTest" />-->
+            <class name="Tests.CallPlanTest" />
+       <!--     <class name="Tests.ResourceCentreTest" />-->
+        </classes>
+    </test>
+</suite>

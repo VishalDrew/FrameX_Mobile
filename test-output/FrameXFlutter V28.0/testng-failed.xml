@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FrameXFlutter V28.0]" guice-stage="DEVELOPMENT" verbose="3">
+  <listeners>
+    <listener class-name="Utilities.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="FramexFunctional Test(failed)" verbose="3">
+    <classes>
+      <class name="Tests.CallPlanTest">
+        <methods>
+          <include name="StartApp"/>
+          <include name="TearApp"/>
+          <include name="TC_003_VerifyCategoryLists"/>
+        </methods>
+      </class> <!-- Tests.CallPlanTest -->
+    </classes>
+  </test> <!-- FramexFunctional Test(failed) -->
+</suite> <!-- Failed suite [FrameXFlutter V28.0] -->

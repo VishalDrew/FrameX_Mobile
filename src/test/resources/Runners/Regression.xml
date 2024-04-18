@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+    <listeners>
+        <listener class-name="Listeners.FrameX_Listeners"></listener>
+    </listeners>
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.LoginTest" />
+            <class name="Tests.AttendanceTest" />
+               <class name="Tests.DownloadcallsTest" />
+             <class name="Tests.VisitorLoginTest" />
+             <class name="Tests.CallPlanTest" />
+             <class name="Tests.ResourceCentreTest" />
+        </classes>
+    </test>
+</suite>
