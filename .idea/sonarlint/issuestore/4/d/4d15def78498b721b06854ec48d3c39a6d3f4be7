@@ -1,0 +1,49 @@
+
+cWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ
+Z	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
+C	Web:S1827")Remove this deprecated "align" attribute.(ÍÚ˜ãùÿÿÿÿ
+HWeb:TableWithoutCaptionCheck	" Add a description to this table.(†ñËø
+:	Web:S5256	"%Add "<th>" headers to this "<table>".(†ñËø
+>	Web:S1827	")Remove this deprecated "width" attribute.(†ñËø
+?	Web:S1827
+"*Remove this deprecated "valign" attribute.(ú©£û
+MWeb:TableWithoutCaptionCheck" Add a description to this table.(îé· şÿÿÿÿ
+?	Web:S5256"%Add "<th>" headers to this "<table>".(îé· şÿÿÿÿ
+C	Web:S1827")Remove this deprecated "width" attribute.(îé· şÿÿÿÿ
+HWeb:TableWithoutCaptionCheck" Add a description to this table.(÷»¶•
+:	Web:S5256"%Add "<th>" headers to this "<table>".(÷»¶•
+?	Web:S1827"*Remove this deprecated "valign" attribute.(÷»¶•
+?	Web:S1827"*Remove this deprecated "valign" attribute.(÷»¶•
+>	Web:S1827")Remove this deprecated "align" attribute.(÷»¶•
+MWeb:TableWithoutCaptionCheck" Add a description to this table.(îé· şÿÿÿÿ
+?	Web:S5256"%Add "<th>" headers to this "<table>".(îé· şÿÿÿÿ
+C	Web:S1827")Remove this deprecated "width" attribute.(îé· şÿÿÿÿ
+MWeb:TableWithoutCaptionCheck!" Add a description to this table.(ô®¨Ïıÿÿÿÿ
+?	Web:S5256!"%Add "<th>" headers to this "<table>".(ô®¨Ïıÿÿÿÿ
+D	Web:S1827!"*Remove this deprecated "valign" attribute.(ô®¨Ïıÿÿÿÿ
+D	Web:S1827!"*Remove this deprecated "valign" attribute.(ô®¨Ïıÿÿÿÿ
+C	Web:S1827!")Remove this deprecated "align" attribute.(ô®¨Ïıÿÿÿÿ
+MWeb:TableWithoutCaptionCheck'" Add a description to this table.(îé· şÿÿÿÿ
+?	Web:S5256'"%Add "<th>" headers to this "<table>".(îé· şÿÿÿÿ
+C	Web:S1827'")Remove this deprecated "width" attribute.(îé· şÿÿÿÿ
+MWeb:TableWithoutCaptionCheck)" Add a description to this table.(Ğ˜™ıÿÿÿÿ
+?	Web:S5256)"%Add "<th>" headers to this "<table>".(Ğ˜™ıÿÿÿÿ
+D	Web:S1827)"*Remove this deprecated "valign" attribute.(Ğ˜™ıÿÿÿÿ
+D	Web:S1827)"*Remove this deprecated "valign" attribute.(Ğ˜™ıÿÿÿÿ
+C	Web:S1827)")Remove this deprecated "align" attribute.(Ğ˜™ıÿÿÿÿ
+MWeb:TableWithoutCaptionCheck/" Add a description to this table.(îé· şÿÿÿÿ
+?	Web:S5256/"%Add "<th>" headers to this "<table>".(îé· şÿÿÿÿ
+C	Web:S1827/")Remove this deprecated "width" attribute.(îé· şÿÿÿÿ
+MWeb:TableWithoutCaptionCheck1" Add a description to this table.(ä´ñäûÿÿÿÿ
+?	Web:S52561"%Add "<th>" headers to this "<table>".(ä´ñäûÿÿÿÿ
+D	Web:S18271"*Remove this deprecated "valign" attribute.(ä´ñäûÿÿÿÿ
+D	Web:S18271"*Remove this deprecated "valign" attribute.(ä´ñäûÿÿÿÿ
+C	Web:S18271")Remove this deprecated "align" attribute.(ä´ñäûÿÿÿÿ
+HWeb:TableWithoutCaptionCheck7" Add a description to this table.(È–¡º
+:	Web:S52567"%Add "<th>" headers to this "<table>".(È–¡º
+>	Web:S18277")Remove this deprecated "width" attribute.(È–¡º
+MWeb:TableWithoutCaptionCheck9" Add a description to this table.(¡‡ÈØÿÿÿÿÿ
+?	Web:S52569"%Add "<th>" headers to this "<table>".(¡‡ÈØÿÿÿÿÿ
+D	Web:S18279"*Remove this deprecated "valign" attribute.(¡‡ÈØÿÿÿÿÿ
+D	Web:S18279"*Remove this deprecated "valign" attribute.(¡‡ÈØÿÿÿÿÿ
+C	Web:S18279")Remove this deprecated "align" attribute.(¡‡ÈØÿÿÿÿÿ
