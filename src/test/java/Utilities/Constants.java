@@ -1,7 +1,6 @@
 package Utilities;
 
 import static Base.TestSetup.globaldata;
-import static Modules.Callplan_Module.currenttarget;
 import static Utilities.Utils.generateFormattedDate;
 import static Utilities.Utils.getDeviceName;
 

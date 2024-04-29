@@ -10,12 +10,12 @@
             </run>
         </groups>
         <classes>
-        <!--    <class name="Tests.LoginTest" />
-            <class name="Tests.AttendanceTest" />-->
-            <!--<class name="Tests.DownloadcallsTest" />-->
-      <!--      <class name="Tests.VisitorLoginTest" />-->
+            <class name="Tests.LoginTest" />
+            <class name="Tests.AttendanceTest" />
+            <class name="Tests.DownloadcallsTest" />
+            <class name="Tests.VisitorLoginTest" />
             <class name="Tests.CallPlanTest" />
-       <!--     <class name="Tests.ResourceCentreTest" />-->
+            <class name="Tests.ResourceCentreTest" />
         </classes>
     </test>
 </suite>

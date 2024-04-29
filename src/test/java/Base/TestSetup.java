@@ -7,6 +7,7 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.json.JSONObject;
+import org.openqa.selenium.html5.Location;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

@@ -15,8 +15,8 @@ public class Rough {
 
 
     public static void main(String[] args) {
-        // Sample target IDs
         List<String> targetIds = new ArrayList<>();
+        // Sample target IDs
         targetIds.add("11345");
         targetIds.add("113434");
         targetIds.add("113567");
@@ -27,33 +27,27 @@ public class Rough {
         targetIds.add("1130899");
         targetIds.add("114532");
 
-        // Sample JSON data structure
-        String[] callTypes = {"upload", "upload", "close", "close"};
-        String[] fieldTypes = {"Mandatory only", "Non Mandatory only"};
+        String[] callTypes = {"upload", "upload","close"};
+        String[] fieldTypes = {"Mandatory only", "All"};
+        String[] networkModes = {"Wifi", "Mobiledata"};
+        String[] durationInSeconds = {"5","2","10","15","8"};
 
-        // Create a list to store JSON data for each target ID
         List<CallPlanData> callPlanDataList = new ArrayList<>();
-
-        // Generate JSON data for each target ID
         Random random = new Random();
+
         for (String targetId : targetIds) {
-            // Randomly select call type and fields
             String callType = callTypes[random.nextInt(callTypes.length)];
-            String fields = fieldTypes[random.nextInt(fieldTypes.length)];
+            String fields = callType.equals("upload") ? fieldTypes[random.nextInt(fieldTypes.length)] : null;
+            String networkMode = networkModes[random.nextInt(networkModes.length)];
+            String duration = durationInSeconds[random.nextInt(durationInSeconds.length)];
 
-            // Create CallPlanData object
-            CallPlanData callPlanData = new CallPlanData(targetId, callType, fields);
-
-            // Add to the list
+            CallPlanData callPlanData = new CallPlanData(targetId, callType, fields, networkMode, duration);
             callPlanDataList.add(callPlanData);
         }
 
-        // Convert the list to JSON format using Gson
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String jsonData = gson.toJson(callPlanDataList);
 
-        // Print JSON data
         System.out.println(jsonData);
     }
-
 }
