@@ -1,9 +1,9 @@
 {
   "Login": {
     "User1": {
-      "username": "Abhisdel",
-      "password": "Abhisdel",
-      "project": "jj",
+      "username": "71579",
+      "password": "71579",
+      "project": "pidilite",
       "mobileno": "8345667899",
       "expected": "Call Plan"
     },
@@ -135,33 +135,6 @@
       "Aware about all the targets errmsg": "Enter a Aware about all the targets",
       "Selfie errmsg": "Please, Take a image"
     }
-  },
-
-
-  "Call Plan": {
-    "Uploaddata1": {
-      "Targetid": "",
-      "Call Type": "upload",
-      "Fields": "Mandatory only"
-    },
-    "Uploaddata2": {
-      "Targetid": "",
-      "Call Type": "upload",
-      "Fields": "Non Mandatory only"
-    },
-    "Uploaddata3": {
-      "Targetid": "",
-      "Call Type": "close",
-      "Fields": "Mandatory only"
-    },
-    "Uploaddata4": {
-      "Targetid": "",
-      "Call Type": "close",
-      "Fields": "Non Mandatory only"
-    }
   }
-
-
-
 
 }

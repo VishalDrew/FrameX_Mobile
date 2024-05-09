@@ -117,6 +117,59 @@ public class DBConfig extends TestSetup {
         }
     }
 
+
+
+    /*==============================FRAMENEW_MAIN PROJECTMASTER CONNECTION SETUP=====================================================*/
+
+
+    public static String getprojectdatafromdatabase(String query, String columnName) throws Exception {
+        try {
+            List<Map<String, String>> result = executeframeQuery(query);
+            if (!result.isEmpty()) {
+                Map<String, String> firstRow = result.get(0); // Assuming there's only one row
+                String data = firstRow.get(columnName);
+                log.info("Data retrieved successfully from the database");
+                return data;
+            } else {
+                log.warn("No data found for the query: " + query);
+                return null;
+            }
+        } catch (Exception e) {
+            log.error("Error fetching data from the database: " + e.getMessage());
+            throw e;
+        }
+    }
+
+
+    public static List<Map<String, String>> executeframeQuery(String query) throws Exception {
+        try (
+                Connection con = DriverManager.getConnection(framenewmainURL, LiveDbusername, LiveDbpassword);
+                Statement statement = con.createStatement();
+                ResultSet result = statement.executeQuery(isShopFrontPhotoRequired())) {
+
+            ResultSetMetaData metaData = result.getMetaData();
+            int columnCount = metaData.getColumnCount();
+
+            List<Map<String, String>> dataList = new ArrayList<>();
+
+            while (result.next()) {
+                Map<String, String> rowData = new LinkedHashMap<>();
+
+                for (int i = 1; i <= columnCount; i++) {
+                    String columnName = metaData.getColumnName(i);
+                    String columnValue = result.getString(i);
+                    rowData.put(columnName, columnValue);
+                }
+
+                dataList.add(rowData);
+            }
+            return dataList;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
 }
 
 

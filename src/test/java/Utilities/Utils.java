@@ -12,7 +12,8 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 import Base.TestSetup;
-import Pages.Login_Page;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
 import org.openqa.selenium.OutputType;
@@ -22,13 +23,13 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 
 import static Listeners.FrameX_Listeners.*;
+import static Modules.CallPlan.DataBinder.fieldName;
 import static Modules.Login_Module.login;
 import static Pages.CallPlan_page.*;
-import static Pages.HomePage_page.Attendance;
+import static Pages.HomePage_page.ActivityLog;
 import static Pages.Login_Page.menubutton;
 import static Utilities.Actions.*;
-import static Utilities.Constants.configfilepath;
-import static Utilities.Constants.queryfilepath;
+import static Utilities.Constants.*;
 import static Utilities.DBConfig.*;
 import static Utilities.TestDataUtil.gettestdata;
 
@@ -38,6 +39,7 @@ import static Utilities.TestDataUtil.gettestdata;
 public class Utils extends TestSetup {
 
     public static String screenshotName;
+    public static int totalimagescaptured;
 
     /**
      * Generates dataset based on the given type and facing type.
@@ -50,98 +52,19 @@ public class Utils extends TestSetup {
     public static String Datasetter(String type, String facingtype) {
 
         if (type.equals("Int")) {
-            if (facingtype.equalsIgnoreCase("Industry Facing *")) {
-                return Randomint().get(1).toString();
-            } else if (facingtype.equalsIgnoreCase("Our Brand Facing *")) {
-                return Randomint().get(0).toString();
+            if (facingtype.contains("Industry Facings *")) {
+                return "5";
+            } else if (facingtype.contains("Our Brand Facings *")) {
+                return "2";
             }
-            return Randomint().get(0).toString();
+            return "3";
+        } else if (type.equals("integer")){
+            return "6";
         } else if (type.contains("Varchar")||type.contains("string")) {
             return "Testdata";
         }
         return null;
     }
-
-    /**
-     * Generates a list of random integers.
-     *
-     * @return A list of random integers.
-     */
-    public static List<Integer> Randomint() {
-
-        Random random = new Random();
-        List<Integer> integerList = new ArrayList<>();
-        // Generate a random integer between 0 and 9
-        int randomInt = random.nextInt(10);
-        integerList.add(randomInt);
-        // Generate a random integer between 10 and 20
-        int randomIntInRange = random.nextInt(11) + 10;
-        integerList.add(randomIntInRange);
-
-        return integerList;
-    }
-
-    /**
-     * Sets a dropdown field in a form with random options.
-     *
-     * @param formName the name of the form
-     * @param productName the name of the product
-     * @throws Exception if an error occurs while setting the dropdown field
-     */
-  /*  public static void Dropdownsetter(String formName, String productName) throws Exception {
-        try {
-            List<String> dropList = getColumnNamesFromDatabase(MessageFormat.format(queries.get("EnumFieldquery"),formName ,"'" + productName + "'","'" + formName + "'"), "FieldOption");
-            Collections.shuffle(dropList);
-            int size = dropList.size();
-            Random random = new Random();
-            int count = 0;
-            for (String drop : dropList) {
-                if (count >= size) {
-                    break;
-                }
-                *//*String attribute = SetTextFieldAttribute(fieldName);*//*
-                if (sourceExists(fieldName)) {
-                    click("ACCESSIBILITYID", fieldName);
-                    click("ACCESSIBILITYID", drop);
-                    break;
-                } else {
-                    scrollE2E("up");
-                    click("ACCESSIBILITYID", fieldName);
-                    click("ACCESSIBILITYID", drop);
-                    break;
-                }
-
-            }
-
-        } catch (Exception e) {
-            log.error("Error setting dropdown for field {} in form "+ fieldName);
-            log.error(e.getMessage());
-        }
-
-    }*/
-
-    /**
-     * Captures an image using the device's camera.
-     *
-     * @throws InterruptedException if the thread is interrupted while waiting for elements to load.
-     */
-   /* public static void ImageCapture() throws InterruptedException {
-
-        if(fieldName.contains("Photo *")){
-            click("Xpath", Camerabutton_M);
-            log.info("Camera mandatory is Cliked");
-        }else{
-            click("Xpath", Camerabutton_NM);
-            log.info("Camera non mandatory is Cliked");
-        }
-        webdriverWait("Xpath", Shutterbutton, 4);
-        click("Xpath", Shutterbutton);
-        log.info("Shutter button is Cliked");
-        webdriverWait("ACCESSIBILITYID", "Done", 3);
-        click("ACCESSIBILITYID", "Done");
-        log.info("Done button is Cliked");
-
-    }*/
 
 
     /**
@@ -413,18 +336,18 @@ public class Utils extends TestSetup {
      * @throws IOException if an I/O error occurs while reading the properties file
      */
     public static Map<String, String> queryloader() throws IOException {
-
         Properties properties = new Properties();
         FileInputStream fileInputStream = null;
 
         Map<String, String> Queries = new HashMap<>();
 
         try {
+            log.info("Loading queries from file: " + queryfilepath);
             fileInputStream = new FileInputStream(queryfilepath);
             properties.load(fileInputStream);
 
             String[] querykeys = {"Categorymasterquery", "FormFieldsquery", "QuestionFormFieldsquery",
-                    "ProductColumnquery", "FormMasterquery", "Productquery", "EnumFieldquery"};
+                    "ProductColumnquery", "FormMasterquery", "Productquery", "EnumFieldquery", "EnumQuestionFieldquery"};
 
             for (String key : querykeys) {
                 Queries.put(key, properties.getProperty(key));
@@ -433,20 +356,19 @@ public class Utils extends TestSetup {
             log.info("Queries loaded successfully.");
         } catch (IOException e) {
             log.error("Error loading queries: " + e.getMessage());
-            e.printStackTrace();
+            throw e; // Rethrow the exception to indicate failure
         } finally {
             if (fileInputStream != null) {
                 try {
                     fileInputStream.close();
                 } catch (IOException e) {
-                    log.error("Error closing FileInputStream: " + e.getMessage());
-                    e.printStackTrace();
+                    log.error("Error closing file input stream: " + e.getMessage());
+                    throw e; // Rethrow the exception to indicate failure
                 }
             }
         }
 
         return Queries;
-
     }
 
     /**
@@ -664,6 +586,127 @@ public class Utils extends TestSetup {
     }
 
 
+    public static void shopfrontphotorequired () throws Exception {
+        if (getprojectdatafromdatabase(isShopFrontPhotoRequired(), "IsShopFrontPhotoRequired").equals("1")) {
+            log.info("ShopFrontPhotoRequired image is Required");
+            pssshopfrontimage();
+        }
+    }
+
+
+    public static void pssshopfrontimage() throws InterruptedException {
+
+        log.info("Starting PSS Shop front image capture process");
+        webdriverWait("Xpath", Shutterbutton, 30);
+        click("Xpath", Shutterbutton);
+        webdriverWait("ACCESSIBILITYID", "Done", 3);
+        click("ACCESSIBILITYID", "Done");
+        log.info("PSS Shop front image capture process completed successfully");
+
+    }
+
+    public static void scroll(AndroidDriver driver, int distance) throws InterruptedException {
+        String scrollScript = String.format("new UiScrollable(new UiSelector().scrollable(true)).scrollForward(%d)", distance);
+        driver.findElement(AppiumBy.androidUIAutomator(scrollScript));
+
+    }
+
+    public static String removeUnderscores(String input) {
+        // Replace underscores with an empty string
+        return input.replace("_", " ");
+    }
+
+
+    public static void Dropdownsetter(String formName, String productName, String IsQuestionForm, String fieldName) throws Exception {
+        try {
+            String Enumquery;
+            if (IsQuestionForm.equals("1")) {
+                Enumquery = MessageFormat.format(queries.get("EnumQuestionFieldquery"), formName, "'" + productName + "'", "'" + formName + "'");
+            } else {
+                Enumquery = MessageFormat.format(queries.get("EnumFieldquery"), "'" + fieldName.replace(" *", "").replace(" ", "_") + "'", "'" + formName + "'");
+            }
+            log.info("EnumQuery " + Enumquery);
+            List<String> dropList = getColumnNamesFromDatabase(Enumquery, "FieldOption");
+            Collections.shuffle(dropList);
+
+            for (String drop : dropList) {
+                if (sourceExists(fieldName)) {
+                    dropdown(fieldName,drop);
+                    break;
+                } else{
+                    Thread.sleep(500);
+                    if (sourceExists(drop)) {
+                        click("ACCESSIBILITYID", drop);
+                        log.info(drop + " is Clicked");
+                        break;
+                    }
+                    Thread.sleep(500);
+                    Utils.scroll(driver,600);
+                    dropdown(fieldName,drop);
+                    break;
+                }
+            }
+
+
+        } catch (Exception e) {
+            log.error("Error setting dropdown for field " + fieldName + " in form " + formName);
+            log.error(e.getMessage());
+        }
+    }
+
+    public static void dropdown(String fieldName,String drop){
+
+        if (sourceExists(fieldName)) {
+            log.info(fieldName + " is present in source");
+            click("ACCESSIBILITYID", fieldName);
+            log.info(fieldName + " is Clicked");
+            click("ACCESSIBILITYID", drop);
+            log.info(drop + " is Clicked");
+
+        } else if (sourceExists(drop)) {
+            click("ACCESSIBILITYID", drop);
+            log.info(drop + " is Clicked");
+        }
+    }
+
+
+    public static void ImageCapture() throws InterruptedException {
+
+        if(fieldName.contains("Photo *")){
+            click("Xpath", Camerabutton_M);
+            log.info("Camera mandatory is Cliked");
+        }else{
+            click("Xpath", Camerabutton_NM);
+            log.info("Camera non mandatory is Cliked");
+        }
+        webdriverWait("Xpath", Shutterbutton, 4);
+        click("Xpath", Shutterbutton);
+        log.info("Shutter button is Cliked");
+        webdriverWait("ACCESSIBILITYID", "Done", 3);
+        click("ACCESSIBILITYID", "Done");
+        totalimagescaptured++;
+        log.info("Done button is Cliked");
+
+    }
+
+    public static boolean waitForCallupload(String msg) throws InterruptedException {
+        boolean displayed = sourceExists(msg);
+        long startTime = System.currentTimeMillis();
+        long timeout = 60000;
+        try {
+            while (!displayed && (System.currentTimeMillis() - startTime) < timeout) {
+                log.info("Waiting for message: '" + msg + "'");
+                Thread.sleep(500);
+                click("ACCESSIBILITYID", ActivityLog);
+                displayed = sourceExists(msg);
+                driver.navigate().back();
+            }
+        } catch (InterruptedException e) {
+            log.error("Interrupted while waiting for message: '" + msg + "'");
+            Thread.currentThread().interrupt(); // Reset interrupted status
+        }
+        return displayed;
+    }
 
     /**
      * Fetches targets from the database for a given username.
@@ -679,8 +722,8 @@ public class Utils extends TestSetup {
             String updateTodayCallstoUnplanned = "update Pjpplan set Status = 'A' where username = '"+username+"' ";
             fetchdatafromdb(updateTodayCallstoUnplanned);
             log.info("Updated today's calls to unplanned.");
-            String getUnplannedCalls = "select top 10 * from Pjpplan where username = '"+username+"' ";
-            String updateUnplannedCalls = ";WITH T AS (select top 10 * from PjpPlan where username = 'Abhisdel') update T set Pjpdate = '"+currentdate+"' ";
+            String getUnplannedCalls = "select top 4 * from Pjpplan where username = '"+username+"' ";
+            String updateUnplannedCalls = ";WITH T AS (select top 4 * from PjpPlan where username = 'Abhisdel') update T set Pjpdate = '"+currentdate+"' ";
             fetchdatafromdb(updateUnplannedCalls);
             log.info("Updated unplanned calls.");
             List<String> targetsforUnplannedCalls = getColumnNamesFromDatabase(getUnplannedCalls, "TargetId");
@@ -692,7 +735,6 @@ public class Utils extends TestSetup {
         }
         return null;
     }
-
 }
 
 

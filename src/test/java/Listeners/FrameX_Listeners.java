@@ -28,7 +28,8 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
     static Date d = new Date();
     public static final String fileName = props.get("Reportfilename") + d.toString().replace(":", "_").replace(" ", "_") + ".html";
     public static boolean attachmentflag;
-    private static ExtentReports extent;
+    public static ExtentReports extent;
+    public static ExtentTest test;
 
     static {
         try {

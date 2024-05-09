@@ -55,27 +55,4 @@ public class Login_Module extends TestSetup {
 		}
 	}
 
-	/**
-	 * Validates if the specified application version is displayed.
-	 *
-	 * @param versionToCheck The version of the application to verify.
-	 * @return True if the specified version is displayed, false otherwise.
-	 */
-	public static boolean checkVersion(String versionToCheck) {
-		try {
-			webdriverWait("Xpath", username, 15);
-			boolean isVersionDisplayed = sourceExists(versionToCheck);
-			if (isVersionDisplayed) {
-				log.info("App version is matched");
-				return true;
-			} else {
-				log.error("App version is not matched: " + versionToCheck);
-				tearDownApp();
-				return false;
-			}
-		} catch (Exception e) {
-			log.error("Error occurred during version check:", e);
-			return false;
-		}
-	}
 }

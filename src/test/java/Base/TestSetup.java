@@ -2,6 +2,7 @@ package Base;
 
 import Utilities.ExcelReader;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.apache.log4j.Logger;
@@ -23,8 +24,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static Listeners.FrameX_Listeners.fileName;
-import static Modules.Login_Module.checkVersion;
 import static Utilities.Constants.*;
+import static Utilities.DBConfig.getprojectdatafromdatabase;
 import static Utilities.Mailconfig.sendMailReport;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.Utils.*;
@@ -43,13 +44,17 @@ public class TestSetup {
     public static HashMap<String,String>props;
     public static HashMap<String,String>queries;
 
+    public static JSONObject globaldata = gettestdata("Login","User1");
+    public static  String isexitstoreRequired;
+
     static {
         try {
             // Load properties from the property file
             props = propertyloader();
             queries = (HashMap<String, String>) queryloader();
+            isexitstoreRequired = getprojectdatafromdatabase("select ExitButtonRequired, * from Projectmaster where ProjectName = '"+globaldata.getString("project")+"'","ExitButtonRequired");
             log.info("Properties and queries loaded successfully.");
-        } catch (IOException e) {
+        } catch (Exception e) {
             log.error("Error loading file", e);
             throw new RuntimeException("Error loading file", e);
         }
@@ -57,13 +62,11 @@ public class TestSetup {
         excel = new ExcelReader(props.get("Datafilepath"));
     }
 
-    public static JSONObject globaldata = gettestdata("Login","User1");
 
     public static List<String> targets;
     static {
         try {
             targets = fetchTargetsFromDatabase(globaldata.getString("username"));
-            log.info("Targets fetched from the database successfully.");
         } catch (Exception e) {
             log.error("Error fetching targets from the database", e);
             throw new RuntimeException(e);
@@ -99,11 +102,12 @@ public class TestSetup {
             }
             capabilities.setCapability("app", props.get("Apppath"));
             capabilities.setCapability("deviceName", Devicename);
+            capabilities.setCapability("adbExecTimeout", "120000");
+            capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "100");
             // Specify the URL with the correct IP address and port for the Appium server
             driver = new AndroidDriver(new URL(props.get("Serverurl")), capabilities);
             devicemodel = driver.getCapabilities().getCapability("deviceModel").toString();
             driver.manage().timeouts().implicitlyWait(Integer.parseInt(props.get("Implicitywaittimeout")),TimeUnit.SECONDS);
-            checkVersion(props.get("Appversion"));
             log.info("Appium server started successfully, and AndroidDriver initialized.");
         } catch (IOException e) {
             log.error("An error occurred while starting the app:", e);

@@ -16,6 +16,11 @@ public class Constants {
     public static final String queryfilepath = System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\queries.sql";
 
     public static final String TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\Testdatas.json";
+    public static final String CALLPLAN_TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\CallPlandata.json";
+
+
+    public static String framenewmainURL = "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=framenew_main;encrypt=true;trustServerCertificate=true";
+
 
     /**
      * Returns the production URL for connecting to the SQL Server database.
@@ -58,7 +63,7 @@ public class Constants {
             "Fieldlytics QA Team\n";
 
 
-    public static String Categorymasterquerygenerator(String target){
+    public static String Categorymasterquerygenerator(String targetid){
 
         String categoryquery = "DECLARE @NAME NVARCHAR(MAX), @FormMapWith NVARCHAR(MAX), @sql VARCHAR(MAX) = 'select distinct name,catSequence from (';\n" +
                 "DECLARE Form_Name CURSOR LOCAL FORWARD_ONLY FOR\n" +
@@ -100,7 +105,7 @@ public class Constants {
                 "                 INNER JOIN CategoryMaster CM ON CM.CategoryId = mm.CategoryId   \n" +
                 "             Inner Join targetmaster tm ON '+ @result +'\n" +
                 "                 WHERE CM.Status = 1 \n" +
-                "                 AND RoleGroupID IN (SELECT RoleGroupID FROM RoleGroupMapping WHERE RoleID = 4) and Tm.targetid = "+target+"';\n" +
+                "                 AND RoleGroupID IN (SELECT RoleGroupID FROM RoleGroupMapping WHERE RoleID = 4) and Tm.targetid = "+targetid+"';\n" +
                 "\n" +
                 "    FETCH NEXT FROM Form_Name INTO @NAME,@FormMapWith;\n" +
                 "\n" +
@@ -124,12 +129,13 @@ public class Constants {
 
     public static String formmasterquerygenerator(String target,String category){
 
-        String formquery = "DECLARE @NAME NVARCHAR(400), @FormMapWith NVARCHAR(500),@IsQuestionForm varchar(10), @sql VARCHAR(MAX) = 'select distinct formName,IsQuestionForm, condition from (';\n" +
+        String formquery = "\n" +
+                "DECLARE @NAME NVARCHAR(400), @FormMapWith NVARCHAR(500),@IsQuestionForm varchar(10),@FormSequence varchar(10), @sql VARCHAR(MAX) = 'select distinct formName,IsQuestionForm, condition,FormSequence from (';\n" +
                 "DECLARE Form_Name CURSOR LOCAL FORWARD_ONLY FOR\n" +
-                "SELECT Name,FormMapWith,IsQuestionForm FROM formmaster WHERE FormStatus = 1 order by FormSequence ;\n" +
+                "SELECT Name,FormMapWith,IsQuestionForm,FormSequence FROM formmaster WHERE FormStatus = 1 order by FormSequence ;\n" +
                 "\n" +
                 "OPEN Form_Name;\n" +
-                "FETCH NEXT FROM Form_Name INTO @NAME,@FormMapWith,@IsQuestionForm;\n" +
+                "FETCH NEXT FROM Form_Name INTO @NAME,@FormMapWith,@IsQuestionForm,@FormSequence;\n" +
                 "\n" +
                 "WHILE @@FETCH_STATUS = 0\n" +
                 "BEGIN\n" +
@@ -159,14 +165,14 @@ public class Constants {
                 "\n" +
                 "   -- Remove the trailing 'AND'\n" +
                 "   SET @result = LEFT(@result, LEN(@result) - LEN(' AND ')) \n" +
-                "    SET @sql += 'SELECT '''+@Name+''' as FormName,'+@IsQuestionForm+' as IsQuestionForm,'''+ @result+'''AS condition FROM ' + @relation + ' mr \n" +
+                "    SET @sql += 'SELECT '''+@Name+''' as FormName,'+@IsQuestionForm+' as IsQuestionForm,'+ @FormSequence+' as FormSequence,'''+ @result+'''AS condition FROM ' + @relation + ' mr \n" +
                 "                 JOIN ' + @master + ' mm ON mm.' + @ID + ' = mr.' + @ID + ' \n" +
                 "                 INNER JOIN CategoryMaster CM ON CM.CategoryId = mm.CategoryId   \n" +
                 "             Inner Join targetmaster tm ON '+ @result +'\n" +
                 "                 WHERE CM.Status = 1 \n" +
                 "                 AND RoleGroupID IN (SELECT RoleGroupID FROM RoleGroupMapping WHERE RoleID = 4) and Tm.targetid = "+target+" and cm.Name = ''"+category+"''';\n" +
                 "\n" +
-                "    FETCH NEXT FROM Form_Name INTO @NAME,@FormMapWith,@IsQuestionForm;\n" +
+                "    FETCH NEXT FROM Form_Name INTO @NAME,@FormMapWith,@IsQuestionForm,@FormSequence;\n" +
                 "\n" +
                 "    IF @@FETCH_STATUS = 0\n" +
                 "    BEGIN\n" +
@@ -177,10 +183,15 @@ public class Constants {
                 "CLOSE Form_Name;\n" +
                 "DEALLOCATE Form_Name;\n" +
                 "\n" +
-                "SET @sql += ') A'\n" +
+                "SET @sql += ') A order by FormSequence'\n" +
                 "print @sql\n" +
                 "Exec(@sql);";
 
         return formquery;
+    }
+
+    public static String isShopFrontPhotoRequired() {
+        String projectmaster = "select * from Projectmaster where ProjectName = '"+globaldata.getString("project")+"'";
+        return projectmaster;
     }
 }
