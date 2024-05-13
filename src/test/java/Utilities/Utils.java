@@ -23,6 +23,7 @@ import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 
 import static Listeners.FrameX_Listeners.*;
+import static Modules.CallPlan.CallPlanActionHandler.handleNoInternetConnection;
 import static Modules.CallPlan.DataBinder.fieldName;
 import static Modules.Login_Module.login;
 import static Pages.CallPlan_page.*;
@@ -30,7 +31,7 @@ import static Pages.HomePage_page.ActivityLog;
 import static Pages.Login_Page.menubutton;
 import static Utilities.Actions.*;
 import static Utilities.Constants.*;
-import static Utilities.DBConfig.*;
+import static Utilities.DatabaseUtility.*;
 import static Utilities.TestDataUtil.gettestdata;
 
 /**
@@ -49,21 +50,26 @@ public class Utils extends TestSetup {
      * @return            the generated dataset
      * @throws            NullPointerException if type is null
      */
-    public static String Datasetter(String type, String facingtype) {
 
-        if (type.equals("Int")) {
-            if (facingtype.contains("Industry Facings *")) {
+    public static String generateTestData(String dataType, String facingType) {
+        final String INDUSTRY_FACINGS = "Industry Facings *";
+        final String OUR_BRAND_FACINGS = "Our Brand Facings *";
+
+        if ("Int".equals(dataType)) {
+            if (facingType.contains(INDUSTRY_FACINGS)) {
                 return "5";
-            } else if (facingtype.contains("Our Brand Facings *")) {
+            } else if (facingType.contains(OUR_BRAND_FACINGS)) {
                 return "2";
             }
             return "3";
-        } else if (type.equals("integer")){
+        } else if ("integer".equals(dataType)) {
             return "6";
-        } else if (type.contains("Varchar")||type.contains("string")) {
+        } else if (dataType.contains("Varchar") || dataType.contains("string")) {
             return "Testdata";
+        } else {
+            // Handle unknown data types
+            throw new IllegalArgumentException("Unknown data type: " + dataType);
         }
-        return null;
     }
 
 
@@ -289,7 +295,7 @@ public class Utils extends TestSetup {
      * @return a HashMap containing the properties loaded from the configuration file
      * @throws FileNotFoundException if the configuration file is not found
      */
-    public static HashMap<String,String> propertyloader() throws FileNotFoundException {
+    public static HashMap<String,String> loadProperties() throws FileNotFoundException {
 
         Properties properties = new Properties();
         FileInputStream fileInputStream = null;
@@ -335,7 +341,7 @@ public class Utils extends TestSetup {
      * @return a map containing the loaded queries
      * @throws IOException if an I/O error occurs while reading the properties file
      */
-    public static Map<String, String> queryloader() throws IOException {
+    public static Map<String, String> loadQueries() throws IOException {
         Properties properties = new Properties();
         FileInputStream fileInputStream = null;
 
@@ -425,7 +431,7 @@ public class Utils extends TestSetup {
      *
      * @throws Exception             if there is an error while managing network conditions
      */
-    public static void networkconditions(String mode,String duration) throws InterruptedException {
+    public static void manageNetworkConditions(String mode, String duration) throws InterruptedException {
 
         try {
             int sleeptime = Integer.parseInt(duration+"000");
@@ -444,13 +450,9 @@ public class Utils extends TestSetup {
                 log.info("Thread is Waiting for "+sleeptime);
                 driver.toggleData();
                 log.info("Mobiledata is Turned On");
-            } else if (mode.equalsIgnoreCase("Disable")) {
-                networkconnections();
-                log.info("Wifi and Mobiledata is off");
-                Thread.sleep(sleeptime);
-                log.info("Thread is Waiting for "+sleeptime);
-                networkconnections();
-                log.info("Wifi and Mobiledata is turned On");
+            }
+            if (!mode.equalsIgnoreCase("Enable")) {
+                handleNoInternetConnection();
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Restore interrupted status
@@ -535,7 +537,7 @@ public class Utils extends TestSetup {
      */
     public static void lgpage()  {
         JSONObject user1 = gettestdata("Login","User1");
-        login(globaldata.getString("username"), globaldata.getString("password"),globaldata.getString("project"),globaldata.getString("mobileno"));
+        login(globalData.getString("username"), globalData.getString("password"),globalData.getString("project"),globalData.getString("mobileno"));
     }
 
     /**
@@ -587,7 +589,7 @@ public class Utils extends TestSetup {
 
 
     public static void shopfrontphotorequired () throws Exception {
-        if (getprojectdatafromdatabase(isShopFrontPhotoRequired(), "IsShopFrontPhotoRequired").equals("1")) {
+        if (getProjectDataFromDatabase(isShopFrontPhotoRequired(), "IsShopFrontPhotoRequired").equals("1")) {
             log.info("ShopFrontPhotoRequired image is Required");
             pssshopfrontimage();
         }
@@ -596,12 +598,10 @@ public class Utils extends TestSetup {
 
     public static void pssshopfrontimage() throws InterruptedException {
 
-        log.info("Starting PSS Shop front image capture process");
         webdriverWait("Xpath", Shutterbutton, 30);
         click("Xpath", Shutterbutton);
         webdriverWait("ACCESSIBILITYID", "Done", 3);
         click("ACCESSIBILITYID", "Done");
-        log.info("PSS Shop front image capture process completed successfully");
 
     }
 
@@ -627,27 +627,21 @@ public class Utils extends TestSetup {
             }
             log.info("EnumQuery " + Enumquery);
             List<String> dropList = getColumnNamesFromDatabase(Enumquery, "FieldOption");
-            Collections.shuffle(dropList);
 
             for (String drop : dropList) {
                 if (sourceExists(fieldName)) {
                     dropdown(fieldName,drop);
                     break;
                 } else{
-                    Thread.sleep(500);
                     if (sourceExists(drop)) {
                         click("ACCESSIBILITYID", drop);
-                        log.info(drop + " is Clicked");
                         break;
                     }
-                    Thread.sleep(500);
                     Utils.scroll(driver,600);
                     dropdown(fieldName,drop);
                     break;
                 }
             }
-
-
         } catch (Exception e) {
             log.error("Error setting dropdown for field " + fieldName + " in form " + formName);
             log.error(e.getMessage());
@@ -657,15 +651,11 @@ public class Utils extends TestSetup {
     public static void dropdown(String fieldName,String drop){
 
         if (sourceExists(fieldName)) {
-            log.info(fieldName + " is present in source");
             click("ACCESSIBILITYID", fieldName);
-            log.info(fieldName + " is Clicked");
             click("ACCESSIBILITYID", drop);
-            log.info(drop + " is Clicked");
 
         } else if (sourceExists(drop)) {
             click("ACCESSIBILITYID", drop);
-            log.info(drop + " is Clicked");
         }
     }
 
@@ -674,18 +664,15 @@ public class Utils extends TestSetup {
 
         if(fieldName.contains("Photo *")){
             click("Xpath", Camerabutton_M);
-            log.info("Camera mandatory is Cliked");
         }else{
             click("Xpath", Camerabutton_NM);
-            log.info("Camera non mandatory is Cliked");
         }
         webdriverWait("Xpath", Shutterbutton, 4);
         click("Xpath", Shutterbutton);
-        log.info("Shutter button is Cliked");
         webdriverWait("ACCESSIBILITYID", "Done", 3);
         click("ACCESSIBILITYID", "Done");
+        Thread.sleep(700);
         totalimagescaptured++;
-        log.info("Done button is Cliked");
 
     }
 
@@ -715,15 +702,22 @@ public class Utils extends TestSetup {
      * @return a list of target IDs for unplanned calls
      * @throws Exception if an error occurs while fetching targets from the database
      */
+
+    public static String count = "1";
     public static List<String> fetchTargetsFromDatabase(String username) throws Exception {
         try {
+
+            String[] targets = {"5","2","10","4","6"};
+            Random rand = new Random();
+            int randomIndex = rand.nextInt(targets.length);
+            String count = targets[randomIndex];
             log.info("Fetching targets from the database for username: " + username);
             String checkTodayCalls = "select * from Pjpplan where username = '"+username+"'";
             String updateTodayCallstoUnplanned = "update Pjpplan set Status = 'A' where username = '"+username+"' ";
             fetchdatafromdb(updateTodayCallstoUnplanned);
             log.info("Updated today's calls to unplanned.");
-            String getUnplannedCalls = "select top 4 * from Pjpplan where username = '"+username+"' ";
-            String updateUnplannedCalls = ";WITH T AS (select top 4 * from PjpPlan where username = 'Abhisdel') update T set Pjpdate = '"+currentdate+"' ";
+            String getUnplannedCalls = "select top "+count+" * from Pjpplan where username = '"+username+"' ";
+            String updateUnplannedCalls = ";WITH T AS (select top "+count+" * from PjpPlan where username = 'Abhisdel') update T set Pjpdate = '"+currentdate+"' ";
             fetchdatafromdb(updateUnplannedCalls);
             log.info("Updated unplanned calls.");
             List<String> targetsforUnplannedCalls = getColumnNamesFromDatabase(getUnplannedCalls, "TargetId");
@@ -734,6 +728,13 @@ public class Utils extends TestSetup {
             e.getMessage();
         }
         return null;
+    }
+
+    public static String generateStoreRequiredQuery(){
+
+        String storereqquery = "select ExitButtonRequired, * from Projectmaster where ProjectName = '"+ globalData.getString("project")+"'";
+        return storereqquery;
+
     }
 }
 

@@ -3,13 +3,11 @@ package Modules;
 import Base.TestSetup;
 import Modules.CallPlan.CallPlanActionHandler;
 import Utilities.Utils;
-import com.aventstack.extentreports.ExtentTest;
 import org.json.JSONObject;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static Listeners.FrameX_Listeners.formatData;
 import static Listeners.FrameX_Listeners.logAndReportFailure;
 import static Modules.CallPlan.CallPlanActionHandler.Uploadcallfunction;
 import static Modules.CallPlan.CallPlanActionHandler.closecallfunction;
@@ -21,8 +19,7 @@ import static Pages.HomePage_page.Callplan;
 import static Utilities.Actions.click;
 import static Utilities.Actions.webdriverWait;
 import static Utilities.Constants.Categorymasterquerygenerator;
-import static Utilities.DBConfig.getColumnNamesFromDatabase;
-import static Utilities.DBConfig.getdatafromdatabase;
+import static Utilities.DatabaseUtility.getColumnNamesFromDatabase;
 import static Utilities.TestDataUtil.getCallPlanTestData;
 import static Utilities.Utils.*;
 
@@ -92,11 +89,9 @@ public class CallPlanModule extends TestSetup {
 
     static void searchtarget() throws InterruptedException {
         if (!sourceExists(targetid)) {
-            log.info("Target id not found. Navigating back and trying again.");
             driver.navigate().back();
             Thread.sleep(3000);
             click("ACCESSIBILITYID", Callplan);
-            log.info("Clicked on Call plan again");
         }
         if (!sourceExists(targetid)) {
             Utils.scroll(driver, 600);

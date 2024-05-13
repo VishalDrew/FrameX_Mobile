@@ -28,15 +28,20 @@ public class Resourcentre_Module extends TestSetup {
             if(sourceExists(ResourceCentre)){
                 click("ACCESSIBILITYID", ResourceCentre);
             }
+            if(sourceExists("No Resource Center record")) {
+                logAndReportFailure("No Resource Center record found");
+                driver.navigate().back();
+                return false;
+            }
             if (isElementDisplayed("ACCESSIBILITYID", filename)) {
                 click("ACCESSIBILITYID", filename);
-                webdriverWait("ACCESSIBILITYID","Refresh",5);
-                if(sourceExists("Refresh")){
-                    logAndReportSuccess("TestCase Passed : "+filename + " file downloaded Successfully");
+                webdriverWait("ACCESSIBILITYID", "Refresh", 5);
+                if (sourceExists("Refresh")) {
+                    logAndReportSuccess("TestCase Passed : " + filename + " file downloaded Successfully");
                     driver.navigate().back();
                     return true;
                 } else {
-                    logAndReportFailure("TestCase Failed : "+filename + " is not downloaded Successfully");
+                    logAndReportFailure("TestCase Failed : " + filename + " is not downloaded Successfully");
                     return false;
                 }
             } else {

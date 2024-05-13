@@ -4,9 +4,9 @@
   <testcase classname="Tests.CallPlanTest" name="TC_002_VerifyCallPlan" time="29.987"/>
   <system-out/>
   <testcase classname="Tests.CallPlanTest" name="TC_003_VerifyCategoryLists" time="0.166">
-    <error message="Cannot invoke &quot;java.util.List.forEach(java.util.function.Consumer)&quot; because the return value of &quot;Utilities.DBConfig.Db(String)&quot; is null" type="java.lang.NullPointerException">
-      <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.forEach(java.util.function.Consumer)" because the return value of "Utilities.DBConfig.Db(String)" is null
-at Utilities.DBConfig.GetDatas(DBConfig.java:49)
+    <error message="Cannot invoke &quot;java.util.List.forEach(java.util.function.Consumer)&quot; because the return value of &quot;Utilities.DatabaseUtility.Db(String)&quot; is null" type="java.lang.NullPointerException">
+      <![CDATA[java.lang.NullPointerException: Cannot invoke "java.util.List.forEach(java.util.function.Consumer)" because the return value of "Utilities.DatabaseUtility.Db(String)" is null
+at Utilities.DatabaseUtility.GetDatas(DBConfig.java:49)
 at Modules.CallPlan_Module.DataBinder(CallPlan_Module.java:56)
 at Tests.CallPlanTest.TC_003_VerifyCategoryLists(CallPlanTest.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

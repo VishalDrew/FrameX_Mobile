@@ -88,10 +88,11 @@ public class CallPlanData {
     }
 
     public static String setcallplanscenarios(List<String> targetids) {
-        String[] callTypes = {"upload", "upload","upload"};
+        String[] callTypes = {"upload", "upload","close","close"};
         String[] fieldTypes = {"Mandatory only", "All"};
-        String[] networkModes = {"Enable", "Enable"};
+        String[] networkModes = {"Enable", "Wifi"};
         String[] durationInSeconds = {"5","2","10","15","8"};
+
 
         List<JsonObject> callPlanDataList = new ArrayList<>();
         Random random = new Random();
@@ -108,7 +109,9 @@ public class CallPlanData {
             uploadData.addProperty("Call Type", callType);
             uploadData.addProperty("Fields", fields);
             uploadData.addProperty("Network Mode", networkMode);
-            uploadData.addProperty("Disable Duration", duration);
+            if(!networkMode.equalsIgnoreCase("Enable")){
+                uploadData.addProperty("Disable Duration", duration);
+            }
             String logMessage = "Target ID: " + targetId + ", Call Type: " + callType + ", Fields: " + fields + ", Network Mode: " + networkMode + ", Disable Duration: " + duration;
             log.info(logMessage);
             callPlanDataList.add(uploadData);

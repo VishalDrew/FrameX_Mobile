@@ -16,7 +16,7 @@ import static Utilities.Utils.*;
  */
 public class Downloadcalls_Module extends TestSetup {
 
-	private static boolean duplicatecallstest;
+	private static boolean duplicateCallsTest;
 	public static boolean storesForVisitorLogin;
 
 	/**
@@ -46,7 +46,7 @@ public class Downloadcalls_Module extends TestSetup {
 				}
 			}
 			if (isAllDownloaded) {
-				duplicatecallstest = true;
+				duplicateCallsTest = true;
 				storesForVisitorLogin = true;
 				logAndReportSuccess("TestCase Passed : All targets downloaded successfully.");
 				Assert.assertTrue(true);
@@ -76,7 +76,7 @@ public class Downloadcalls_Module extends TestSetup {
 				click("ACCESSIBILITYID", DownloadCalls);
 			}
 			boolean orginalcallExists = false;
-			if(!duplicatecallstest){
+			if(!duplicateCallsTest){
 				click("ACCESSIBILITYID", addtarget);
 				enter("classname", targetidtxtbox,orginalcall);
 				click("ACCESSIBILITYID", addbtn);

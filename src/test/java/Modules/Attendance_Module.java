@@ -1,7 +1,6 @@
 package Modules;
 
 import Base.TestSetup;
-import org.json.JSONObject;
 import org.testng.Assert;
 
 import java.util.HashMap;
@@ -14,8 +13,7 @@ import static Pages.CallPlan_page.currentdate;
 import static Pages.HomePage_page.Attendance;
 import static Pages.HomePage_page.Callplan;
 import static Utilities.Actions.*;
-import static Utilities.DBConfig.fetchdatafromdb;
-import static Utilities.TestDataUtil.gettestdata;
+import static Utilities.DatabaseUtility.fetchdatafromdb;
 import static Utilities.Utils.*;
 
 public class Attendance_Module extends TestSetup {
@@ -187,7 +185,7 @@ public class Attendance_Module extends TestSetup {
     public static void verifyattendancedatainDB() throws Exception {
         try {
             String deviceattendancetime  = attendancetime;
-            String username = globaldata.getString("username");
+            String username = globalData.getString("username");
             String attendancestatus  = getstatusandtime(username,"status");
             String createdTime = getstatusandtime(username,"createddate").split(" ")[1].substring(0, 5);
 

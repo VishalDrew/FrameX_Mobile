@@ -34,7 +34,6 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
     static {
         try {
             extent = ExtentManager.createInstance(props.get("TestReportspath") + fileName);
-            log.info("ExtentReports instance created successfully.");
         } catch (FileNotFoundException e) {
             log.error("Error creating ExtentReports instance:", e);
             throw new RuntimeException(e);

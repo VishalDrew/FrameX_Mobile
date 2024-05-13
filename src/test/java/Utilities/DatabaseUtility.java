@@ -11,7 +11,7 @@ import static Utilities.Constants.*;
 /**
  * DBConfig class.
  */
-public class DBConfig extends TestSetup {
+public class DatabaseUtility extends TestSetup {
 
     /**
      * Fetches data from the database based on the provided query.
@@ -39,7 +39,7 @@ public class DBConfig extends TestSetup {
             }
             log.info("Data fetched successfully from the database");
             return dataList;
-        } catch (Exception e) {
+        } catch (SQLException  e) {
             log.error("Error fetching data from the database: " + e.getMessage());
             System.out.println(e.getMessage());
         }
@@ -122,13 +122,12 @@ public class DBConfig extends TestSetup {
     /*==============================FRAMENEW_MAIN PROJECTMASTER CONNECTION SETUP=====================================================*/
 
 
-    public static String getprojectdatafromdatabase(String query, String columnName) throws Exception {
+    public static String getProjectDataFromDatabase(String query, String columnName) throws Exception {
         try {
             List<Map<String, String>> result = executeframeQuery(query);
             if (!result.isEmpty()) {
                 Map<String, String> firstRow = result.get(0); // Assuming there's only one row
                 String data = firstRow.get(columnName);
-                log.info("Data retrieved successfully from the database");
                 return data;
             } else {
                 log.warn("No data found for the query: " + query);

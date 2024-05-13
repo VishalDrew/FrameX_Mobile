@@ -12,8 +12,8 @@ import static Pages.CallPlan_page.*;
 import static Utilities.Actions.click;
 import static Utilities.Actions.enter;
 import static Utilities.Constants.formmasterquerygenerator;
-import static Utilities.DBConfig.getColumnNamesFromDatabase;
-import static Utilities.DBConfig.getDataObject;
+import static Utilities.DatabaseUtility.getColumnNamesFromDatabase;
+import static Utilities.DatabaseUtility.getDataObject;
 import static Utilities.Utils.*;
 
 /**
@@ -31,7 +31,7 @@ public class DataBinder {
 
     /**
      * Binds data for the given categories and field type.
-     * 
+     *
      * @param categories the list of categories to bind data for
      * @param fieldType the type of field to bind data for
      * @return true if the data binding is successful for all categories, false otherwise
@@ -50,8 +50,6 @@ public class DataBinder {
                     break;
                 }
             }
-
-            log.info(modifiedCategory + " is present in source");
             boolean isCategoryExecutionSuccessful = categoryProcess(category, fieldType);
 
             if (!isCategoryExecutionSuccessful) {
@@ -65,7 +63,7 @@ public class DataBinder {
 
     /**
      * Processes the given category and fieldType.
-     * 
+     *
      * @param category the category to be processed
      * @param fieldType the type of field
      * @return true if the category exists and is processed successfully, false otherwise
@@ -110,11 +108,9 @@ public class DataBinder {
     public static boolean formprocess(String category, String form, String IsQuestionForm, String fieldtype) throws Exception {
         form = removeUnderscores(form);
         if (!sourceExists(form)) {
-            log.warn(form + " form is not present ");
             return false;
         }
 
-        log.info(form + " is present in source");
         click("ACCESSIBILITYID", form);
         String formName = form.replace(" ", "_");
 
@@ -122,7 +118,6 @@ public class DataBinder {
         String productColumn = getColumnNamesFromDatabase(productColumnQuery, "ProductColumn").get(0);
         productColumn = productColumn.replace("*", "+ ' *'");
         log.info("ProductColumn Query " + productColumnQuery);
-        log.info("ProductColumn " + productColumn);
 
         boolean pictureform = formName.equalsIgnoreCase("picture");
         String questionColumns = (IsQuestionForm.equals("1") || pictureform) ?
@@ -131,7 +126,6 @@ public class DataBinder {
                         "        ELSE  '' End " :
                 "Rtrim(Ltrim(" + productColumn + "))";
 
-        log.info("Is picture form " + pictureform);
         String productQuery = MessageFormat.format(queries.get("Productquery"), formName, targetid, "'" + category + "'", questionColumns, formcondition);
         log.info("Product Query " + productQuery);
         List<String> productNames = getColumnNamesFromDatabase(productQuery, "ProductName");
@@ -180,17 +174,12 @@ public class DataBinder {
         String cleanProductName = modifiedProductName.replace("  *", "");
 
         try {
-            log.info("Product Name: " + cleanProductName);
-
             if (!sourceExists(cleanProductName)) {
                 Utils.scroll(driver, 600);
-                log.info(cleanProductName + " is not showing. Scroll is performed");
             }
 
             if (sourceExists(cleanProductName)) {
                 click("ACCESSIBILITYID", adjustproductname(productName));
-                log.info(cleanProductName + " is Clicked");
-
                 if (!formName.contains("Picture")) {
                     cleanProductName = productName.replace(" *", "");
                 }
@@ -266,7 +255,6 @@ public class DataBinder {
         if ("1".equals(fieldData.get("Required"))) {
             fieldName += " *";
         }
-        log.info("FieldName : " + fieldName);
     }
 
     /**
@@ -285,7 +273,7 @@ public class DataBinder {
         switch (Ctrltype) {
             case "TextBox":
                 log.info("Control type is TextBox");
-                enter("Xpath", generatetextfieldlocator(fieldName), Datasetter(Datatype, fieldName));
+                enter("Xpath", generatetextfieldlocator(fieldName), Utils.generateTestData(Datatype, fieldName));
                 driver.hideKeyboard();
                 break;
             case "DropDownList":
@@ -300,7 +288,7 @@ public class DataBinder {
 
     /**
      * Adjusts the product name by removing any trailing whitespace and adding a space before an asterisk if it is missing.
-     * 
+     *
      * @param prodname the product name to be adjusted
      * @return the adjusted product name
      * @throws NullPointerException if prodname is null

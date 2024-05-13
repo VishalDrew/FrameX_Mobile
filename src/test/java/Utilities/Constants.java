@@ -1,6 +1,6 @@
 package Utilities;
 
-import static Base.TestSetup.globaldata;
+import static Base.TestSetup.*;
 import static Utilities.Utils.generateFormattedDate;
 import static Utilities.Utils.getDeviceName;
 
@@ -31,7 +31,7 @@ public class Constants {
      * @param globalproject the JSONObject containing the project information
      */
     public static String getProdUrl() {
-        return "jdbc:sqlserver://65.1.119.118:1433;DatabaseName=" + globaldata.getString("project") + ";encrypt=true;trustServerCertificate=true";      //LIVE URL
+        return "jdbc:sqlserver://65.1.119.118:1433;DatabaseName=" + globalData.getString("project") + ";encrypt=true;trustServerCertificate=true";      //LIVE URL
     }
 
     /**
@@ -41,7 +41,13 @@ public class Constants {
      * @throws JSONException if there is an error retrieving the project name from the global project object
      */
     public static String gettestserverurl() {
-        return "jdbc:sqlserver://192.168.0.124:1433;DatabaseName="+ globaldata.getString("project")+" ;encrypt=true;trustServerCertificate=true";
+        return "jdbc:sqlserver://192.168.0.124:1433;DatabaseName="+ globalData.getString("project")+" ;encrypt=true;trustServerCertificate=true";
+    }
+
+
+    public static String getglobalserverurl() {
+        String testserverurl = "jdbc:sqlserver://183.83.187.133:1433;DatabaseName=" + globalData.getString("project") + ";encrypt=true;trustServerCertificate=true";
+        return testserverurl;
     }
 
     public static final String LiveDbusername = "Field2020";
@@ -191,7 +197,8 @@ public class Constants {
     }
 
     public static String isShopFrontPhotoRequired() {
-        String projectmaster = "select * from Projectmaster where ProjectName = '"+globaldata.getString("project")+"'";
+        String projectmaster = "select * from Projectmaster where ProjectName = '"+globalData.getString("project")+"'";
+        log.info("ShopFront photo Required Query : "+projectmaster);
         return projectmaster;
     }
 }

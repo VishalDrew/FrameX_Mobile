@@ -13,7 +13,6 @@ import java.util.Random;
 
 import static Listeners.FrameX_Listeners.*;
 import static Modules.CallPlanModule.driver;
-import static Modules.CallPlanModule.isexitstoreRequired;
 import static Modules.CallPlanModule.log;
 import static Modules.CallPlanModule.*;
 import static Pages.ActivityLog_Page.*;
@@ -21,8 +20,7 @@ import static Pages.CallPlan_page.*;
 import static Pages.HomePage_page.ActivityLog;
 import static Pages.HomePage_page.Callplan;
 import static Utilities.Actions.*;
-import static Utilities.DBConfig.getColumnNamesFromDatabase;
-import static Utilities.DBConfig.getdatafromdatabase;
+import static Utilities.DatabaseUtility.*;
 import static Utilities.Utils.*;
 
 public class CallPlanActionHandler {
@@ -45,7 +43,7 @@ public class CallPlanActionHandler {
                 log.info("Uploadcalls button is clicked");
             }
         }
-        networkconditions(networkmode,networkoffduration);
+        manageNetworkConditions(networkmode,networkoffduration);
         if (waitForCallupload( "Target "+ targetid +" successfully uploaded")) {
             if(handleUploadSuccess()){
                 logAndReportSuccess(targetid +" Call Uploaded Successfully , Image Count : "+totalimagescaptured );
@@ -54,17 +52,11 @@ public class CallPlanActionHandler {
                 return true;
             }else{
                 driver.navigate().back();
-                Uploadtest.fail(formatData("Failed to Upload call "+ targetid+" , Image Count : "+totalimagescaptured));
-                getactivitylogpageScreenshot(Uploadtest);
-                sendDB();
-                logAndReportFailure("Failed to Upload call "+ targetid+" , Image Count : "+totalimagescaptured);
+                handleUploadFailure(Uploadtest);
                 return false;
             }
         } else {
-            Uploadtest.fail(formatData("Failed to Upload call "+ targetid+" , Image Count : "+totalimagescaptured));
-            getactivitylogpageScreenshot(Uploadtest);
-            sendDB();
-            logAndReportFailure("Failed to Upload call "+ targetid+" , Image Count : "+totalimagescaptured);
+            handleUploadFailure(Uploadtest);
             log.warn("Timeout reached while waiting for message: '" + "Target "+ targetid +" successfully uploaded" + "'");
             return false;
         }
@@ -94,7 +86,7 @@ public class CallPlanActionHandler {
             }
             click("ACCESSIBILITYID", "Done");
             log.info("Clicked on done button");
-            networkconditions(networkmode, networkoffduration);
+            manageNetworkConditions(networkmode, networkoffduration);
             if (waitForCallupload("Target " + targetid + "  Close Call  successfully uploaded")) {
                 if (handleUploadSuccess()) {
                     logAndReportSuccess(targetid + " Close Call Uploaded Successfully ");
@@ -102,24 +94,27 @@ public class CallPlanActionHandler {
                     driver.navigate().back();
                     return true;
                 } else {
-                    closetest.fail(formatData("Failed to Upload Close call "+ targetid));
-                    getactivitylogpageScreenshot(closetest);
-                    sendDB();
-                    logAndReportFailure("Failed to Upload Close call "+ targetid);
+                    handleUploadFailure(closetest);
                     return false;
                 }
             } else {
-                closetest.fail(formatData("Failed to Upload Close call "+ targetid));
-                getactivitylogpageScreenshot(closetest);
-                sendDB();
-                logAndReportFailure("Failed to Upload Close call "+ targetid);
+                handleUploadFailure(closetest);
                 return false;
             }
         }
         return false;
     }
 
-    private static void captureAndAttachScreenshot(ExtentTest test) {
+
+    private static void handleUploadFailure(ExtentTest test) throws InterruptedException {
+        test.fail(formatData("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured));
+        getactivitylogpageScreenshot(test);
+        sendDB();
+        logAndReportFailure("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured);
+    }
+
+
+    static void captureAndAttachScreenshot(ExtentTest test) {
         if (driver instanceof TakesScreenshot) {
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             test.addScreenCaptureFromBase64String(Base64.getEncoder().encodeToString(screenshot), "Screenshot");
@@ -127,7 +122,7 @@ public class CallPlanActionHandler {
     }
 
     // Helper method to capture close call image
-    private static void captureCloseCallImage() {
+    static void captureCloseCallImage() {
         click("Xpath", "//android.view.View[@content-desc=\" \"]/android.view.View[3]");
         click("Xpath", Shutterbutton);
         webdriverWait("ACCESSIBILITYID", "Done", 3);
@@ -164,13 +159,15 @@ public class CallPlanActionHandler {
         }
     }
 
-    private static void clickAndWait(String locatorType, String locator, int waitTime) {
+    static void clickAndWait(String locatorType, String locator, int waitTime) {
         webdriverWait(locatorType, locator, waitTime);
         click(locatorType, locator);
     }
 
 
-    public static boolean handleUploadSuccess() throws InterruptedException {
+    static boolean handleUploadSuccess() throws Exception {
+
+        String  isexitstoreRequired = getProjectDataFromDatabase(generateStoreRequiredQuery(),"ExitButtonRequired");
         String uploadedtargetxpath = "//android.widget.ImageView[contains(@content-desc, 'Target ID: " + targetid + "')]";
         String Exitstoreuploadedtargetxpath = "//android.view.View[contains(@content-desc, 'Target ID: " + targetid + "')]";
 
@@ -193,13 +190,13 @@ public class CallPlanActionHandler {
         }
     }
 
-    private static void getactivitylogpageScreenshot(ExtentTest type) throws InterruptedException {
+    static void getactivitylogpageScreenshot(ExtentTest type) throws InterruptedException {
         click("ACCESSIBILITYID", ActivityLog);
         Thread.sleep(1000);
         captureAndAttachScreenshot(type);
     }
 
-    private static void sendDB(){
+    static void sendDB(){
         click("Xpath", activitylog_menubtn);
         click("ACCESSIBILITYID", Senddb_btn);
         String dbsize = gettext("id", dbSize);

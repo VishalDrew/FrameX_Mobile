@@ -1,12 +1,10 @@
 package Modules;
 
+import Utilities.Utils;
 import org.json.JSONObject;
 import org.testng.Assert;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 import static Listeners.FrameX_Listeners.*;
 import static Modules.Downloadcalls_Module.storesForVisitorLogin;
@@ -15,7 +13,7 @@ import static Pages.HomePage_page.DownloadCalls;
 import static Pages.HomePage_page.visitorlogin;
 import static Pages.Visitorlogin_page.*;
 import static Utilities.Actions.*;
-import static Utilities.DBConfig.getdatafromdatabase;
+import static Utilities.DatabaseUtility.getdatafromdatabase;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.Utils.*;
 import static io.appium.java_client.touch.offset.PointOption.point;
@@ -102,21 +100,17 @@ public class VisitorLogin_Module {
 		}
 		if (!allErrorsDisplayed) {
 			logAndReportFailure("TestCase Failed: Not all error messages are displayed in visitor login");
-			scrollE2E("down");
+			scrollE2E("up");
 			click("ACCESSIBILITYID", "Visitor" + visitorlogindata.getString("Visitor"));
 			click("ACCESSIBILITYID", selectvisitordd);
 			Assert.assertTrue(false);
 		} else {
 			logAndReportSuccess("TestCase Passed : All error messages are displayed in visitor login");
-			scrollE2E("down");
 			click("ACCESSIBILITYID", "Visitor" + visitorlogindata.getString("Visitor"));
 			click("ACCESSIBILITYID", selectvisitordd);
 			Assert.assertTrue(true);
 		}
 	}
-
-
-
 
 
 	/**
@@ -126,7 +120,7 @@ public class VisitorLogin_Module {
      * @return the name of the store
      * @throws Exception if there is an error retrieving the store name from the database
      */
-    private static String getStoreName(String storeId) throws Exception {
+     static String getStoreName(String storeId) throws Exception {
 		return getdatafromdatabase("select TargetName from TargetMaster where TargetID = " + storeId + "", "TargetName");
 	}
 
@@ -138,7 +132,7 @@ public class VisitorLogin_Module {
      * 
      * @throws JSONException if there is an error in parsing the test data.
      */
-    private static ArrayList<String> visitornegativedata(){
+     static ArrayList<String> visitornegativedata(){
 		JSONObject visitorloginnegativedata = gettestdata("Visitor Login", "Visitor Upload errmsg");
 		ArrayList<String>keys = new ArrayList<String>();
 		keys.add("Visitor Type errmsg");
@@ -176,7 +170,7 @@ public class VisitorLogin_Module {
 	 *
 	 * @throws InterruptedException if the thread is interrupted while sleeping.
 	 */
-	private static void fillvisitordetails() throws InterruptedException {
+	 static void fillvisitordetails() throws InterruptedException {
 		Thread.sleep(1000);
 		click("ACCESSIBILITYID", selectvisitordd);
 		click("ACCESSIBILITYID", "Visitor" + visitorlogindata.getString("Visitor"));
@@ -190,7 +184,7 @@ public class VisitorLogin_Module {
 		driver.hideKeyboard();
 		enter("Xpath", remarks_txtbox, visitorlogindata.getString("Remarks"));
 		driver.hideKeyboard();
-		scroll("up");
+		 Utils.scroll(driver,600);
 		click("ACCESSIBILITYID", storeinfo_dd);
 		click("ACCESSIBILITYID", storename);
 		click("ACCESSIBILITYID", promoterwellgroomed_dd);
@@ -199,7 +193,7 @@ public class VisitorLogin_Module {
 		click("ACCESSIBILITYID", visitorlogindata.getString("Maintained well all categories"));
 		click("ACCESSIBILITYID", awareallabttargts_dd);
 		click("ACCESSIBILITYID", visitorlogindata.getString("Aware about all the targets"));
-		scrollE2E("up");
+		Utils.scroll(driver,600);
 		if (visitorlogindata.getString("Selfie").equalsIgnoreCase("True")) {
 			click("xpath", selfie_img);
 			click("id", shutter_btn);

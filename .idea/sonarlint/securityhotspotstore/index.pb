@@ -354,8 +354,6 @@ Q.idea/sonarlint/securityhotspotstore/6/1/616a7974ba5479c16885bfc139300ffb17cc3f
 Q.idea/sonarlint/securityhotspotstore/7/b/7bf28053592baf4cdf2c6a13130e7035eb751bf4,7\e\7e8cec0a90db528a6bd09e2a737c138bd9199579
 w
 G.idea/sonarlint/issuestore/9/a/9ad5be0afb83ce3333ea7268028576720b79aec8,7\4\74ef4dfad8064312ab781b92d996aeec35d9c53c
-Å
-Q.idea/sonarlint/securityhotspotstore/7/f/7f3c7ce5a5505a6f0032f1f792b36ed4a9af4561,4\5\455647fe700ab5df1e6bcda3026e7e92312bfe19
 w
 G.idea/sonarlint/issuestore/9/f/9fa3f52a973032b516ed10af16d32842b433bf16,6\a\6afe1a9ad4f851043c55519443301e88e075fdec
 Å
@@ -430,8 +428,6 @@ G.idea/sonarlint/issuestore/c/5/c54ecab1c734e49072ff03071a86448ee53ffc1e,2\d\2d
 Q.idea/sonarlint/securityhotspotstore/1/b/1b7415f0924522372e886462b7f294781bcfe58f,6\a\6ab601035b237a98c4e09945d3a4d501f1b10704
 Å
 Q.idea/sonarlint/securityhotspotstore/e/1/e13feeb64f88ce1c828d6e7689e54e8d2502cf3d,3\5\354942f77ac2df9c5f3638195c4a261631927c75
-w
-G.idea/sonarlint/issuestore/4/5/455647fe700ab5df1e6bcda3026e7e92312bfe19,8\8\8865758032597dfad7a262ff0d7b4352d1615d17
 Å
 Q.idea/sonarlint/securityhotspotstore/8/5/859d8a897d13eacb2d89c30493f021ca5c4590ab,1\a\1ad4a1055023bed8132ee487d12ab4dc7b3156c1
 w
@@ -506,8 +502,6 @@ w
 G.idea/sonarlint/issuestore/8/f/8f1a0ce07f9d1e634a66d1c6ee4842e6bcef82c2,7\7\77ce67b039b5c0f8e567a9b57a270b42efd8097d
 Å
 Q.idea/sonarlint/securityhotspotstore/a/3/a35134c9ba04c90db801ae71e029d735c3ef0cf2,8\7\8742560c3e60e1860a9af78f288401f714c93492
-Å
-Q.idea/sonarlint/securityhotspotstore/4/5/455647fe700ab5df1e6bcda3026e7e92312bfe19,0\9\09bf689e16e8f9b9a8ce74f280daef34f4a73993
 w
 G.idea/sonarlint/issuestore/e/e/eecd1fa618f9e60949b53050f1683b52eef430aa,5\4\5476b1c1871e3fed923e220da94fdc9cbd547361
 Å
@@ -584,3 +578,5 @@ i
 9src/test/java/Modules/CallPlan/CallPlanActionHandler.java,b\6\b6d419ad49573cb8458227e20a59e412c3fba634
 `
 0src/test/java/Modules/CallPlan/CallPlanData.java,c\4\c48a2ad52c495c33dec23562ffa9df18f1cd89b9
+\
+,src/test/java/Utilities/DatabaseUtility.java,9\3\9380a4f11afb8cc7310c3709c5df168811f06f68
