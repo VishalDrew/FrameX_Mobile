@@ -182,6 +182,7 @@ public class Downloadcalls_Module extends TestSetup {
 				click("ACCESSIBILITYID", DownloadCalls);
 			}
 			click("ACCESSIBILITYID", submit);
+			waitForMessage(errmsg);
 			if(sourceExists(errmsg)){
 				logAndReportSuccess("TestCase Passed : Error message : "+errmsg+"  is Showing");
 				Assert.assertTrue(true);

@@ -1,11 +1,12 @@
 {
   "Login": {
     "User1": {
-      "username": "akashdel",
-      "password": "akashdel",
+      "username": "arundel",
+      "password": "arundel",
       "project": "jj",
       "mobileno": "8345667899",
-      "expected": "Call Plan"
+      "expected": "Call Plan",
+      "Targets" : "2"
     },
     "User2": {
       "username": "arunde",
@@ -79,6 +80,9 @@
   "Callplan": {
     "5minutesSync": {
       "expectedMessage": "You can click after 5 minutes, since it is in Downloading or Uploading Call process."
+    },
+    "FormFillingValidation": {
+      "expectedMessage": "First fill all categories data to upload"
     }
   },
   "Downloadcalls": {
@@ -86,7 +90,7 @@
       "targetid": "00000"
     },
     "SubmitButtonValidation": {
-      "ErrorMessage": "Please Add the target"
+      "ErrorMessage": "Please, Enter the target Id"
     }
   },
   "ResourceCenter": {

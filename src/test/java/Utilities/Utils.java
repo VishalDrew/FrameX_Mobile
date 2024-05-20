@@ -41,6 +41,7 @@ public class Utils extends TestSetup {
 
     public static String screenshotName;
     public static int totalimagescaptured;
+    public  static boolean capturedDone;
 
     /**
      * Generates dataset based on the given type and facing type.
@@ -592,6 +593,7 @@ public class Utils extends TestSetup {
         if (getProjectDataFromDatabase(isShopFrontPhotoRequired(), "IsShopFrontPhotoRequired").equals("1")) {
             log.info("ShopFrontPhotoRequired image is Required");
             pssshopfrontimage();
+            capturedDone = true;
         }
     }
 
@@ -660,7 +662,7 @@ public class Utils extends TestSetup {
     }
 
 
-    public static void ImageCapture() throws InterruptedException {
+    public static void imageCapture() throws InterruptedException {
 
         if(fieldName.contains("Photo *")){
             click("Xpath", Camerabutton_M);
@@ -703,14 +705,11 @@ public class Utils extends TestSetup {
      * @throws Exception if an error occurs while fetching targets from the database
      */
 
-    public static String count = "1";
+
     public static List<String> fetchTargetsFromDatabase(String username) throws Exception {
         try {
 
-            String[] targets = {"5","2","10","4","6"};
-            Random rand = new Random();
-            int randomIndex = rand.nextInt(targets.length);
-            String count = targets[randomIndex];
+            String count = globalData.getString("Targets");
             log.info("Fetching targets from the database for username: " + username);
             String checkTodayCalls = "select * from Pjpplan where username = '"+username+"'";
             String updateTodayCallstoUnplanned = "update Pjpplan set Status = 'A' where username = '"+username+"' ";

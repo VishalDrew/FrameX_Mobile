@@ -137,7 +137,7 @@ public class CallPlanActionHandler {
             log.info("Target start time  :  "+devicetime);
             log.info("Visited date and time is Showing");
         }else{
-            logAndReportFailure("Visited date and time is not Showing");
+            log.warn("Visited date and time is not Showing");
         }
         return devicetime;
     }
@@ -209,3 +209,4 @@ public class CallPlanActionHandler {
     }
 
 }
+

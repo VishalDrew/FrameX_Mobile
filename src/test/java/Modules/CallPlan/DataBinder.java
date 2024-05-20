@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 
 import static Base.TestSetup.*;
+import static Modules.CallPlanModule.fieldtypes;
 import static Modules.CallPlanModule.targetid;
 import static Pages.CallPlan_page.*;
 import static Utilities.Actions.click;
@@ -15,18 +16,20 @@ import static Utilities.Constants.formmasterquerygenerator;
 import static Utilities.DatabaseUtility.getColumnNamesFromDatabase;
 import static Utilities.DatabaseUtility.getDataObject;
 import static Utilities.Utils.*;
+import static Utilities.Utils.imageCapture;
 
 /**
  * CallPlanValidationHandler class.
  */
 public class DataBinder {
 
-    private static String Ctrltype;
-    private static String Datatype;
-    private static String enumfieldName;
-    private static String cleanProductName;
-    private static  String formcondition;
+    static String Ctrltype;
+    static String Datatype;
+    static String enumfieldName;
+    static String cleanProductName;
+    static  String formcondition;
     public static String fieldName;
+    static String previousCtrltype ;
 
 
     /**
@@ -111,7 +114,6 @@ public class DataBinder {
             return false;
         }
 
-        click("ACCESSIBILITYID", form);
         String formName = form.replace(" ", "_");
 
         String productColumnQuery = MessageFormat.format(queries.get("ProductColumnquery"), "'" + formName + "'");
@@ -143,10 +145,10 @@ public class DataBinder {
             }
         }
 
-        if (driver.isKeyboardShown()) {
+      /*  if (driver.isKeyboardShown()) {
             driver.hideKeyboard();
         }
-
+*/
         if (sourceExists("Next")) {
             click("ACCESSIBILITYID", NextButton);
             log.info("Next button is clicked");
@@ -179,7 +181,14 @@ public class DataBinder {
             }
 
             if (sourceExists(cleanProductName)) {
-                click("ACCESSIBILITYID", adjustproductname(productName));
+
+                if(!fieldtypes.equalsIgnoreCase("Mandatory only")){
+                    productClickValidation( formName,  IsQuestionForm ,productName);
+                }else{
+                    click("ACCESSIBILITYID", adjustproductname(productName));
+                }
+
+
                 if (!formName.contains("Picture")) {
                     cleanProductName = productName.replace(" *", "");
                 }
@@ -281,7 +290,7 @@ public class DataBinder {
                 Dropdownsetter(formName, prodname, IsQuestionForm, fieldName);
                 break;
             case "FileUpload":
-                ImageCapture();
+                imageCapture();
                 break;
         }
     }
@@ -301,5 +310,23 @@ public class DataBinder {
         }
     }
 
+    static void productClickValidation(String formName, String IsQuestionForm, String productName) throws Exception {
+
+        int forDEO = IsQuestionForm.equals("1") ? 0 : 1;
+        List<Object> fieldNames = getDataObject(IsQuestionForm.equals("1") ? MessageFormat.format(queries.get("QuestionFormFieldsquery"), formName, "'" + productName + "'", "'" + formName + "'") : MessageFormat.format(queries.get("FormFieldsquery"), "'" + formName + "'", IsQuestionForm, forDEO));
+
+        for (Object field : fieldNames) {
+            if (!(field instanceof LinkedHashMap<?, ?>)) {
+                continue;
+            }
+            LinkedHashMap<?, ?> fieldData = (LinkedHashMap<?, ?>) field;
+            String Ctrltype = (String) fieldData.get("ControlType");
+
+            if (previousCtrltype != null && !previousCtrltype.equals("DropDownList")) {
+                click("ACCESSIBILITYID", adjustproductname(productName));
+            }
+            previousCtrltype = Ctrltype;
+        }
+    }
 
 }

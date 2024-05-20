@@ -5,10 +5,9 @@ import Modules.CallPlan.CallPlanActionHandler;
 import Utilities.Utils;
 import org.json.JSONObject;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-import static Listeners.FrameX_Listeners.logAndReportFailure;
+import static Listeners.FrameX_Listeners.*;
 import static Modules.CallPlan.CallPlanActionHandler.Uploadcallfunction;
 import static Modules.CallPlan.CallPlanActionHandler.closecallfunction;
 import static Modules.CallPlan.CallPlanData.generateCallPlanScenarios;
@@ -16,10 +15,9 @@ import static Modules.CallPlan.CallPlanData.targetSize;
 import static Modules.CallPlan.DataBinder.dataBinder;
 import static Pages.CallPlan_page.*;
 import static Pages.HomePage_page.Callplan;
-import static Utilities.Actions.click;
-import static Utilities.Actions.webdriverWait;
-import static Utilities.Constants.Categorymasterquerygenerator;
-import static Utilities.DatabaseUtility.getColumnNamesFromDatabase;
+import static Utilities.Actions.*;
+import static Utilities.Constants.*;
+import static Utilities.DatabaseUtility.*;
 import static Utilities.TestDataUtil.getCallPlanTestData;
 import static Utilities.Utils.*;
 
@@ -29,6 +27,7 @@ import static Utilities.Utils.*;
 public class CallPlanModule extends TestSetup {
 
     public static String targetid;
+    public static String fieldtypes;
 
     /**
      * Starts the call process by generating call plan scenarios for the given targets.
@@ -40,8 +39,9 @@ public class CallPlanModule extends TestSetup {
             JSONObject callPlanTestData;
             for (int i = 1; i <= targetSize; i++) {
                 callPlanTestData = getCallPlanTestData("Call Plan", "Uploaddata" + i);
-                 targetid = callPlanTestData.getString("Targetid");
+                targetid = callPlanTestData.getString("Targetid");
                 if (callPlanTestData.getString("Call Type").equalsIgnoreCase("Upload")) {
+                    fieldtypes = callPlanTestData.getString("Fields");
                     validateUploadCall(callPlanTestData.getString("Call Type") ,callPlanTestData.getString("Network Mode"),callPlanTestData.getString("Disable Duration"),callPlanTestData.getString("Fields"));
                 } else {
                     validateUploadCall(callPlanTestData.getString("Call Type") ,callPlanTestData.getString("Network Mode"),callPlanTestData.getString("Disable Duration"));
@@ -65,13 +65,17 @@ public class CallPlanModule extends TestSetup {
 
         List<String> categories = getColumnNamesFromDatabase(Categorymasterquerygenerator(targetid), "name");
         String starttargetXPath = "//android.view.View[contains(@content-desc, 'Target ID: " + targetid + "')]";
+        applogin(Callplan);
         click("ACCESSIBILITYID", Callplan);
         searchtarget();
         if (sourceExists(targetid)) {
             click("Xpath", starttargetXPath);
             String startTime = CallPlanActionHandler.datevisitedvalidation();
             click("Xpath", Startworkbutton);
-            shopfrontphotorequired ();
+            if(!capturedDone){
+                shopfrontphotorequired ();
+            }
+            capturedDone = false;
             webdriverWait("ACCESSIBILITYID", UploadcallButton, 35);
             if (uploadType.equalsIgnoreCase("Upload")) {
                 if (dataBinder(categories, Arrays.toString(fieldType))) {

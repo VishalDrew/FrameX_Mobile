@@ -107,28 +107,6 @@ public class CallPlan_page {
 		}
 	}
 
-	public static void validate_Concurrent_Job_Start(String trg1,String trg2) throws InterruptedException {
-		if (!sourceExists(trg1)||!sourceExists(trg2)) {
-			log.info("Target ID not found. Navigating back and trying again.");
-			driver.navigate().back();
-			Thread.sleep(4500);
-			click("ACCESSIBILITYID", Callplan);
-			log.info("Clicked on Call plan again");
-		}
-		click("xpath",gettargetxpath(trg1));
-		driver.navigate().back();
-		click("xpath",gettargetxpath(trg2));
-		Thread.sleep(700);
-		if(sourceExists("You cannot view this target because another target  "+trg1+" is already in process. Please complete it first")){
-			click("ACCESSIBILITYID","Ok");
-			logAndReportSuccess("TestCase Passed : Concurrent job start error message Displayed.");
-			Assert.assertTrue(true);
-		} else {
-			logAndReportFailure("TestCase Failed : Error message is not displayed when user tries to start another target.");
-			Assert.assertTrue(false);
-		}
-	}
-
 	public static void navigateToCallplanPage() {
 		if(sourceExists("Username")) {
 			lgpage();
@@ -144,7 +122,7 @@ public class CallPlan_page {
 		}
 	}
 
-	public static void formcompletingvalidation() throws Exception {
+	public static void formcompletingvalidation(String errmsg) throws Exception {
 		if(!sourceExists((targets.get(0)))){
 			if (!storesForVisitorLogin == true) {
 				navigateto(DownloadCalls);
@@ -155,9 +133,10 @@ public class CallPlan_page {
 		click("ACCESSIBILITYID",Callplan);
 		click("xpath",gettargetxpath(targets.get(0)));
 		click("Xpath", Startworkbutton);
+		shopfrontphotorequired ();
 		webdriverWait("ACCESSIBILITYID", UploadcallButton, 20);
 		click("ACCESSIBILITYID",UploadcallButton);
-		if(sourceExists(uploadcall_errmsg)){
+		if(sourceExists(errmsg)){
 			logAndReportSuccess("TestCase Passed : First fill all categories data to upload is Displayed");
 			Assert.assertTrue(true);
 		} else {

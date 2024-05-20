@@ -41,7 +41,6 @@ public class DatabaseUtility extends TestSetup {
             return dataList;
         } catch (SQLException  e) {
             log.error("Error fetching data from the database: " + e.getMessage());
-            System.out.println(e.getMessage());
         }
         return null;
     }

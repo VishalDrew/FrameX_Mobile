@@ -70,7 +70,7 @@ public class TestSetup {
 
     // Method to start the app and set up the test environment
     @BeforeSuite(alwaysRun = true)
-    private static void StartApp() throws IOException {
+    public static void StartApp() throws IOException {
 
         try {
             PropertyConfigurator.configure(props.get("Logpropertiesfilepath"));
@@ -96,7 +96,7 @@ public class TestSetup {
 
     // Method to tear down the test environment after test execution
     @AfterSuite(alwaysRun = true)
-    private static void tearDownApp() {
+    public static void tearDownApp() {
         try {
             closeDriver();
             stopAppiumService();
@@ -124,7 +124,7 @@ public class TestSetup {
         capabilities.setCapability("appPackage", props.get("appPackage"));
         capabilities.setCapability("appActivity",props.get("appActivity"));
         capabilities.setCapability("automationName", props.get("automationName"));
-        capabilities.setCapability("autoGrantPermissions", Boolean.parseBoolean(props.get("autoGrantPermissions")));
+        capabilities.setCapability("autoGrantPermissions",Boolean.parseBoolean(props.get("Autograntpermissions")));
         capabilities.setCapability("skipDeviceInitialization",Boolean.parseBoolean(props.get("skipDeviceInitialization")) );
         capabilities.setCapability("skipServerInstallation", Boolean.parseBoolean(props.get("skipServerInstallation")));
         capabilities.setCapability("ignoreUnimportantViews", Boolean.parseBoolean(props.get("ignoreUnimportantViews")));
