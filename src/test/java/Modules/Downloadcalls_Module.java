@@ -1,6 +1,7 @@
 package Modules;
 
 import Base.TestSetup;
+import Listeners.FrameX_Listeners;
 import org.testng.Assert;
 
 import java.util.List;
@@ -8,6 +9,7 @@ import java.util.List;
 import static Listeners.FrameX_Listeners.*;
 import static Pages.Downloadcalls_page.*;
 import static Pages.HomePage_page.*;
+import static Pages.Login_Page.project;
 import static Utilities.Actions.*;
 import static Utilities.Utils.*;
 
@@ -194,6 +196,26 @@ public class Downloadcalls_Module extends TestSetup {
 			logAndReportFailure("TestCase Failed : An error occurred while verifying submit button without adding target: " + e.getMessage());
 			Assert.fail("TestCase Failed : An error occurred while verifying submit button without adding target: " + e.getMessage());
 		}
+	}
+
+	public static void validateMaxTextLimitIntargetIDTextbox(String testtargetid,String limit){
+		if (sourceExists(DownloadCalls)) {
+			click("ACCESSIBILITYID", DownloadCalls);
+		}
+		click("ACCESSIBILITYID", addtarget);
+		boolean isLimitEnforced = checkTextboxCharacterLimit("classname",targetidtxtbox,testtargetid,limit);
+		if (isLimitEnforced) {
+			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + testtargetid);
+			click("ACCESSIBILITYID",cancelbtn);
+			driver.navigate().back();
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + testtargetid);
+			click("ACCESSIBILITYID",cancelbtn);
+			driver.navigate().back();
+			Assert.assertTrue(false);
+		}
+
 	}
 
 }

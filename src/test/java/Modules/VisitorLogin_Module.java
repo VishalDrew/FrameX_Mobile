@@ -1,5 +1,6 @@
 package Modules;
 
+import Listeners.FrameX_Listeners;
 import Utilities.Utils;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ import static Modules.Downloadcalls_Module.storesForVisitorLogin;
 import static Pages.Downloadcalls_page.*;
 import static Pages.HomePage_page.DownloadCalls;
 import static Pages.HomePage_page.visitorlogin;
+import static Pages.Login_Page.project;
 import static Pages.Visitorlogin_page.*;
 import static Utilities.Actions.*;
 import static Utilities.DatabaseUtility.getdatafromdatabase;
@@ -202,5 +204,157 @@ public class VisitorLogin_Module {
 		click("ACCESSIBILITYID", submit_btn);
 	}
 
+
+	public static void validateMaxTextLimitInEmpIDTextbox(String Empid,String limit) throws InterruptedException {
+		click("ACCESSIBILITYID", selectvisitordd);
+		click("ACCESSIBILITYID", "Visitor1");
+		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",visitorempid_txtbox,Empid,limit);
+		if (isLimitEnforced) {
+			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + Empid);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + Empid);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateSpecialcharInEmpIDTextbox(String Empid){
+		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorempid_txtbox,Empid);
+		if (ishandlespecialchar) {
+			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + Empid);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + Empid);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateNumbersInEmpIDTextbox(String Empid){
+		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorempid_txtbox,Empid);
+		if (ishandlenumber) {
+			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + Empid);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + Empid);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateMaxTextLimitInNameTextbox(String visitorname,String limit){
+
+		 if(driver.isKeyboardShown()){
+			 driver.hideKeyboard();
+		 }
+		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",visitorname_txtbox,visitorname,limit);
+		if (isLimitEnforced) {
+			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + visitorname);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + visitorname);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateSpecialcharInNameTextbox(String visitorname){
+		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorname_txtbox,visitorname);
+		if (ishandlespecialchar) {
+			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + visitorname);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + visitorname);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateNumbersInNameTextbox(String visitorname){
+		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorname_txtbox,visitorname);
+		if (ishandlenumber) {
+			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + visitorname);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + visitorname);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateMaxTextLimitInDesignationTextbox(String Designation,String limit){
+		if(driver.isKeyboardShown()){
+			driver.hideKeyboard();
+		}
+		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",designation_txtbox,Designation,limit);
+		if (isLimitEnforced) {
+			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + Designation);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + Designation);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateSpecialcharInDesignationTextbox(String Designation){
+
+		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",designation_txtbox,Designation);
+		if (ishandlespecialchar) {
+			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + Designation);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + Designation);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateNumbersInDesignationTextbox(String Designation){
+
+		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",designation_txtbox,Designation);
+		if (ishandlenumber) {
+			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + Designation);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + Designation);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateMaxTextLimitInRemarksTextbox(String remarks,String limit){
+		if(driver.isKeyboardShown()){
+			driver.hideKeyboard();
+		}
+		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",remarks_txtbox,remarks,limit);
+		if (isLimitEnforced) {
+			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + remarks);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + remarks);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateSpecialcharInRemarksTextbox(String remarks){
+
+		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",remarks_txtbox,remarks);
+		if (ishandlespecialchar) {
+			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + remarks);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + remarks);
+			Assert.assertTrue(false);
+		}
+	}
+
+	public static void validateNumbersInRemarksTextbox(String remarks) throws InterruptedException {
+
+		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",remarks_txtbox,remarks);
+		if (ishandlenumber) {
+			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + remarks);
+			Assert.assertTrue(true);
+		} else {
+			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + remarks);
+			Assert.assertTrue(false);
+		}
+		driver.hideKeyboard();
+		scrollE2E("down");
+		click("ACCESSIBILITYID", "Visitor1");
+		click("ACCESSIBILITYID", selectvisitordd);
+	}
 }
 

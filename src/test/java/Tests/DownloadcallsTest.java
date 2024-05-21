@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 
 import static Listeners.FrameX_Listeners.logAndReportFailure;
 import static Modules.Downloadcalls_Module.*;
+import static Modules.Login_Module.*;
 import static Pages.HomePage_page.Attendance;
 import static Pages.HomePage_page.DownloadCalls;
 import static Utilities.TestDataUtil.gettestdata;
@@ -76,8 +77,13 @@ public class DownloadcallsTest {
         validatesubmitbutton(downloadcallsdata.getString("ErrorMessage"));
     }
 
-
-
+    @Test(priority = 7, dependsOnMethods = { "TC_001_VerifyDownloadCallsModuleIsDisplayed" },groups = {"regression"},enabled = true)
+    public void TC_007_Verify_TargetIDTextboxCharacterLimit() {
+        JSONObject downloadcallsdata = gettestdata("Downloadcalls", "CharacterLimit");
+        String testtrgid = downloadcallsdata.getString("TargetID");
+        String limit = downloadcallsdata.getString("Limit");
+        validateMaxTextLimitIntargetIDTextbox(testtrgid,limit);
+    }
 }
 
 

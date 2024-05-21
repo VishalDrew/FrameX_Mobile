@@ -1,6 +1,5 @@
 package Base;
 
-import Utilities.ExcelReader;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -24,7 +23,6 @@ import java.util.concurrent.TimeUnit;
 
 import static Listeners.FrameX_Listeners.fileName;
 import static Utilities.Constants.Devicename;
-import static Utilities.DatabaseUtility.getProjectDataFromDatabase;
 import static Utilities.Mailconfig.sendMailReport;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.Utils.*;
@@ -39,7 +37,6 @@ public class TestSetup {
     public static Logger log = Logger.getLogger(TestSetup.class);
     private static DesiredCapabilities capabilities ;
     public static String devicemodel;
-    public static ExcelReader excel;
     public static HashMap<String,String>props;
     public static HashMap<String,String>queries;
 
@@ -53,8 +50,6 @@ public class TestSetup {
             log.error("Error loading file", e);
             throw new RuntimeException("Error loading file", e);
         }
-        // Initialize ExcelReader with the specified data file path
-        excel = new ExcelReader(props.get("Datafilepath"));
     }
 
 

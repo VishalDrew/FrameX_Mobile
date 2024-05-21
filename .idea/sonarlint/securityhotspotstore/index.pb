@@ -580,3 +580,9 @@ T
 $src/test/resources/Runners/Smoke.xml,1\9\19ea422ec045c5ca22f858fc974df832f558f852
 w
 G.idea/sonarlint/issuestore/8/3/83e51f549eab3bbfe020e95bd3cb2845e9f722ed,3\4\34dbf15bada083c1f5d1e1ecea988d06c6fac190
+]
+-src/test/java/Utilities/JsonConfigReader.java,c\b\cb5b72679f5795bb061372217a3ae3c89b3a4497
+W
+'src/main/java/TestConfig/Testdatas.json,c\f\cf5d2e661dd180abddf1151e4b827894c38e22e0
+X
+(src/main/java/TestConfig/TestSuites.json,9\d\9d6e2449127ba1fa04605f750cb78568ccbffacc

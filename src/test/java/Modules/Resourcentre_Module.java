@@ -37,6 +37,7 @@ public class Resourcentre_Module extends TestSetup {
                 click("ACCESSIBILITYID", filename);
                 webdriverWait("ACCESSIBILITYID", "Refresh", 5);
                 if (sourceExists("Refresh")) {
+                    Thread.sleep(900);
                     logAndReportSuccess("TestCase Passed : " + filename + " file downloaded Successfully");
                     driver.navigate().back();
                     return true;

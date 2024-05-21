@@ -1,0 +1,13 @@
+{
+  "SUITES": {
+    "SMOKE": {
+      "Runmode": "Y"
+    },
+    "REGRESSION": {
+      "Runmode": "N"
+    },
+    "NEGATIVE": {
+      "Runmode": "N"
+    }
+  }
+}

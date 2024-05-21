@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Smoke_Suite" class="navigator-link">
-              <span class="suite-name border-skipped">Smoke Suite</span>
+            <a href="#" panel-name="suite-Negative_Suite" class="navigator-link">
+              <span class="suite-name border-failed">Negative Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Smoke_Suite" class="navigator-link ">
-                    <span>E:\Automation Workspace\FrameXMobile\src\test\resources\Runners\Smoke.xml</span>
+                  <a href="#" panel-name="test-xml-Negative_Suite" class="navigator-link ">
+                    <span>E:\Automation Workspace\FrameXMobile\src\test\resources\Runners\Negative.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Smoke_Suite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-Negative_Suite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Smoke_Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                  <a href="#" panel-name="group-Negative_Suite" class="navigator-link ">
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Smoke_Suite" class="navigator-link ">
+                  <a href="#" panel-name="times-Negative_Suite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Smoke_Suite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-Negative_Suite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Smoke_Suite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-Negative_Suite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Smoke_Suite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-Negative_Suite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,111 +92,124 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">19 methods,  19 skipped,  </span>
+                    <span class="method-stats">18 methods, 2 failed,  1 skipped,  15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Negative_Suite" class="hide-methods failed suite-Negative_Suite"> (hide)</a> <!-- hide-methods failed suite-Negative_Suite -->
+                      <a href="#" panel-name="suite-Negative_Suite" class="show-methods failed suite-Negative_Suite"> (show)</a> <!-- show-methods failed suite-Negative_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Negative_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.VisitorLoginTest" class="method navigator-link" hash-for-method="TC_001_Verify_VisitorLogin_Module_Displayed">TC_001_Verify_VisitorLogin_Module_Displayed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.CallPlanTest" class="method navigator-link" hash-for-method="TC_005_Verify_Upload_Button_Without_Completing_Form">TC_005_Verify_Upload_Button_Without_Completing_Form</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Negative_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
                     <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Smoke_Suite" class="hide-methods skipped suite-Smoke_Suite"> (hide)</a> <!-- hide-methods skipped suite-Smoke_Suite -->
-                      <a href="#" panel-name="suite-Smoke_Suite" class="show-methods skipped suite-Smoke_Suite"> (show)</a> <!-- show-methods skipped suite-Smoke_Suite -->
+                      <a href="#" panel-name="suite-Negative_Suite" class="hide-methods skipped suite-Negative_Suite"> (hide)</a> <!-- hide-methods skipped suite-Negative_Suite -->
+                      <a href="#" panel-name="suite-Negative_Suite" class="show-methods skipped suite-Negative_Suite"> (show)</a> <!-- show-methods skipped suite-Negative_Suite -->
                     </span>
-                    <div class="method-list-content skipped suite-Smoke_Suite">
+                    <div class="method-list-content skipped suite-Negative_Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC002_VerifyPPTXFileDownloaded">TC002_VerifyPPTXFileDownloaded</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.VisitorLoginTest" class="method navigator-link" hash-for-method="TC_002_Verify_Submit_Button_Without_Enter_fields">TC_002_Verify_Submit_Button_Without_Enter_fields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Negative_Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Negative_Suite" class="hide-methods passed suite-Negative_Suite"> (hide)</a> <!-- hide-methods passed suite-Negative_Suite -->
+                      <a href="#" panel-name="suite-Negative_Suite" class="show-methods passed suite-Negative_Suite"> (show)</a> <!-- show-methods passed suite-Negative_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Negative_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_001_VerifyDownloadCallsModuleIsDisplayed">TC_001_VerifyDownloadCallsModuleIsDisplayed</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC003_VerifyMP4FileDownloaded">TC003_VerifyMP4FileDownloaded</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_001_Verify_Attendance_Module_Displayed">TC_001_Verify_Attendance_Module_Displayed</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC004_VerifyPDFFileDownloaded">TC004_VerifyPDFFileDownloaded</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.CallPlanTest" class="method navigator-link" hash-for-method="TC_001_Verify_Call_Plan_Module_Displayed">TC_001_Verify_Call_Plan_Module_Displayed</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC005_VerifyDOCXFileDownloaded">TC005_VerifyDOCXFileDownloaded</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_002_Verify_Attendance_Without_Capturing_Image">TC_002_Verify_Attendance_Without_Capturing_Image</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC006_VerifyJPGFileDownloaded">TC006_VerifyJPGFileDownloaded</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_002_Verify_Login_With_Invalid_Username">TC_002_Verify_Login_With_Invalid_Username</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC007_VerifyXLSXFileDownloaded">TC007_VerifyXLSXFileDownloaded</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_003_VerifyDuplicateCallDownload">TC_003_VerifyDuplicateCallDownload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_001_VerifyDownloadCallsModuleIsDisplayed">TC_001_VerifyDownloadCallsModuleIsDisplayed</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_003_Verify_Login_With_Invalid_Password">TC_003_Verify_Login_With_Invalid_Password</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_001_Verify_Attendance_Module_Displayed">TC_001_Verify_Attendance_Module_Displayed</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_004_VerifyInvalidTargetDownload">TC_004_VerifyInvalidTargetDownload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.CallPlanTest" class="method navigator-link" hash-for-method="TC_001_Verify_Call_Plan_Module_Displayed">TC_001_Verify_Call_Plan_Module_Displayed</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_004_Verify_Login_With_Invalid_Project">TC_004_Verify_Login_With_Invalid_Project</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_001_Verify_Login_With_Valid_Credentials">TC_001_Verify_Login_With_Valid_Credentials</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_005_Verify_Login_With_Invalid_Mobile_Number">TC_005_Verify_Login_With_Invalid_Mobile_Number</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.ResourceCentreTest" class="method navigator-link" hash-for-method="TC_001_Verify_ResourceCenter_Module_Displayed">TC_001_Verify_ResourceCenter_Module_Displayed</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_006_VerifySubmitButtonWithoutAddingTarget">TC_006_VerifySubmitButtonWithoutAddingTarget</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.VisitorLoginTest" class="method navigator-link" hash-for-method="TC_001_Verify_VisitorLogin_Module_Displayed">TC_001_Verify_VisitorLogin_Module_Displayed</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_006_Verify_Login_Without_Entering_Username">TC_006_Verify_Login_Without_Entering_Username</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_002_VerifyCallsAreDownloaded">TC_002_VerifyCallsAreDownloaded</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_007_Verify_Login_Without_Entering_Password">TC_007_Verify_Login_Without_Entering_Password</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.CallPlanTest" class="method navigator-link" hash-for-method="TC_002_Verify_Sync_Button_Functionality">TC_002_Verify_Sync_Button_Functionality</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_008_Verify_Login_Without_Entering_Project">TC_008_Verify_Login_Without_Entering_Project</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.CallPlanTest" class="method navigator-link" hash-for-method="TC_003_Verify_5_Minute_Sync_Process">TC_003_Verify_5_Minute_Sync_Process</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Negative_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_009_Verify_Login_Without_Entering_Mobile_Number">TC_009_Verify_Login_Without_Entering_Mobile_Number</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_003_Verify_Attendance_Submission">TC_003_Verify_Attendance_Submission</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.VisitorLoginTest" class="method navigator-link" hash-for-method="TC_003_Verify_Visitor_Upload">TC_003_Verify_Visitor_Upload</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_004_Verify_Attendance_Recorded_In_Database">TC_004_Verify_Attendance_Recorded_In_Database</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Smoke_Suite" title="Tests.CallPlanTest" class="method navigator-link" hash-for-method="TC_009_Verify_Call_Upload">TC_009_Verify_Call_Upload</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Smoke_Suite -->
+                    </div> <!-- method-list-content passed suite-Negative_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -207,426 +220,10 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Smoke_Suite" class="panel Smoke_Suite">
-          <div class="suite-Smoke_Suite-class-skipped">
+        <div panel-name="suite-Negative_Suite" class="panel Negative_Suite">
+          <div class="suite-Negative_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Tests.CallPlanTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_001_Verify_Call_Plan_Module_Displayed">
-                  </a> <!-- TC_001_Verify_Call_Plan_Module_Displayed -->
-                  <span class="method-name">TC_001_Verify_Call_Plan_Module_Displayed</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:87)
-	at Tests.Main.main(Main.java:15)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_002_Verify_Sync_Button_Functionality">
-                  </a> <!-- TC_002_Verify_Sync_Button_Functionality -->
-                  <span class="method-name">TC_002_Verify_Sync_Button_Functionality</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.CallPlanTest.TC_002_Verify_Sync_Button_Functionality() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_003_Verify_5_Minute_Sync_Process">
-                  </a> <!-- TC_003_Verify_5_Minute_Sync_Process -->
-                  <span class="method-name">TC_003_Verify_5_Minute_Sync_Process</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.CallPlanTest.TC_003_Verify_5_Minute_Sync_Process() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_009_Verify_Call_Upload">
-                  </a> <!-- TC_009_Verify_Call_Upload -->
-                  <span class="method-name">TC_009_Verify_Call_Upload</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.CallPlanTest.TC_009_Verify_Call_Upload() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Suite-class-skipped -->
-          <div class="suite-Smoke_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Tests.ResourceCentreTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC002_VerifyPPTXFileDownloaded">
-                  </a> <!-- TC002_VerifyPPTXFileDownloaded -->
-                  <span class="method-name">TC002_VerifyPPTXFileDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.ResourceCentreTest.TC002_VerifyPPTXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC003_VerifyMP4FileDownloaded">
-                  </a> <!-- TC003_VerifyMP4FileDownloaded -->
-                  <span class="method-name">TC003_VerifyMP4FileDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.ResourceCentreTest.TC003_VerifyMP4FileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC004_VerifyPDFFileDownloaded">
-                  </a> <!-- TC004_VerifyPDFFileDownloaded -->
-                  <span class="method-name">TC004_VerifyPDFFileDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.ResourceCentreTest.TC004_VerifyPDFFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC005_VerifyDOCXFileDownloaded">
-                  </a> <!-- TC005_VerifyDOCXFileDownloaded -->
-                  <span class="method-name">TC005_VerifyDOCXFileDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.ResourceCentreTest.TC005_VerifyDOCXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC006_VerifyJPGFileDownloaded">
-                  </a> <!-- TC006_VerifyJPGFileDownloaded -->
-                  <span class="method-name">TC006_VerifyJPGFileDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.ResourceCentreTest.TC006_VerifyJPGFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC007_VerifyXLSXFileDownloaded">
-                  </a> <!-- TC007_VerifyXLSXFileDownloaded -->
-                  <span class="method-name">TC007_VerifyXLSXFileDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.ResourceCentreTest.TC007_VerifyXLSXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_001_Verify_ResourceCenter_Module_Displayed">
-                  </a> <!-- TC_001_Verify_ResourceCenter_Module_Displayed -->
-                  <span class="method-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:87)
-	at Tests.Main.main(Main.java:15)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Suite-class-skipped -->
-          <div class="suite-Smoke_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Tests.DownloadcallsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_001_VerifyDownloadCallsModuleIsDisplayed">
-                  </a> <!-- TC_001_VerifyDownloadCallsModuleIsDisplayed -->
-                  <span class="method-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:87)
-	at Tests.Main.main(Main.java:15)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_002_VerifyCallsAreDownloaded">
-                  </a> <!-- TC_002_VerifyCallsAreDownloaded -->
-                  <span class="method-name">TC_002_VerifyCallsAreDownloaded</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.DownloadcallsTest.TC_002_VerifyCallsAreDownloaded() on instance Tests.DownloadcallsTest@1654a892 depends on not successfully finished methods 
-[Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed() on instance Tests.DownloadcallsTest@1654a892]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Suite-class-skipped -->
-          <div class="suite-Smoke_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Tests.AttendanceTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_001_Verify_Attendance_Module_Displayed">
-                  </a> <!-- TC_001_Verify_Attendance_Module_Displayed -->
-                  <span class="method-name">TC_001_Verify_Attendance_Module_Displayed</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:87)
-	at Tests.Main.main(Main.java:15)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_003_Verify_Attendance_Submission">
-                  </a> <!-- TC_003_Verify_Attendance_Submission -->
-                  <span class="method-name">TC_003_Verify_Attendance_Submission</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.AttendanceTest.TC_003_Verify_Attendance_Submission() on instance Tests.AttendanceTest@3163987e depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_001_Verify_Attendance_Module_Displayed() on instance Tests.AttendanceTest@3163987e]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_004_Verify_Attendance_Recorded_In_Database">
-                  </a> <!-- TC_004_Verify_Attendance_Recorded_In_Database -->
-                  <span class="method-name">TC_004_Verify_Attendance_Recorded_In_Database</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.AttendanceTest.TC_004_Verify_Attendance_Recorded_In_Database() on instance Tests.AttendanceTest@3163987e depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_003_Verify_Attendance_Submission() on instance Tests.AttendanceTest@3163987e]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Suite-class-skipped -->
-          <div class="suite-Smoke_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Tests.VisitorLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -635,155 +232,214 @@ Caused by: java.net.SocketException: Connection reset
                   <a name="TC_001_Verify_VisitorLogin_Module_Displayed">
                   </a> <!-- TC_001_Verify_VisitorLogin_Module_Displayed -->
                   <span class="method-name">TC_001_Verify_VisitorLogin_Module_Displayed</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:87)
-	at Tests.Main.main(Main.java:15)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Utilities.Utils.verifyModuleDisplayedStatus(Utils.java:431)
+	at Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed(VisitorLoginTest.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:33)
+... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Negative_Suite-class-failed -->
+          <div class="suite-Negative_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">Tests.CallPlanTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_003_Verify_Visitor_Upload">
-                  </a> <!-- TC_003_Verify_Visitor_Upload -->
-                  <span class="method-name">TC_003_Verify_Visitor_Upload</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.VisitorLoginTest.TC_003_Verify_Visitor_Upload() on instance Tests.VisitorLoginTest@6c000e0c depends on not successfully finished methods 
-[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@6c000e0c]
+                  <a name="TC_005_Verify_Upload_Button_Without_Completing_Form">
+                  </a> <!-- TC_005_Verify_Upload_Button_Without_Completing_Form -->
+                  <span class="method-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Pages.CallPlan_page.formcompletingvalidation(CallPlan_page.java:144)
+	at Tests.CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form(CallPlanTest.java:82)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:15)
+	at Tests.Main.main(Main.java:33)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Negative_Suite-class-failed -->
+          <div class="suite-Negative_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">Tests.VisitorLoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_002_Verify_Submit_Button_Without_Enter_fields">
+                  </a> <!-- TC_002_Verify_Submit_Button_Without_Enter_fields -->
+                  <span class="method-name">TC_002_Verify_Submit_Button_Without_Enter_fields</span>
+                  <div class="stack-trace">java.lang.Throwable: Method Tests.VisitorLoginTest.TC_002_Verify_Submit_Button_Without_Enter_fields() on instance Tests.VisitorLoginTest@79517588 depends on not successfully finished methods 
+[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@79517588]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:33)
 ... Removed 15 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Suite-class-skipped -->
-          <div class="suite-Smoke_Suite-class-skipped">
+          </div> <!-- suite-Negative_Suite-class-skipped -->
+          <div class="suite-Negative_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="passed.png"/>
+              <span class="class-name">Tests.AttendanceTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001_Verify_Attendance_Module_Displayed">
+                  </a> <!-- TC_001_Verify_Attendance_Module_Displayed -->
+                  <span class="method-name">TC_001_Verify_Attendance_Module_Displayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_002_Verify_Attendance_Without_Capturing_Image">
+                  </a> <!-- TC_002_Verify_Attendance_Without_Capturing_Image -->
+                  <span class="method-name">TC_002_Verify_Attendance_Without_Capturing_Image</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Negative_Suite-class-passed -->
+          <div class="suite-Negative_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.DownloadcallsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001_VerifyDownloadCallsModuleIsDisplayed">
+                  </a> <!-- TC_001_VerifyDownloadCallsModuleIsDisplayed -->
+                  <span class="method-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_003_VerifyDuplicateCallDownload">
+                  </a> <!-- TC_003_VerifyDuplicateCallDownload -->
+                  <span class="method-name">TC_003_VerifyDuplicateCallDownload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_004_VerifyInvalidTargetDownload">
+                  </a> <!-- TC_004_VerifyInvalidTargetDownload -->
+                  <span class="method-name">TC_004_VerifyInvalidTargetDownload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_006_VerifySubmitButtonWithoutAddingTarget">
+                  </a> <!-- TC_006_VerifySubmitButtonWithoutAddingTarget -->
+                  <span class="method-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Negative_Suite-class-passed -->
+          <div class="suite-Negative_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">Tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_001_Verify_Login_With_Valid_Credentials">
-                  </a> <!-- TC_001_Verify_Login_With_Valid_Credentials -->
-                  <span class="method-name">TC_001_Verify_Login_With_Valid_Credentials</span>
-                  <div class="stack-trace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:87)
-	at Tests.Main.main(Main.java:15)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
+                  <a name="TC_002_Verify_Login_With_Invalid_Username">
+                  </a> <!-- TC_002_Verify_Login_With_Invalid_Username -->
+                  <span class="method-name">TC_002_Verify_Login_With_Invalid_Username</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_003_Verify_Login_With_Invalid_Password">
+                  </a> <!-- TC_003_Verify_Login_With_Invalid_Password -->
+                  <span class="method-name">TC_003_Verify_Login_With_Invalid_Password</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_004_Verify_Login_With_Invalid_Project">
+                  </a> <!-- TC_004_Verify_Login_With_Invalid_Project -->
+                  <span class="method-name">TC_004_Verify_Login_With_Invalid_Project</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_005_Verify_Login_With_Invalid_Mobile_Number">
+                  </a> <!-- TC_005_Verify_Login_With_Invalid_Mobile_Number -->
+                  <span class="method-name">TC_005_Verify_Login_With_Invalid_Mobile_Number</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_006_Verify_Login_Without_Entering_Username">
+                  </a> <!-- TC_006_Verify_Login_Without_Entering_Username -->
+                  <span class="method-name">TC_006_Verify_Login_Without_Entering_Username</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_007_Verify_Login_Without_Entering_Password">
+                  </a> <!-- TC_007_Verify_Login_Without_Entering_Password -->
+                  <span class="method-name">TC_007_Verify_Login_Without_Entering_Password</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_008_Verify_Login_Without_Entering_Project">
+                  </a> <!-- TC_008_Verify_Login_Without_Entering_Project -->
+                  <span class="method-name">TC_008_Verify_Login_Without_Entering_Project</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_009_Verify_Login_Without_Entering_Mobile_Number">
+                  </a> <!-- TC_009_Verify_Login_Without_Entering_Mobile_Number -->
+                  <span class="method-name">TC_009_Verify_Login_Without_Entering_Mobile_Number</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Smoke_Suite-class-skipped -->
-        </div> <!-- panel Smoke_Suite -->
-        <div panel-name="test-xml-Smoke_Suite" class="panel">
+          </div> <!-- suite-Negative_Suite-class-passed -->
+          <div class="suite-Negative_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.CallPlanTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001_Verify_Call_Plan_Module_Displayed">
+                  </a> <!-- TC_001_Verify_Call_Plan_Module_Displayed -->
+                  <span class="method-name">TC_001_Verify_Call_Plan_Module_Displayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Negative_Suite-class-passed -->
+        </div> <!-- panel Negative_Suite -->
+        <div panel-name="test-xml-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\Automation Workspace\FrameXMobile\src\test\resources\Runners\Smoke.xml</span>
+            <span class="header-content">E:\Automation Workspace\FrameXMobile\src\test\resources\Runners\Negative.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Smoke Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite name=&quot;Negative Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Listeners.FrameX_Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Smoke Tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Negative Tests&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
-        &lt;include name=&quot;smoke&quot;/&gt;
+        &lt;include name=&quot;negative&quot;/&gt;
       &lt;/run&gt;
     &lt;/groups&gt;
     &lt;classes&gt;
@@ -794,55 +450,91 @@ Caused by: java.net.SocketException: Connection reset
       &lt;class name=&quot;Tests.VisitorLoginTest&quot;/&gt;
       &lt;class name=&quot;Tests.ResourceCentreTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Smoke Tests --&gt;
-&lt;/suite&gt; &lt;!-- Smoke Suite --&gt;
+  &lt;/test&gt; &lt;!-- Negative Tests --&gt;
+&lt;/suite&gt; &lt;!-- Negative Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Smoke_Suite" class="panel">
+        <div panel-name="testlist-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Smoke Suite</span>
+            <span class="header-content">Tests for Negative Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Smoke Tests (6 classes)</span>
+                <span class="test-name">Negative Tests (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Smoke_Suite" class="panel">
+        <div panel-name="group-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Smoke Suite</span>
+            <span class="header-content">Groups for Negative Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">regression</span>
+              <span class="test-group-name">negative</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">TC002_VerifyPPTXFileDownloaded</span>
+                <span class="method-in-group-name">TC_002_Verify_Attendance_Without_Capturing_Image</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC003_VerifyMP4FileDownloaded</span>
+                <span class="method-in-group-name">TC_002_Verify_Login_With_Invalid_Username</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC004_VerifyPDFFileDownloaded</span>
+                <span class="method-in-group-name">TC_002_Verify_Submit_Button_Without_Enter_fields</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC005_VerifyDOCXFileDownloaded</span>
+                <span class="method-in-group-name">TC_003_VerifyDuplicateCallDownload</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC006_VerifyJPGFileDownloaded</span>
+                <span class="method-in-group-name">TC_003_Verify_Login_With_Invalid_Password</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC007_VerifyXLSXFileDownloaded</span>
+                <span class="method-in-group-name">TC_004_VerifyInvalidTargetDownload</span>
                 <br/>
               </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_004_Verify_Login_With_Invalid_Project</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_005_Verify_Login_With_Invalid_Mobile_Number</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_006_Verify_Login_Without_Entering_Username</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_007_Verify_Login_Without_Entering_Password</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_008_Verify_Login_Without_Entering_Project</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_009_Verify_Login_Without_Entering_Mobile_Number</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">regression</span>
+              <br/>
               <div class="method-in-group">
                 <span class="method-in-group-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
                 <br/>
@@ -856,43 +548,63 @@ Caused by: java.net.SocketException: Connection reset
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_001_Verify_Login_With_Valid_Credentials</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">TC_001_Verify_VisitorLogin_Module_Displayed</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_002_VerifyCallsAreDownloaded</span>
+                <span class="method-in-group-name">TC_002_Verify_Attendance_Without_Capturing_Image</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_002_Verify_Sync_Button_Functionality</span>
+                <span class="method-in-group-name">TC_002_Verify_Login_With_Invalid_Username</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_003_Verify_5_Minute_Sync_Process</span>
+                <span class="method-in-group-name">TC_002_Verify_Submit_Button_Without_Enter_fields</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_003_Verify_Attendance_Submission</span>
+                <span class="method-in-group-name">TC_003_VerifyDuplicateCallDownload</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_003_Verify_Visitor_Upload</span>
+                <span class="method-in-group-name">TC_003_Verify_Login_With_Invalid_Password</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_004_Verify_Attendance_Recorded_In_Database</span>
+                <span class="method-in-group-name">TC_004_VerifyInvalidTargetDownload</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_009_Verify_Call_Upload</span>
+                <span class="method-in-group-name">TC_004_Verify_Login_With_Invalid_Project</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_005_Verify_Login_With_Invalid_Mobile_Number</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_006_Verify_Login_Without_Entering_Username</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_007_Verify_Login_Without_Entering_Password</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_008_Verify_Login_Without_Entering_Project</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">TC_009_Verify_Login_Without_Entering_Mobile_Number</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -900,30 +612,6 @@ Caused by: java.net.SocketException: Connection reset
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">TC002_VerifyPPTXFileDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC003_VerifyMP4FileDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC004_VerifyPDFFileDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC005_VerifyDOCXFileDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC006_VerifyJPGFileDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC007_VerifyXLSXFileDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -936,223 +624,232 @@ Caused by: java.net.SocketException: Connection reset
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
-                <span class="method-in-group-name">TC_001_Verify_Login_With_Valid_Credentials</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
                 <span class="method-in-group-name">TC_001_Verify_VisitorLogin_Module_Displayed</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_002_VerifyCallsAreDownloaded</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_002_Verify_Sync_Button_Functionality</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_003_Verify_5_Minute_Sync_Process</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_003_Verify_Attendance_Submission</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_003_Verify_Visitor_Upload</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_004_Verify_Attendance_Recorded_In_Database</span>
-                <br/>
-              </div> <!-- method-in-group -->
-              <div class="method-in-group">
-                <span class="method-in-group-name">TC_009_Verify_Call_Upload</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Smoke_Suite" class="panel">
+        <div panel-name="times-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Smoke Suite</span>
+            <span class="header-content">Times for Negative Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Smoke_Suite');
-function tableData_Smoke_Suite() {
+suiteTableInitFunctions.push('tableData_Negative_Suite');
+function tableData_Negative_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(19);
+data.addRows(18);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_001_Verify_Login_With_Valid_Credentials')
-data.setCell(0, 2, 'Tests.LoginTest')
-data.setCell(0, 3, 1);
+data.setCell(0, 1, 'TC_005_Verify_Upload_Button_Without_Completing_Form')
+data.setCell(0, 2, 'Tests.CallPlanTest')
+data.setCell(0, 3, 23357);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_002_VerifyCallsAreDownloaded')
+data.setCell(1, 1, 'TC_001_VerifyDownloadCallsModuleIsDisplayed')
 data.setCell(1, 2, 'Tests.DownloadcallsTest')
-data.setCell(1, 3, 1);
+data.setCell(1, 3, 15729);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_003_Verify_5_Minute_Sync_Process')
-data.setCell(2, 2, 'Tests.CallPlanTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 1, 'TC_003_VerifyDuplicateCallDownload')
+data.setCell(2, 2, 'Tests.DownloadcallsTest')
+data.setCell(2, 3, 14749);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'TC_003_Verify_Visitor_Upload')
-data.setCell(3, 2, 'Tests.VisitorLoginTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 1, 'TC_003_Verify_Login_With_Invalid_Password')
+data.setCell(3, 2, 'Tests.LoginTest')
+data.setCell(3, 3, 14696);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_001_Verify_VisitorLogin_Module_Displayed')
-data.setCell(4, 2, 'Tests.VisitorLoginTest')
-data.setCell(4, 3, 0);
+data.setCell(4, 1, 'TC_002_Verify_Login_With_Invalid_Username')
+data.setCell(4, 2, 'Tests.LoginTest')
+data.setCell(4, 3, 14659);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC_002_Verify_Sync_Button_Functionality')
-data.setCell(5, 2, 'Tests.CallPlanTest')
-data.setCell(5, 3, 0);
+data.setCell(5, 1, 'TC_004_Verify_Login_With_Invalid_Project')
+data.setCell(5, 2, 'Tests.LoginTest')
+data.setCell(5, 3, 13930);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC_003_Verify_Attendance_Submission')
-data.setCell(6, 2, 'Tests.AttendanceTest')
-data.setCell(6, 3, 0);
+data.setCell(6, 1, 'TC_008_Verify_Login_Without_Entering_Project')
+data.setCell(6, 2, 'Tests.LoginTest')
+data.setCell(6, 3, 13224);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC_001_Verify_Attendance_Module_Displayed')
-data.setCell(7, 2, 'Tests.AttendanceTest')
-data.setCell(7, 3, 0);
+data.setCell(7, 1, 'TC_005_Verify_Login_With_Invalid_Mobile_Number')
+data.setCell(7, 2, 'Tests.LoginTest')
+data.setCell(7, 3, 12670);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC004_VerifyPDFFileDownloaded')
-data.setCell(8, 2, 'Tests.ResourceCentreTest')
-data.setCell(8, 3, 0);
+data.setCell(8, 1, 'TC_006_Verify_Login_Without_Entering_Username')
+data.setCell(8, 2, 'Tests.LoginTest')
+data.setCell(8, 3, 11856);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TC003_VerifyMP4FileDownloaded')
-data.setCell(9, 2, 'Tests.ResourceCentreTest')
-data.setCell(9, 3, 0);
+data.setCell(9, 1, 'TC_009_Verify_Login_Without_Entering_Mobile_Number')
+data.setCell(9, 2, 'Tests.LoginTest')
+data.setCell(9, 3, 11796);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TC006_VerifyJPGFileDownloaded')
-data.setCell(10, 2, 'Tests.ResourceCentreTest')
-data.setCell(10, 3, 0);
+data.setCell(10, 1, 'TC_007_Verify_Login_Without_Entering_Password')
+data.setCell(10, 2, 'Tests.LoginTest')
+data.setCell(10, 3, 11265);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TC_001_Verify_Call_Plan_Module_Displayed')
-data.setCell(11, 2, 'Tests.CallPlanTest')
-data.setCell(11, 3, 0);
+data.setCell(11, 1, 'TC_004_VerifyInvalidTargetDownload')
+data.setCell(11, 2, 'Tests.DownloadcallsTest')
+data.setCell(11, 3, 7734);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TC005_VerifyDOCXFileDownloaded')
-data.setCell(12, 2, 'Tests.ResourceCentreTest')
-data.setCell(12, 3, 0);
+data.setCell(12, 1, 'TC_002_Verify_Attendance_Without_Capturing_Image')
+data.setCell(12, 2, 'Tests.AttendanceTest')
+data.setCell(12, 3, 7141);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'TC_009_Verify_Call_Upload')
-data.setCell(13, 2, 'Tests.CallPlanTest')
-data.setCell(13, 3, 0);
+data.setCell(13, 1, 'TC_006_VerifySubmitButtonWithoutAddingTarget')
+data.setCell(13, 2, 'Tests.DownloadcallsTest')
+data.setCell(13, 3, 5370);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'TC_001_Verify_ResourceCenter_Module_Displayed')
-data.setCell(14, 2, 'Tests.ResourceCentreTest')
-data.setCell(14, 3, 0);
+data.setCell(14, 1, 'TC_001_Verify_Attendance_Module_Displayed')
+data.setCell(14, 2, 'Tests.AttendanceTest')
+data.setCell(14, 3, 4549);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'TC_001_VerifyDownloadCallsModuleIsDisplayed')
-data.setCell(15, 2, 'Tests.DownloadcallsTest')
-data.setCell(15, 3, 0);
+data.setCell(15, 1, 'TC_001_Verify_VisitorLogin_Module_Displayed')
+data.setCell(15, 2, 'Tests.VisitorLoginTest')
+data.setCell(15, 3, 3885);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'TC_004_Verify_Attendance_Recorded_In_Database')
-data.setCell(16, 2, 'Tests.AttendanceTest')
-data.setCell(16, 3, 0);
+data.setCell(16, 1, 'TC_001_Verify_Call_Plan_Module_Displayed')
+data.setCell(16, 2, 'Tests.CallPlanTest')
+data.setCell(16, 3, 2401);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'TC002_VerifyPPTXFileDownloaded')
-data.setCell(17, 2, 'Tests.ResourceCentreTest')
+data.setCell(17, 1, 'TC_002_Verify_Submit_Button_Without_Enter_fields')
+data.setCell(17, 2, 'Tests.VisitorLoginTest')
 data.setCell(17, 3, 0);
-data.setCell(18, 0, 18)
-data.setCell(18, 1, 'TC007_VerifyXLSXFileDownloaded')
-data.setCell(18, 2, 'Tests.ResourceCentreTest')
-data.setCell(18, 3, 0);
-window.suiteTableData['Smoke_Suite']= { tableData: data, tableDiv: 'times-div-Smoke_Suite'}
+window.suiteTableData['Negative_Suite']= { tableData: data, tableDiv: 'times-div-Negative_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 ms</span>
-              <div id="times-div-Smoke_Suite">
-              </div> <!-- times-div-Smoke_Suite -->
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Negative_Suite">
+              </div> <!-- times-div-Negative_Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Smoke_Suite" class="panel">
+        <div panel-name="reporter-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Smoke Suite</span>
+            <span class="header-content">Reporter output for Negative Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Smoke_Suite" class="panel">
+        <div panel-name="ignored-methods-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">17 ignored methods</span>
+            <span class="header-content">39 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Tests.CallPlanTest</span>
+              <span class="ignored-class-name">Tests.AttendanceTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
+                <span class="ignored-method-name">TC_003_Verify_Attendance_Submission</span>
                 <br/>
-                <span class="ignored-method-name">tearDownApp</span>
-                <br/>
-                <span class="ignored-method-name">StartApp</span>
+                <span class="ignored-method-name">TC_004_Verify_Attendance_Recorded_In_Database</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">Tests.DownloadcallsTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
+                <span class="ignored-method-name">TC_002_VerifyCallsAreDownloaded</span>
                 <br/>
                 <span class="ignored-method-name">TC_005_VerifyRemoveButtonFunctionality</span>
                 <br/>
-                <span class="ignored-method-name">TC_003_VerifyDuplicateCallDownload</span>
-                <br/>
-                <span class="ignored-method-name">TC_004_VerifyInvalidTargetDownload</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Tests.AttendanceTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC_002_Verify_Attendance_Without_Capturing_Image</span>
+                <span class="ignored-method-name">TC_007_Verify_TargetIDTextboxCharacterLimit</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">Tests.VisitorLoginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC_002_Verify_Submit_Button_Without_Enter_fields</span>
+                <span class="ignored-method-name">TC_007_Verify_VisitorNameTextboxAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_011_Verify_DesignationTextboxAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_009_Verify_DesignationTextboxCharacterLimit</span>
+                <br/>
+                <span class="ignored-method-name">TC_015_Verify_Visitor_Upload</span>
+                <br/>
+                <span class="ignored-method-name">TC_013_Verify_RemarksTextboxAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_008_Verify_VisitorNameTextboxAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_006_Verify_VisitorNameTextboxCharacterLimit</span>
+                <br/>
+                <span class="ignored-method-name">TC_010_Verify_DesignationTextboxAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_012_Verify_RemarksTextboxCharacterLimit</span>
+                <br/>
+                <span class="ignored-method-name">TC_014_Verify_RemarksTextboxAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_004_Verify_VisitorEmpIDTextboxAcceptsSpecialCharacters</span>
+                <br/>
+                <span class="ignored-method-name">TC_005_Verify_VisitorEmpIDTextboxAcceptsNumbers</span>
+                <br/>
+                <span class="ignored-method-name">TC_003_Verify_VisitorEmpIDTextboxCharacterLimit</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Tests.ResourceCentreTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC003_VerifyMP4FileDownloaded</span>
+                <br/>
+                <span class="ignored-method-name">TC005_VerifyDOCXFileDownloaded</span>
+                <br/>
+                <span class="ignored-method-name">TC007_VerifyXLSXFileDownloaded</span>
+                <br/>
+                <span class="ignored-method-name">TC002_VerifyPPTXFileDownloaded</span>
+                <br/>
+                <span class="ignored-method-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
+                <br/>
+                <span class="ignored-method-name">TC006_VerifyJPGFileDownloaded</span>
+                <br/>
+                <span class="ignored-method-name">TC004_VerifyPDFFileDownloaded</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">Tests.LoginTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC_003_Verify_Login_With_Invalid_Password</span>
+                <span class="ignored-method-name">TC_001_Verify_Login_With_Valid_Credentials</span>
                 <br/>
-                <span class="ignored-method-name">TC_007_Verify_Login_Without_Entering_Password</span>
+                <span class="ignored-method-name">TC_012_Verify_UsernameTextboxAcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_004_Verify_Login_With_Invalid_Project</span>
+                <span class="ignored-method-name">TC_010_Verify_UsernameTextboxCharacterLimit</span>
                 <br/>
-                <span class="ignored-method-name">TC_009_Verify_Login_Without_Entering_Mobile_Number</span>
+                <span class="ignored-method-name">TC_016_Verify_ProjectTextboxAcceptsNumbers</span>
                 <br/>
-                <span class="ignored-method-name">TC_002_Verify_Login_With_Invalid_Username</span>
+                <span class="ignored-method-name">TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters</span>
                 <br/>
-                <span class="ignored-method-name">TC_006_Verify_Login_Without_Entering_Username</span>
+                <span class="ignored-method-name">TC_013_Verify_PasswordTextboxCharacterLimit</span>
                 <br/>
-                <span class="ignored-method-name">TC_005_Verify_Login_With_Invalid_Mobile_Number</span>
+                <span class="ignored-method-name">TC_017_Verify_MobileNumberTextboxCharacterLimit</span>
                 <br/>
-                <span class="ignored-method-name">TC_008_Verify_Login_Without_Entering_Project</span>
+                <span class="ignored-method-name">TC_014_Verify_ProjectTextboxCharacterLimit</span>
+                <br/>
+                <span class="ignored-method-name">TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">Tests.CallPlanTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TC_009_Verify_Call_Upload</span>
+                <br/>
+                <span class="ignored-method-name">tearDownApp</span>
+                <br/>
+                <span class="ignored-method-name">TC_003_Verify_5_Minute_Sync_Process</span>
+                <br/>
+                <span class="ignored-method-name">TC_002_Verify_Sync_Button_Functionality</span>
+                <br/>
+                <span class="ignored-method-name">StartApp</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Smoke_Suite" class="panel">
+        <div panel-name="chronological-Negative_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -1160,114 +857,103 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">StartApp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">TC_001_Verify_Login_With_Valid_Credentials</span>
-                <span class="method-start">3953 ms</span>
+                <span class="method-name">TC_002_Verify_Login_With_Invalid_Username</span>
+                <span class="method-start">16049 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_003_Verify_Login_With_Invalid_Password</span>
+                <span class="method-start">30715 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_004_Verify_Login_With_Invalid_Project</span>
+                <span class="method-start">45414 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_005_Verify_Login_With_Invalid_Mobile_Number</span>
+                <span class="method-start">59345 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_006_Verify_Login_Without_Entering_Username</span>
+                <span class="method-start">72016 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_007_Verify_Login_Without_Entering_Password</span>
+                <span class="method-start">83873 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_008_Verify_Login_Without_Entering_Project</span>
+                <span class="method-start">95140 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_009_Verify_Login_Without_Entering_Mobile_Number</span>
+                <span class="method-start">108366 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.DownloadcallsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
-                <span class="method-start">3964 ms</span>
+                <span class="method-start">120165 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TC_002_VerifyCallsAreDownloaded</span>
-                <span class="method-start">3966 ms</span>
+                <span class="method-name">TC_003_VerifyDuplicateCallDownload</span>
+                <span class="method-start">135896 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_004_VerifyInvalidTargetDownload</span>
+                <span class="method-start">150646 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
+                <span class="method-start">158380 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.CallPlanTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_Verify_Call_Plan_Module_Displayed</span>
-                <span class="method-start">3968 ms</span>
+                <span class="method-start">163752 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TC_003_Verify_5_Minute_Sync_Process</span>
-                <span class="method-start">3969 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC_002_Verify_Sync_Button_Functionality</span>
-                <span class="method-start">3969 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC_009_Verify_Call_Upload</span>
-                <span class="method-start">3970 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
+                <span class="method-start">166154 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.AttendanceTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_Verify_Attendance_Module_Displayed</span>
-                <span class="method-start">3971 ms</span>
+                <span class="method-start">190045 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TC_003_Verify_Attendance_Submission</span>
-                <span class="method-start">3972 ms</span>
+                <span class="method-name">TC_002_Verify_Attendance_Without_Capturing_Image</span>
+                <span class="method-start">194594 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.VisitorLoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">TC_001_Verify_VisitorLogin_Module_Displayed</span>
-                <span class="method-start">3973 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Tests.AttendanceTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">TC_004_Verify_Attendance_Recorded_In_Database</span>
-                <span class="method-start">3973 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Tests.VisitorLoginTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">TC_003_Verify_Visitor_Upload</span>
-                <span class="method-start">3974 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Tests.ResourceCentreTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
-                <span class="method-start">3975 ms</span>
+                <span class="method-start">201736 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">TC002_VerifyPPTXFileDownloaded</span>
-                <span class="method-start">3976 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC004_VerifyPDFFileDownloaded</span>
-                <span class="method-start">3977 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC003_VerifyMP4FileDownloaded</span>
-                <span class="method-start">3977 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC005_VerifyDOCXFileDownloaded</span>
-                <span class="method-start">3978 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC006_VerifyJPGFileDownloaded</span>
-                <span class="method-start">3980 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">TC007_VerifyXLSXFileDownloaded</span>
-                <span class="method-start">3981 ms</span>
+                <span class="method-name">TC_002_Verify_Submit_Button_Without_Enter_fields</span>
+                <span class="method-start">206184 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDownApp</span>
-                <span class="method-start">4345 ms</span>
+                <span class="method-start">206467 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

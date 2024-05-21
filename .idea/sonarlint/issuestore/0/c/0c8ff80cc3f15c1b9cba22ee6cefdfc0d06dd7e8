@@ -2,15 +2,36 @@
 cWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ
 Z	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
 C	Web:S18278")Remove this deprecated "align" attribute.(ôÉ‡Øıÿÿÿÿ
-MWeb:TableWithoutCaptionCheck8" Add a description to this table.(ôÉ‡Øıÿÿÿÿ
 ?	Web:S52568"%Add "<th>" headers to this "<table>".(ôÉ‡Øıÿÿÿÿ
 C	Web:S18278")Remove this deprecated "align" attribute.(ôÉ‡Øıÿÿÿÿ
-HWeb:TableWithoutCaptionCheckF" Add a description to this table.(ß¤€
-:	Web:S5256F"%Add "<th>" headers to this "<table>".(ß¤€
->	Web:S1827F")Remove this deprecated "width" attribute.(ß¤€
-C	Web:S1827G")Remove this deprecated "align" attribute.(„òÓ‚ıÿÿÿÿ
+?	Web:S5256F"%Add "<th>" headers to this "<table>".(‚°Œˆüÿÿÿÿ
+C	Web:S1827F")Remove this deprecated "width" attribute.(‚°Œˆüÿÿÿÿ
+C	Web:S1827G")Remove this deprecated "align" attribute.(ŞÆâúøÿÿÿÿ
 C	Web:S1827J")Remove this deprecated "width" attribute.(­Òƒÿÿÿÿÿ
 C	Web:S1827K")Remove this deprecated "width" attribute.(‰¨€åøÿÿÿÿ
-~javascript:S2703"]Add the "let", "const" or "var" keyword to this declaration of "current" to make it explicit.(èÜ»æıÿÿÿÿ
-sjavascript:S2703*"WAdd the "let", "const" or "var" keyword to this declaration of "d" to make it explicit.(ÔÃ‰ø
-xjavascript:S2703+"WAdd the "let", "const" or "var" keyword to this declaration of "i" to make it explicit.(£×åóÿÿÿÿÿ
+G	Web:S6844€"*Anchor tags should not be used as buttons.(Ô£¨À8”µÌ²ù1
+B	Web:S5256È"%Add "<th>" headers to this "<table>".(ÏßôØ8”µÌ²ù1
+F	Web:S1827È")Remove this deprecated "width" attribute.(ÏßôØ8•µÌ²ù1
+F	Web:S1827É")Remove this deprecated "align" attribute.(ÿùÀ™8•µÌ²ù1
+K	Web:S1827Ì")Remove this deprecated "width" attribute.(­Òƒÿÿÿÿÿ8•µÌ²ù1
+K	Web:S1827Í")Remove this deprecated "width" attribute.(‰¨€åøÿÿÿÿ8•µÌ²ù1
+L	Web:S6844Ö"*Anchor tags should not be used as buttons.(ÅÌëıÿÿÿÿ8•µÌ²ù1
+L	Web:S6844ó"*Anchor tags should not be used as buttons.(½µıúÿÿÿÿ8•µÌ²ù1
+G	Web:S6844¼"*Anchor tags should not be used as buttons.(§ÁÕ¤8•µÌ²ù1
+L	Web:S6844‰"*Anchor tags should not be used as buttons.(ÒƒÄ¡şÿÿÿÿ8•µÌ²ù1
+G	Web:S6844¦"*Anchor tags should not be used as buttons.(­Õ¾8•µÌ²ù1
+L	Web:S6844ï"*Anchor tags should not be used as buttons.(¡Â€Àşÿÿÿÿ8–µÌ²ù1
+L	Web:S6844¼"*Anchor tags should not be used as buttons.(õ¿·ùøÿÿÿÿ8–µÌ²ù1
+L	Web:S6844…"*Anchor tags should not be used as buttons.(ÿÁ‰·ûÿÿÿÿ8–µÌ²ù1
+G	Web:S6844Ò"*Anchor tags should not be used as buttons.(Çšš8–µÌ²ù1
+G	Web:S6844ï"*Anchor tags should not be used as buttons.(ÙÃ’ö8–µÌ²ù1
+L	Web:S6844¸"*Anchor tags should not be used as buttons.(áë´ôøÿÿÿÿ8–µÌ²ù1
+G	Web:S6844…"*Anchor tags should not be used as buttons.(—¶ˆÉ8–µÌ²ù1
+G	Web:S6844¢"*Anchor tags should not be used as buttons.(â®ëÎ8–µÌ²ù1
+L	Web:S6844ë"*Anchor tags should not be used as buttons.(Æ«ÒÅùÿÿÿÿ8—µÌ²ù1
+L	Web:S6844ä"*Anchor tags should not be used as buttons.(í²ëÖıÿÿÿÿ8—µÌ²ù1
+G	Web:S6844±	"*Anchor tags should not be used as buttons.(¥­ÏÔ8—µÌ²ù1
+G	Web:S6844Î	"*Anchor tags should not be used as buttons.(ŸÁ»8—µÌ²ù1
+G	Web:S6844ë	"*Anchor tags should not be used as buttons.(êØş8—µÌ²ù1
+G	Web:S6844ˆ
+"*Anchor tags should not be used as buttons.(¡—Ë¹8—µÌ²ù1

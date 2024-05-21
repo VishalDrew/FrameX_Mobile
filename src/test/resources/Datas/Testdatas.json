@@ -1,8 +1,8 @@
 {
   "Login": {
     "User1": {
-      "username": "arundel",
-      "password": "arundel",
+      "username": "amitkdel",
+      "password": "amitkdel",
       "project": "jj",
       "mobileno": "8345667899",
       "expected": "Call Plan",
@@ -63,8 +63,27 @@
       "project": "jj",
       "mobileno": "",
       "expectedErrorMessage": "Mobile Number is Required"
+    },
+    "User10": {
+      "username": "thisisaverylongusernameexceedinglimits",
+      "Limit": "15"
+    },
+    "User13": {
+      "password": "thisisaverylongusernameexceedinglimits",
+      "Limit": "15"
+    },
+    "User14": {
+      "project": "thisisaverylongusernameexceedinglimits",
+      "Limit": "15"
+    },
+    "User15": {
+      "Mobileno": "123456789056789",
+      "Limit": "10"
     }
   },
+
+
+
   "Attendance": {
     "Attendance Submission": {
       "type": "Present",
@@ -77,6 +96,10 @@
       "expectedErrorMessage": "Please, Take Photo for submit attendance."
     }
   },
+
+
+
+
   "Callplan": {
     "5minutesSync": {
       "expectedMessage": "You can click after 5 minutes, since it is in Downloading or Uploading Call process."
@@ -85,14 +108,25 @@
       "expectedMessage": "First fill all categories data to upload"
     }
   },
+
+
+
   "Downloadcalls": {
     "InvalidTargetID": {
       "targetid": "00000"
     },
     "SubmitButtonValidation": {
       "ErrorMessage": "Please, Enter the target Id"
+    },
+    "CharacterLimit": {
+      "TargetID": "86986978979798798797987978687687687",
+      "Limit": "10"
     }
+
   },
+
+
+
   "ResourceCenter": {
     "validatingpptx": {
       "filename": "Lead 2023 design.pptx"
@@ -113,6 +147,10 @@
       "filename": "Task Target Mapping (29)(1).xlsx"
     }
   },
+
+
+
+
   "Visitor Login": {
     "Visitor Upload": {
       "Visitor": "1",
@@ -138,7 +176,24 @@
       "Maintained well all categories errmsg": "Enter a Maintained well all categories",
       "Aware about all the targets errmsg": "Enter a Aware about all the targets",
       "Selfie errmsg": "Please, Take a image"
+    },
+    "EmpID CharacterLimit": {
+      "EmpID": "thisisaverylongusernameexceedinglimits",
+      "Limit": "10"
+    },
+    "Name CharacterLimit": {
+      "Name": "thisisaverylongusernameexceedinglimits",
+      "Limit": "10"
+    },
+    "Designation CharacterLimit": {
+      "Name": "thisisaverylongusernameexceedinglimits",
+      "Limit": "15"
+    },
+    "Remarks CharacterLimit": {
+      "Name": "thisisaverylongusernameexceedinglimits",
+      "Limit": "15"
     }
+
   }
 
 }

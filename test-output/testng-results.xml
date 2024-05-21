@@ -1,611 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="17" total="36" passed="0" failed="0" skipped="19">
+<testng-results ignored="39" total="57" passed="15" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-20T19:30:35 IST" name="Smoke Suite" finished-at="2024-05-20T19:30:35 IST" duration-ms="60">
+  <suite started-at="2024-05-21T19:33:43 IST" name="Negative Suite" finished-at="2024-05-21T19:36:53 IST" duration-ms="190157">
     <groups>
+      <group name="negative">
+        <method signature="AttendanceTest.TC_002_Verify_Attendance_Without_Capturing_Image()[pri:2, instance:Tests.AttendanceTest@4eb386df]" name="TC_002_Verify_Attendance_Without_Capturing_Image" class="Tests.AttendanceTest"/>
+        <method signature="VisitorLoginTest.TC_002_Verify_Submit_Button_Without_Enter_fields()[pri:2, instance:Tests.VisitorLoginTest@79517588]" name="TC_002_Verify_Submit_Button_Without_Enter_fields" class="Tests.VisitorLoginTest"/>
+        <method signature="DownloadcallsTest.TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_003_VerifyDuplicateCallDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@2f1de2d6]" name="TC_005_Verify_Upload_Button_Without_Completing_Form" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_004_VerifyInvalidTargetDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="DownloadcallsTest.TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_006_VerifySubmitButtonWithoutAddingTarget" class="Tests.DownloadcallsTest"/>
+        <method signature="LoginTest.TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@460ebd80]" name="TC_002_Verify_Login_With_Invalid_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@460ebd80]" name="TC_003_Verify_Login_With_Invalid_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@460ebd80]" name="TC_004_Verify_Login_With_Invalid_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@460ebd80]" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@460ebd80]" name="TC_006_Verify_Login_Without_Entering_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@460ebd80]" name="TC_007_Verify_Login_Without_Entering_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@460ebd80]" name="TC_008_Verify_Login_Without_Entering_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@460ebd80]" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" class="Tests.LoginTest"/>
+      </group> <!-- negative -->
       <group name="regression">
-        <method signature="AttendanceTest.TC_001_Verify_Attendance_Module_Displayed()[pri:1, instance:Tests.AttendanceTest@3163987e]" name="TC_001_Verify_Attendance_Module_Displayed" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2577d6c8]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@1654a892]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@5f233b26]" name="TC_001_Verify_ResourceCenter_Module_Displayed" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@6c000e0c]" name="TC_001_Verify_VisitorLogin_Module_Displayed" class="Tests.VisitorLoginTest"/>
-        <method signature="CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@2577d6c8]" name="TC_002_Verify_Sync_Button_Functionality" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@1654a892]" name="TC_002_VerifyCallsAreDownloaded" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@5f233b26]" name="TC002_VerifyPPTXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="AttendanceTest.TC_003_Verify_Attendance_Submission()[pri:3, instance:Tests.AttendanceTest@3163987e]" name="TC_003_Verify_Attendance_Submission" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@2577d6c8]" name="TC_003_Verify_5_Minute_Sync_Process" class="Tests.CallPlanTest"/>
-        <method signature="ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@5f233b26]" name="TC003_VerifyMP4FileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_003_Verify_Visitor_Upload()[pri:3, instance:Tests.VisitorLoginTest@6c000e0c]" name="TC_003_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
-        <method signature="AttendanceTest.TC_004_Verify_Attendance_Recorded_In_Database()[pri:4, instance:Tests.AttendanceTest@3163987e]" name="TC_004_Verify_Attendance_Recorded_In_Database" class="Tests.AttendanceTest"/>
-        <method signature="ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@5f233b26]" name="TC004_VerifyPDFFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@2577d6c8]" name="TC_009_Verify_Call_Upload" class="Tests.CallPlanTest"/>
-        <method signature="ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@5f233b26]" name="TC005_VerifyDOCXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@5f233b26]" name="TC006_VerifyJPGFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@5f233b26]" name="TC007_VerifyXLSXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@3dedb4a6]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
+        <method signature="AttendanceTest.TC_001_Verify_Attendance_Module_Displayed()[pri:1, instance:Tests.AttendanceTest@4eb386df]" name="TC_001_Verify_Attendance_Module_Displayed" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2f1de2d6]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
+        <method signature="VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@79517588]" name="TC_001_Verify_VisitorLogin_Module_Displayed" class="Tests.VisitorLoginTest"/>
+        <method signature="AttendanceTest.TC_002_Verify_Attendance_Without_Capturing_Image()[pri:2, instance:Tests.AttendanceTest@4eb386df]" name="TC_002_Verify_Attendance_Without_Capturing_Image" class="Tests.AttendanceTest"/>
+        <method signature="VisitorLoginTest.TC_002_Verify_Submit_Button_Without_Enter_fields()[pri:2, instance:Tests.VisitorLoginTest@79517588]" name="TC_002_Verify_Submit_Button_Without_Enter_fields" class="Tests.VisitorLoginTest"/>
+        <method signature="DownloadcallsTest.TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_003_VerifyDuplicateCallDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@2f1de2d6]" name="TC_005_Verify_Upload_Button_Without_Completing_Form" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_004_VerifyInvalidTargetDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="DownloadcallsTest.TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_006_VerifySubmitButtonWithoutAddingTarget" class="Tests.DownloadcallsTest"/>
+        <method signature="LoginTest.TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@460ebd80]" name="TC_002_Verify_Login_With_Invalid_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@460ebd80]" name="TC_003_Verify_Login_With_Invalid_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@460ebd80]" name="TC_004_Verify_Login_With_Invalid_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@460ebd80]" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@460ebd80]" name="TC_006_Verify_Login_Without_Entering_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@460ebd80]" name="TC_007_Verify_Login_Without_Entering_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@460ebd80]" name="TC_008_Verify_Login_Without_Entering_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@460ebd80]" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" class="Tests.LoginTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="AttendanceTest.TC_001_Verify_Attendance_Module_Displayed()[pri:1, instance:Tests.AttendanceTest@3163987e]" name="TC_001_Verify_Attendance_Module_Displayed" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2577d6c8]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@1654a892]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@5f233b26]" name="TC_001_Verify_ResourceCenter_Module_Displayed" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@6c000e0c]" name="TC_001_Verify_VisitorLogin_Module_Displayed" class="Tests.VisitorLoginTest"/>
-        <method signature="CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@2577d6c8]" name="TC_002_Verify_Sync_Button_Functionality" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@1654a892]" name="TC_002_VerifyCallsAreDownloaded" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@5f233b26]" name="TC002_VerifyPPTXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="AttendanceTest.TC_003_Verify_Attendance_Submission()[pri:3, instance:Tests.AttendanceTest@3163987e]" name="TC_003_Verify_Attendance_Submission" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@2577d6c8]" name="TC_003_Verify_5_Minute_Sync_Process" class="Tests.CallPlanTest"/>
-        <method signature="ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@5f233b26]" name="TC003_VerifyMP4FileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_003_Verify_Visitor_Upload()[pri:3, instance:Tests.VisitorLoginTest@6c000e0c]" name="TC_003_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
-        <method signature="AttendanceTest.TC_004_Verify_Attendance_Recorded_In_Database()[pri:4, instance:Tests.AttendanceTest@3163987e]" name="TC_004_Verify_Attendance_Recorded_In_Database" class="Tests.AttendanceTest"/>
-        <method signature="ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@5f233b26]" name="TC004_VerifyPDFFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@2577d6c8]" name="TC_009_Verify_Call_Upload" class="Tests.CallPlanTest"/>
-        <method signature="ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@5f233b26]" name="TC005_VerifyDOCXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@5f233b26]" name="TC006_VerifyJPGFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@5f233b26]" name="TC007_VerifyXLSXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@3dedb4a6]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
+        <method signature="AttendanceTest.TC_001_Verify_Attendance_Module_Displayed()[pri:1, instance:Tests.AttendanceTest@4eb386df]" name="TC_001_Verify_Attendance_Module_Displayed" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2f1de2d6]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@6a55299e]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
+        <method signature="VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@79517588]" name="TC_001_Verify_VisitorLogin_Module_Displayed" class="Tests.VisitorLoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-05-20T19:30:35 IST" name="Smoke Tests" finished-at="2024-05-20T19:30:35 IST" duration-ms="60">
-      <class name="Tests.ResourceCentreTest">
-        <test-method signature="TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC_001_Verify_ResourceCenter_Module_Displayed" finished-at="2024-05-20T19:30:35 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_001_Verify_ResourceCenter_Module_Displayed -->
-        <test-method signature="TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC002_VerifyPPTXFileDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.ResourceCentreTest.TC002_VerifyPPTXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.ResourceCentreTest.TC002_VerifyPPTXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC002_VerifyPPTXFileDownloaded -->
-        <test-method signature="TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC004_VerifyPDFFileDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.ResourceCentreTest.TC004_VerifyPDFFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.ResourceCentreTest.TC004_VerifyPDFFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC004_VerifyPDFFileDownloaded -->
-        <test-method signature="TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC003_VerifyMP4FileDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.ResourceCentreTest.TC003_VerifyMP4FileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.ResourceCentreTest.TC003_VerifyMP4FileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC003_VerifyMP4FileDownloaded -->
-        <test-method signature="TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC005_VerifyDOCXFileDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.ResourceCentreTest.TC005_VerifyDOCXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.ResourceCentreTest.TC005_VerifyDOCXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC005_VerifyDOCXFileDownloaded -->
-        <test-method signature="TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC006_VerifyJPGFileDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.ResourceCentreTest.TC006_VerifyJPGFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.ResourceCentreTest.TC006_VerifyJPGFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC006_VerifyJPGFileDownloaded -->
-        <test-method signature="TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@5f233b26]" started-at="2024-05-20T19:30:35 IST" name="TC007_VerifyXLSXFileDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.ResourceCentreTest.TC007_VerifyXLSXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.ResourceCentreTest.TC007_VerifyXLSXFileDownloaded() on instance Tests.ResourceCentreTest@5f233b26 depends on not successfully finished methods 
-[Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed() on instance Tests.ResourceCentreTest@5f233b26]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC007_VerifyXLSXFileDownloaded -->
-      </class> <!-- Tests.ResourceCentreTest -->
+    <test started-at="2024-05-21T19:33:43 IST" name="Negative Tests" finished-at="2024-05-21T19:36:53 IST" duration-ms="190157">
       <class name="Tests.DownloadcallsTest">
-        <test-method signature="TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@1654a892]" started-at="2024-05-20T19:30:35 IST" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" finished-at="2024-05-20T19:30:35 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@6a55299e]" started-at="2024-05-21T19:35:27 IST" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" finished-at="2024-05-21T19:35:43 IST" duration-ms="15729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_VerifyDownloadCallsModuleIsDisplayed -->
-        <test-method signature="TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@1654a892]" started-at="2024-05-20T19:30:35 IST" name="TC_002_VerifyCallsAreDownloaded" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="1" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.DownloadcallsTest.TC_002_VerifyCallsAreDownloaded() on instance Tests.DownloadcallsTest@1654a892 depends on not successfully finished methods 
-[Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed() on instance Tests.DownloadcallsTest@1654a892]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.DownloadcallsTest.TC_002_VerifyCallsAreDownloaded() on instance Tests.DownloadcallsTest@1654a892 depends on not successfully finished methods 
-[Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed() on instance Tests.DownloadcallsTest@1654a892]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@6a55299e]" started-at="2024-05-21T19:35:43 IST" name="TC_003_VerifyDuplicateCallDownload" finished-at="2024-05-21T19:35:58 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="14749" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_002_VerifyCallsAreDownloaded -->
+        </test-method> <!-- TC_003_VerifyDuplicateCallDownload -->
+        <test-method signature="TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@6a55299e]" started-at="2024-05-21T19:35:58 IST" name="TC_004_VerifyInvalidTargetDownload" finished-at="2024-05-21T19:36:06 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="7734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_VerifyInvalidTargetDownload -->
+        <test-method signature="TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@6a55299e]" started-at="2024-05-21T19:36:06 IST" name="TC_006_VerifySubmitButtonWithoutAddingTarget" finished-at="2024-05-21T19:36:11 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="5370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_VerifySubmitButtonWithoutAddingTarget -->
       </class> <!-- Tests.DownloadcallsTest -->
       <class name="Tests.AttendanceTest">
-        <test-method signature="TC_001_Verify_Attendance_Module_Displayed()[pri:1, instance:Tests.AttendanceTest@3163987e]" started-at="2024-05-20T19:30:35 IST" name="TC_001_Verify_Attendance_Module_Displayed" finished-at="2024-05-20T19:30:35 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="TC_001_Verify_Attendance_Module_Displayed()[pri:1, instance:Tests.AttendanceTest@4eb386df]" started-at="2024-05-21T19:36:37 IST" name="TC_001_Verify_Attendance_Module_Displayed" finished-at="2024-05-21T19:36:42 IST" duration-ms="4549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_Verify_Attendance_Module_Displayed -->
-        <test-method signature="TC_003_Verify_Attendance_Submission()[pri:3, instance:Tests.AttendanceTest@3163987e]" started-at="2024-05-20T19:30:35 IST" name="TC_003_Verify_Attendance_Submission" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.AttendanceTest.TC_001_Verify_Attendance_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.AttendanceTest.TC_003_Verify_Attendance_Submission() on instance Tests.AttendanceTest@3163987e depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_001_Verify_Attendance_Module_Displayed() on instance Tests.AttendanceTest@3163987e]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.AttendanceTest.TC_003_Verify_Attendance_Submission() on instance Tests.AttendanceTest@3163987e depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_001_Verify_Attendance_Module_Displayed() on instance Tests.AttendanceTest@3163987e]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="TC_002_Verify_Attendance_Without_Capturing_Image()[pri:2, instance:Tests.AttendanceTest@4eb386df]" started-at="2024-05-21T19:36:42 IST" name="TC_002_Verify_Attendance_Without_Capturing_Image" finished-at="2024-05-21T19:36:49 IST" depends-on-methods="Tests.AttendanceTest.TC_001_Verify_Attendance_Module_Displayed" duration-ms="7141" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_003_Verify_Attendance_Submission -->
-        <test-method signature="TC_004_Verify_Attendance_Recorded_In_Database()[pri:4, instance:Tests.AttendanceTest@3163987e]" started-at="2024-05-20T19:30:35 IST" name="TC_004_Verify_Attendance_Recorded_In_Database" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.AttendanceTest.TC_003_Verify_Attendance_Submission" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.AttendanceTest.TC_004_Verify_Attendance_Recorded_In_Database() on instance Tests.AttendanceTest@3163987e depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_003_Verify_Attendance_Submission() on instance Tests.AttendanceTest@3163987e]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.AttendanceTest.TC_004_Verify_Attendance_Recorded_In_Database() on instance Tests.AttendanceTest@3163987e depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_003_Verify_Attendance_Submission() on instance Tests.AttendanceTest@3163987e]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_004_Verify_Attendance_Recorded_In_Database -->
+        </test-method> <!-- TC_002_Verify_Attendance_Without_Capturing_Image -->
       </class> <!-- Tests.AttendanceTest -->
       <class name="Tests.VisitorLoginTest">
-        <test-method signature="TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@6c000e0c]" started-at="2024-05-20T19:30:35 IST" name="TC_001_Verify_VisitorLogin_Module_Displayed" finished-at="2024-05-20T19:30:35 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+        <test-method signature="TC_001_Verify_VisitorLogin_Module_Displayed()[pri:1, instance:Tests.VisitorLoginTest@79517588]" started-at="2024-05-21T19:36:49 IST" name="TC_001_Verify_VisitorLogin_Module_Displayed" finished-at="2024-05-21T19:36:53 IST" duration-ms="3885" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at Utilities.Utils.verifyModuleDisplayedStatus(Utils.java:431)
+at Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed(VisitorLoginTest.java:29)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
 at org.testng.SuiteRunner.run(SuiteRunner.java:330)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
@@ -613,65 +113,22 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
+at Tests.Main.main(Main.java:33)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_Verify_VisitorLogin_Module_Displayed -->
-        <test-method signature="TC_003_Verify_Visitor_Upload()[pri:3, instance:Tests.VisitorLoginTest@6c000e0c]" started-at="2024-05-20T19:30:35 IST" name="TC_003_Verify_Visitor_Upload" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed" duration-ms="0" status="SKIP">
+        <test-method signature="TC_002_Verify_Submit_Button_Without_Enter_fields()[pri:2, instance:Tests.VisitorLoginTest@79517588]" started-at="2024-05-21T19:36:53 IST" name="TC_002_Verify_Submit_Button_Without_Enter_fields" finished-at="2024-05-21T19:36:53 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed" duration-ms="0" status="SKIP">
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Method Tests.VisitorLoginTest.TC_003_Verify_Visitor_Upload() on instance Tests.VisitorLoginTest@6c000e0c depends on not successfully finished methods 
-[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@6c000e0c]]]>
+              <![CDATA[Method Tests.VisitorLoginTest.TC_002_Verify_Submit_Button_Without_Enter_fields() on instance Tests.VisitorLoginTest@79517588 depends on not successfully finished methods 
+[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@79517588]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.VisitorLoginTest.TC_003_Verify_Visitor_Upload() on instance Tests.VisitorLoginTest@6c000e0c depends on not successfully finished methods 
-[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@6c000e0c]
+              <![CDATA[java.lang.Throwable: Method Tests.VisitorLoginTest.TC_002_Verify_Submit_Button_Without_Enter_fields() on instance Tests.VisitorLoginTest@79517588 depends on not successfully finished methods 
+[Tests.VisitorLoginTest.TC_001_Verify_VisitorLogin_Module_Displayed() on instance Tests.VisitorLoginTest@79517588]
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -688,216 +145,48 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
+at Tests.Main.main(Main.java:33)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_003_Verify_Visitor_Upload -->
+        </test-method> <!-- TC_002_Verify_Submit_Button_Without_Enter_fields -->
       </class> <!-- Tests.VisitorLoginTest -->
       <class name="Tests.CallPlanTest">
-        <test-method signature="TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2577d6c8]" started-at="2024-05-20T19:30:35 IST" name="TC_001_Verify_Call_Plan_Module_Displayed" finished-at="2024-05-20T19:30:35 IST" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2f1de2d6]" started-at="2024-05-21T19:36:11 IST" name="TC_001_Verify_Call_Plan_Module_Displayed" finished-at="2024-05-21T19:36:13 IST" duration-ms="2401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_Verify_Call_Plan_Module_Displayed -->
-        <test-method signature="TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@2577d6c8]" started-at="2024-05-20T19:30:35 IST" name="TC_003_Verify_5_Minute_Sync_Process" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
+        <test-method signature="TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@2f1de2d6]" started-at="2024-05-21T19:36:13 IST" name="TC_005_Verify_Upload_Button_Without_Completing_Form" finished-at="2024-05-21T19:36:37 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="23357" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Method Tests.CallPlanTest.TC_003_Verify_5_Minute_Sync_Process() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.CallPlanTest.TC_003_Verify_5_Minute_Sync_Process() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_003_Verify_5_Minute_Sync_Process -->
-        <test-method signature="TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@2577d6c8]" started-at="2024-05-20T19:30:35 IST" name="TC_002_Verify_Sync_Button_Functionality" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.CallPlanTest.TC_002_Verify_Sync_Button_Functionality() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.CallPlanTest.TC_002_Verify_Sync_Button_Functionality() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_002_Verify_Sync_Button_Functionality -->
-        <test-method signature="TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@2577d6c8]" started-at="2024-05-20T19:30:35 IST" name="TC_009_Verify_Call_Upload" finished-at="2024-05-20T19:30:35 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.CallPlanTest.TC_009_Verify_Call_Upload() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.CallPlanTest.TC_009_Verify_Call_Upload() on instance Tests.CallPlanTest@2577d6c8 depends on not successfully finished methods 
-[Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed() on instance Tests.CallPlanTest@2577d6c8]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_009_Verify_Call_Upload -->
-      </class> <!-- Tests.CallPlanTest -->
-      <class name="Tests.LoginTest">
-        <test-method is-config="true" signature="StartApp()[pri:0, instance:Tests.LoginTest@3dedb4a6]" started-at="2024-05-20T19:30:31 IST" name="StartApp" finished-at="2024-05-20T19:30:35 IST" duration-ms="3920" status="FAIL">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1577)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at Pages.CallPlan_page.formcompletingvalidation(CallPlan_page.java:144)
+at Tests.CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form(CallPlanTest.java:82)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
 at org.testng.SuiteRunner.run(SuiteRunner.java:330)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
@@ -905,141 +194,56 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
+at Tests.Main.main(Main.java:33)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_Verify_Upload_Button_Without_Completing_Form -->
+      </class> <!-- Tests.CallPlanTest -->
+      <class name="Tests.LoginTest">
+        <test-method is-config="true" signature="StartApp()[pri:0, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:33:27 IST" name="StartApp" finished-at="2024-05-21T19:33:43 IST" duration-ms="16027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartApp -->
-        <test-method signature="TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@3dedb4a6]" started-at="2024-05-20T19:30:35 IST" name="TC_001_Verify_Login_With_Valid_Credentials" finished-at="2024-05-20T19:30:35 IST" duration-ms="1" status="SKIP">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148']]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'DESKTOP-OET6KL6', ip: '192.168.0.148'
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:80)
-at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:92)
-at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:117)
-at Base.TestSetup.StartApp(TestSetup.java:87)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:376)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:15)
-Caused by: org.openqa.selenium.WebDriverException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.1', revision: '8ebccac989'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: driver.version: AndroidDriver
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-... 21 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-... 27 more
-Caused by: java.net.SocketException: Connection reset
-at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+        <test-method signature="TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:33:43 IST" name="TC_002_Verify_Login_With_Invalid_Username" finished-at="2024-05-21T19:33:58 IST" duration-ms="14659" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_001_Verify_Login_With_Valid_Credentials -->
-        <test-method is-config="true" signature="tearDownApp()[pri:0, instance:Tests.LoginTest@3dedb4a6]" started-at="2024-05-20T19:30:35 IST" name="tearDownApp" finished-at="2024-05-20T19:30:43 IST" duration-ms="7619" status="PASS">
+        </test-method> <!-- TC_002_Verify_Login_With_Invalid_Username -->
+        <test-method signature="TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:33:58 IST" name="TC_003_Verify_Login_With_Invalid_Password" finished-at="2024-05-21T19:34:13 IST" duration-ms="14696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_Verify_Login_With_Invalid_Password -->
+        <test-method signature="TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:34:13 IST" name="TC_004_Verify_Login_With_Invalid_Project" finished-at="2024-05-21T19:34:27 IST" duration-ms="13930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_Verify_Login_With_Invalid_Project -->
+        <test-method signature="TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:34:27 IST" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" finished-at="2024-05-21T19:34:39 IST" duration-ms="12670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_Verify_Login_With_Invalid_Mobile_Number -->
+        <test-method signature="TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:34:39 IST" name="TC_006_Verify_Login_Without_Entering_Username" finished-at="2024-05-21T19:34:51 IST" duration-ms="11856" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_Verify_Login_Without_Entering_Username -->
+        <test-method signature="TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:34:51 IST" name="TC_007_Verify_Login_Without_Entering_Password" finished-at="2024-05-21T19:35:02 IST" duration-ms="11265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_Verify_Login_Without_Entering_Password -->
+        <test-method signature="TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:35:02 IST" name="TC_008_Verify_Login_Without_Entering_Project" finished-at="2024-05-21T19:35:16 IST" duration-ms="13224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_008_Verify_Login_Without_Entering_Project -->
+        <test-method signature="TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:35:16 IST" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" finished-at="2024-05-21T19:35:27 IST" duration-ms="11796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_009_Verify_Login_Without_Entering_Mobile_Number -->
+        <test-method is-config="true" signature="tearDownApp()[pri:0, instance:Tests.LoginTest@460ebd80]" started-at="2024-05-21T19:36:54 IST" name="tearDownApp" finished-at="2024-05-21T19:37:04 IST" duration-ms="10125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownApp -->
       </class> <!-- Tests.LoginTest -->
-    </test> <!-- Smoke Tests -->
-  </suite> <!-- Smoke Suite -->
+    </test> <!-- Negative Tests -->
+  </suite> <!-- Negative Suite -->
 </testng-results>
