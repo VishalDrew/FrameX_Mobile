@@ -1,7 +1,6 @@
 package Utilities;
 
 import Base.TestSetup;
-import Listeners.FrameX_Listeners;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
@@ -9,7 +8,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
@@ -301,7 +299,7 @@ public class Actions extends TestSetup {
         if (result.getStatus() == ITestResult.FAILURE) {
             TakesScreenshot ts = driver;
             File source = ts.getScreenshotAs(OutputType.FILE); // capture screenshot file
-            File target = new File(props.get("Screenshotpath") + result.getName() + ".png");
+            File target = new File(properties.get("Screenshotpath") + result.getName() + ".png");
             FileUtils.copyFile(source, target);
         }
 
@@ -385,7 +383,7 @@ public class Actions extends TestSetup {
         return displayed;
     }
 
-    public static boolean checkTextboxCharacterLimit(String locatorType, String locatorValue, String input, String limit) {
+    public static boolean validateTextLimit(String locatorType, String locatorValue, String input, String limit) {
         int limitvalue = Integer.parseInt(limit);
         enter(locatorType, locatorValue, input);
         String enteredText = gettext(locatorType, locatorValue);
@@ -393,7 +391,7 @@ public class Actions extends TestSetup {
 
     }
 
-        public static boolean verifyTextboxHandlesSpecialCharactersandNumbers(String locatorType, String locatorValue, String input){
+        public static boolean validateSpecialCharactersandNumbers(String locatorType, String locatorValue, String input){
             enter(locatorType, locatorValue, input);
             String  enteredText = gettext(locatorType, locatorValue);
             return enteredText.equals(input);

@@ -26,7 +26,7 @@ public class CallPlanTest extends TestSetup {
      * @throws Exception if an error occurs during the execution of the method
      */
     @Test(priority = 1, groups = {"smoke", "regression"},enabled = true)
-    private static void TC_001_Verify_Call_Plan_Module_Displayed() throws Exception {
+    public static void TC_001_Verify_Call_Plan_Module_Displayed() throws Exception {
 
        verifyModuleDisplayedStatus(Callplan);
     }
@@ -41,7 +41,7 @@ public class CallPlanTest extends TestSetup {
      * @throws Exception if an error occurs during the execution of the test case.
      */
     @Test(priority = 2,dependsOnMethods = { "TC_001_Verify_Call_Plan_Module_Displayed" },groups = {"smoke", "regression"},enabled = true)
-    private static void TC_002_Verify_Sync_Button_Functionality() throws Exception {
+    public static void TC_002_Verify_Sync_Button_Functionality() throws Exception {
         navigateto(Callplan);
         sync();
         if(sourceExists(Callplan)){
@@ -61,7 +61,7 @@ public class CallPlanTest extends TestSetup {
      * @throws Exception if an error occurs during the test execution.
      */
     @Test(priority = 3,dependsOnMethods = { "TC_001_Verify_Call_Plan_Module_Displayed" },groups = {"smoke", "regression"},enabled = true)
-    private static void TC_003_Verify_5_Minute_Sync_Process() throws Exception {
+    public static void TC_003_Verify_5_Minute_Sync_Process() throws Exception {
         JSONObject callplandata = gettestdata("Callplan", "5minutesSync");
         navigateto(Callplan);
         fiveminssync(callplandata.getString("expectedMessage"));
@@ -76,7 +76,7 @@ public class CallPlanTest extends TestSetup {
      *
      */
     @Test(priority = 4,dependsOnMethods = { "TC_001_Verify_Call_Plan_Module_Displayed" },groups = {"negative","regression"},enabled = true)
-    private static void TC_005_Verify_Upload_Button_Without_Completing_Form() throws Exception {
+    public static void TC_005_Verify_Upload_Button_Without_Completing_Form() throws Exception {
         JSONObject callplandata = gettestdata("Callplan", "FormFillingValidation");
         navigateto(Callplan);
         formcompletingvalidation(callplandata.getString("expectedMessage"));
@@ -88,7 +88,7 @@ public class CallPlanTest extends TestSetup {
      * @throws Exception if an error occurs during the test execution.
      */
     @Test(priority = 5, dependsOnMethods = { "TC_001_Verify_Call_Plan_Module_Displayed" },groups = {"smoke", "regression"},enabled = true)
-    private static void TC_009_Verify_Call_Upload() throws Exception {
+    public static void TC_009_Verify_Call_Upload() throws Exception {
         startCallProcess();
     }
 

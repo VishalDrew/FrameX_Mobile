@@ -12,7 +12,6 @@ import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.annotations.BeforeTest;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -21,19 +20,19 @@ import java.util.Date;
 
 import static Base.TestSetup.log;
 
-import static Base.TestSetup.props;
+import static Base.TestSetup.properties;
 import static Utilities.Utils.screenshotName;
 
 public class FrameX_Listeners implements ITestListener, ISuiteListener {
     static Date d = new Date();
-    public static final String fileName = props.get("Reportfilename") + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+    public static final String fileName = properties.get("Reportfilename") + d.toString().replace(":", "_").replace(" ", "_") + ".html";
     public static boolean attachmentflag;
     public static ExtentReports extent;
     public static ExtentTest test;
 
     static {
         try {
-            extent = ExtentManager.createInstance(props.get("TestReportspath") + fileName);
+            extent = ExtentManager.createInstance(properties.get("TestReportspath") + fileName);
         } catch (FileNotFoundException e) {
             log.error("Error creating ExtentReports instance:", e);
             throw new RuntimeException(e);
@@ -65,7 +64,7 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
         try {
             Utils.captureScreenshot();
             testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
-                    MediaEntityBuilder.createScreenCaptureFromPath(props.get("Screenshotpath") + screenshotName)
+                    MediaEntityBuilder.createScreenCaptureFromPath(properties.get("Screenshotpath") + screenshotName)
                             .build());
         } catch (IOException e) {
             log.error("Error capturing screenshot:", e);

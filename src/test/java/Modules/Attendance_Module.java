@@ -205,4 +205,14 @@ public class Attendance_Module extends TestSetup {
             throw e;
         }
     }
+
+    private static void navigateBackToAttendance() throws InterruptedException {
+        driver.navigate().back();
+        click("ACCESSIBILITYID", "Callplan");
+        Thread.sleep(2000);
+        driver.navigate().back();
+        click("ACCESSIBILITYID", "Attendance");
+        Thread.sleep(700);
+    }
+
 }

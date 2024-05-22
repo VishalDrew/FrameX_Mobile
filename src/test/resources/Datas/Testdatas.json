@@ -1,12 +1,12 @@
 {
   "Login": {
     "User1": {
-      "username": "amitkdel",
-      "password": "amitkdel",
+      "username": "arundel",
+      "password": "arundel",
       "project": "jj",
       "mobileno": "8345667899",
       "expected": "Call Plan",
-      "Targets" : "2"
+      "Targets" : "3"
     },
     "User2": {
       "username": "arunde",

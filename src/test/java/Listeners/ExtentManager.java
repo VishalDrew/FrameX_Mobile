@@ -8,7 +8,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import java.io.FileNotFoundException;
 
 import static Base.TestSetup.log;
-import static Base.TestSetup.props;
+import static Base.TestSetup.properties;
 
 
 public class ExtentManager {
@@ -21,18 +21,18 @@ public class ExtentManager {
             log.info("Creating ExtentReports instance...");
             ExtentSparkReporter htmlReporter = new ExtentSparkReporter(fileName);
 
-            htmlReporter.config().setTheme(Theme.valueOf(props.get("Reporttheme")));
-            htmlReporter.config().setDocumentTitle(props.get("Reporttitle"));
+            htmlReporter.config().setTheme(Theme.valueOf(properties.get("Reporttheme")));
+            htmlReporter.config().setDocumentTitle(properties.get("Reporttitle"));
             htmlReporter.config().setEncoding("utf-8");
-            htmlReporter.config().setReportName(props.get("Reportname"));
+            htmlReporter.config().setReportName(properties.get("Reportname"));
 
             extent = new ExtentReports();
             extent.attachReporter(htmlReporter);
-            extent.setSystemInfo(props.get("Role"), props.get("Roleuser"));
-            extent.setSystemInfo("Organization", props.get("Organization"));
+            extent.setSystemInfo(properties.get("Role"), properties.get("Roleuser"));
+            extent.setSystemInfo("Organization", properties.get("Organization"));
             extent.setSystemInfo("User", System.getProperty("user.name"));
-            extent.setSystemInfo("Environment", props.get("Environment"));
-            extent.setSystemInfo("Device", TestSetup.devicemodel );
+            extent.setSystemInfo("Environment", properties.get("Environment"));
+            extent.setSystemInfo("Device", TestSetup.deviceModel);
 
             log.info("ExtentReports instance created successfully.");
         } catch (Exception e) {

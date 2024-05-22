@@ -2,7 +2,6 @@ package Utilities;
 
 
 import java.io.*;
-import java.lang.reflect.Method;
 import java.text.MessageFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -19,13 +18,11 @@ import org.json.JSONObject;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
-import org.testng.SkipException;
-import org.testng.annotations.DataProvider;
 
 import static Listeners.FrameX_Listeners.*;
 import static Modules.CallPlan.CallPlanActionHandler.handleNoInternetConnection;
 import static Modules.CallPlan.DataBinder.fieldName;
-import static Modules.Login_Module.login;
+import static Modules.Login_Module.performLogin;
 import static Pages.CallPlan_page.*;
 import static Pages.HomePage_page.ActivityLog;
 import static Pages.Login_Page.menubutton;
@@ -117,7 +114,7 @@ public class Utils extends TestSetup {
 
         Date d = new Date();
         screenshotName ="Screenshot_"+ d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-        FileUtils.copyFile(scrFile, new File(props.get("Screenshotpath") + screenshotName));
+        FileUtils.copyFile(scrFile, new File(properties.get("Screenshotpath") + screenshotName));
     }
 
 
@@ -450,7 +447,7 @@ public class Utils extends TestSetup {
      */
     public static void lgpage()  {
         JSONObject user1 = gettestdata("Login","User1");
-        login(globalData.getString("username"), globalData.getString("password"),globalData.getString("project"),globalData.getString("mobileno"));
+        performLogin(globalData.getString("username"), globalData.getString("password"),globalData.getString("project"),globalData.getString("mobileno"));
     }
 
     /**
@@ -535,9 +532,9 @@ public class Utils extends TestSetup {
         try {
             String Enumquery;
             if (IsQuestionForm.equals("1")) {
-                Enumquery = MessageFormat.format(queries.get("EnumQuestionFieldquery"), formName, "'" + productName + "'", "'" + formName + "'");
+                Enumquery = MessageFormat.format(sqlQueries.get("EnumQuestionFieldquery"), formName, "'" + productName + "'", "'" + formName + "'");
             } else {
-                Enumquery = MessageFormat.format(queries.get("EnumFieldquery"), "'" + fieldName.replace(" *", "").replace(" ", "_") + "'", "'" + formName + "'");
+                Enumquery = MessageFormat.format(sqlQueries.get("EnumFieldquery"), "'" + fieldName.replace(" *", "").replace(" ", "_") + "'", "'" + formName + "'");
             }
             log.info("EnumQuery " + Enumquery);
             List<String> dropList = getColumnNamesFromDatabase(Enumquery, "FieldOption");

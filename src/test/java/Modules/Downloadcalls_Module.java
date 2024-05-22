@@ -9,7 +9,6 @@ import java.util.List;
 import static Listeners.FrameX_Listeners.*;
 import static Pages.Downloadcalls_page.*;
 import static Pages.HomePage_page.*;
-import static Pages.Login_Page.project;
 import static Utilities.Actions.*;
 import static Utilities.Utils.*;
 
@@ -29,15 +28,11 @@ public class Downloadcalls_Module extends TestSetup {
 	public static void validateDownloadCalls()  {
 
 		try {
-			if (sourceExists(DownloadCalls)) {
-				click("ACCESSIBILITYID", DownloadCalls);
-			}
+			navigateToDownloadCalls();
 			List<String> unplannedCalls = targets;
 			boolean isAllDownloaded = true;
 			for (String upcalls : unplannedCalls) {
-				click("ACCESSIBILITYID", addtarget);
-				enter("classname", targetidtxtbox, upcalls);
-				click("ACCESSIBILITYID", addbtn);
+				addTarget(upcalls);
 			}
 			click("ACCESSIBILITYID", submit);
 			for (String upcalls : unplannedCalls) {
@@ -54,7 +49,7 @@ public class Downloadcalls_Module extends TestSetup {
 				Assert.assertTrue(true);
 			} else {
 				logAndReportFailure("TestCase Failed : Some targets failed to download.");
-				Assert.assertTrue(false,"TestCase Failed : Some targets failed to download");
+				Assert.fail("TestCase Failed : Some targets failed to download.");
 			}
 		} catch (Exception e) {
 			logAndReportFailure("TestCase Failed : Failed to verify calls download functionality: " + e.getMessage());
@@ -71,12 +66,10 @@ public class Downloadcalls_Module extends TestSetup {
 
 		String orginalcall = targets.get(0);
 		String duplicatecall = orginalcall;
+		String alreadyDownloadedMsg = "Info&#10;Store " + duplicatecall + " already downloaded.";
 
 		try {
-			String alreadyDownloadedMsg = "Info&#10;Store " + duplicatecall + " already downloaded.";
-			if (sourceExists(DownloadCalls)) {
-				click("ACCESSIBILITYID", DownloadCalls);
-			}
+			navigateToDownloadCalls();
 			boolean orginalcallExists = false;
 			if(!duplicateCallsTest){
 				click("ACCESSIBILITYID", addtarget);
@@ -86,9 +79,7 @@ public class Downloadcalls_Module extends TestSetup {
 				waitForMessage("Downloaded Successfully for target " + orginalcall);
 			}
 
-			if (sourceExists(DownloadCalls)) {
-				click("ACCESSIBILITYID", DownloadCalls);
-			}
+		navigateToDownloadCalls();
 			click("ACCESSIBILITYID", addtarget);
 			enter("classname", targetidtxtbox,duplicatecall);
 			click("ACCESSIBILITYID", addbtn);
@@ -100,8 +91,8 @@ public class Downloadcalls_Module extends TestSetup {
 				logAndReportSuccess("TestCase Passed : "+alreadyDownloadedMsg+"  is Showing");
 				Assert.assertTrue(true);
 			}else{
-				logAndReportFailure("TestCase Failed : "+alreadyDownloadedMsg+"  is not Showing");
-				Assert.assertTrue(false);
+				logAndReportFailure("TestCase Failed : " + alreadyDownloadedMsg + " is not Showing");
+				Assert.fail("TestCase Failed : " + alreadyDownloadedMsg + " is not Showing");
 			}
 		} catch (Exception e) {
 			logAndReportFailure("TestCase Failed : Failed to verify duplicate call download: " + e.getMessage());
@@ -112,27 +103,25 @@ public class Downloadcalls_Module extends TestSetup {
 	/**
 	 * Validates if the given target ID is invalid.
 	 *
-	 * @param trgid the target ID to be validated
+	 * @param targetId the target ID to be validated
 	 * @throws Exception if an error occurs during the validation process
 	 */
-	public static void validateInvalidTarget(String trgid) throws Exception {
+	public static void validateInvalidTarget(String targetId) throws Exception {
 
-		String invalididmsg = "Target ID "+trgid+" is invalid. Please enter a valid Target Id and try again.";
+		String invalididmsg = "Target ID "+targetId+" is invalid. Please enter a valid Target Id and try again.";
 
 		try {
-			if (sourceExists(DownloadCalls)) {
-				click("ACCESSIBILITYID", DownloadCalls);
-			}
+		navigateToDownloadCalls();
 			click("ACCESSIBILITYID", addtarget);
-			enter("classname", targetidtxtbox, trgid);
+			enter("classname", targetidtxtbox, targetId);
 			click("ACCESSIBILITYID", addbtn);
 			click("ACCESSIBILITYID", submit);
 			if(waitForMessage(invalididmsg)){
 				logAndReportSuccess("TestCase Passed : "+invalididmsg+"  is Showing");
 				Assert.assertTrue(true);
 			}else{
-				logAndReportFailure("TestCase Failed : "+invalididmsg+"  is not Showing");
-				Assert.assertTrue(false);
+				logAndReportFailure("TestCase Failed : " + invalididmsg + " is not Showing");
+				Assert.fail("TestCase Failed : " + invalididmsg + " is not Showing");
 			}
 		} catch (Exception e) {
 			logAndReportFailure("TestCase Failed : Failed to verify invalid target download: " + e.getMessage());
@@ -150,19 +139,16 @@ public class Downloadcalls_Module extends TestSetup {
 		String target = "31233";
 
 		try {
-			if (sourceExists(DownloadCalls)) {
-				click("ACCESSIBILITYID", DownloadCalls);
-			}
+			navigateToDownloadCalls();
 			click("ACCESSIBILITYID", addtarget);
 			enter("classname", targetidtxtbox,target );
 			click("ACCESSIBILITYID", addbtn);
-			click("ACCESSIBILITYID", target);
-			click("ACCESSIBILITYID", "Yes");
+			removeTarget(target);
 			if(sourceExists(target)){
-				logAndReportFailure("TestCase Failed : "+target+"  is Showing, Remove Target is not working");
-				Assert.assertTrue(false);
+				logAndReportFailure("TestCase Failed : " + target + " is Showing, Remove Target is not working");
+				Assert.fail("TestCase Failed : " + target + " is Showing, Remove Target is not working");
 			}else{
-				logAndinfo("TestCase Passed : "+target+"  is not  Showing, Remove Target is Working");
+				logAndinfo("TestCase Passed : " + target + " is not Showing, Remove Target is Working");
 				Assert.assertTrue(true);
 			}
 
@@ -180,17 +166,15 @@ public class Downloadcalls_Module extends TestSetup {
 	 */
 	public static void validatesubmitbutton(String errmsg) throws Exception {
 		try {
-			if (sourceExists(DownloadCalls)) {
-				click("ACCESSIBILITYID", DownloadCalls);
-			}
+		navigateToDownloadCalls();
 			click("ACCESSIBILITYID", submit);
 			waitForMessage(errmsg);
 			if(sourceExists(errmsg)){
 				logAndReportSuccess("TestCase Passed : Error message : "+errmsg+"  is Showing");
 				Assert.assertTrue(true);
 			}else{
-				logAndReportSuccess("TestCase Failed :  Error message : "+errmsg+" is Not Showing");
-				Assert.assertTrue(false);
+				logAndReportFailure("TestCase Failed : Error message : " + errmsg + " is Not Showing");
+				Assert.fail("TestCase Failed : Error message : " + errmsg + " is Not Showing");
 			}
 		} catch (Exception e) {
 			logAndReportFailure("TestCase Failed : An error occurred while verifying submit button without adding target: " + e.getMessage());
@@ -199,11 +183,9 @@ public class Downloadcalls_Module extends TestSetup {
 	}
 
 	public static void validateMaxTextLimitIntargetIDTextbox(String testtargetid,String limit){
-		if (sourceExists(DownloadCalls)) {
-			click("ACCESSIBILITYID", DownloadCalls);
-		}
+		navigateToDownloadCalls();
 		click("ACCESSIBILITYID", addtarget);
-		boolean isLimitEnforced = checkTextboxCharacterLimit("classname",targetidtxtbox,testtargetid,limit);
+		boolean isLimitEnforced = validateTextLimit("classname",targetidtxtbox,testtargetid,limit);
 		if (isLimitEnforced) {
 			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + testtargetid);
 			click("ACCESSIBILITYID",cancelbtn);
@@ -216,6 +198,23 @@ public class Downloadcalls_Module extends TestSetup {
 			Assert.assertTrue(false);
 		}
 
+	}
+
+	private static void addTarget(String targetId) {
+		click("ACCESSIBILITYID", addtarget);
+		enter("classname", targetidtxtbox, targetId);
+		click("ACCESSIBILITYID", addbtn);
+	}
+
+	private static void navigateToDownloadCalls() {
+		if (sourceExists(DownloadCalls)) {
+			click("ACCESSIBILITYID", DownloadCalls);
+		}
+	}
+
+	private static void removeTarget(String targetId) {
+		click("ACCESSIBILITYID", targetId);
+		click("ACCESSIBILITYID", "Yes");
 	}
 
 }

@@ -29,6 +29,7 @@ public class Main {
             suites.add(negativeSuite);
         }
         TestNG testng = new TestNG();
+
         testng.setTestSuites(suites);
         testng.run();
     }

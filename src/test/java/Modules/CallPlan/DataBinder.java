@@ -116,7 +116,7 @@ public class DataBinder {
 
         String formName = form.replace(" ", "_");
 
-        String productColumnQuery = MessageFormat.format(queries.get("ProductColumnquery"), "'" + formName + "'");
+        String productColumnQuery = MessageFormat.format(sqlQueries.get("ProductColumnquery"), "'" + formName + "'");
         String productColumn = getColumnNamesFromDatabase(productColumnQuery, "ProductColumn").get(0);
         productColumn = productColumn.replace("*", "+ ' *'");
         log.info("ProductColumn Query " + productColumnQuery);
@@ -128,7 +128,7 @@ public class DataBinder {
                         "        ELSE  '' End " :
                 "Rtrim(Ltrim(" + productColumn + "))";
 
-        String productQuery = MessageFormat.format(queries.get("Productquery"), formName, targetid, "'" + category + "'", questionColumns, formcondition);
+        String productQuery = MessageFormat.format(sqlQueries.get("Productquery"), formName, targetid, "'" + category + "'", questionColumns, formcondition);
         log.info("Product Query " + productQuery);
         List<String> productNames = getColumnNamesFromDatabase(productQuery, "ProductName");
 
@@ -221,7 +221,7 @@ public class DataBinder {
 
     private static boolean enterfieldprocess(String formName, String IsQuestionForm, String productName) throws Exception {
         int forDEO = IsQuestionForm.equals("1") ? 0 : 1;
-        List<Object> fieldNames = getDataObject(IsQuestionForm.equals("1") ? MessageFormat.format(queries.get("QuestionFormFieldsquery"), formName, "'" + productName + "'", "'" + formName + "'") : MessageFormat.format(queries.get("FormFieldsquery"), "'" + formName + "'", IsQuestionForm, forDEO));
+        List<Object> fieldNames = getDataObject(IsQuestionForm.equals("1") ? MessageFormat.format(sqlQueries.get("QuestionFormFieldsquery"), formName, "'" + productName + "'", "'" + formName + "'") : MessageFormat.format(sqlQueries.get("FormFieldsquery"), "'" + formName + "'", IsQuestionForm, forDEO));
 
         for (Object field : fieldNames) {
             if (!(field instanceof LinkedHashMap<?, ?>)) {
@@ -310,10 +310,10 @@ public class DataBinder {
         }
     }
 
-    static void productClickValidation(String formName, String IsQuestionForm, String productName) throws Exception {
+   private static void productClickValidation(String formName, String IsQuestionForm, String productName) throws Exception {
 
         int forDEO = IsQuestionForm.equals("1") ? 0 : 1;
-        List<Object> fieldNames = getDataObject(IsQuestionForm.equals("1") ? MessageFormat.format(queries.get("QuestionFormFieldsquery"), formName, "'" + productName + "'", "'" + formName + "'") : MessageFormat.format(queries.get("FormFieldsquery"), "'" + formName + "'", IsQuestionForm, forDEO));
+        List<Object> fieldNames = getDataObject(IsQuestionForm.equals("1") ? MessageFormat.format(sqlQueries.get("QuestionFormFieldsquery"), formName, "'" + productName + "'", "'" + formName + "'") : MessageFormat.format(sqlQueries.get("FormFieldsquery"), "'" + formName + "'", IsQuestionForm, forDEO));
 
         for (Object field : fieldNames) {
             if (!(field instanceof LinkedHashMap<?, ?>)) {

@@ -12,7 +12,6 @@ import static Modules.Downloadcalls_Module.storesForVisitorLogin;
 import static Pages.Downloadcalls_page.*;
 import static Pages.HomePage_page.DownloadCalls;
 import static Pages.HomePage_page.visitorlogin;
-import static Pages.Login_Page.project;
 import static Pages.Visitorlogin_page.*;
 import static Utilities.Actions.*;
 import static Utilities.DatabaseUtility.getdatafromdatabase;
@@ -25,16 +24,16 @@ import static io.appium.java_client.touch.offset.PointOption.point;
  */
 public class VisitorLogin_Module {
 
-	static JSONObject visitorlogindata = gettestdata("Visitor Login", "Visitor Upload");
-	static JSONObject visitorLoginNegativeData = gettestdata("Visitor Login", "Visitor Upload errmsg");
-	static String targetid = targets.get(0);
-	static String storename;
+	private static JSONObject visitorlogindata = gettestdata("Visitor Login", "Visitor Upload");
+	private static JSONObject visitorLoginNegativeData = gettestdata("Visitor Login", "Visitor Upload errmsg");
+	private static String targetid = targets.get(0);
+	private static String storename;
 
 	static {
 		try {
 			storename = getStoreName(targetid) + "/" + targetid;
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new RuntimeException("Error initializing store name", e);
 		}
 	}
 
@@ -60,7 +59,7 @@ public class VisitorLogin_Module {
 			click("ACCESSIBILITYID", selectvisitordd);
 			if(sourceExists("Visitor" + visitorlogindata.getString("Visitor"))){
 				logAndReportSuccess("TestCase Failed : Visitor Upload Failed");
-				Assert.assertTrue(false);
+				Assert.fail();
 			}else {
 				logAndReportSuccess("TestCase Passed : "+visitorlogindata.getString("expected message"));
 				driver.navigate().back();
@@ -122,7 +121,7 @@ public class VisitorLogin_Module {
      * @return the name of the store
      * @throws Exception if there is an error retrieving the store name from the database
      */
-     static String getStoreName(String storeId) throws Exception {
+     private static String getStoreName(String storeId) throws Exception {
 		return getdatafromdatabase("select TargetName from TargetMaster where TargetID = " + storeId + "", "TargetName");
 	}
 
@@ -134,8 +133,8 @@ public class VisitorLogin_Module {
      * 
      * @throws JSONException if there is an error in parsing the test data.
      */
-     static ArrayList<String> visitornegativedata(){
-		JSONObject visitorloginnegativedata = gettestdata("Visitor Login", "Visitor Upload errmsg");
+     private static ArrayList<String> visitornegativedata(){
+
 		ArrayList<String>keys = new ArrayList<String>();
 		keys.add("Visitor Type errmsg");
 		keys.add("Visitor Empid errmsg");
@@ -172,7 +171,7 @@ public class VisitorLogin_Module {
 	 *
 	 * @throws InterruptedException if the thread is interrupted while sleeping.
 	 */
-	 static void fillvisitordetails() throws InterruptedException {
+	 private static void fillvisitordetails() throws InterruptedException {
 		Thread.sleep(1000);
 		click("ACCESSIBILITYID", selectvisitordd);
 		click("ACCESSIBILITYID", "Visitor" + visitorlogindata.getString("Visitor"));
@@ -208,7 +207,7 @@ public class VisitorLogin_Module {
 	public static void validateMaxTextLimitInEmpIDTextbox(String Empid,String limit) throws InterruptedException {
 		click("ACCESSIBILITYID", selectvisitordd);
 		click("ACCESSIBILITYID", "Visitor1");
-		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",visitorempid_txtbox,Empid,limit);
+		boolean isLimitEnforced = validateTextLimit("Xpath",visitorempid_txtbox,Empid,limit);
 		if (isLimitEnforced) {
 			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + Empid);
 			Assert.assertTrue(true);
@@ -219,24 +218,24 @@ public class VisitorLogin_Module {
 	}
 
 	public static void validateSpecialcharInEmpIDTextbox(String Empid){
-		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorempid_txtbox,Empid);
+		boolean ishandlespecialchar = validateSpecialCharactersandNumbers("Xpath",visitorempid_txtbox,Empid);
 		if (ishandlespecialchar) {
 			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + Empid);
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + Empid);
-			Assert.assertTrue(false);
+			Assert.fail();
 		}
 	}
 
 	public static void validateNumbersInEmpIDTextbox(String Empid){
-		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorempid_txtbox,Empid);
+		boolean ishandlenumber = validateSpecialCharactersandNumbers("Xpath",visitorempid_txtbox,Empid);
 		if (ishandlenumber) {
 			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + Empid);
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + Empid);
-			Assert.assertTrue(false);
+			Assert.fail();
 		}
 	}
 
@@ -245,29 +244,29 @@ public class VisitorLogin_Module {
 		 if(driver.isKeyboardShown()){
 			 driver.hideKeyboard();
 		 }
-		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",visitorname_txtbox,visitorname,limit);
+		boolean isLimitEnforced = validateTextLimit("Xpath",visitorname_txtbox,visitorname,limit);
 		if (isLimitEnforced) {
 			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + visitorname);
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + visitorname);
-			Assert.assertTrue(false);
+			Assert.fail();
 		}
 	}
 
 	public static void validateSpecialcharInNameTextbox(String visitorname){
-		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorname_txtbox,visitorname);
+		boolean ishandlespecialchar = validateSpecialCharactersandNumbers("Xpath",visitorname_txtbox,visitorname);
 		if (ishandlespecialchar) {
 			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + visitorname);
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + visitorname);
-			Assert.assertTrue(false);
+			Assert.fail();
 		}
 	}
 
 	public static void validateNumbersInNameTextbox(String visitorname){
-		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",visitorname_txtbox,visitorname);
+		boolean ishandlenumber = validateSpecialCharactersandNumbers("Xpath",visitorname_txtbox,visitorname);
 		if (ishandlenumber) {
 			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + visitorname);
 			Assert.assertTrue(true);
@@ -281,7 +280,7 @@ public class VisitorLogin_Module {
 		if(driver.isKeyboardShown()){
 			driver.hideKeyboard();
 		}
-		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",designation_txtbox,Designation,limit);
+		boolean isLimitEnforced = validateTextLimit("Xpath",designation_txtbox,Designation,limit);
 		if (isLimitEnforced) {
 			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + Designation);
 			Assert.assertTrue(true);
@@ -293,7 +292,7 @@ public class VisitorLogin_Module {
 
 	public static void validateSpecialcharInDesignationTextbox(String Designation){
 
-		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",designation_txtbox,Designation);
+		boolean ishandlespecialchar = validateSpecialCharactersandNumbers("Xpath",designation_txtbox,Designation);
 		if (ishandlespecialchar) {
 			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + Designation);
 			Assert.assertTrue(true);
@@ -305,7 +304,7 @@ public class VisitorLogin_Module {
 
 	public static void validateNumbersInDesignationTextbox(String Designation){
 
-		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",designation_txtbox,Designation);
+		boolean ishandlenumber = validateSpecialCharactersandNumbers("Xpath",designation_txtbox,Designation);
 		if (ishandlenumber) {
 			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + Designation);
 			Assert.assertTrue(true);
@@ -319,7 +318,7 @@ public class VisitorLogin_Module {
 		if(driver.isKeyboardShown()){
 			driver.hideKeyboard();
 		}
-		boolean isLimitEnforced = checkTextboxCharacterLimit("Xpath",remarks_txtbox,remarks,limit);
+		boolean isLimitEnforced = validateTextLimit("Xpath",remarks_txtbox,remarks,limit);
 		if (isLimitEnforced) {
 			FrameX_Listeners.logAndReportSuccess("Character limit is enforced. Entered text: " + remarks);
 			Assert.assertTrue(true);
@@ -331,7 +330,7 @@ public class VisitorLogin_Module {
 
 	public static void validateSpecialcharInRemarksTextbox(String remarks){
 
-		boolean ishandlespecialchar = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",remarks_txtbox,remarks);
+		boolean ishandlespecialchar = validateSpecialCharactersandNumbers("Xpath",remarks_txtbox,remarks);
 		if (ishandlespecialchar) {
 			FrameX_Listeners.logAndReportSuccess("Special characters are allowed. Entered text: " + remarks);
 			Assert.assertTrue(true);
@@ -343,7 +342,7 @@ public class VisitorLogin_Module {
 
 	public static void validateNumbersInRemarksTextbox(String remarks) throws InterruptedException {
 
-		boolean ishandlenumber = verifyTextboxHandlesSpecialCharactersandNumbers("Xpath",remarks_txtbox,remarks);
+		boolean ishandlenumber = validateSpecialCharactersandNumbers("Xpath",remarks_txtbox,remarks);
 		if (ishandlenumber) {
 			FrameX_Listeners.logAndReportSuccess("Numbers are allowed. Entered text: " + remarks);
 			Assert.assertTrue(true);
