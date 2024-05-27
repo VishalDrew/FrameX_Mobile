@@ -2,16 +2,12 @@ package Tests;
 
 import Modules.Downloadcalls_Module;
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Listeners.FrameX_Listeners.logAndReportFailure;
 import static Modules.Downloadcalls_Module.*;
-import static Modules.Login_Module.*;
-import static Pages.HomePage_page.Attendance;
 import static Pages.HomePage_page.DownloadCalls;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 /**
  * DownloadcallsTest class.

@@ -18,7 +18,7 @@ public class DatabaseUtility extends TestSetup {
      */
     public static List<Map<String, String>> fetchdatafromdb(String query) throws Exception {
         try (
-                Connection con = DriverManager.getConnection(gettestserverurl(), LiveDbusername, LiveDbpassword);
+                Connection con = DriverManager.getConnection(getURL(), databasebUsername, databasePassword);
                 Statement statement = con.createStatement();
                 ResultSet result = statement.executeQuery(query)) {
 
@@ -141,7 +141,7 @@ public class DatabaseUtility extends TestSetup {
 
     public static List<Map<String, String>> executeframeQuery(String query) throws Exception {
         try (
-                Connection con = DriverManager.getConnection(framenewmainURL, LiveDbusername, LiveDbpassword);
+                Connection con = DriverManager.getConnection(framenewmainURL, databasebUsername, databasePassword);
                 Statement statement = con.createStatement();
                 ResultSet result = statement.executeQuery(isShopFrontPhotoRequired())) {
 

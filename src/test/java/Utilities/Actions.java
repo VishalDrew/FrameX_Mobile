@@ -15,14 +15,12 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-import static Utilities.Utils.sourceExists;
+import static Utilities.AppUtils.sourceExists;
 
 /**
  * Actions class.
  */
 public class Actions extends TestSetup {
-
-    public static WebDriver wait;
 
     public static WebElement element;
 
@@ -298,7 +296,7 @@ public class Actions extends TestSetup {
 
         if (result.getStatus() == ITestResult.FAILURE) {
             TakesScreenshot ts = driver;
-            File source = ts.getScreenshotAs(OutputType.FILE); // capture screenshot file
+            File source = ts.getScreenshotAs(OutputType.FILE);
             File target = new File(properties.get("Screenshotpath") + result.getName() + ".png");
             FileUtils.copyFile(source, target);
         }

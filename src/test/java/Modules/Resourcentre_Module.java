@@ -2,14 +2,10 @@ package Modules;
 
 import Base.TestSetup;
 
-import java.util.Set;
-
 import static Listeners.FrameX_Listeners.*;
-import static Pages.HomePage_page.Callplan;
 import static Pages.HomePage_page.ResourceCentre;
-import static Pages.Login_Page.menubutton;
 import static Utilities.Actions.*;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 /**
  * Resourcentre_Module class.

@@ -10,7 +10,7 @@ import static Listeners.FrameX_Listeners.*;
 import static Pages.Downloadcalls_page.*;
 import static Pages.HomePage_page.*;
 import static Utilities.Actions.*;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 /**
  * Downloadcalls_Module class.

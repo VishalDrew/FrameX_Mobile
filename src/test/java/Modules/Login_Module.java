@@ -35,6 +35,7 @@ public class Login_Module extends TestSetup {
 			log.info("Password: " + Password);
 			log.info("Project: " + Project);
 			log.info("Mobile number: " + Mobileno);
+
 		} catch (Exception e) {
 			log.error("Error occurred during login process:", e);
 			throw new RuntimeException("Error occurred during login process", e);

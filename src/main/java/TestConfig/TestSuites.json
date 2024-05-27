@@ -1,10 +1,10 @@
 {
   "SUITES": {
     "SMOKE": {
-      "Runmode": "Y"
+      "Runmode": "N"
     },
     "REGRESSION": {
-      "Runmode": "N"
+      "Runmode": "Y"
     },
     "NEGATIVE": {
       "Runmode": "N"

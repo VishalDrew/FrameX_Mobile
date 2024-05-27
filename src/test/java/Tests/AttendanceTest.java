@@ -1,18 +1,12 @@
 package Tests;
 
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Listeners.FrameX_Listeners.logAndReportFailure;
-import static Listeners.FrameX_Listeners.logAndReportSuccess;
 import static Modules.Attendance_Module.*;
-import static Pages.Attendance_page.*;
 import static Pages.HomePage_page.Attendance;
-import static Pages.Login_Page.menubutton;
-import static Utilities.Actions.*;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 /**
  * AttendanceTest class.

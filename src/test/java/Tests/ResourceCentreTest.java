@@ -1,19 +1,12 @@
 package Tests;
 
-import Utilities.Utils;
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Method;
-import java.util.Hashtable;
-
-import static Listeners.FrameX_Listeners.logAndReportFailure;
-import static Listeners.FrameX_Listeners.logAndReportSuccess;
 import static Modules.Resourcentre_Module.validateFiles;
 import static Pages.HomePage_page.*;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 public class ResourceCentreTest {
 

@@ -1,35 +1,32 @@
 package Modules.CallPlan;
 
-import Utilities.Utils;
+import Utilities.AppUtils;
 
 import java.text.MessageFormat;
 import java.util.LinkedHashMap;
 import java.util.List;
 
 import static Base.TestSetup.*;
-import static Modules.CallPlanModule.fieldtypes;
-import static Modules.CallPlanModule.targetid;
+import static Modules.CallPlanModule.*;
 import static Pages.CallPlan_page.*;
-import static Utilities.Actions.click;
-import static Utilities.Actions.enter;
+import static Utilities.Actions.*;
+import static Utilities.Actions.webdriverWait;
 import static Utilities.Constants.formmasterquerygenerator;
 import static Utilities.DatabaseUtility.getColumnNamesFromDatabase;
 import static Utilities.DatabaseUtility.getDataObject;
-import static Utilities.Utils.*;
-import static Utilities.Utils.imageCapture;
+import static Utilities.AppUtils.*;
 
 /**
  * CallPlanValidationHandler class.
  */
 public class DataBinder {
 
-    static String Ctrltype;
-    static String Datatype;
-    static String enumfieldName;
-    static String cleanProductName;
-    static  String formcondition;
+    private static String Ctrltype;
+    private  static String Datatype;
+    private  static String enumfieldName;
+    private static  String formcondition;
     public static String fieldName;
-    static String previousCtrltype ;
+    private static String previousCtrltype ;
 
 
     /**
@@ -46,7 +43,7 @@ public class DataBinder {
             String modifiedCategory = SetSpecialCharacter(category);
 
             if (!sourceExists(modifiedCategory)) {
-                Utils.scroll(driver, 600);
+                AppUtils.scroll(driver, 600);
 
                 if (!sourceExists(modifiedCategory)) {
                     isExecutionSuccessful = false;
@@ -80,7 +77,6 @@ public class DataBinder {
         String categoryXpath = generatecategorylocator(category);
         click("Xpath", categoryXpath);
         String formQuery = formmasterquerygenerator(targetid, category);
-        log.info("Form Query " + formQuery);
         List<Object> formDatas = getDataObject(formQuery);
         for (Object formData : formDatas) {
             if (formData instanceof LinkedHashMap<?, ?>) {
@@ -108,7 +104,7 @@ public class DataBinder {
      * @return                true if the form execution is successful, false otherwise
      * @throws Exception      if an error occurs during form processing
      */
-    public static boolean formprocess(String category, String form, String IsQuestionForm, String fieldtype) throws Exception {
+    private static boolean formprocess(String category, String form, String IsQuestionForm, String fieldtype) throws Exception {
         form = removeUnderscores(form);
         if (!sourceExists(form)) {
             return false;
@@ -119,7 +115,6 @@ public class DataBinder {
         String productColumnQuery = MessageFormat.format(sqlQueries.get("ProductColumnquery"), "'" + formName + "'");
         String productColumn = getColumnNamesFromDatabase(productColumnQuery, "ProductColumn").get(0);
         productColumn = productColumn.replace("*", "+ ' *'");
-        log.info("ProductColumn Query " + productColumnQuery);
 
         boolean pictureform = formName.equalsIgnoreCase("picture");
         String questionColumns = (IsQuestionForm.equals("1") || pictureform) ?
@@ -129,7 +124,6 @@ public class DataBinder {
                 "Rtrim(Ltrim(" + productColumn + "))";
 
         String productQuery = MessageFormat.format(sqlQueries.get("Productquery"), formName, targetid, "'" + category + "'", questionColumns, formcondition);
-        log.info("Product Query " + productQuery);
         List<String> productNames = getColumnNamesFromDatabase(productQuery, "ProductName");
 
         if (fieldtype.contains("Mandatory only")) {
@@ -177,7 +171,7 @@ public class DataBinder {
 
         try {
             if (!sourceExists(cleanProductName)) {
-                Utils.scroll(driver, 600);
+                AppUtils.scroll(driver, 600);
             }
 
             if (sourceExists(cleanProductName)) {
@@ -233,8 +227,6 @@ public class DataBinder {
             Datatype = (String) fieldData.get("DataType");
             fieldName = IsQuestionForm.equals("1") ? Ctrltype : (String) fieldData.get("FieldName");
             enumfieldName = (String) fieldData.get("FieldName");
-            String logMessage = "Control Type: " + Ctrltype + ", DataType: " + Datatype + ", Fieldname: " + fieldName + ", EnumFieldname : " + enumfieldName;
-            log.info(logMessage);
 
             updateFieldNameForRequired(formName, productName, fieldData);
 
@@ -282,7 +274,7 @@ public class DataBinder {
         switch (Ctrltype) {
             case "TextBox":
                 log.info("Control type is TextBox");
-                enter("Xpath", generatetextfieldlocator(fieldName), Utils.generateTestData(Datatype, fieldName));
+                enter("Xpath", generatetextfieldlocator(fieldName), generateTestData(Datatype, fieldName));
                 driver.hideKeyboard();
                 break;
             case "DropDownList":
@@ -310,7 +302,7 @@ public class DataBinder {
         }
     }
 
-   private static void productClickValidation(String formName, String IsQuestionForm, String productName) throws Exception {
+    private static void productClickValidation(String formName, String IsQuestionForm, String productName) throws Exception {
 
         int forDEO = IsQuestionForm.equals("1") ? 0 : 1;
         List<Object> fieldNames = getDataObject(IsQuestionForm.equals("1") ? MessageFormat.format(sqlQueries.get("QuestionFormFieldsquery"), formName, "'" + productName + "'", "'" + formName + "'") : MessageFormat.format(sqlQueries.get("FormFieldsquery"), "'" + formName + "'", IsQuestionForm, forDEO));
@@ -329,4 +321,94 @@ public class DataBinder {
         }
     }
 
+
+
+    private static void Dropdownsetter(String formName, String productName, String IsQuestionForm, String fieldName) throws Exception {
+        try {
+            String Enumquery;
+            if (IsQuestionForm.equals("1")) {
+                Enumquery = MessageFormat.format(sqlQueries.get("EnumQuestionFieldquery"), formName, "'" + productName + "'", "'" + formName + "'");
+            } else {
+                Enumquery = MessageFormat.format(sqlQueries.get("EnumFieldquery"), "'" + fieldName.replace(" *", "").replace(" ", "_") + "'", "'" + formName + "'");
+            }
+            List<String> dropList = getColumnNamesFromDatabase(Enumquery, "FieldOption");
+
+            for (String drop : dropList) {
+                if (sourceExists(fieldName)) {
+                    dropdown(fieldName,drop);
+                    break;
+                } else{
+                    if (sourceExists(drop)) {
+                        click("ACCESSIBILITYID", drop);
+                        break;
+                    }
+                    AppUtils.scroll(driver,600);
+                    dropdown(fieldName,drop);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            log.error("Error setting dropdown for field " + fieldName + " in form " + formName);
+            log.error(e.getMessage());
+        }
+    }
+
+    private static void dropdown(String fieldName,String drop){
+
+        if (sourceExists(fieldName)) {
+            click("ACCESSIBILITYID", fieldName);
+            click("ACCESSIBILITYID", drop);
+
+        } else if (sourceExists(drop)) {
+            click("ACCESSIBILITYID", drop);
+        }
+    }
+
+
+    private static void imageCapture() throws InterruptedException {
+
+        if(fieldName.contains("Photo *")){
+            click("Xpath", Camerabutton_M);
+        }else{
+            click("Xpath", Camerabutton_NM);
+        }
+        webdriverWait("Xpath", Shutterbutton, 4);
+        click("Xpath", Shutterbutton);
+        webdriverWait("ACCESSIBILITYID", "Done", 3);
+        click("ACCESSIBILITYID", "Done");
+        Thread.sleep(700);
+        totalimagescaptured++;
+
+    }
+
+
+    /**
+     * Generates dataset based on the given type and facing type.
+     *
+     * @param type        the type of dataset (Int or Varchar)
+     * @param facingtype  the facing type (Industry Facing * or Our Brand Facing *)
+     * @return            the generated dataset
+     * @throws            NullPointerException if type is null
+     */
+
+    private static String generateTestData(String dataType, String facingType) {
+        final String INDUSTRY_FACINGS = "Industry Facings *";
+        final String OUR_BRAND_FACINGS = "Our Brand Facings *";
+
+        if ("Int".equals(dataType)) {
+            if (facingType.contains(INDUSTRY_FACINGS)) {
+                return "5";
+            } else if (facingType.contains(OUR_BRAND_FACINGS)) {
+                return "2";
+            }
+            return "3";
+        } else if ("integer".equals(dataType)) {
+            return "6";
+        } else if (dataType.contains("Varchar") || dataType.contains("string")) {
+            return "Testdata";
+        } else {
+            // Handle unknown data types
+            throw new IllegalArgumentException("Unknown data type: " + dataType);
+        }
+    }
 }

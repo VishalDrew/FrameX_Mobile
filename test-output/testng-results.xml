@@ -1,161 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="57" passed="44" failed="10" skipped="1">
+<testng-results ignored="2" total="57" passed="47" failed="8" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-22T15:34:41 IST" name="Regression Suite" finished-at="2024-05-22T15:48:56 IST" duration-ms="855622">
+  <suite started-at="2024-05-27T17:47:03 IST" name="Regression Suite" finished-at="2024-05-27T17:55:11 IST" duration-ms="488654">
     <groups>
       <group name="negative">
-        <method signature="AttendanceTest.TC_002_VerifyAttendanceWithoutCapturingImage()[pri:2, instance:Tests.AttendanceTest@6995bf68]" name="TC_002_VerifyAttendanceWithoutCapturingImage" class="Tests.AttendanceTest"/>
-        <method signature="VisitorLoginTest.TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@5143c662]" name="TC_002_VerifySubmitButtonWithoutEnteringFields" class="Tests.VisitorLoginTest"/>
-        <method signature="DownloadcallsTest.TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_003_VerifyDuplicateCallDownload" class="Tests.DownloadcallsTest"/>
-        <method signature="CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@4c51cf28]" name="TC_005_Verify_Upload_Button_Without_Completing_Form" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_004_VerifyInvalidTargetDownload" class="Tests.DownloadcallsTest"/>
-        <method signature="DownloadcallsTest.TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_006_VerifySubmitButtonWithoutAddingTarget" class="Tests.DownloadcallsTest"/>
-        <method signature="LoginTest.TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@51acdf2e]" name="TC_002_Verify_Login_With_Invalid_Username" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@51acdf2e]" name="TC_003_Verify_Login_With_Invalid_Password" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@51acdf2e]" name="TC_004_Verify_Login_With_Invalid_Project" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@51acdf2e]" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@51acdf2e]" name="TC_006_Verify_Login_Without_Entering_Username" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@51acdf2e]" name="TC_007_Verify_Login_Without_Entering_Password" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@51acdf2e]" name="TC_008_Verify_Login_Without_Entering_Project" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@51acdf2e]" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" class="Tests.LoginTest"/>
+        <method signature="AttendanceTest.TC_002_VerifyAttendanceWithoutCapturingImage()[pri:2, instance:Tests.AttendanceTest@710b18a6]" name="TC_002_VerifyAttendanceWithoutCapturingImage" class="Tests.AttendanceTest"/>
+        <method signature="VisitorLoginTest.TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@119020fb]" name="TC_002_VerifySubmitButtonWithoutEnteringFields" class="Tests.VisitorLoginTest"/>
+        <method signature="DownloadcallsTest.TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_003_VerifyDuplicateCallDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_005_Verify_Upload_Button_Without_Completing_Form" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_004_VerifyInvalidTargetDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="DownloadcallsTest.TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_006_VerifySubmitButtonWithoutAddingTarget" class="Tests.DownloadcallsTest"/>
+        <method signature="LoginTest.TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@1c3b9394]" name="TC_002_Verify_Login_With_Invalid_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@1c3b9394]" name="TC_003_Verify_Login_With_Invalid_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@1c3b9394]" name="TC_004_Verify_Login_With_Invalid_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@1c3b9394]" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@1c3b9394]" name="TC_006_Verify_Login_Without_Entering_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@1c3b9394]" name="TC_007_Verify_Login_Without_Entering_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@1c3b9394]" name="TC_008_Verify_Login_Without_Entering_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@1c3b9394]" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" class="Tests.LoginTest"/>
       </group> <!-- negative -->
       <group name="regression">
-        <method signature="AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed()[pri:1, instance:Tests.AttendanceTest@6995bf68]" name="TC_001_VerifyAttendanceModuleDisplayed" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@4c51cf28]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@77825085]" name="TC_001_Verify_ResourceCenter_Module_Displayed" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed()[pri:1, instance:Tests.VisitorLoginTest@5143c662]" name="TC_001_VerifyVisitorLoginModuleDisplayed" class="Tests.VisitorLoginTest"/>
-        <method signature="AttendanceTest.TC_002_VerifyAttendanceWithoutCapturingImage()[pri:2, instance:Tests.AttendanceTest@6995bf68]" name="TC_002_VerifyAttendanceWithoutCapturingImage" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@4c51cf28]" name="TC_002_Verify_Sync_Button_Functionality" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_002_VerifyCallsAreDownloaded" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@77825085]" name="TC002_VerifyPPTXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@5143c662]" name="TC_002_VerifySubmitButtonWithoutEnteringFields" class="Tests.VisitorLoginTest"/>
-        <method signature="AttendanceTest.TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@6995bf68]" name="TC_003_VerifyAttendanceSubmission" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@4c51cf28]" name="TC_003_Verify_5_Minute_Sync_Process" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_003_VerifyDuplicateCallDownload" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@77825085]" name="TC003_VerifyMP4FileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit()[pri:3, instance:Tests.VisitorLoginTest@5143c662]" name="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
-        <method signature="AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@6995bf68]" name="TC_004_VerifyAttendanceRecordedInDatabase" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@4c51cf28]" name="TC_005_Verify_Upload_Button_Without_Completing_Form" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_004_VerifyInvalidTargetDownload" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@77825085]" name="TC004_VerifyPDFFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters()[pri:4, instance:Tests.VisitorLoginTest@5143c662]" name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
-        <method signature="CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@4c51cf28]" name="TC_009_Verify_Call_Upload" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_005_VerifyRemoveButtonFunctionality()[pri:5, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_005_VerifyRemoveButtonFunctionality" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@77825085]" name="TC005_VerifyDOCXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers()[pri:5, instance:Tests.VisitorLoginTest@5143c662]" name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
-        <method signature="DownloadcallsTest.TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_006_VerifySubmitButtonWithoutAddingTarget" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@77825085]" name="TC006_VerifyJPGFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit()[pri:6, instance:Tests.VisitorLoginTest@5143c662]" name="TC_006_VerifyVisitorNameTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
-        <method signature="DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit()[pri:7, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_007_VerifyTargetIDTextboxCharacterLimit" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@77825085]" name="TC007_VerifyXLSXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters()[pri:7, instance:Tests.VisitorLoginTest@5143c662]" name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_008_VerifyVisitorNameTextboxAcceptsNumbers()[pri:8, instance:Tests.VisitorLoginTest@5143c662]" name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit()[pri:9, instance:Tests.VisitorLoginTest@5143c662]" name="TC_009_VerifyDesignationTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters()[pri:10, instance:Tests.VisitorLoginTest@5143c662]" name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_011_VerifyDesignationTextboxAcceptsNumbers()[pri:11, instance:Tests.VisitorLoginTest@5143c662]" name="TC_011_VerifyDesignationTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit()[pri:12, instance:Tests.VisitorLoginTest@5143c662]" name="TC_012_VerifyRemarksTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters()[pri:13, instance:Tests.VisitorLoginTest@5143c662]" name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_014_Verify_RemarksTextboxAcceptsNumbers()[pri:14, instance:Tests.VisitorLoginTest@5143c662]" name="TC_014_Verify_RemarksTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
-        <method signature="VisitorLoginTest.TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@5143c662]" name="TC_015_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
-        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@51acdf2e]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@51acdf2e]" name="TC_002_Verify_Login_With_Invalid_Username" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@51acdf2e]" name="TC_003_Verify_Login_With_Invalid_Password" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@51acdf2e]" name="TC_004_Verify_Login_With_Invalid_Project" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@51acdf2e]" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@51acdf2e]" name="TC_006_Verify_Login_Without_Entering_Username" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@51acdf2e]" name="TC_007_Verify_Login_Without_Entering_Password" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@51acdf2e]" name="TC_008_Verify_Login_Without_Entering_Project" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@51acdf2e]" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit()[pri:10, instance:Tests.LoginTest@51acdf2e]" name="TC_010_Verify_UsernameTextboxCharacterLimit" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters()[pri:11, instance:Tests.LoginTest@51acdf2e]" name="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_012_Verify_UsernameTextboxAcceptsNumbers()[pri:12, instance:Tests.LoginTest@51acdf2e]" name="TC_012_Verify_UsernameTextboxAcceptsNumbers" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit()[pri:13, instance:Tests.LoginTest@51acdf2e]" name="TC_013_Verify_PasswordTextboxCharacterLimit" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit()[pri:14, instance:Tests.LoginTest@51acdf2e]" name="TC_014_Verify_ProjectTextboxCharacterLimit" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters()[pri:15, instance:Tests.LoginTest@51acdf2e]" name="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_016_Verify_ProjectTextboxAcceptsNumbers()[pri:16, instance:Tests.LoginTest@51acdf2e]" name="TC_016_Verify_ProjectTextboxAcceptsNumbers" class="Tests.LoginTest"/>
-        <method signature="LoginTest.TC_017_Verify_MobileNumberTextboxCharacterLimit()[pri:17, instance:Tests.LoginTest@51acdf2e]" name="TC_017_Verify_MobileNumberTextboxCharacterLimit" class="Tests.LoginTest"/>
+        <method signature="AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed()[pri:1, instance:Tests.AttendanceTest@710b18a6]" name="TC_001_VerifyAttendanceModuleDisplayed" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC_001_Verify_ResourceCenter_Module_Displayed" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed()[pri:1, instance:Tests.VisitorLoginTest@119020fb]" name="TC_001_VerifyVisitorLoginModuleDisplayed" class="Tests.VisitorLoginTest"/>
+        <method signature="AttendanceTest.TC_002_VerifyAttendanceWithoutCapturingImage()[pri:2, instance:Tests.AttendanceTest@710b18a6]" name="TC_002_VerifyAttendanceWithoutCapturingImage" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_002_Verify_Sync_Button_Functionality" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_002_VerifyCallsAreDownloaded" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC002_VerifyPPTXFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@119020fb]" name="TC_002_VerifySubmitButtonWithoutEnteringFields" class="Tests.VisitorLoginTest"/>
+        <method signature="AttendanceTest.TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@710b18a6]" name="TC_003_VerifyAttendanceSubmission" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_003_Verify_5_Minute_Sync_Process" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_003_VerifyDuplicateCallDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC003_VerifyMP4FileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit()[pri:3, instance:Tests.VisitorLoginTest@119020fb]" name="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
+        <method signature="AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@710b18a6]" name="TC_004_VerifyAttendanceRecordedInDatabase" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_005_Verify_Upload_Button_Without_Completing_Form" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_004_VerifyInvalidTargetDownload" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC004_VerifyPDFFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters()[pri:4, instance:Tests.VisitorLoginTest@119020fb]" name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
+        <method signature="CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_009_Verify_Call_Upload" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_005_VerifyRemoveButtonFunctionality()[pri:5, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_005_VerifyRemoveButtonFunctionality" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC005_VerifyDOCXFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers()[pri:5, instance:Tests.VisitorLoginTest@119020fb]" name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
+        <method signature="DownloadcallsTest.TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_006_VerifySubmitButtonWithoutAddingTarget" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC006_VerifyJPGFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit()[pri:6, instance:Tests.VisitorLoginTest@119020fb]" name="TC_006_VerifyVisitorNameTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
+        <method signature="DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit()[pri:7, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_007_VerifyTargetIDTextboxCharacterLimit" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC007_VerifyXLSXFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters()[pri:7, instance:Tests.VisitorLoginTest@119020fb]" name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_008_VerifyVisitorNameTextboxAcceptsNumbers()[pri:8, instance:Tests.VisitorLoginTest@119020fb]" name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit()[pri:9, instance:Tests.VisitorLoginTest@119020fb]" name="TC_009_VerifyDesignationTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters()[pri:10, instance:Tests.VisitorLoginTest@119020fb]" name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_011_VerifyDesignationTextboxAcceptsNumbers()[pri:11, instance:Tests.VisitorLoginTest@119020fb]" name="TC_011_VerifyDesignationTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit()[pri:12, instance:Tests.VisitorLoginTest@119020fb]" name="TC_012_VerifyRemarksTextboxCharacterLimit" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters()[pri:13, instance:Tests.VisitorLoginTest@119020fb]" name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_014_Verify_RemarksTextboxAcceptsNumbers()[pri:14, instance:Tests.VisitorLoginTest@119020fb]" name="TC_014_Verify_RemarksTextboxAcceptsNumbers" class="Tests.VisitorLoginTest"/>
+        <method signature="VisitorLoginTest.TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@119020fb]" name="TC_015_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
+        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@1c3b9394]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@1c3b9394]" name="TC_002_Verify_Login_With_Invalid_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@1c3b9394]" name="TC_003_Verify_Login_With_Invalid_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@1c3b9394]" name="TC_004_Verify_Login_With_Invalid_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@1c3b9394]" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@1c3b9394]" name="TC_006_Verify_Login_Without_Entering_Username" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@1c3b9394]" name="TC_007_Verify_Login_Without_Entering_Password" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@1c3b9394]" name="TC_008_Verify_Login_Without_Entering_Project" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@1c3b9394]" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit()[pri:10, instance:Tests.LoginTest@1c3b9394]" name="TC_010_Verify_UsernameTextboxCharacterLimit" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters()[pri:11, instance:Tests.LoginTest@1c3b9394]" name="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_012_Verify_UsernameTextboxAcceptsNumbers()[pri:12, instance:Tests.LoginTest@1c3b9394]" name="TC_012_Verify_UsernameTextboxAcceptsNumbers" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit()[pri:13, instance:Tests.LoginTest@1c3b9394]" name="TC_013_Verify_PasswordTextboxCharacterLimit" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit()[pri:14, instance:Tests.LoginTest@1c3b9394]" name="TC_014_Verify_ProjectTextboxCharacterLimit" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters()[pri:15, instance:Tests.LoginTest@1c3b9394]" name="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_016_Verify_ProjectTextboxAcceptsNumbers()[pri:16, instance:Tests.LoginTest@1c3b9394]" name="TC_016_Verify_ProjectTextboxAcceptsNumbers" class="Tests.LoginTest"/>
+        <method signature="LoginTest.TC_017_Verify_MobileNumberTextboxCharacterLimit()[pri:17, instance:Tests.LoginTest@1c3b9394]" name="TC_017_Verify_MobileNumberTextboxCharacterLimit" class="Tests.LoginTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed()[pri:1, instance:Tests.AttendanceTest@6995bf68]" name="TC_001_VerifyAttendanceModuleDisplayed" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@4c51cf28]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@77825085]" name="TC_001_Verify_ResourceCenter_Module_Displayed" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed()[pri:1, instance:Tests.VisitorLoginTest@5143c662]" name="TC_001_VerifyVisitorLoginModuleDisplayed" class="Tests.VisitorLoginTest"/>
-        <method signature="CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@4c51cf28]" name="TC_002_Verify_Sync_Button_Functionality" class="Tests.CallPlanTest"/>
-        <method signature="DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@503ecb24]" name="TC_002_VerifyCallsAreDownloaded" class="Tests.DownloadcallsTest"/>
-        <method signature="ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@77825085]" name="TC002_VerifyPPTXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="AttendanceTest.TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@6995bf68]" name="TC_003_VerifyAttendanceSubmission" class="Tests.AttendanceTest"/>
-        <method signature="CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@4c51cf28]" name="TC_003_Verify_5_Minute_Sync_Process" class="Tests.CallPlanTest"/>
-        <method signature="ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@77825085]" name="TC003_VerifyMP4FileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@6995bf68]" name="TC_004_VerifyAttendanceRecordedInDatabase" class="Tests.AttendanceTest"/>
-        <method signature="ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@77825085]" name="TC004_VerifyPDFFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@4c51cf28]" name="TC_009_Verify_Call_Upload" class="Tests.CallPlanTest"/>
-        <method signature="ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@77825085]" name="TC005_VerifyDOCXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@77825085]" name="TC006_VerifyJPGFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@77825085]" name="TC007_VerifyXLSXFileDownloaded" class="Tests.ResourceCentreTest"/>
-        <method signature="VisitorLoginTest.TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@5143c662]" name="TC_015_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
-        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@51acdf2e]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
+        <method signature="AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed()[pri:1, instance:Tests.AttendanceTest@710b18a6]" name="TC_001_VerifyAttendanceModuleDisplayed" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_001_Verify_Call_Plan_Module_Displayed" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC_001_Verify_ResourceCenter_Module_Displayed" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed()[pri:1, instance:Tests.VisitorLoginTest@119020fb]" name="TC_001_VerifyVisitorLoginModuleDisplayed" class="Tests.VisitorLoginTest"/>
+        <method signature="CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_002_Verify_Sync_Button_Functionality" class="Tests.CallPlanTest"/>
+        <method signature="DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@2101b44a]" name="TC_002_VerifyCallsAreDownloaded" class="Tests.DownloadcallsTest"/>
+        <method signature="ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC002_VerifyPPTXFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="AttendanceTest.TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@710b18a6]" name="TC_003_VerifyAttendanceSubmission" class="Tests.AttendanceTest"/>
+        <method signature="CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_003_Verify_5_Minute_Sync_Process" class="Tests.CallPlanTest"/>
+        <method signature="ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC003_VerifyMP4FileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@710b18a6]" name="TC_004_VerifyAttendanceRecordedInDatabase" class="Tests.AttendanceTest"/>
+        <method signature="ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC004_VerifyPDFFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@2cc3ad05]" name="TC_009_Verify_Call_Upload" class="Tests.CallPlanTest"/>
+        <method signature="ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC005_VerifyDOCXFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC006_VerifyJPGFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@3d9f6567]" name="TC007_VerifyXLSXFileDownloaded" class="Tests.ResourceCentreTest"/>
+        <method signature="VisitorLoginTest.TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@119020fb]" name="TC_015_Verify_Visitor_Upload" class="Tests.VisitorLoginTest"/>
+        <method signature="LoginTest.TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@1c3b9394]" name="TC_001_Verify_Login_With_Valid_Credentials" class="Tests.LoginTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-05-22T15:34:41 IST" name="Regression Tests" finished-at="2024-05-22T15:48:56 IST" duration-ms="855622">
+    <test started-at="2024-05-27T17:47:03 IST" name="Regression Tests" finished-at="2024-05-27T17:55:11 IST" duration-ms="488654">
       <class name="Tests.ResourceCentreTest">
-        <test-method signature="TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:32 IST" name="TC_001_Verify_ResourceCenter_Module_Displayed" finished-at="2024-05-22T15:48:36 IST" duration-ms="4016" status="PASS">
+        <test-method signature="TC_001_Verify_ResourceCenter_Module_Displayed()[pri:1, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:54:42 IST" name="TC_001_Verify_ResourceCenter_Module_Displayed" finished-at="2024-05-27T17:54:47 IST" duration-ms="4425" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_Verify_ResourceCenter_Module_Displayed -->
-        <test-method signature="TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:36 IST" name="TC002_VerifyPPTXFileDownloaded" finished-at="2024-05-22T15:48:40 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="4156" status="PASS">
+        <test-method signature="TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:54:47 IST" name="TC002_VerifyPPTXFileDownloaded" finished-at="2024-05-27T17:54:52 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="5407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC002_VerifyPPTXFileDownloaded -->
-        <test-method signature="TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:40 IST" name="TC003_VerifyMP4FileDownloaded" finished-at="2024-05-22T15:48:44 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3322" status="PASS">
+        <test-method signature="TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:54:52 IST" name="TC003_VerifyMP4FileDownloaded" finished-at="2024-05-27T17:54:56 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC003_VerifyMP4FileDownloaded -->
-        <test-method signature="TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:44 IST" name="TC004_VerifyPDFFileDownloaded" finished-at="2024-05-22T15:48:47 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3244" status="PASS">
+        <test-method signature="TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:54:56 IST" name="TC004_VerifyPDFFileDownloaded" finished-at="2024-05-27T17:55:00 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="4479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC004_VerifyPDFFileDownloaded -->
-        <test-method signature="TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:47 IST" name="TC005_VerifyDOCXFileDownloaded" finished-at="2024-05-22T15:48:50 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="2994" status="PASS">
+        <test-method signature="TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:55:00 IST" name="TC005_VerifyDOCXFileDownloaded" finished-at="2024-05-27T17:55:03 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3365" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC005_VerifyDOCXFileDownloaded -->
-        <test-method signature="TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:50 IST" name="TC006_VerifyJPGFileDownloaded" finished-at="2024-05-22T15:48:53 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3107" status="PASS">
+        <test-method signature="TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:55:03 IST" name="TC006_VerifyJPGFileDownloaded" finished-at="2024-05-27T17:55:07 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3763" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC006_VerifyJPGFileDownloaded -->
-        <test-method signature="TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@77825085]" started-at="2024-05-22T15:48:53 IST" name="TC007_VerifyXLSXFileDownloaded" finished-at="2024-05-22T15:48:56 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="3170" status="PASS">
+        <test-method signature="TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@3d9f6567]" started-at="2024-05-27T17:55:07 IST" name="TC007_VerifyXLSXFileDownloaded" finished-at="2024-05-27T17:55:11 IST" depends-on-methods="Tests.ResourceCentreTest.TC_001_Verify_ResourceCenter_Module_Displayed" duration-ms="4068" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC007_VerifyXLSXFileDownloaded -->
       </class> <!-- Tests.ResourceCentreTest -->
       <class name="Tests.DownloadcallsTest">
-        <test-method signature="TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:36:46 IST" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" finished-at="2024-05-22T15:36:58 IST" duration-ms="12445" status="PASS">
+        <test-method signature="TC_001_VerifyDownloadCallsModuleIsDisplayed()[pri:1, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:49:42 IST" name="TC_001_VerifyDownloadCallsModuleIsDisplayed" finished-at="2024-05-27T17:49:58 IST" duration-ms="15459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_VerifyDownloadCallsModuleIsDisplayed -->
-        <test-method signature="TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:36:58 IST" name="TC_002_VerifyCallsAreDownloaded" finished-at="2024-05-22T15:37:13 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="15126" status="PASS">
+        <test-method signature="TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:49:58 IST" name="TC_002_VerifyCallsAreDownloaded" finished-at="2024-05-27T17:50:16 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="18244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002_VerifyCallsAreDownloaded -->
-        <test-method signature="TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:37:13 IST" name="TC_003_VerifyDuplicateCallDownload" finished-at="2024-05-22T15:37:20 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="7133" status="PASS">
+        <test-method signature="TC_003_VerifyDuplicateCallDownload()[pri:3, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:50:16 IST" name="TC_003_VerifyDuplicateCallDownload" finished-at="2024-05-27T17:50:24 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="7562" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003_VerifyDuplicateCallDownload -->
-        <test-method signature="TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:37:20 IST" name="TC_004_VerifyInvalidTargetDownload" finished-at="2024-05-22T15:37:28 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="7760" status="PASS">
+        <test-method signature="TC_004_VerifyInvalidTargetDownload()[pri:4, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:50:24 IST" name="TC_004_VerifyInvalidTargetDownload" finished-at="2024-05-27T17:50:32 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="8168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_004_VerifyInvalidTargetDownload -->
-        <test-method signature="TC_005_VerifyRemoveButtonFunctionality()[pri:5, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:37:28 IST" name="TC_005_VerifyRemoveButtonFunctionality" finished-at="2024-05-22T15:37:34 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="6173" status="PASS">
+        <test-method signature="TC_005_VerifyRemoveButtonFunctionality()[pri:5, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:50:32 IST" name="TC_005_VerifyRemoveButtonFunctionality" finished-at="2024-05-27T17:50:38 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="6421" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005_VerifyRemoveButtonFunctionality -->
-        <test-method signature="TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:37:34 IST" name="TC_006_VerifySubmitButtonWithoutAddingTarget" finished-at="2024-05-22T15:37:35 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="884" status="PASS">
+        <test-method signature="TC_006_VerifySubmitButtonWithoutAddingTarget()[pri:6, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:50:38 IST" name="TC_006_VerifySubmitButtonWithoutAddingTarget" finished-at="2024-05-27T17:50:39 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="1137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_006_VerifySubmitButtonWithoutAddingTarget -->
-        <test-method signature="TC_007_VerifyTargetIDTextboxCharacterLimit()[pri:7, instance:Tests.DownloadcallsTest@503ecb24]" started-at="2024-05-22T15:37:35 IST" name="TC_007_VerifyTargetIDTextboxCharacterLimit" finished-at="2024-05-22T15:37:39 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="3712" status="FAIL">
+        <test-method signature="TC_007_VerifyTargetIDTextboxCharacterLimit()[pri:7, instance:Tests.DownloadcallsTest@2101b44a]" started-at="2024-05-27T17:50:39 IST" name="TC_007_VerifyTargetIDTextboxCharacterLimit" finished-at="2024-05-27T17:50:44 IST" depends-on-methods="Tests.DownloadcallsTest.TC_001_VerifyDownloadCallsModuleIsDisplayed" duration-ms="4270" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -167,7 +167,7 @@ at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
 at Modules.Downloadcalls_Module.validateMaxTextLimitIntargetIDTextbox(Downloadcalls_Module.java:198)
-at Tests.DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit(DownloadcallsTest.java:91)
+at Tests.DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit(DownloadcallsTest.java:87)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -191,7 +191,7 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
@@ -200,129 +200,33 @@ at Tests.Main.main(Main.java:33)
         </test-method> <!-- TC_007_VerifyTargetIDTextboxCharacterLimit -->
       </class> <!-- Tests.DownloadcallsTest -->
       <class name="Tests.AttendanceTest">
-        <test-method signature="TC_001_VerifyAttendanceModuleDisplayed()[pri:1, instance:Tests.AttendanceTest@6995bf68]" started-at="2024-05-22T15:46:35 IST" name="TC_001_VerifyAttendanceModuleDisplayed" finished-at="2024-05-22T15:46:36 IST" duration-ms="1049" status="PASS">
+        <test-method signature="TC_001_VerifyAttendanceModuleDisplayed()[pri:1, instance:Tests.AttendanceTest@710b18a6]" started-at="2024-05-27T17:51:57 IST" name="TC_001_VerifyAttendanceModuleDisplayed" finished-at="2024-05-27T17:51:59 IST" duration-ms="1680" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_VerifyAttendanceModuleDisplayed -->
-        <test-method signature="TC_002_VerifyAttendanceWithoutCapturingImage()[pri:2, instance:Tests.AttendanceTest@6995bf68]" started-at="2024-05-22T15:46:36 IST" name="TC_002_VerifyAttendanceWithoutCapturingImage" finished-at="2024-05-22T15:46:37 IST" depends-on-methods="Tests.AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed" duration-ms="889" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.json.JSONObject.getString(String)" because "attendanceData" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.json.JSONObject.getString(String)" because "attendanceData" is null
-at Tests.AttendanceTest.TC_002_VerifyAttendanceWithoutCapturingImage(AttendanceTest.java:41)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="TC_002_VerifyAttendanceWithoutCapturingImage()[pri:2, instance:Tests.AttendanceTest@710b18a6]" started-at="2024-05-27T17:51:59 IST" name="TC_002_VerifyAttendanceWithoutCapturingImage" finished-at="2024-05-27T17:52:05 IST" depends-on-methods="Tests.AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed" duration-ms="5934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002_VerifyAttendanceWithoutCapturingImage -->
-        <test-method signature="TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@6995bf68]" started-at="2024-05-22T15:46:37 IST" name="TC_003_VerifyAttendanceSubmission" finished-at="2024-05-22T15:46:38 IST" depends-on-methods="Tests.AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed" duration-ms="652" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "org.json.JSONObject.getString(String)" because "attendanceData" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.json.JSONObject.getString(String)" because "attendanceData" is null
-at Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission(AttendanceTest.java:53)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@710b18a6]" started-at="2024-05-27T17:52:05 IST" name="TC_003_VerifyAttendanceSubmission" finished-at="2024-05-27T17:52:28 IST" depends-on-methods="Tests.AttendanceTest.TC_001_VerifyAttendanceModuleDisplayed" duration-ms="23187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003_VerifyAttendanceSubmission -->
-        <test-method signature="TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@6995bf68]" started-at="2024-05-22T15:46:38 IST" name="TC_004_VerifyAttendanceRecordedInDatabase" finished-at="2024-05-22T15:46:38 IST" depends-on-methods="Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Tests.AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase() on instance Tests.AttendanceTest@6995bf68 depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission() on instance Tests.AttendanceTest@6995bf68]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Tests.AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase() on instance Tests.AttendanceTest@6995bf68 depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission() on instance Tests.AttendanceTest@6995bf68]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:150)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@710b18a6]" started-at="2024-05-27T17:52:28 IST" name="TC_004_VerifyAttendanceRecordedInDatabase" finished-at="2024-05-27T17:52:28 IST" depends-on-methods="Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission" duration-ms="322" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_004_VerifyAttendanceRecordedInDatabase -->
       </class> <!-- Tests.AttendanceTest -->
       <class name="Tests.VisitorLoginTest">
-        <test-method signature="TC_001_VerifyVisitorLoginModuleDisplayed()[pri:1, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:46:38 IST" name="TC_001_VerifyVisitorLoginModuleDisplayed" finished-at="2024-05-22T15:46:41 IST" duration-ms="2083" status="PASS">
+        <test-method signature="TC_001_VerifyVisitorLoginModuleDisplayed()[pri:1, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:52:28 IST" name="TC_001_VerifyVisitorLoginModuleDisplayed" finished-at="2024-05-27T17:52:31 IST" duration-ms="2484" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_VerifyVisitorLoginModuleDisplayed -->
-        <test-method signature="TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:46:41 IST" name="TC_002_VerifySubmitButtonWithoutEnteringFields" finished-at="2024-05-22T15:46:59 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="18682" status="PASS">
+        <test-method signature="TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:52:31 IST" name="TC_002_VerifySubmitButtonWithoutEnteringFields" finished-at="2024-05-27T17:52:50 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="19712" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002_VerifySubmitButtonWithoutEnteringFields -->
-        <test-method signature="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit()[pri:3, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:46:59 IST" name="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit" finished-at="2024-05-22T15:47:04 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="4640" status="FAIL">
+        <test-method signature="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit()[pri:3, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:52:50 IST" name="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit" finished-at="2024-05-27T17:52:58 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="7442" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -334,7 +238,7 @@ at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
 at Modules.VisitorLogin_Module.validateMaxTextLimitInEmpIDTextbox(VisitorLogin_Module.java:216)
-at Tests.VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit(VisitorLoginTest.java:49)
+at Tests.VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit(VisitorLoginTest.java:41)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -358,22 +262,22 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003_VerifyVisitorEmpIDTextboxCharacterLimit -->
-        <test-method signature="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters()[pri:4, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:04 IST" name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters" finished-at="2024-05-22T15:47:07 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2208" status="PASS">
+        <test-method signature="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters()[pri:4, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:52:58 IST" name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters" finished-at="2024-05-27T17:53:01 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2658" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters -->
-        <test-method signature="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers()[pri:5, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:07 IST" name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers" finished-at="2024-05-22T15:47:09 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2163" status="PASS">
+        <test-method signature="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers()[pri:5, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:01 IST" name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers" finished-at="2024-05-27T17:53:04 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers -->
-        <test-method signature="TC_006_VerifyVisitorNameTextboxCharacterLimit()[pri:6, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:09 IST" name="TC_006_VerifyVisitorNameTextboxCharacterLimit" finished-at="2024-05-22T15:47:13 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="3859" status="FAIL">
+        <test-method signature="TC_006_VerifyVisitorNameTextboxCharacterLimit()[pri:6, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:04 IST" name="TC_006_VerifyVisitorNameTextboxCharacterLimit" finished-at="2024-05-27T17:53:09 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="4647" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -383,7 +287,7 @@ at Tests.Main.main(Main.java:33)
 at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.fail(Assert.java:115)
 at Modules.VisitorLogin_Module.validateMaxTextLimitInNameTextbox(VisitorLogin_Module.java:253)
-at Tests.VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit(VisitorLoginTest.java:67)
+at Tests.VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit(VisitorLoginTest.java:57)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -407,22 +311,22 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_006_VerifyVisitorNameTextboxCharacterLimit -->
-        <test-method signature="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters()[pri:7, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:13 IST" name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters" finished-at="2024-05-22T15:47:15 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2251" status="PASS">
+        <test-method signature="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters()[pri:7, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:09 IST" name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters" finished-at="2024-05-27T17:53:12 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2678" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters -->
-        <test-method signature="TC_008_VerifyVisitorNameTextboxAcceptsNumbers()[pri:8, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:15 IST" name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers" finished-at="2024-05-22T15:47:17 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2038" status="PASS">
+        <test-method signature="TC_008_VerifyVisitorNameTextboxAcceptsNumbers()[pri:8, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:12 IST" name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers" finished-at="2024-05-27T17:53:15 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_008_VerifyVisitorNameTextboxAcceptsNumbers -->
-        <test-method signature="TC_009_VerifyDesignationTextboxCharacterLimit()[pri:9, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:17 IST" name="TC_009_VerifyDesignationTextboxCharacterLimit" finished-at="2024-05-22T15:47:21 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="4111" status="FAIL">
+        <test-method signature="TC_009_VerifyDesignationTextboxCharacterLimit()[pri:9, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:15 IST" name="TC_009_VerifyDesignationTextboxCharacterLimit" finished-at="2024-05-27T17:53:20 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="4761" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -434,7 +338,7 @@ at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
 at Modules.VisitorLogin_Module.validateMaxTextLimitInDesignationTextbox(VisitorLogin_Module.java:289)
-at Tests.VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit(VisitorLoginTest.java:85)
+at Tests.VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit(VisitorLoginTest.java:73)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -458,22 +362,22 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_009_VerifyDesignationTextboxCharacterLimit -->
-        <test-method signature="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters()[pri:10, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:22 IST" name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters" finished-at="2024-05-22T15:47:24 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2283" status="PASS">
+        <test-method signature="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters()[pri:10, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:20 IST" name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters" finished-at="2024-05-27T17:53:23 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="3204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters -->
-        <test-method signature="TC_011_VerifyDesignationTextboxAcceptsNumbers()[pri:11, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:24 IST" name="TC_011_VerifyDesignationTextboxAcceptsNumbers" finished-at="2024-05-22T15:47:26 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2108" status="PASS">
+        <test-method signature="TC_011_VerifyDesignationTextboxAcceptsNumbers()[pri:11, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:23 IST" name="TC_011_VerifyDesignationTextboxAcceptsNumbers" finished-at="2024-05-27T17:53:27 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="3211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_011_VerifyDesignationTextboxAcceptsNumbers -->
-        <test-method signature="TC_012_VerifyRemarksTextboxCharacterLimit()[pri:12, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:26 IST" name="TC_012_VerifyRemarksTextboxCharacterLimit" finished-at="2024-05-22T15:47:30 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="4061" status="FAIL">
+        <test-method signature="TC_012_VerifyRemarksTextboxCharacterLimit()[pri:12, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:27 IST" name="TC_012_VerifyRemarksTextboxCharacterLimit" finished-at="2024-05-27T17:53:33 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="6077" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -485,7 +389,7 @@ at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
 at Modules.VisitorLogin_Module.validateMaxTextLimitInRemarksTextbox(VisitorLogin_Module.java:327)
-at Tests.VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit(VisitorLoginTest.java:103)
+at Tests.VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit(VisitorLoginTest.java:89)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -509,90 +413,90 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_012_VerifyRemarksTextboxCharacterLimit -->
-        <test-method signature="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters()[pri:13, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:31 IST" name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters" finished-at="2024-05-22T15:47:33 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="2575" status="PASS">
+        <test-method signature="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters()[pri:13, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:33 IST" name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters" finished-at="2024-05-27T17:53:36 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="3142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters -->
-        <test-method signature="TC_014_Verify_RemarksTextboxAcceptsNumbers()[pri:14, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:33 IST" name="TC_014_Verify_RemarksTextboxAcceptsNumbers" finished-at="2024-05-22T15:47:41 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="7340" status="PASS">
+        <test-method signature="TC_014_Verify_RemarksTextboxAcceptsNumbers()[pri:14, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:36 IST" name="TC_014_Verify_RemarksTextboxAcceptsNumbers" finished-at="2024-05-27T17:53:45 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="8339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_014_Verify_RemarksTextboxAcceptsNumbers -->
-        <test-method signature="TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@5143c662]" started-at="2024-05-22T15:47:41 IST" name="TC_015_Verify_Visitor_Upload" finished-at="2024-05-22T15:48:32 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="51757" status="PASS">
+        <test-method signature="TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@119020fb]" started-at="2024-05-27T17:53:45 IST" name="TC_015_Verify_Visitor_Upload" finished-at="2024-05-27T17:54:42 IST" depends-on-methods="Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed" duration-ms="57359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_015_Verify_Visitor_Upload -->
       </class> <!-- Tests.VisitorLoginTest -->
       <class name="Tests.CallPlanTest">
-        <test-method signature="TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@4c51cf28]" started-at="2024-05-22T15:37:39 IST" name="TC_001_Verify_Call_Plan_Module_Displayed" finished-at="2024-05-22T15:37:41 IST" duration-ms="1119" status="PASS">
+        <test-method signature="TC_001_Verify_Call_Plan_Module_Displayed()[pri:1, instance:Tests.CallPlanTest@2cc3ad05]" started-at="2024-05-27T17:50:44 IST" name="TC_001_Verify_Call_Plan_Module_Displayed" finished-at="2024-05-27T17:50:46 IST" duration-ms="1778" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_Verify_Call_Plan_Module_Displayed -->
-        <test-method signature="TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@4c51cf28]" started-at="2024-05-22T15:37:41 IST" name="TC_002_Verify_Sync_Button_Functionality" finished-at="2024-05-22T15:37:44 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="2946" status="PASS">
+        <test-method signature="TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@2cc3ad05]" started-at="2024-05-27T17:50:46 IST" name="TC_002_Verify_Sync_Button_Functionality" finished-at="2024-05-27T17:50:49 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="2821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002_Verify_Sync_Button_Functionality -->
-        <test-method signature="TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@4c51cf28]" started-at="2024-05-22T15:37:44 IST" name="TC_003_Verify_5_Minute_Sync_Process" finished-at="2024-05-22T15:37:46 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="2614" status="PASS">
+        <test-method signature="TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@2cc3ad05]" started-at="2024-05-27T17:50:49 IST" name="TC_003_Verify_5_Minute_Sync_Process" finished-at="2024-05-27T17:50:53 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="3557" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003_Verify_5_Minute_Sync_Process -->
-        <test-method signature="TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@4c51cf28]" started-at="2024-05-22T15:37:46 IST" name="TC_005_Verify_Upload_Button_Without_Completing_Form" finished-at="2024-05-22T15:37:59 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="13297" status="PASS">
+        <test-method signature="TC_005_Verify_Upload_Button_Without_Completing_Form()[pri:4, instance:Tests.CallPlanTest@2cc3ad05]" started-at="2024-05-27T17:50:53 IST" name="TC_005_Verify_Upload_Button_Without_Completing_Form" finished-at="2024-05-27T17:51:04 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="11125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005_Verify_Upload_Button_Without_Completing_Form -->
-        <test-method signature="TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@4c51cf28]" started-at="2024-05-22T15:37:59 IST" name="TC_009_Verify_Call_Upload" finished-at="2024-05-22T15:46:35 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="515468" status="PASS">
+        <test-method signature="TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@2cc3ad05]" started-at="2024-05-27T17:51:04 IST" name="TC_009_Verify_Call_Upload" finished-at="2024-05-27T17:51:57 IST" depends-on-methods="Tests.CallPlanTest.TC_001_Verify_Call_Plan_Module_Displayed" duration-ms="53245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_009_Verify_Call_Upload -->
       </class> <!-- Tests.CallPlanTest -->
       <class name="Tests.LoginTest">
-        <test-method is-config="true" signature="StartApp()[pri:0, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:34:26 IST" name="StartApp" finished-at="2024-05-22T15:34:41 IST" duration-ms="14762" status="PASS">
+        <test-method is-config="true" signature="StartApp()[pri:0, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:46:43 IST" name="StartApp" finished-at="2024-05-27T17:47:03 IST" duration-ms="20010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartApp -->
-        <test-method signature="TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:34:41 IST" name="TC_001_Verify_Login_With_Valid_Credentials" finished-at="2024-05-22T15:34:57 IST" duration-ms="16274" status="PASS">
+        <test-method signature="TC_001_Verify_Login_With_Valid_Credentials()[pri:1, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:47:03 IST" name="TC_001_Verify_Login_With_Valid_Credentials" finished-at="2024-05-27T17:47:23 IST" duration-ms="20588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001_Verify_Login_With_Valid_Credentials -->
-        <test-method signature="TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:34:57 IST" name="TC_002_Verify_Login_With_Invalid_Username" finished-at="2024-05-22T15:35:08 IST" duration-ms="11250" status="PASS">
+        <test-method signature="TC_002_Verify_Login_With_Invalid_Username()[pri:2, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:47:23 IST" name="TC_002_Verify_Login_With_Invalid_Username" finished-at="2024-05-27T17:47:36 IST" duration-ms="13189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002_Verify_Login_With_Invalid_Username -->
-        <test-method signature="TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:35:08 IST" name="TC_003_Verify_Login_With_Invalid_Password" finished-at="2024-05-22T15:35:21 IST" duration-ms="12402" status="PASS">
+        <test-method signature="TC_003_Verify_Login_With_Invalid_Password()[pri:3, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:47:36 IST" name="TC_003_Verify_Login_With_Invalid_Password" finished-at="2024-05-27T17:47:51 IST" duration-ms="14659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003_Verify_Login_With_Invalid_Password -->
-        <test-method signature="TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:35:21 IST" name="TC_004_Verify_Login_With_Invalid_Project" finished-at="2024-05-22T15:35:33 IST" duration-ms="12083" status="PASS">
+        <test-method signature="TC_004_Verify_Login_With_Invalid_Project()[pri:4, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:47:51 IST" name="TC_004_Verify_Login_With_Invalid_Project" finished-at="2024-05-27T17:48:08 IST" duration-ms="16996" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_004_Verify_Login_With_Invalid_Project -->
-        <test-method signature="TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:35:33 IST" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" finished-at="2024-05-22T15:35:44 IST" duration-ms="10941" status="PASS">
+        <test-method signature="TC_005_Verify_Login_With_Invalid_Mobile_Number()[pri:5, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:48:08 IST" name="TC_005_Verify_Login_With_Invalid_Mobile_Number" finished-at="2024-05-27T17:48:22 IST" duration-ms="14359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_005_Verify_Login_With_Invalid_Mobile_Number -->
-        <test-method signature="TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:35:44 IST" name="TC_006_Verify_Login_Without_Entering_Username" finished-at="2024-05-22T15:35:54 IST" duration-ms="10108" status="PASS">
+        <test-method signature="TC_006_Verify_Login_Without_Entering_Username()[pri:6, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:48:22 IST" name="TC_006_Verify_Login_Without_Entering_Username" finished-at="2024-05-27T17:48:36 IST" duration-ms="13921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_006_Verify_Login_Without_Entering_Username -->
-        <test-method signature="TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:35:54 IST" name="TC_007_Verify_Login_Without_Entering_Password" finished-at="2024-05-22T15:36:04 IST" duration-ms="9948" status="PASS">
+        <test-method signature="TC_007_Verify_Login_Without_Entering_Password()[pri:7, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:48:36 IST" name="TC_007_Verify_Login_Without_Entering_Password" finished-at="2024-05-27T17:48:48 IST" duration-ms="12080" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_007_Verify_Login_Without_Entering_Password -->
-        <test-method signature="TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:04 IST" name="TC_008_Verify_Login_Without_Entering_Project" finished-at="2024-05-22T15:36:15 IST" duration-ms="10750" status="PASS">
+        <test-method signature="TC_008_Verify_Login_Without_Entering_Project()[pri:8, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:48:48 IST" name="TC_008_Verify_Login_Without_Entering_Project" finished-at="2024-05-27T17:49:01 IST" duration-ms="12955" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_008_Verify_Login_Without_Entering_Project -->
-        <test-method signature="TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:15 IST" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" finished-at="2024-05-22T15:36:24 IST" duration-ms="9792" status="PASS">
+        <test-method signature="TC_009_Verify_Login_Without_Entering_Mobile_Number()[pri:9, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:01 IST" name="TC_009_Verify_Login_Without_Entering_Mobile_Number" finished-at="2024-05-27T17:49:13 IST" duration-ms="11527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_009_Verify_Login_Without_Entering_Mobile_Number -->
-        <test-method signature="TC_010_Verify_UsernameTextboxCharacterLimit()[pri:10, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:24 IST" name="TC_010_Verify_UsernameTextboxCharacterLimit" finished-at="2024-05-22T15:36:27 IST" duration-ms="2489" status="FAIL">
+        <test-method signature="TC_010_Verify_UsernameTextboxCharacterLimit()[pri:10, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:13 IST" name="TC_010_Verify_UsernameTextboxCharacterLimit" finished-at="2024-05-27T17:49:16 IST" duration-ms="3073" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -603,9 +507,9 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:67)
-at Modules.Login_Module.validateMaxTextLimitInUsernameTextbox(Login_Module.java:101)
-at Tests.LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit(LoginTest.java:131)
+at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+at Modules.Login_Module.validateMaxTextLimitInUsernameTextbox(Login_Module.java:102)
+at Tests.LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit(LoginTest.java:133)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -629,22 +533,22 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_010_Verify_UsernameTextboxCharacterLimit -->
-        <test-method signature="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters()[pri:11, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:27 IST" name="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters" finished-at="2024-05-22T15:36:30 IST" duration-ms="2195" status="PASS">
+        <test-method signature="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters()[pri:11, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:17 IST" name="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters" finished-at="2024-05-27T17:49:20 IST" duration-ms="3031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters -->
-        <test-method signature="TC_012_Verify_UsernameTextboxAcceptsNumbers()[pri:12, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:30 IST" name="TC_012_Verify_UsernameTextboxAcceptsNumbers" finished-at="2024-05-22T15:36:32 IST" duration-ms="2152" status="PASS">
+        <test-method signature="TC_012_Verify_UsernameTextboxAcceptsNumbers()[pri:12, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:20 IST" name="TC_012_Verify_UsernameTextboxAcceptsNumbers" finished-at="2024-05-27T17:49:23 IST" duration-ms="2764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_012_Verify_UsernameTextboxAcceptsNumbers -->
-        <test-method signature="TC_013_Verify_PasswordTextboxCharacterLimit()[pri:13, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:32 IST" name="TC_013_Verify_PasswordTextboxCharacterLimit" finished-at="2024-05-22T15:36:34 IST" duration-ms="2084" status="FAIL">
+        <test-method signature="TC_013_Verify_PasswordTextboxCharacterLimit()[pri:13, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:23 IST" name="TC_013_Verify_PasswordTextboxCharacterLimit" finished-at="2024-05-27T17:49:26 IST" duration-ms="2796" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -655,9 +559,9 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:67)
-at Modules.Login_Module.validateMaxTextLimitInPasswordTextbox(Login_Module.java:113)
-at Tests.LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit(LoginTest.java:148)
+at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+at Modules.Login_Module.validateMaxTextLimitInPasswordTextbox(Login_Module.java:114)
+at Tests.LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit(LoginTest.java:150)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -681,14 +585,14 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_013_Verify_PasswordTextboxCharacterLimit -->
-        <test-method signature="TC_014_Verify_ProjectTextboxCharacterLimit()[pri:14, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:34 IST" name="TC_014_Verify_ProjectTextboxCharacterLimit" finished-at="2024-05-22T15:36:37 IST" duration-ms="2778" status="FAIL">
+        <test-method signature="TC_014_Verify_ProjectTextboxCharacterLimit()[pri:14, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:26 IST" name="TC_014_Verify_ProjectTextboxCharacterLimit" finished-at="2024-05-27T17:49:30 IST" duration-ms="3877" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -699,9 +603,9 @@ at org.testng.Assert.fail(Assert.java:110)
 at org.testng.Assert.failNotEquals(Assert.java:1577)
 at org.testng.Assert.assertTrue(Assert.java:56)
 at org.testng.Assert.assertTrue(Assert.java:66)
-at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:67)
-at Modules.Login_Module.validateMaxTextLimitInProjectTextbox(Login_Module.java:117)
-at Tests.LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit(LoginTest.java:154)
+at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+at Modules.Login_Module.validateMaxTextLimitInProjectTextbox(Login_Module.java:118)
+at Tests.LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit(LoginTest.java:156)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -725,26 +629,26 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
 at org.testng.TestNG.runSuites(TestNG.java:1099)
 at org.testng.TestNG.run(TestNG.java:1067)
-at Tests.Main.main(Main.java:33)
+at Tests.Main.main(Main.java:34)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_014_Verify_ProjectTextboxCharacterLimit -->
-        <test-method signature="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters()[pri:15, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:38 IST" name="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters" finished-at="2024-05-22T15:36:40 IST" duration-ms="2358" status="PASS">
+        <test-method signature="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters()[pri:15, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:31 IST" name="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters" finished-at="2024-05-27T17:49:34 IST" duration-ms="3217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters -->
-        <test-method signature="TC_016_Verify_ProjectTextboxAcceptsNumbers()[pri:16, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:40 IST" name="TC_016_Verify_ProjectTextboxAcceptsNumbers" finished-at="2024-05-22T15:36:42 IST" duration-ms="2230" status="PASS">
+        <test-method signature="TC_016_Verify_ProjectTextboxAcceptsNumbers()[pri:16, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:34 IST" name="TC_016_Verify_ProjectTextboxAcceptsNumbers" finished-at="2024-05-27T17:49:37 IST" duration-ms="2989" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_016_Verify_ProjectTextboxAcceptsNumbers -->
-        <test-method signature="TC_017_Verify_MobileNumberTextboxCharacterLimit()[pri:17, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:36:42 IST" name="TC_017_Verify_MobileNumberTextboxCharacterLimit" finished-at="2024-05-22T15:36:46 IST" duration-ms="3547" status="PASS">
+        <test-method signature="TC_017_Verify_MobileNumberTextboxCharacterLimit()[pri:17, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:49:37 IST" name="TC_017_Verify_MobileNumberTextboxCharacterLimit" finished-at="2024-05-27T17:49:42 IST" duration-ms="5331" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_017_Verify_MobileNumberTextboxCharacterLimit -->
-        <test-method is-config="true" signature="tearDownApp()[pri:0, instance:Tests.LoginTest@51acdf2e]" started-at="2024-05-22T15:48:57 IST" name="tearDownApp" finished-at="2024-05-22T15:49:05 IST" duration-ms="8056" status="PASS">
+        <test-method is-config="true" signature="tearDownApp()[pri:0, instance:Tests.LoginTest@1c3b9394]" started-at="2024-05-27T17:55:12 IST" name="tearDownApp" finished-at="2024-05-27T17:55:19 IST" duration-ms="7699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownApp -->

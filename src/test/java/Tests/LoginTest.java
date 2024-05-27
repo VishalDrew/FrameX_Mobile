@@ -2,13 +2,14 @@ package Tests;
 
 import Base.TestSetup;
 import Modules.Login_Module;
+import Pages.HomePage_page;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 import static Modules.Login_Module.*;
 import static Utilities.Actions.*;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 public class LoginTest extends TestSetup {
 
@@ -21,6 +22,7 @@ public class LoginTest extends TestSetup {
     public void TC_001_Verify_Login_With_Valid_Credentials() throws InterruptedException {
         JSONObject user1 = gettestdata("Login","User1");
         performLogin(user1);
+        webdriverWait("ACCESSIBILITYID", HomePage_page.Callplan,10);
         Assertion(user1.getString("expected"), "Login Failed");
         logout();
     }

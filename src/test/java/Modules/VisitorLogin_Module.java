@@ -1,7 +1,7 @@
 package Modules;
 
 import Listeners.FrameX_Listeners;
-import Utilities.Utils;
+import Utilities.AppUtils;
 import org.json.JSONObject;
 import org.testng.Assert;
 
@@ -16,7 +16,7 @@ import static Pages.Visitorlogin_page.*;
 import static Utilities.Actions.*;
 import static Utilities.DatabaseUtility.getdatafromdatabase;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 import static io.appium.java_client.touch.offset.PointOption.point;
 
 /**
@@ -185,7 +185,7 @@ public class VisitorLogin_Module {
 		driver.hideKeyboard();
 		enter("Xpath", remarks_txtbox, visitorlogindata.getString("Remarks"));
 		driver.hideKeyboard();
-		 Utils.scroll(driver,600);
+		 AppUtils.scroll(driver,600);
 		click("ACCESSIBILITYID", storeinfo_dd);
 		click("ACCESSIBILITYID", storename);
 		click("ACCESSIBILITYID", promoterwellgroomed_dd);
@@ -194,7 +194,7 @@ public class VisitorLogin_Module {
 		click("ACCESSIBILITYID", visitorlogindata.getString("Maintained well all categories"));
 		click("ACCESSIBILITYID", awareallabttargts_dd);
 		click("ACCESSIBILITYID", visitorlogindata.getString("Aware about all the targets"));
-		Utils.scroll(driver,600);
+		AppUtils.scroll(driver,600);
 		if (visitorlogindata.getString("Selfie").equalsIgnoreCase("True")) {
 			click("xpath", selfie_img);
 			click("id", shutter_btn);

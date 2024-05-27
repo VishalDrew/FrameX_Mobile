@@ -1,7 +1,8 @@
 package Modules.CallPlan;
 
 import Pages.CallPlan_page;
-import Utilities.Utils;
+import Utilities.AppUtils;
+import Utilities.Constants;
 import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -21,7 +22,7 @@ import static Pages.HomePage_page.ActivityLog;
 import static Pages.HomePage_page.Callplan;
 import static Utilities.Actions.*;
 import static Utilities.DatabaseUtility.*;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 public class CallPlanActionHandler {
 
@@ -114,7 +115,7 @@ public class CallPlanActionHandler {
     }
 
 
-    static void captureAndAttachScreenshot(ExtentTest test) {
+    private static void captureAndAttachScreenshot(ExtentTest test) {
         if (driver instanceof TakesScreenshot) {
             byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
             test.addScreenCaptureFromBase64String(Base64.getEncoder().encodeToString(screenshot), "Screenshot");
@@ -122,13 +123,12 @@ public class CallPlanActionHandler {
     }
 
     // Helper method to capture close call image
-    static void captureCloseCallImage() {
+    private static void captureCloseCallImage() {
         click("Xpath", "//android.view.View[@content-desc=\" \"]/android.view.View[3]");
         click("Xpath", Shutterbutton);
         webdriverWait("ACCESSIBILITYID", "Done", 3);
         click("ACCESSIBILITYID", "Done");
     }
-
 
 
     public static String datevisitedvalidation()  {
@@ -159,22 +159,22 @@ public class CallPlanActionHandler {
         }
     }
 
-    static void clickAndWait(String locatorType, String locator, int waitTime) {
+    private  static void clickAndWait(String locatorType, String locator, int waitTime) {
         webdriverWait(locatorType, locator, waitTime);
         click(locatorType, locator);
     }
 
 
-    static boolean handleUploadSuccess() throws Exception {
+    private static boolean handleUploadSuccess() throws Exception {
 
-        String  isexitstoreRequired = getProjectDataFromDatabase(generateStoreRequiredQuery(),"ExitButtonRequired");
+        String  isexitstoreRequired = getProjectDataFromDatabase(Constants.generateStoreRequiredQuery(),"ExitButtonRequired");
         String uploadedtargetxpath = "//android.widget.ImageView[contains(@content-desc, 'Target ID: " + targetid + "')]";
         String Exitstoreuploadedtargetxpath = "//android.view.View[contains(@content-desc, 'Target ID: " + targetid + "')]";
 
         clickAndWait("ACCESSIBILITYID", Callplan, 15);
         Thread.sleep(1000);
         if (!sourceExists(targetid)) {
-            Utils.scroll(driver, 600);
+            AppUtils.scroll(driver, 600);
         }
         if(isexitstoreRequired.equals("1")){
             click("xpath", Exitstoreuploadedtargetxpath);
@@ -190,13 +190,13 @@ public class CallPlanActionHandler {
         }
     }
 
-    static void getactivitylogpageScreenshot(ExtentTest type) throws InterruptedException {
+    private static void getactivitylogpageScreenshot(ExtentTest type) throws InterruptedException {
         click("ACCESSIBILITYID", ActivityLog);
         Thread.sleep(1000);
         captureAndAttachScreenshot(type);
     }
 
-    static void sendDB(){
+    private static void sendDB(){
         click("Xpath", activitylog_menubtn);
         click("ACCESSIBILITYID", Senddb_btn);
         String dbsize = gettext("id", dbSize);
@@ -208,5 +208,83 @@ public class CallPlanActionHandler {
         }
     }
 
+
+    /**
+     * Manages network conditions based on the given mode and duration.
+     *
+     * @param mode     the network mode to be set (Wifi, MobileData, Disable)
+     * @param duration the duration for which the network mode should be maintained (in seconds)
+     *
+     * @throws InterruptedException if the thread is interrupted while waiting
+     *
+     * @throws NumberFormatException if the duration is not in a valid format
+     *
+     * @throws Exception             if there is an error while managing network conditions
+     */
+    private static void manageNetworkConditions(String mode, String duration) throws InterruptedException {
+
+        try {
+            int sleeptime = Integer.parseInt(duration+"000");
+            log.info("Network Mode: "+mode+" Duration : "+duration);
+            if(mode.equalsIgnoreCase("Wifi")){
+                networkconnections();
+                log.info("Wifi and Mobiledata is off");
+                Thread.sleep(sleeptime);
+                log.info("Thread is Waiting for "+sleeptime);
+                driver.toggleWifi();
+                log.info("Wifi is Turned On");
+            } else if (mode.equalsIgnoreCase("MobileData")) {
+                networkconnections();
+                log.info("Wifi and Mobiledata is off");
+                Thread.sleep(sleeptime);
+                log.info("Thread is Waiting for "+sleeptime);
+                driver.toggleData();
+                log.info("Mobiledata is Turned On");
+            }
+            if (!mode.equalsIgnoreCase("Enable")) {
+                handleNoInternetConnection();
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Restore interrupted status
+            log.error("Thread interrupted while waiting: {}"+ e.getMessage(), e);
+        } catch (NumberFormatException e) {
+            log.error("Invalid duration format: {}"+ duration);
+        } catch (Exception e) {
+            log.error("Error while managing network conditions: {}"+ e.getMessage(), e);
+        }
+
+    }
+
+
+    /**
+     * Toggles the network connections.
+     * This method toggles the wifi and data connections on the device.
+     *
+     * @throws UnsupportedOperationException if the device does not support toggling network connections.
+     */
+    private static void networkconnections(){
+        driver.toggleWifi();
+        driver.toggleData();
+    }
+
+
+    private static boolean waitForCallupload(String msg) throws InterruptedException {
+        boolean displayed = sourceExists(msg);
+        long startTime = System.currentTimeMillis();
+        long timeout = 60000;
+        try {
+            while (!displayed && (System.currentTimeMillis() - startTime) < timeout) {
+                log.info("Waiting for message: '" + msg + "'");
+                Thread.sleep(500);
+                click("ACCESSIBILITYID", ActivityLog);
+                displayed = sourceExists(msg);
+                driver.navigate().back();
+            }
+        } catch (InterruptedException e) {
+            log.error("Interrupted while waiting for message: '" + msg + "'");
+            Thread.currentThread().interrupt(); // Reset interrupted status
+        }
+        return displayed;
+    }
 }
 

@@ -14,8 +14,8 @@ import static Base.TestSetup.log;
 import static Listeners.FrameX_Listeners.attachmentflag;
 import static Listeners.FrameX_Listeners.fileName;
 import static Utilities.Constants.*;
-import static Utilities.Utils.generatedateandtime;
-import static Utilities.Utils.screenshotName;
+import static Utilities.AppUtils.generatedateandtime;
+import static Utilities.AppUtils.screenshotName;
 
 
 public class Mailconfig {

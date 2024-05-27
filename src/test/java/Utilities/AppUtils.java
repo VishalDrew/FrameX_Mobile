@@ -2,7 +2,6 @@ package Utilities;
 
 
 import java.io.*;
-import java.text.MessageFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -14,61 +13,25 @@ import Base.TestSetup;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.apache.commons.io.FileUtils;
-import org.json.JSONObject;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
 import static Listeners.FrameX_Listeners.*;
-import static Modules.CallPlan.CallPlanActionHandler.handleNoInternetConnection;
-import static Modules.CallPlan.DataBinder.fieldName;
-import static Modules.Login_Module.performLogin;
 import static Pages.CallPlan_page.*;
-import static Pages.HomePage_page.ActivityLog;
+import static Pages.Login_Page.lgpage;
 import static Pages.Login_Page.menubutton;
 import static Utilities.Actions.*;
 import static Utilities.Constants.*;
-import static Utilities.DatabaseUtility.*;
-import static Utilities.TestDataUtil.gettestdata;
 
 /**
  * Utils class.
  */
-public class Utils extends TestSetup {
+public class AppUtils extends TestSetup {
 
     public static String screenshotName;
     public static int totalimagescaptured;
     public  static boolean capturedDone;
-
-    /**
-     * Generates dataset based on the given type and facing type.
-     *
-     * @param type        the type of dataset (Int or Varchar)
-     * @param facingtype  the facing type (Industry Facing * or Our Brand Facing *)
-     * @return            the generated dataset
-     * @throws            NullPointerException if type is null
-     */
-
-    public static String generateTestData(String dataType, String facingType) {
-        final String INDUSTRY_FACINGS = "Industry Facings *";
-        final String OUR_BRAND_FACINGS = "Our Brand Facings *";
-
-        if ("Int".equals(dataType)) {
-            if (facingType.contains(INDUSTRY_FACINGS)) {
-                return "5";
-            } else if (facingType.contains(OUR_BRAND_FACINGS)) {
-                return "2";
-            }
-            return "3";
-        } else if ("integer".equals(dataType)) {
-            return "6";
-        } else if (dataType.contains("Varchar") || dataType.contains("string")) {
-            return "Testdata";
-        } else {
-            // Handle unknown data types
-            throw new IllegalArgumentException("Unknown data type: " + dataType);
-        }
-    }
 
 
     /**
@@ -325,66 +288,6 @@ public class Utils extends TestSetup {
     }
 
 
-
-
-
-    /**
-     * Manages network conditions based on the given mode and duration.
-     *
-     * @param mode     the network mode to be set (Wifi, MobileData, Disable)
-     * @param duration the duration for which the network mode should be maintained (in seconds)
-     *
-     * @throws InterruptedException if the thread is interrupted while waiting
-     *
-     * @throws NumberFormatException if the duration is not in a valid format
-     *
-     * @throws Exception             if there is an error while managing network conditions
-     */
-    public static void manageNetworkConditions(String mode, String duration) throws InterruptedException {
-
-        try {
-            int sleeptime = Integer.parseInt(duration+"000");
-            log.info("Network Mode: "+mode+" Duration : "+duration);
-            if(mode.equalsIgnoreCase("Wifi")){
-                networkconnections();
-                log.info("Wifi and Mobiledata is off");
-                Thread.sleep(sleeptime);
-                log.info("Thread is Waiting for "+sleeptime);
-                driver.toggleWifi();
-                log.info("Wifi is Turned On");
-            } else if (mode.equalsIgnoreCase("MobileData")) {
-                networkconnections();
-                log.info("Wifi and Mobiledata is off");
-                Thread.sleep(sleeptime);
-                log.info("Thread is Waiting for "+sleeptime);
-                driver.toggleData();
-                log.info("Mobiledata is Turned On");
-            }
-            if (!mode.equalsIgnoreCase("Enable")) {
-                handleNoInternetConnection();
-            }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Restore interrupted status
-            log.error("Thread interrupted while waiting: {}"+ e.getMessage(), e);
-        } catch (NumberFormatException e) {
-            log.error("Invalid duration format: {}"+ duration);
-        } catch (Exception e) {
-            log.error("Error while managing network conditions: {}"+ e.getMessage(), e);
-        }
-
-    }
-
-    /**
-     * Toggles the network connections.
-     * This method toggles the wifi and data connections on the device.
-     *
-     * @throws UnsupportedOperationException if the device does not support toggling network connections.
-     */
-    public static void networkconnections(){
-        driver.toggleWifi();
-        driver.toggleData();
-    }
-
     /**
      * Checks if the given value exists in the page source.
      *
@@ -433,22 +336,7 @@ public class Utils extends TestSetup {
 
     }
 
-    /**
-     * Logs in the user using the provided login credentials.
-     *
-     * @throws JSONException if there is an error parsing the test data
-     *
-     * @param username the username of the user
-     * @param password the password of the user
-     * @param project the project name
-     * @param mobileno the mobile number of the user
-     *
-     * @returns void
-     */
-    public static void lgpage()  {
-        JSONObject user1 = gettestdata("Login","User1");
-        performLogin(globalData.getString("username"), globalData.getString("password"),globalData.getString("project"),globalData.getString("mobileno"));
-    }
+
 
     /**
      * Logs into the application.
@@ -498,24 +386,6 @@ public class Utils extends TestSetup {
     }
 
 
-    public static void shopfrontphotorequired () throws Exception {
-        if (getProjectDataFromDatabase(isShopFrontPhotoRequired(), "IsShopFrontPhotoRequired").equals("1")) {
-            log.info("ShopFrontPhotoRequired image is Required");
-            pssshopfrontimage();
-            capturedDone = true;
-        }
-    }
-
-
-    public static void pssshopfrontimage() throws InterruptedException {
-
-        webdriverWait("Xpath", Shutterbutton, 30);
-        click("Xpath", Shutterbutton);
-        webdriverWait("ACCESSIBILITYID", "Done", 3);
-        click("ACCESSIBILITYID", "Done");
-
-    }
-
     public static void scroll(AndroidDriver driver, int distance) throws InterruptedException {
         String scrollScript = String.format("new UiScrollable(new UiSelector().scrollable(true)).scrollForward(%d)", distance);
         driver.findElement(AppiumBy.androidUIAutomator(scrollScript));
@@ -523,126 +393,7 @@ public class Utils extends TestSetup {
     }
 
     public static String removeUnderscores(String input) {
-        // Replace underscores with an empty string
         return input.replace("_", " ");
-    }
-
-
-    public static void Dropdownsetter(String formName, String productName, String IsQuestionForm, String fieldName) throws Exception {
-        try {
-            String Enumquery;
-            if (IsQuestionForm.equals("1")) {
-                Enumquery = MessageFormat.format(sqlQueries.get("EnumQuestionFieldquery"), formName, "'" + productName + "'", "'" + formName + "'");
-            } else {
-                Enumquery = MessageFormat.format(sqlQueries.get("EnumFieldquery"), "'" + fieldName.replace(" *", "").replace(" ", "_") + "'", "'" + formName + "'");
-            }
-            log.info("EnumQuery " + Enumquery);
-            List<String> dropList = getColumnNamesFromDatabase(Enumquery, "FieldOption");
-
-            for (String drop : dropList) {
-                if (sourceExists(fieldName)) {
-                    dropdown(fieldName,drop);
-                    break;
-                } else{
-                    if (sourceExists(drop)) {
-                        click("ACCESSIBILITYID", drop);
-                        break;
-                    }
-                    Utils.scroll(driver,600);
-                    dropdown(fieldName,drop);
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            log.error("Error setting dropdown for field " + fieldName + " in form " + formName);
-            log.error(e.getMessage());
-        }
-    }
-
-    public static void dropdown(String fieldName,String drop){
-
-        if (sourceExists(fieldName)) {
-            click("ACCESSIBILITYID", fieldName);
-            click("ACCESSIBILITYID", drop);
-
-        } else if (sourceExists(drop)) {
-            click("ACCESSIBILITYID", drop);
-        }
-    }
-
-
-    public static void imageCapture() throws InterruptedException {
-
-        if(fieldName.contains("Photo *")){
-            click("Xpath", Camerabutton_M);
-        }else{
-            click("Xpath", Camerabutton_NM);
-        }
-        webdriverWait("Xpath", Shutterbutton, 4);
-        click("Xpath", Shutterbutton);
-        webdriverWait("ACCESSIBILITYID", "Done", 3);
-        click("ACCESSIBILITYID", "Done");
-        Thread.sleep(700);
-        totalimagescaptured++;
-
-    }
-
-    public static boolean waitForCallupload(String msg) throws InterruptedException {
-        boolean displayed = sourceExists(msg);
-        long startTime = System.currentTimeMillis();
-        long timeout = 60000;
-        try {
-            while (!displayed && (System.currentTimeMillis() - startTime) < timeout) {
-                log.info("Waiting for message: '" + msg + "'");
-                Thread.sleep(500);
-                click("ACCESSIBILITYID", ActivityLog);
-                displayed = sourceExists(msg);
-                driver.navigate().back();
-            }
-        } catch (InterruptedException e) {
-            log.error("Interrupted while waiting for message: '" + msg + "'");
-            Thread.currentThread().interrupt(); // Reset interrupted status
-        }
-        return displayed;
-    }
-
-    /**
-     * Fetches targets from the database for a given username.
-     *
-     * @param username the username for which targets are to be fetched
-     * @return a list of target IDs for unplanned calls
-     * @throws Exception if an error occurs while fetching targets from the database
-     */
-
-
-    public static List<String> fetchTargetsFromDatabase(String username) throws Exception {
-        try {
-
-            String count = globalData.getString("Targets");
-            log.info("Fetching targets from the database for username: " + username);
-            String checkTodayCalls = "select * from Pjpplan where username = '"+username+"'";
-            String updateTodayCallstoUnplanned = "update Pjpplan set Status = 'A' where username = '"+username+"' ";
-            fetchdatafromdb(updateTodayCallstoUnplanned);
-            log.info("Updated today's calls to unplanned.");
-            String getUnplannedCalls = "select top "+count+" * from Pjpplan where username = '"+username+"' ";
-            String updateUnplannedCalls = ";WITH T AS (select top "+count+" * from PjpPlan where username = 'Abhisdel') update T set Pjpdate = '"+currentdate+"' ";
-            fetchdatafromdb(updateUnplannedCalls);
-            log.info("Updated unplanned calls.");
-            List<String> targetsforUnplannedCalls = getColumnNamesFromDatabase(getUnplannedCalls, "TargetId");
-            log.info("Targets fetched successfully.");
-            return targetsforUnplannedCalls;
-        } catch (Exception e) {
-            log.error("Error fetching targets from the database: " + e.getMessage());
-            e.getMessage();
-        }
-        return null;
-    }
-
-    public static String generateStoreRequiredQuery(){
-
-        String storereqquery = "select ExitButtonRequired, * from Projectmaster where ProjectName = '"+ globalData.getString("project")+"'";
-        return storereqquery;
-
     }
 
 

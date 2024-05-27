@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 10 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 8 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">55 methods, 10 failed,  1 skipped,  44 passed</span>
+                    <span class="method-stats">55 methods, 8 failed,   47 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,16 +101,6 @@
                       <a href="#" panel-name="suite-Regression_Suite" class="show-methods failed suite-Regression_Suite"> (show)</a> <!-- show-methods failed suite-Regression_Suite -->
                     </span>
                     <div class="method-list-content failed suite-Regression_Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_002_VerifyAttendanceWithoutCapturingImage">TC_002_VerifyAttendanceWithoutCapturingImage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_003_VerifyAttendanceSubmission">TC_003_VerifyAttendanceSubmission</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression_Suite" title="Tests.VisitorLoginTest" class="method navigator-link" hash-for-method="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit">TC_003_VerifyVisitorEmpIDTextboxCharacterLimit</a> <!-- method navigator-link -->
@@ -152,20 +142,6 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Regression_Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Regression_Suite" class="hide-methods skipped suite-Regression_Suite"> (hide)</a> <!-- hide-methods skipped suite-Regression_Suite -->
-                      <a href="#" panel-name="suite-Regression_Suite" class="show-methods skipped suite-Regression_Suite"> (show)</a> <!-- show-methods skipped suite-Regression_Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-Regression_Suite">
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_004_VerifyAttendanceRecordedInDatabase">TC_004_VerifyAttendanceRecordedInDatabase</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-Regression_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -236,6 +212,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_002_VerifyAttendanceWithoutCapturingImage">TC_002_VerifyAttendanceWithoutCapturingImage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_002_VerifyCallsAreDownloaded">TC_002_VerifyCallsAreDownloaded</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -256,6 +237,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_003_VerifyAttendanceSubmission">TC_003_VerifyAttendanceSubmission</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression_Suite" title="Tests.DownloadcallsTest" class="method navigator-link" hash-for-method="TC_003_VerifyDuplicateCallDownload">TC_003_VerifyDuplicateCallDownload</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -267,6 +253,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression_Suite" title="Tests.LoginTest" class="method navigator-link" hash-for-method="TC_003_Verify_Login_With_Invalid_Password">TC_003_Verify_Login_With_Invalid_Password</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Suite" title="Tests.AttendanceTest" class="method navigator-link" hash-for-method="TC_004_VerifyAttendanceRecordedInDatabase">TC_004_VerifyAttendanceRecordedInDatabase</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -409,53 +400,50 @@
           <div class="suite-Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Tests.AttendanceTest</span>
+              <span class="class-name">Tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_002_VerifyAttendanceWithoutCapturingImage">
-                  </a> <!-- TC_002_VerifyAttendanceWithoutCapturingImage -->
-                  <span class="method-name">TC_002_VerifyAttendanceWithoutCapturingImage</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.json.JSONObject.getString(String)&quot; because &quot;attendanceData&quot; is null
-	at Tests.AttendanceTest.TC_002_VerifyAttendanceWithoutCapturingImage(AttendanceTest.java:41)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_003_VerifyAttendanceSubmission">
-                  </a> <!-- TC_003_VerifyAttendanceSubmission -->
-                  <span class="method-name">TC_003_VerifyAttendanceSubmission</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.json.JSONObject.getString(String)&quot; because &quot;attendanceData&quot; is null
-	at Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission(AttendanceTest.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
-... Removed 22 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression_Suite-class-failed -->
-          <div class="suite-Regression_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Tests.DownloadcallsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_007_VerifyTargetIDTextboxCharacterLimit">
-                  </a> <!-- TC_007_VerifyTargetIDTextboxCharacterLimit -->
-                  <span class="method-name">TC_007_VerifyTargetIDTextboxCharacterLimit</span>
+                  <a name="TC_010_Verify_UsernameTextboxCharacterLimit">
+                  </a> <!-- TC_010_Verify_UsernameTextboxCharacterLimit -->
+                  <span class="method-name">TC_010_Verify_UsernameTextboxCharacterLimit</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at Modules.Downloadcalls_Module.validateMaxTextLimitIntargetIDTextbox(Downloadcalls_Module.java:198)
-	at Tests.DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit(DownloadcallsTest.java:91)
+	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+	at Modules.Login_Module.validateMaxTextLimitInUsernameTextbox(Login_Module.java:102)
+	at Tests.LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit(LoginTest.java:133)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
+	at Tests.Main.main(Main.java:34)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_013_Verify_PasswordTextboxCharacterLimit">
+                  </a> <!-- TC_013_Verify_PasswordTextboxCharacterLimit -->
+                  <span class="method-name">TC_013_Verify_PasswordTextboxCharacterLimit</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+	at Modules.Login_Module.validateMaxTextLimitInPasswordTextbox(Login_Module.java:114)
+	at Tests.LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit(LoginTest.java:150)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:34)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_014_Verify_ProjectTextboxCharacterLimit">
+                  </a> <!-- TC_014_Verify_ProjectTextboxCharacterLimit -->
+                  <span class="method-name">TC_014_Verify_ProjectTextboxCharacterLimit</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+	at Modules.Login_Module.validateMaxTextLimitInProjectTextbox(Login_Module.java:118)
+	at Tests.LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit(LoginTest.java:156)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:34)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -475,9 +463,9 @@
                   <span class="method-name">TC_003_VerifyVisitorEmpIDTextboxCharacterLimit</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at Modules.VisitorLogin_Module.validateMaxTextLimitInEmpIDTextbox(VisitorLogin_Module.java:216)
-	at Tests.VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit(VisitorLoginTest.java:49)
+	at Tests.VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit(VisitorLoginTest.java:41)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
+	at Tests.Main.main(Main.java:34)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -489,9 +477,9 @@
                   <span class="method-name">TC_006_VerifyVisitorNameTextboxCharacterLimit</span>
                   <div class="stack-trace">java.lang.AssertionError: null
 	at Modules.VisitorLogin_Module.validateMaxTextLimitInNameTextbox(VisitorLogin_Module.java:253)
-	at Tests.VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit(VisitorLoginTest.java:67)
+	at Tests.VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit(VisitorLoginTest.java:57)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
+	at Tests.Main.main(Main.java:34)
 ... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -503,9 +491,9 @@
                   <span class="method-name">TC_009_VerifyDesignationTextboxCharacterLimit</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at Modules.VisitorLogin_Module.validateMaxTextLimitInDesignationTextbox(VisitorLogin_Module.java:289)
-	at Tests.VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit(VisitorLoginTest.java:85)
+	at Tests.VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit(VisitorLoginTest.java:73)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
+	at Tests.Main.main(Main.java:34)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -517,9 +505,9 @@
                   <span class="method-name">TC_012_VerifyRemarksTextboxCharacterLimit</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
 	at Modules.VisitorLogin_Module.validateMaxTextLimitInRemarksTextbox(VisitorLogin_Module.java:327)
-	at Tests.VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit(VisitorLoginTest.java:103)
+	at Tests.VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit(VisitorLoginTest.java:89)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
+	at Tests.Main.main(Main.java:34)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -529,77 +517,25 @@
           <div class="suite-Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">Tests.LoginTest</span>
+              <span class="class-name">Tests.DownloadcallsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_010_Verify_UsernameTextboxCharacterLimit">
-                  </a> <!-- TC_010_Verify_UsernameTextboxCharacterLimit -->
-                  <span class="method-name">TC_010_Verify_UsernameTextboxCharacterLimit</span>
+                  <a name="TC_007_VerifyTargetIDTextboxCharacterLimit">
+                  </a> <!-- TC_007_VerifyTargetIDTextboxCharacterLimit -->
+                  <span class="method-name">TC_007_VerifyTargetIDTextboxCharacterLimit</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:67)
-	at Modules.Login_Module.validateMaxTextLimitInUsernameTextbox(Login_Module.java:101)
-	at Tests.LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit(LoginTest.java:131)
+	at Modules.Downloadcalls_Module.validateMaxTextLimitIntargetIDTextbox(Downloadcalls_Module.java:198)
+	at Tests.DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit(DownloadcallsTest.java:87)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_013_Verify_PasswordTextboxCharacterLimit">
-                  </a> <!-- TC_013_Verify_PasswordTextboxCharacterLimit -->
-                  <span class="method-name">TC_013_Verify_PasswordTextboxCharacterLimit</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:67)
-	at Modules.Login_Module.validateMaxTextLimitInPasswordTextbox(Login_Module.java:113)
-	at Tests.LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit(LoginTest.java:148)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_014_Verify_ProjectTextboxCharacterLimit">
-                  </a> <!-- TC_014_Verify_ProjectTextboxCharacterLimit -->
-                  <span class="method-name">TC_014_Verify_ProjectTextboxCharacterLimit</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
-	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:67)
-	at Modules.Login_Module.validateMaxTextLimitInProjectTextbox(Login_Module.java:117)
-	at Tests.LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit(LoginTest.java:154)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
+	at Tests.Main.main(Main.java:34)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Regression_Suite-class-failed -->
-          <div class="suite-Regression_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Tests.AttendanceTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_004_VerifyAttendanceRecordedInDatabase">
-                  </a> <!-- TC_004_VerifyAttendanceRecordedInDatabase -->
-                  <span class="method-name">TC_004_VerifyAttendanceRecordedInDatabase</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Tests.AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase() on instance Tests.AttendanceTest@6995bf68 depends on not successfully finished methods 
-[Tests.AttendanceTest.TC_003_VerifyAttendanceSubmission() on instance Tests.AttendanceTest@6995bf68]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at Tests.Main.main(Main.java:33)
-... Removed 15 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression_Suite-class-skipped -->
           <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -613,54 +549,25 @@
                   <span class="method-name">TC_001_VerifyAttendanceModuleDisplayed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression_Suite-class-passed -->
-          <div class="suite-Regression_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Tests.DownloadcallsTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_001_VerifyDownloadCallsModuleIsDisplayed">
-                  </a> <!-- TC_001_VerifyDownloadCallsModuleIsDisplayed -->
-                  <span class="method-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
+                  <a name="TC_002_VerifyAttendanceWithoutCapturingImage">
+                  </a> <!-- TC_002_VerifyAttendanceWithoutCapturingImage -->
+                  <span class="method-name">TC_002_VerifyAttendanceWithoutCapturingImage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_002_VerifyCallsAreDownloaded">
-                  </a> <!-- TC_002_VerifyCallsAreDownloaded -->
-                  <span class="method-name">TC_002_VerifyCallsAreDownloaded</span>
+                  <a name="TC_003_VerifyAttendanceSubmission">
+                  </a> <!-- TC_003_VerifyAttendanceSubmission -->
+                  <span class="method-name">TC_003_VerifyAttendanceSubmission</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_003_VerifyDuplicateCallDownload">
-                  </a> <!-- TC_003_VerifyDuplicateCallDownload -->
-                  <span class="method-name">TC_003_VerifyDuplicateCallDownload</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_004_VerifyInvalidTargetDownload">
-                  </a> <!-- TC_004_VerifyInvalidTargetDownload -->
-                  <span class="method-name">TC_004_VerifyInvalidTargetDownload</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_005_VerifyRemoveButtonFunctionality">
-                  </a> <!-- TC_005_VerifyRemoveButtonFunctionality -->
-                  <span class="method-name">TC_005_VerifyRemoveButtonFunctionality</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_006_VerifySubmitButtonWithoutAddingTarget">
-                  </a> <!-- TC_006_VerifySubmitButtonWithoutAddingTarget -->
-                  <span class="method-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
+                  <a name="TC_004_VerifyAttendanceRecordedInDatabase">
+                  </a> <!-- TC_004_VerifyAttendanceRecordedInDatabase -->
+                  <span class="method-name">TC_004_VerifyAttendanceRecordedInDatabase</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -668,141 +575,42 @@
           <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Tests.ResourceCentreTest</span>
+              <span class="class-name">Tests.CallPlanTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC002_VerifyPPTXFileDownloaded">
-                  </a> <!-- TC002_VerifyPPTXFileDownloaded -->
-                  <span class="method-name">TC002_VerifyPPTXFileDownloaded</span>
+                  <a name="TC_001_Verify_Call_Plan_Module_Displayed">
+                  </a> <!-- TC_001_Verify_Call_Plan_Module_Displayed -->
+                  <span class="method-name">TC_001_Verify_Call_Plan_Module_Displayed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC003_VerifyMP4FileDownloaded">
-                  </a> <!-- TC003_VerifyMP4FileDownloaded -->
-                  <span class="method-name">TC003_VerifyMP4FileDownloaded</span>
+                  <a name="TC_002_Verify_Sync_Button_Functionality">
+                  </a> <!-- TC_002_Verify_Sync_Button_Functionality -->
+                  <span class="method-name">TC_002_Verify_Sync_Button_Functionality</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC004_VerifyPDFFileDownloaded">
-                  </a> <!-- TC004_VerifyPDFFileDownloaded -->
-                  <span class="method-name">TC004_VerifyPDFFileDownloaded</span>
+                  <a name="TC_003_Verify_5_Minute_Sync_Process">
+                  </a> <!-- TC_003_Verify_5_Minute_Sync_Process -->
+                  <span class="method-name">TC_003_Verify_5_Minute_Sync_Process</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC005_VerifyDOCXFileDownloaded">
-                  </a> <!-- TC005_VerifyDOCXFileDownloaded -->
-                  <span class="method-name">TC005_VerifyDOCXFileDownloaded</span>
+                  <a name="TC_005_Verify_Upload_Button_Without_Completing_Form">
+                  </a> <!-- TC_005_Verify_Upload_Button_Without_Completing_Form -->
+                  <span class="method-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC006_VerifyJPGFileDownloaded">
-                  </a> <!-- TC006_VerifyJPGFileDownloaded -->
-                  <span class="method-name">TC006_VerifyJPGFileDownloaded</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC007_VerifyXLSXFileDownloaded">
-                  </a> <!-- TC007_VerifyXLSXFileDownloaded -->
-                  <span class="method-name">TC007_VerifyXLSXFileDownloaded</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_001_Verify_ResourceCenter_Module_Displayed">
-                  </a> <!-- TC_001_Verify_ResourceCenter_Module_Displayed -->
-                  <span class="method-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression_Suite-class-passed -->
-          <div class="suite-Regression_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Tests.VisitorLoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_001_VerifyVisitorLoginModuleDisplayed">
-                  </a> <!-- TC_001_VerifyVisitorLoginModuleDisplayed -->
-                  <span class="method-name">TC_001_VerifyVisitorLoginModuleDisplayed</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_002_VerifySubmitButtonWithoutEnteringFields">
-                  </a> <!-- TC_002_VerifySubmitButtonWithoutEnteringFields -->
-                  <span class="method-name">TC_002_VerifySubmitButtonWithoutEnteringFields</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters">
-                  </a> <!-- TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters -->
-                  <span class="method-name">TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers">
-                  </a> <!-- TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers -->
-                  <span class="method-name">TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters">
-                  </a> <!-- TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters -->
-                  <span class="method-name">TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers">
-                  </a> <!-- TC_008_VerifyVisitorNameTextboxAcceptsNumbers -->
-                  <span class="method-name">TC_008_VerifyVisitorNameTextboxAcceptsNumbers</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters">
-                  </a> <!-- TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters -->
-                  <span class="method-name">TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_011_VerifyDesignationTextboxAcceptsNumbers">
-                  </a> <!-- TC_011_VerifyDesignationTextboxAcceptsNumbers -->
-                  <span class="method-name">TC_011_VerifyDesignationTextboxAcceptsNumbers</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters">
-                  </a> <!-- TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters -->
-                  <span class="method-name">TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_014_Verify_RemarksTextboxAcceptsNumbers">
-                  </a> <!-- TC_014_Verify_RemarksTextboxAcceptsNumbers -->
-                  <span class="method-name">TC_014_Verify_RemarksTextboxAcceptsNumbers</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC_015_Verify_Visitor_Upload">
-                  </a> <!-- TC_015_Verify_Visitor_Upload -->
-                  <span class="method-name">TC_015_Verify_Visitor_Upload</span>
+                  <a name="TC_009_Verify_Call_Upload">
+                  </a> <!-- TC_009_Verify_Call_Upload -->
+                  <span class="method-name">TC_009_Verify_Call_Upload</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -916,42 +724,191 @@
           <div class="suite-Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Tests.CallPlanTest</span>
+              <span class="class-name">Tests.VisitorLoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_001_Verify_Call_Plan_Module_Displayed">
-                  </a> <!-- TC_001_Verify_Call_Plan_Module_Displayed -->
-                  <span class="method-name">TC_001_Verify_Call_Plan_Module_Displayed</span>
+                  <a name="TC_001_VerifyVisitorLoginModuleDisplayed">
+                  </a> <!-- TC_001_VerifyVisitorLoginModuleDisplayed -->
+                  <span class="method-name">TC_001_VerifyVisitorLoginModuleDisplayed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_002_Verify_Sync_Button_Functionality">
-                  </a> <!-- TC_002_Verify_Sync_Button_Functionality -->
-                  <span class="method-name">TC_002_Verify_Sync_Button_Functionality</span>
+                  <a name="TC_002_VerifySubmitButtonWithoutEnteringFields">
+                  </a> <!-- TC_002_VerifySubmitButtonWithoutEnteringFields -->
+                  <span class="method-name">TC_002_VerifySubmitButtonWithoutEnteringFields</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_003_Verify_5_Minute_Sync_Process">
-                  </a> <!-- TC_003_Verify_5_Minute_Sync_Process -->
-                  <span class="method-name">TC_003_Verify_5_Minute_Sync_Process</span>
+                  <a name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters">
+                  </a> <!-- TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_005_Verify_Upload_Button_Without_Completing_Form">
-                  </a> <!-- TC_005_Verify_Upload_Button_Without_Completing_Form -->
-                  <span class="method-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
+                  <a name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers">
+                  </a> <!-- TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers -->
+                  <span class="method-name">TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="TC_009_Verify_Call_Upload">
-                  </a> <!-- TC_009_Verify_Call_Upload -->
-                  <span class="method-name">TC_009_Verify_Call_Upload</span>
+                  <a name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters">
+                  </a> <!-- TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers">
+                  </a> <!-- TC_008_VerifyVisitorNameTextboxAcceptsNumbers -->
+                  <span class="method-name">TC_008_VerifyVisitorNameTextboxAcceptsNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters">
+                  </a> <!-- TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_011_VerifyDesignationTextboxAcceptsNumbers">
+                  </a> <!-- TC_011_VerifyDesignationTextboxAcceptsNumbers -->
+                  <span class="method-name">TC_011_VerifyDesignationTextboxAcceptsNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters">
+                  </a> <!-- TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters -->
+                  <span class="method-name">TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_014_Verify_RemarksTextboxAcceptsNumbers">
+                  </a> <!-- TC_014_Verify_RemarksTextboxAcceptsNumbers -->
+                  <span class="method-name">TC_014_Verify_RemarksTextboxAcceptsNumbers</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_015_Verify_Visitor_Upload">
+                  </a> <!-- TC_015_Verify_Visitor_Upload -->
+                  <span class="method-name">TC_015_Verify_Visitor_Upload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Suite-class-passed -->
+          <div class="suite-Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.ResourceCentreTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC002_VerifyPPTXFileDownloaded">
+                  </a> <!-- TC002_VerifyPPTXFileDownloaded -->
+                  <span class="method-name">TC002_VerifyPPTXFileDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC003_VerifyMP4FileDownloaded">
+                  </a> <!-- TC003_VerifyMP4FileDownloaded -->
+                  <span class="method-name">TC003_VerifyMP4FileDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC004_VerifyPDFFileDownloaded">
+                  </a> <!-- TC004_VerifyPDFFileDownloaded -->
+                  <span class="method-name">TC004_VerifyPDFFileDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC005_VerifyDOCXFileDownloaded">
+                  </a> <!-- TC005_VerifyDOCXFileDownloaded -->
+                  <span class="method-name">TC005_VerifyDOCXFileDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC006_VerifyJPGFileDownloaded">
+                  </a> <!-- TC006_VerifyJPGFileDownloaded -->
+                  <span class="method-name">TC006_VerifyJPGFileDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC007_VerifyXLSXFileDownloaded">
+                  </a> <!-- TC007_VerifyXLSXFileDownloaded -->
+                  <span class="method-name">TC007_VerifyXLSXFileDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001_Verify_ResourceCenter_Module_Displayed">
+                  </a> <!-- TC_001_Verify_ResourceCenter_Module_Displayed -->
+                  <span class="method-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Suite-class-passed -->
+          <div class="suite-Regression_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Tests.DownloadcallsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_001_VerifyDownloadCallsModuleIsDisplayed">
+                  </a> <!-- TC_001_VerifyDownloadCallsModuleIsDisplayed -->
+                  <span class="method-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_002_VerifyCallsAreDownloaded">
+                  </a> <!-- TC_002_VerifyCallsAreDownloaded -->
+                  <span class="method-name">TC_002_VerifyCallsAreDownloaded</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_003_VerifyDuplicateCallDownload">
+                  </a> <!-- TC_003_VerifyDuplicateCallDownload -->
+                  <span class="method-name">TC_003_VerifyDuplicateCallDownload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_004_VerifyInvalidTargetDownload">
+                  </a> <!-- TC_004_VerifyInvalidTargetDownload -->
+                  <span class="method-name">TC_004_VerifyInvalidTargetDownload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_005_VerifyRemoveButtonFunctionality">
+                  </a> <!-- TC_005_VerifyRemoveButtonFunctionality -->
+                  <span class="method-name">TC_005_VerifyRemoveButtonFunctionality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC_006_VerifySubmitButtonWithoutAddingTarget">
+                  </a> <!-- TC_006_VerifySubmitButtonWithoutAddingTarget -->
+                  <span class="method-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1387,230 +1344,230 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(55);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC_009_Verify_Call_Upload')
-data.setCell(0, 2, 'Tests.CallPlanTest')
-data.setCell(0, 3, 515468);
+data.setCell(0, 1, 'TC_015_Verify_Visitor_Upload')
+data.setCell(0, 2, 'Tests.VisitorLoginTest')
+data.setCell(0, 3, 57359);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TC_015_Verify_Visitor_Upload')
-data.setCell(1, 2, 'Tests.VisitorLoginTest')
-data.setCell(1, 3, 51757);
+data.setCell(1, 1, 'TC_009_Verify_Call_Upload')
+data.setCell(1, 2, 'Tests.CallPlanTest')
+data.setCell(1, 3, 53245);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'TC_002_VerifySubmitButtonWithoutEnteringFields')
-data.setCell(2, 2, 'Tests.VisitorLoginTest')
-data.setCell(2, 3, 18682);
+data.setCell(2, 1, 'TC_003_VerifyAttendanceSubmission')
+data.setCell(2, 2, 'Tests.AttendanceTest')
+data.setCell(2, 3, 23187);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'TC_001_Verify_Login_With_Valid_Credentials')
 data.setCell(3, 2, 'Tests.LoginTest')
-data.setCell(3, 3, 16274);
+data.setCell(3, 3, 20588);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TC_002_VerifyCallsAreDownloaded')
-data.setCell(4, 2, 'Tests.DownloadcallsTest')
-data.setCell(4, 3, 15126);
+data.setCell(4, 1, 'TC_002_VerifySubmitButtonWithoutEnteringFields')
+data.setCell(4, 2, 'Tests.VisitorLoginTest')
+data.setCell(4, 3, 19712);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC_005_Verify_Upload_Button_Without_Completing_Form')
-data.setCell(5, 2, 'Tests.CallPlanTest')
-data.setCell(5, 3, 13297);
+data.setCell(5, 1, 'TC_002_VerifyCallsAreDownloaded')
+data.setCell(5, 2, 'Tests.DownloadcallsTest')
+data.setCell(5, 3, 18244);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'TC_001_VerifyDownloadCallsModuleIsDisplayed')
-data.setCell(6, 2, 'Tests.DownloadcallsTest')
-data.setCell(6, 3, 12445);
+data.setCell(6, 1, 'TC_004_Verify_Login_With_Invalid_Project')
+data.setCell(6, 2, 'Tests.LoginTest')
+data.setCell(6, 3, 16996);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'TC_003_Verify_Login_With_Invalid_Password')
-data.setCell(7, 2, 'Tests.LoginTest')
-data.setCell(7, 3, 12402);
+data.setCell(7, 1, 'TC_001_VerifyDownloadCallsModuleIsDisplayed')
+data.setCell(7, 2, 'Tests.DownloadcallsTest')
+data.setCell(7, 3, 15459);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'TC_004_Verify_Login_With_Invalid_Project')
+data.setCell(8, 1, 'TC_003_Verify_Login_With_Invalid_Password')
 data.setCell(8, 2, 'Tests.LoginTest')
-data.setCell(8, 3, 12083);
+data.setCell(8, 3, 14659);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'TC_002_Verify_Login_With_Invalid_Username')
+data.setCell(9, 1, 'TC_005_Verify_Login_With_Invalid_Mobile_Number')
 data.setCell(9, 2, 'Tests.LoginTest')
-data.setCell(9, 3, 11250);
+data.setCell(9, 3, 14359);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'TC_005_Verify_Login_With_Invalid_Mobile_Number')
+data.setCell(10, 1, 'TC_006_Verify_Login_Without_Entering_Username')
 data.setCell(10, 2, 'Tests.LoginTest')
-data.setCell(10, 3, 10941);
+data.setCell(10, 3, 13921);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'TC_008_Verify_Login_Without_Entering_Project')
+data.setCell(11, 1, 'TC_002_Verify_Login_With_Invalid_Username')
 data.setCell(11, 2, 'Tests.LoginTest')
-data.setCell(11, 3, 10750);
+data.setCell(11, 3, 13189);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'TC_006_Verify_Login_Without_Entering_Username')
+data.setCell(12, 1, 'TC_008_Verify_Login_Without_Entering_Project')
 data.setCell(12, 2, 'Tests.LoginTest')
-data.setCell(12, 3, 10108);
+data.setCell(12, 3, 12955);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'TC_007_Verify_Login_Without_Entering_Password')
 data.setCell(13, 2, 'Tests.LoginTest')
-data.setCell(13, 3, 9948);
+data.setCell(13, 3, 12080);
 data.setCell(14, 0, 14)
 data.setCell(14, 1, 'TC_009_Verify_Login_Without_Entering_Mobile_Number')
 data.setCell(14, 2, 'Tests.LoginTest')
-data.setCell(14, 3, 9792);
+data.setCell(14, 3, 11527);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'TC_004_VerifyInvalidTargetDownload')
-data.setCell(15, 2, 'Tests.DownloadcallsTest')
-data.setCell(15, 3, 7760);
+data.setCell(15, 1, 'TC_005_Verify_Upload_Button_Without_Completing_Form')
+data.setCell(15, 2, 'Tests.CallPlanTest')
+data.setCell(15, 3, 11125);
 data.setCell(16, 0, 16)
 data.setCell(16, 1, 'TC_014_Verify_RemarksTextboxAcceptsNumbers')
 data.setCell(16, 2, 'Tests.VisitorLoginTest')
-data.setCell(16, 3, 7340);
+data.setCell(16, 3, 8339);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'TC_003_VerifyDuplicateCallDownload')
+data.setCell(17, 1, 'TC_004_VerifyInvalidTargetDownload')
 data.setCell(17, 2, 'Tests.DownloadcallsTest')
-data.setCell(17, 3, 7133);
+data.setCell(17, 3, 8168);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'TC_005_VerifyRemoveButtonFunctionality')
+data.setCell(18, 1, 'TC_003_VerifyDuplicateCallDownload')
 data.setCell(18, 2, 'Tests.DownloadcallsTest')
-data.setCell(18, 3, 6173);
+data.setCell(18, 3, 7562);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'TC_003_VerifyVisitorEmpIDTextboxCharacterLimit')
 data.setCell(19, 2, 'Tests.VisitorLoginTest')
-data.setCell(19, 3, 4640);
+data.setCell(19, 3, 7442);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'TC002_VerifyPPTXFileDownloaded')
-data.setCell(20, 2, 'Tests.ResourceCentreTest')
-data.setCell(20, 3, 4156);
+data.setCell(20, 1, 'TC_005_VerifyRemoveButtonFunctionality')
+data.setCell(20, 2, 'Tests.DownloadcallsTest')
+data.setCell(20, 3, 6421);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'TC_009_VerifyDesignationTextboxCharacterLimit')
+data.setCell(21, 1, 'TC_012_VerifyRemarksTextboxCharacterLimit')
 data.setCell(21, 2, 'Tests.VisitorLoginTest')
-data.setCell(21, 3, 4111);
+data.setCell(21, 3, 6077);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'TC_012_VerifyRemarksTextboxCharacterLimit')
-data.setCell(22, 2, 'Tests.VisitorLoginTest')
-data.setCell(22, 3, 4061);
+data.setCell(22, 1, 'TC_002_VerifyAttendanceWithoutCapturingImage')
+data.setCell(22, 2, 'Tests.AttendanceTest')
+data.setCell(22, 3, 5934);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'TC_001_Verify_ResourceCenter_Module_Displayed')
+data.setCell(23, 1, 'TC002_VerifyPPTXFileDownloaded')
 data.setCell(23, 2, 'Tests.ResourceCentreTest')
-data.setCell(23, 3, 4016);
+data.setCell(23, 3, 5407);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'TC_006_VerifyVisitorNameTextboxCharacterLimit')
-data.setCell(24, 2, 'Tests.VisitorLoginTest')
-data.setCell(24, 3, 3859);
+data.setCell(24, 1, 'TC_017_Verify_MobileNumberTextboxCharacterLimit')
+data.setCell(24, 2, 'Tests.LoginTest')
+data.setCell(24, 3, 5331);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'TC_007_VerifyTargetIDTextboxCharacterLimit')
-data.setCell(25, 2, 'Tests.DownloadcallsTest')
-data.setCell(25, 3, 3712);
+data.setCell(25, 1, 'TC_009_VerifyDesignationTextboxCharacterLimit')
+data.setCell(25, 2, 'Tests.VisitorLoginTest')
+data.setCell(25, 3, 4761);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'TC_017_Verify_MobileNumberTextboxCharacterLimit')
-data.setCell(26, 2, 'Tests.LoginTest')
-data.setCell(26, 3, 3547);
+data.setCell(26, 1, 'TC_006_VerifyVisitorNameTextboxCharacterLimit')
+data.setCell(26, 2, 'Tests.VisitorLoginTest')
+data.setCell(26, 3, 4647);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'TC003_VerifyMP4FileDownloaded')
+data.setCell(27, 1, 'TC004_VerifyPDFFileDownloaded')
 data.setCell(27, 2, 'Tests.ResourceCentreTest')
-data.setCell(27, 3, 3322);
+data.setCell(27, 3, 4479);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'TC004_VerifyPDFFileDownloaded')
+data.setCell(28, 1, 'TC_001_Verify_ResourceCenter_Module_Displayed')
 data.setCell(28, 2, 'Tests.ResourceCentreTest')
-data.setCell(28, 3, 3244);
+data.setCell(28, 3, 4425);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'TC007_VerifyXLSXFileDownloaded')
-data.setCell(29, 2, 'Tests.ResourceCentreTest')
-data.setCell(29, 3, 3170);
+data.setCell(29, 1, 'TC_007_VerifyTargetIDTextboxCharacterLimit')
+data.setCell(29, 2, 'Tests.DownloadcallsTest')
+data.setCell(29, 3, 4270);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'TC006_VerifyJPGFileDownloaded')
+data.setCell(30, 1, 'TC007_VerifyXLSXFileDownloaded')
 data.setCell(30, 2, 'Tests.ResourceCentreTest')
-data.setCell(30, 3, 3107);
+data.setCell(30, 3, 4068);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'TC005_VerifyDOCXFileDownloaded')
-data.setCell(31, 2, 'Tests.ResourceCentreTest')
-data.setCell(31, 3, 2994);
+data.setCell(31, 1, 'TC_014_Verify_ProjectTextboxCharacterLimit')
+data.setCell(31, 2, 'Tests.LoginTest')
+data.setCell(31, 3, 3877);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'TC_002_Verify_Sync_Button_Functionality')
-data.setCell(32, 2, 'Tests.CallPlanTest')
-data.setCell(32, 3, 2946);
+data.setCell(32, 1, 'TC006_VerifyJPGFileDownloaded')
+data.setCell(32, 2, 'Tests.ResourceCentreTest')
+data.setCell(32, 3, 3763);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'TC_014_Verify_ProjectTextboxCharacterLimit')
-data.setCell(33, 2, 'Tests.LoginTest')
-data.setCell(33, 3, 2778);
+data.setCell(33, 1, 'TC_003_Verify_5_Minute_Sync_Process')
+data.setCell(33, 2, 'Tests.CallPlanTest')
+data.setCell(33, 3, 3557);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'TC_003_Verify_5_Minute_Sync_Process')
-data.setCell(34, 2, 'Tests.CallPlanTest')
-data.setCell(34, 3, 2614);
+data.setCell(34, 1, 'TC003_VerifyMP4FileDownloaded')
+data.setCell(34, 2, 'Tests.ResourceCentreTest')
+data.setCell(34, 3, 3551);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters')
-data.setCell(35, 2, 'Tests.VisitorLoginTest')
-data.setCell(35, 3, 2575);
+data.setCell(35, 1, 'TC005_VerifyDOCXFileDownloaded')
+data.setCell(35, 2, 'Tests.ResourceCentreTest')
+data.setCell(35, 3, 3365);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'TC_010_Verify_UsernameTextboxCharacterLimit')
+data.setCell(36, 1, 'TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters')
 data.setCell(36, 2, 'Tests.LoginTest')
-data.setCell(36, 3, 2489);
+data.setCell(36, 3, 3217);
 data.setCell(37, 0, 37)
-data.setCell(37, 1, 'TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters')
-data.setCell(37, 2, 'Tests.LoginTest')
-data.setCell(37, 3, 2358);
+data.setCell(37, 1, 'TC_011_VerifyDesignationTextboxAcceptsNumbers')
+data.setCell(37, 2, 'Tests.VisitorLoginTest')
+data.setCell(37, 3, 3211);
 data.setCell(38, 0, 38)
 data.setCell(38, 1, 'TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters')
 data.setCell(38, 2, 'Tests.VisitorLoginTest')
-data.setCell(38, 3, 2283);
+data.setCell(38, 3, 3204);
 data.setCell(39, 0, 39)
-data.setCell(39, 1, 'TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters')
+data.setCell(39, 1, 'TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters')
 data.setCell(39, 2, 'Tests.VisitorLoginTest')
-data.setCell(39, 3, 2251);
+data.setCell(39, 3, 3142);
 data.setCell(40, 0, 40)
-data.setCell(40, 1, 'TC_016_Verify_ProjectTextboxAcceptsNumbers')
+data.setCell(40, 1, 'TC_010_Verify_UsernameTextboxCharacterLimit')
 data.setCell(40, 2, 'Tests.LoginTest')
-data.setCell(40, 3, 2230);
+data.setCell(40, 3, 3073);
 data.setCell(41, 0, 41)
-data.setCell(41, 1, 'TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters')
-data.setCell(41, 2, 'Tests.VisitorLoginTest')
-data.setCell(41, 3, 2208);
+data.setCell(41, 1, 'TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters')
+data.setCell(41, 2, 'Tests.LoginTest')
+data.setCell(41, 3, 3031);
 data.setCell(42, 0, 42)
-data.setCell(42, 1, 'TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters')
+data.setCell(42, 1, 'TC_016_Verify_ProjectTextboxAcceptsNumbers')
 data.setCell(42, 2, 'Tests.LoginTest')
-data.setCell(42, 3, 2195);
+data.setCell(42, 3, 2989);
 data.setCell(43, 0, 43)
-data.setCell(43, 1, 'TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers')
+data.setCell(43, 1, 'TC_008_VerifyVisitorNameTextboxAcceptsNumbers')
 data.setCell(43, 2, 'Tests.VisitorLoginTest')
-data.setCell(43, 3, 2163);
+data.setCell(43, 3, 2961);
 data.setCell(44, 0, 44)
-data.setCell(44, 1, 'TC_012_Verify_UsernameTextboxAcceptsNumbers')
-data.setCell(44, 2, 'Tests.LoginTest')
-data.setCell(44, 3, 2152);
+data.setCell(44, 1, 'TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers')
+data.setCell(44, 2, 'Tests.VisitorLoginTest')
+data.setCell(44, 3, 2893);
 data.setCell(45, 0, 45)
-data.setCell(45, 1, 'TC_011_VerifyDesignationTextboxAcceptsNumbers')
-data.setCell(45, 2, 'Tests.VisitorLoginTest')
-data.setCell(45, 3, 2108);
+data.setCell(45, 1, 'TC_002_Verify_Sync_Button_Functionality')
+data.setCell(45, 2, 'Tests.CallPlanTest')
+data.setCell(45, 3, 2821);
 data.setCell(46, 0, 46)
 data.setCell(46, 1, 'TC_013_Verify_PasswordTextboxCharacterLimit')
 data.setCell(46, 2, 'Tests.LoginTest')
-data.setCell(46, 3, 2084);
+data.setCell(46, 3, 2796);
 data.setCell(47, 0, 47)
-data.setCell(47, 1, 'TC_001_VerifyVisitorLoginModuleDisplayed')
-data.setCell(47, 2, 'Tests.VisitorLoginTest')
-data.setCell(47, 3, 2083);
+data.setCell(47, 1, 'TC_012_Verify_UsernameTextboxAcceptsNumbers')
+data.setCell(47, 2, 'Tests.LoginTest')
+data.setCell(47, 3, 2764);
 data.setCell(48, 0, 48)
-data.setCell(48, 1, 'TC_008_VerifyVisitorNameTextboxAcceptsNumbers')
+data.setCell(48, 1, 'TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters')
 data.setCell(48, 2, 'Tests.VisitorLoginTest')
-data.setCell(48, 3, 2038);
+data.setCell(48, 3, 2678);
 data.setCell(49, 0, 49)
-data.setCell(49, 1, 'TC_001_Verify_Call_Plan_Module_Displayed')
-data.setCell(49, 2, 'Tests.CallPlanTest')
-data.setCell(49, 3, 1119);
+data.setCell(49, 1, 'TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters')
+data.setCell(49, 2, 'Tests.VisitorLoginTest')
+data.setCell(49, 3, 2658);
 data.setCell(50, 0, 50)
-data.setCell(50, 1, 'TC_001_VerifyAttendanceModuleDisplayed')
-data.setCell(50, 2, 'Tests.AttendanceTest')
-data.setCell(50, 3, 1049);
+data.setCell(50, 1, 'TC_001_VerifyVisitorLoginModuleDisplayed')
+data.setCell(50, 2, 'Tests.VisitorLoginTest')
+data.setCell(50, 3, 2484);
 data.setCell(51, 0, 51)
-data.setCell(51, 1, 'TC_002_VerifyAttendanceWithoutCapturingImage')
-data.setCell(51, 2, 'Tests.AttendanceTest')
-data.setCell(51, 3, 889);
+data.setCell(51, 1, 'TC_001_Verify_Call_Plan_Module_Displayed')
+data.setCell(51, 2, 'Tests.CallPlanTest')
+data.setCell(51, 3, 1778);
 data.setCell(52, 0, 52)
-data.setCell(52, 1, 'TC_006_VerifySubmitButtonWithoutAddingTarget')
-data.setCell(52, 2, 'Tests.DownloadcallsTest')
-data.setCell(52, 3, 884);
+data.setCell(52, 1, 'TC_001_VerifyAttendanceModuleDisplayed')
+data.setCell(52, 2, 'Tests.AttendanceTest')
+data.setCell(52, 3, 1680);
 data.setCell(53, 0, 53)
-data.setCell(53, 1, 'TC_003_VerifyAttendanceSubmission')
-data.setCell(53, 2, 'Tests.AttendanceTest')
-data.setCell(53, 3, 652);
+data.setCell(53, 1, 'TC_006_VerifySubmitButtonWithoutAddingTarget')
+data.setCell(53, 2, 'Tests.DownloadcallsTest')
+data.setCell(53, 3, 1137);
 data.setCell(54, 0, 54)
 data.setCell(54, 1, 'TC_004_VerifyAttendanceRecordedInDatabase')
 data.setCell(54, 2, 'Tests.AttendanceTest')
-data.setCell(54, 3, 0);
+data.setCell(54, 3, 322);
 window.suiteTableData['Regression_Suite']= { tableData: data, tableDiv: 'times-div-Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 minutes</span>
+              <span class="suite-total-time">Total running time: 8 minutes</span>
               <div id="times-div-Regression_Suite">
               </div> <!-- times-div-Regression_Suite -->
             </div> <!-- times-div -->
@@ -1652,265 +1609,261 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">TC_001_Verify_Login_With_Valid_Credentials</span>
-                <span class="method-start">14789 ms</span>
+                <span class="method-start">20055 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_002_Verify_Login_With_Invalid_Username</span>
-                <span class="method-start">31084 ms</span>
+                <span class="method-start">40655 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_003_Verify_Login_With_Invalid_Password</span>
-                <span class="method-start">42338 ms</span>
+                <span class="method-start">53847 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_004_Verify_Login_With_Invalid_Project</span>
-                <span class="method-start">54743 ms</span>
+                <span class="method-start">68509 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_005_Verify_Login_With_Invalid_Mobile_Number</span>
-                <span class="method-start">66830 ms</span>
+                <span class="method-start">85507 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_006_Verify_Login_Without_Entering_Username</span>
-                <span class="method-start">77773 ms</span>
+                <span class="method-start">99868 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_007_Verify_Login_Without_Entering_Password</span>
-                <span class="method-start">87881 ms</span>
+                <span class="method-start">113792 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_008_Verify_Login_Without_Entering_Project</span>
-                <span class="method-start">97830 ms</span>
+                <span class="method-start">125874 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_009_Verify_Login_Without_Entering_Mobile_Number</span>
-                <span class="method-start">108581 ms</span>
+                <span class="method-start">138830 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_010_Verify_UsernameTextboxCharacterLimit</span>
-                <span class="method-start">118374 ms</span>
+                <span class="method-start">150360 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters</span>
-                <span class="method-start">121434 ms</span>
+                <span class="method-start">154393 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_012_Verify_UsernameTextboxAcceptsNumbers</span>
-                <span class="method-start">123630 ms</span>
+                <span class="method-start">157427 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_013_Verify_PasswordTextboxCharacterLimit</span>
-                <span class="method-start">125784 ms</span>
+                <span class="method-start">160194 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_014_Verify_ProjectTextboxCharacterLimit</span>
-                <span class="method-start">128405 ms</span>
+                <span class="method-start">163799 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters</span>
-                <span class="method-start">131616 ms</span>
+                <span class="method-start">168295 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_016_Verify_ProjectTextboxAcceptsNumbers</span>
-                <span class="method-start">133975 ms</span>
+                <span class="method-start">171513 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_017_Verify_MobileNumberTextboxCharacterLimit</span>
-                <span class="method-start">136205 ms</span>
+                <span class="method-start">174503 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.DownloadcallsTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_VerifyDownloadCallsModuleIsDisplayed</span>
-                <span class="method-start">139753 ms</span>
+                <span class="method-start">179837 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_002_VerifyCallsAreDownloaded</span>
-                <span class="method-start">152207 ms</span>
+                <span class="method-start">195307 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_003_VerifyDuplicateCallDownload</span>
-                <span class="method-start">167336 ms</span>
+                <span class="method-start">213555 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_004_VerifyInvalidTargetDownload</span>
-                <span class="method-start">174471 ms</span>
+                <span class="method-start">221122 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_005_VerifyRemoveButtonFunctionality</span>
-                <span class="method-start">182234 ms</span>
+                <span class="method-start">229294 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_006_VerifySubmitButtonWithoutAddingTarget</span>
-                <span class="method-start">188410 ms</span>
+                <span class="method-start">235719 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_007_VerifyTargetIDTextboxCharacterLimit</span>
-                <span class="method-start">189297 ms</span>
+                <span class="method-start">236860 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.CallPlanTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_Verify_Call_Plan_Module_Displayed</span>
-                <span class="method-start">193537 ms</span>
+                <span class="method-start">241810 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_002_Verify_Sync_Button_Functionality</span>
-                <span class="method-start">194657 ms</span>
+                <span class="method-start">243592 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_003_Verify_5_Minute_Sync_Process</span>
-                <span class="method-start">197604 ms</span>
+                <span class="method-start">246417 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_005_Verify_Upload_Button_Without_Completing_Form</span>
-                <span class="method-start">200219 ms</span>
+                <span class="method-start">249977 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_009_Verify_Call_Upload</span>
-                <span class="method-start">213518 ms</span>
+                <span class="method-start">261105 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.AttendanceTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_VerifyAttendanceModuleDisplayed</span>
-                <span class="method-start">728988 ms</span>
+                <span class="method-start">314352 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC_002_VerifyAttendanceWithoutCapturingImage</span>
-                <span class="method-start">730040 ms</span>
+                <span class="method-start">316035 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC_003_VerifyAttendanceSubmission</span>
-                <span class="method-start">731452 ms</span>
+                <span class="method-start">321971 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_004_VerifyAttendanceRecordedInDatabase</span>
-                <span class="method-start">732503 ms</span>
+                <span class="method-start">345160 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.VisitorLoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_VerifyVisitorLoginModuleDisplayed</span>
-                <span class="method-start">732504 ms</span>
+                <span class="method-start">345483 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_002_VerifySubmitButtonWithoutEnteringFields</span>
-                <span class="method-start">734589 ms</span>
+                <span class="method-start">347970 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_003_VerifyVisitorEmpIDTextboxCharacterLimit</span>
-                <span class="method-start">753273 ms</span>
+                <span class="method-start">367685 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters</span>
-                <span class="method-start">758369 ms</span>
+                <span class="method-start">375784 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers</span>
-                <span class="method-start">760578 ms</span>
+                <span class="method-start">378445 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_006_VerifyVisitorNameTextboxCharacterLimit</span>
-                <span class="method-start">762742 ms</span>
+                <span class="method-start">381340 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters</span>
-                <span class="method-start">767030 ms</span>
+                <span class="method-start">386576 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_008_VerifyVisitorNameTextboxAcceptsNumbers</span>
-                <span class="method-start">769283 ms</span>
+                <span class="method-start">389257 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_009_VerifyDesignationTextboxCharacterLimit</span>
-                <span class="method-start">771322 ms</span>
+                <span class="method-start">392220 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters</span>
-                <span class="method-start">775848 ms</span>
+                <span class="method-start">397617 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_011_VerifyDesignationTextboxAcceptsNumbers</span>
-                <span class="method-start">778132 ms</span>
+                <span class="method-start">400823 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">TC_012_VerifyRemarksTextboxCharacterLimit</span>
-                <span class="method-start">780240 ms</span>
+                <span class="method-start">404036 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters</span>
-                <span class="method-start">784689 ms</span>
+                <span class="method-start">410745 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_014_Verify_RemarksTextboxAcceptsNumbers</span>
-                <span class="method-start">787266 ms</span>
+                <span class="method-start">413891 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC_015_Verify_Visitor_Upload</span>
-                <span class="method-start">794607 ms</span>
+                <span class="method-start">422232 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.ResourceCentreTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">TC_001_Verify_ResourceCenter_Module_Displayed</span>
-                <span class="method-start">846365 ms</span>
+                <span class="method-start">479592 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC002_VerifyPPTXFileDownloaded</span>
-                <span class="method-start">850382 ms</span>
+                <span class="method-start">484019 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC003_VerifyMP4FileDownloaded</span>
-                <span class="method-start">854538 ms</span>
+                <span class="method-start">489429 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC004_VerifyPDFFileDownloaded</span>
-                <span class="method-start">857863 ms</span>
+                <span class="method-start">492982 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC005_VerifyDOCXFileDownloaded</span>
-                <span class="method-start">861110 ms</span>
+                <span class="method-start">497463 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC006_VerifyJPGFileDownloaded</span>
-                <span class="method-start">864105 ms</span>
+                <span class="method-start">500830 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TC007_VerifyXLSXFileDownloaded</span>
-                <span class="method-start">867214 ms</span>
+                <span class="method-start">504596 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDownApp</span>
-                <span class="method-start">870712 ms</span>
+                <span class="method-start">509182 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,8 +1,8 @@
 package Utilities;
 
 import static Base.TestSetup.*;
-import static Utilities.Utils.generateFormattedDate;
-import static Utilities.Utils.getDeviceName;
+import static Utilities.AppUtils.generateFormattedDate;
+import static Utilities.AppUtils.getDeviceName;
 
 /**
  * Constants class.
@@ -10,19 +10,13 @@ import static Utilities.Utils.getDeviceName;
 public class Constants {
 
     public static final String Devicename  = getDeviceName();
-
     public static final String  configfilepath = System.getProperty("user.dir") + "\\src\\test\\resources\\Properties\\Config.properties";
-
     public static final String queryfilepath = System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\queries.sql";
-
     public static final String TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\Testdatas.json";
     public static final String CALLPLAN_TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\CallPlandata.json";
-
     public static final String TESTSUITES_DATA_FILE = "./src/main/java/TestConfig/TestSuites.json";
-
-
-    public static String framenewmainURL = "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=framenew_main;encrypt=true;trustServerCertificate=true";
-
+    public static final String framenewmainURL = "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=framenew_main;encrypt=true;trustServerCertificate=true";
+    private static String databaseURL ;
 
     /**
      * Returns the production URL for connecting to the SQL Server database.
@@ -32,7 +26,7 @@ public class Constants {
      * 
      * @param globalproject the JSONObject containing the project information
      */
-    public static String getProdUrl() {
+    private static final String getProdUrl() {
         return "jdbc:sqlserver://65.1.119.118:1433;DatabaseName=" + globalData.getString("project") + ";encrypt=true;trustServerCertificate=true";      //LIVE URL
     }
 
@@ -42,20 +36,24 @@ public class Constants {
      * @return the test server URL in the format "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=<project>;encrypt=true;trustServerCertificate=true"
      * @throws JSONException if there is an error retrieving the project name from the global project object
      */
-    public static String gettestserverurl() {
+    private static final String gettestserverurl() {
         return "jdbc:sqlserver://192.168.0.124:1433;DatabaseName="+ globalData.getString("project")+" ;encrypt=true;trustServerCertificate=true";
     }
 
 
-    public static String getglobalserverurl() {
+    private static final String getglobalserverurl() {
         String testserverurl = "jdbc:sqlserver://183.83.187.133:1433;DatabaseName=" + globalData.getString("project") + ";encrypt=true;trustServerCertificate=true";
         return testserverurl;
     }
 
-    public static final String LiveDbusername = "Field2020";
-    public static final String LiveDbpassword = "Fieldlytics@#@2020";
+    public static final String getURL(){
+        return getdatabseurl();
+    }
 
-    public static String body = "Dear Team,\n" +
+    public static final String databasebUsername = "Field2020";
+    public static final String databasePassword = "Fieldlytics@#@2020";
+
+    public static final  String body = "Dear Team,\n" +
             "\n" +
             "Please find the attached test automation report for FrameX Mobile executed on "+generateFormattedDate("dd-MM-yy")+" . The test suite covered various scenarios validating the functionalities of FrameX mobile.\n" +
             "\n" +
@@ -200,7 +198,30 @@ public class Constants {
 
     public static String isShopFrontPhotoRequired() {
         String projectmaster = "select * from Projectmaster where ProjectName = '"+globalData.getString("project")+"'";
-        log.info("ShopFront photo Required Query : "+projectmaster);
         return projectmaster;
+    }
+
+    public static String generateStoreRequiredQuery(){
+
+        String storereqquery = "select ExitButtonRequired, * from Projectmaster where ProjectName = '"+ globalData.getString("project")+"'";
+        return storereqquery;
+
+    }
+
+    private static String getdatabseurl(){
+
+        String env = properties.get("Environment");
+        if(env.equalsIgnoreCase("Production")){
+            databaseURL =  getProdUrl();
+        } else if (env.equalsIgnoreCase("QA")) {
+            databaseURL =  gettestserverurl();
+        } else if (env.equalsIgnoreCase("Global")) {
+            databaseURL =  getglobalserverurl();
+        }else{
+            log.error(env+" is not found");
+            System.out.println(env+" is not found");
+            return null;
+        }
+        return databaseURL;
     }
 }

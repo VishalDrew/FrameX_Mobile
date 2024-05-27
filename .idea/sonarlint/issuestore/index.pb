@@ -43,8 +43,6 @@ Z
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 V
 &src/test/java/Utilities/Constants.java,e\a\ea4d0d53796becd00c2df95a978fabeaa376e38c
-R
-"src/test/java/Utilities/Rough.java,e\5\e59413f627d0f7f42a33450c4a2f57244dd2bb7d
 Q
 !src/test/java/Base/TestSetup.java,3\c\3c4e934388aa197578b724170644f3a9193e2244
 V
@@ -95,8 +93,6 @@ J
 test-output/old/index.html,2\8\281a4dcaca3d8148e650e14997a38d1fd5663350
 V
 &src/test/java/Pages/HomePage_page.java,9\d\9d19c016975f1bd6a7e6b4e973a0043cc6dcb86c
-X
-(src/test/java/Utilities/ExcelReader.java,8\c\8c7560f0dd668992f41f1f8aebafc838676f81db
 j
 :test-output/FrameXFlutter V28.0/FramexFunctional Test.html,0\e\0eb91b1908b792ef9e5fe61b30f86576fd103d26
 i
@@ -582,7 +578,10 @@ w
 G.idea/sonarlint/issuestore/8/3/83e51f549eab3bbfe020e95bd3cb2845e9f722ed,3\4\34dbf15bada083c1f5d1e1ecea988d06c6fac190
 ]
 -src/test/java/Utilities/JsonConfigReader.java,c\b\cb5b72679f5795bb061372217a3ae3c89b3a4497
-W
-'src/main/java/TestConfig/Testdatas.json,c\f\cf5d2e661dd180abddf1151e4b827894c38e22e0
 X
 (src/main/java/TestConfig/TestSuites.json,9\d\9d6e2449127ba1fa04605f750cb78568ccbffacc
+:
+
+log4j2.xml,e\b\ebe6a3928074fe7cd4e9c659afbc0076ea5c3914
+U
+%src/test/java/Utilities/AppUtils.java,c\d\cd91a3df69207cbc51899ff71542a2ab2d467945

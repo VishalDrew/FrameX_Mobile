@@ -1,6 +1,6 @@
 package Listeners;
 
-import Utilities.Utils;
+import Utilities.AppUtils;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -21,7 +21,7 @@ import java.util.Date;
 import static Base.TestSetup.log;
 
 import static Base.TestSetup.properties;
-import static Utilities.Utils.screenshotName;
+import static Utilities.AppUtils.screenshotName;
 
 public class FrameX_Listeners implements ITestListener, ISuiteListener {
     static Date d = new Date();
@@ -45,6 +45,7 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
         ExtentTest test = extent.createTest(result.getTestClass().getName() + "     @TestCase : " + result.getMethod().getMethodName());
         testReport.set(test);
         log.info("Test started: " + result.getTestClass().getName() + "     @TestCase : " + result.getMethod().getMethodName());
+
     }
 
     public void onTestSuccess(ITestResult result) {
@@ -62,7 +63,7 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
         testReport.get().fail("<details>" + "<summary>" + "<b>" + "<font color=" + "red>" + "Exception Occurred: Click to see" + "</font>" + "</b >" + "</summary>" + excepionMessage.replaceAll(",", "<br>") + "</details>" + " \n");
         attachmentflag = true;
         try {
-            Utils.captureScreenshot();
+            AppUtils.captureScreenshot();
             testReport.get().fail("<b>" + "<font color=" + "red>" + "Screenshot of failure" + "</font>" + "</b>",
                     MediaEntityBuilder.createScreenCaptureFromPath(properties.get("Screenshotpath") + screenshotName)
                             .build());
@@ -73,6 +74,7 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
         String failureLog = "TEST CASE FAILED";
         Markup m = MarkupHelper.createLabel(failureLog, ExtentColor.RED);
         testReport.get().log(Status.FAIL, m);
+
     }
 
     public void onTestSkipped(ITestResult result) {

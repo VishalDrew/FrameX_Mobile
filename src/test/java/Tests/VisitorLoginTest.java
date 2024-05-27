@@ -1,18 +1,12 @@
 package Tests;
 
 import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import Modules.VisitorLogin_Module;
-
-import static Listeners.FrameX_Listeners.logAndReportFailure;
-import static Listeners.FrameX_Listeners.logAndReportSuccess;
-import static Modules.Login_Module.*;
 import static Modules.VisitorLogin_Module.*;
 import static Pages.HomePage_page.*;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 /**
  * VisitorLoginTest class.
@@ -44,9 +38,7 @@ public class VisitorLoginTest {
     @Test(priority = 3,dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" }, groups = {"regression"},enabled = true)
     public void TC_003_VerifyVisitorEmpIDTextboxCharacterLimit() throws InterruptedException {
         JSONObject charclimit = gettestdata("Visitor Login", "EmpID CharacterLimit");
-        String empid = charclimit.getString("EmpID");
-        String limit = charclimit.getString("Limit");
-        validateMaxTextLimitInEmpIDTextbox(empid,limit);
+        validateMaxTextLimitInEmpIDTextbox(charclimit.getString("EmpID"),charclimit.getString("Limit"));
     }
 
     @Test(priority = 4, dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" },groups = {"regression"},enabled = true)
@@ -62,9 +54,7 @@ public class VisitorLoginTest {
     @Test(priority = 6,dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" }, groups = {"regression"},enabled = true)
     public void TC_006_VerifyVisitorNameTextboxCharacterLimit() {
         JSONObject Namecharacterlimit = gettestdata("Visitor Login", "Name CharacterLimit");
-        String name = Namecharacterlimit.getString("Name");
-        String limit = Namecharacterlimit.getString("Limit");
-        validateMaxTextLimitInNameTextbox(name,limit);
+        validateMaxTextLimitInNameTextbox( Namecharacterlimit.getString("Name"),Namecharacterlimit.getString("Limit"));
     }
 
     @Test(priority = 7, dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" },groups = {"regression"},enabled = true)
@@ -80,9 +70,7 @@ public class VisitorLoginTest {
     @Test(priority = 9, dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" },groups = {"regression"},enabled = true)
     public void TC_009_VerifyDesignationTextboxCharacterLimit() {
         JSONObject desigcharacterlimit = gettestdata("Visitor Login", "Designation CharacterLimit");
-        String name = desigcharacterlimit.getString("Name");
-        String limit = desigcharacterlimit.getString("Limit");
-        validateMaxTextLimitInDesignationTextbox(name,limit);
+        validateMaxTextLimitInDesignationTextbox( desigcharacterlimit.getString("Name"),desigcharacterlimit.getString("Limit"));
     }
 
     @Test(priority = 10,dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" }, groups = {"regression"},enabled = true)
@@ -98,9 +86,7 @@ public class VisitorLoginTest {
     @Test(priority = 12, dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" },groups = {"regression"},enabled = true)
     public void TC_012_VerifyRemarksTextboxCharacterLimit() {
         JSONObject remarkscharlimit = gettestdata("Visitor Login", "Remarks CharacterLimit");
-        String name = remarkscharlimit.getString("Name");
-        String limit = remarkscharlimit.getString("Limit");
-        validateMaxTextLimitInRemarksTextbox(name,limit);
+        validateMaxTextLimitInRemarksTextbox(remarkscharlimit.getString("Name"),remarkscharlimit.getString("Limit"));
     }
 
     @Test(priority = 13, dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" },groups = {"regression"},enabled = true)
@@ -120,7 +106,6 @@ public class VisitorLoginTest {
      */
     @Test(priority = 15,dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" }, groups = {"smoke", "regression"},enabled = true)
     public   void TC_015_Verify_Visitor_Upload() throws Exception {
-        //navigateto(visitorlogin);
         validatevisitorUpload();
     }
 

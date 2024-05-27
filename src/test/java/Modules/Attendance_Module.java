@@ -14,10 +14,10 @@ import static Pages.HomePage_page.Attendance;
 import static Pages.HomePage_page.Callplan;
 import static Utilities.Actions.*;
 import static Utilities.DatabaseUtility.fetchdatafromdb;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 public class Attendance_Module extends TestSetup {
-    public static String attendancetime;
+    private static String attendancetime;
 
     /**
      * Validates the attendance submission for a given attendance type, image and expected message.
@@ -44,7 +44,6 @@ public class Attendance_Module extends TestSetup {
                 }
             }
             webdriverWait("ACCESSIBILITYID",savedmsg,15);
-            // Verifying attendance submission success/failure
             return attendancesubmittedvalidation(attendancetype,savedmsg,expected);
 
         } catch (Exception e) {
@@ -62,7 +61,7 @@ public class Attendance_Module extends TestSetup {
      * @return true if the attendance submission is successful, false otherwise
      * @throws InterruptedException if the thread is interrupted while sleeping
      */
-    static boolean attendancesubmittedvalidation(String type , String response,String confirmresponse) throws InterruptedException {
+    private static boolean attendancesubmittedvalidation(String type , String response,String confirmresponse) throws InterruptedException {
         if (sourceExists(response)){
             click("ACCESSIBILITYID", Attendance);
             log.info(response);
@@ -98,7 +97,7 @@ public class Attendance_Module extends TestSetup {
      * @param img a flag indicating if an image is required for the attendance activity
      * @throws InterruptedException if the thread is interrupted while waiting
      */
-    public static void performAttendanceActivity(String type , String img) throws InterruptedException {
+    private static void performAttendanceActivity(String type , String img) throws InterruptedException {
         try {
             for (String key : attendancemessages().keySet()) {
                 if(sourceExists(key)) {
@@ -162,7 +161,7 @@ public class Attendance_Module extends TestSetup {
      * @return the value of the specified column for the given username and current date
      * @throws Exception if there is an error while fetching data from the database
      */
-    public static String getstatusandtime(String username, String columnName) throws Exception {
+    private static String getstatusandtime(String username, String columnName) throws Exception {
         try {
             String todaydate = generateFormattedDate("yyyy-MM-dd");
             List<Map<String, String>> result = fetchdatafromdb("select username, status, createddate from Attendancedetail where username = '"+username+"' and date = '"+todaydate+"'");
@@ -206,13 +205,5 @@ public class Attendance_Module extends TestSetup {
         }
     }
 
-    private static void navigateBackToAttendance() throws InterruptedException {
-        driver.navigate().back();
-        click("ACCESSIBILITYID", "Callplan");
-        Thread.sleep(2000);
-        driver.navigate().back();
-        click("ACCESSIBILITYID", "Attendance");
-        Thread.sleep(700);
-    }
 
 }

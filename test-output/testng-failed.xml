@@ -11,20 +11,15 @@
       </run>
     </groups>
     <classes>
-      <class name="Tests.DownloadcallsTest">
+      <class name="Tests.LoginTest">
         <methods>
-          <include name="TC_001_VerifyDownloadCallsModuleIsDisplayed"/>
-          <include name="TC_007_VerifyTargetIDTextboxCharacterLimit"/>
+          <include name="TC_014_Verify_ProjectTextboxCharacterLimit"/>
+          <include name="tearDownApp"/>
+          <include name="StartApp"/>
+          <include name="TC_013_Verify_PasswordTextboxCharacterLimit"/>
+          <include name="TC_010_Verify_UsernameTextboxCharacterLimit"/>
         </methods>
-      </class> <!-- Tests.DownloadcallsTest -->
-      <class name="Tests.AttendanceTest">
-        <methods>
-          <include name="TC_004_VerifyAttendanceRecordedInDatabase"/>
-          <include name="TC_003_VerifyAttendanceSubmission"/>
-          <include name="TC_002_VerifyAttendanceWithoutCapturingImage"/>
-          <include name="TC_001_VerifyAttendanceModuleDisplayed"/>
-        </methods>
-      </class> <!-- Tests.AttendanceTest -->
+      </class> <!-- Tests.LoginTest -->
       <class name="Tests.VisitorLoginTest">
         <methods>
           <include name="TC_006_VerifyVisitorNameTextboxCharacterLimit"/>
@@ -34,15 +29,12 @@
           <include name="TC_001_VerifyVisitorLoginModuleDisplayed"/>
         </methods>
       </class> <!-- Tests.VisitorLoginTest -->
-      <class name="Tests.LoginTest">
+      <class name="Tests.DownloadcallsTest">
         <methods>
-          <include name="TC_014_Verify_ProjectTextboxCharacterLimit"/>
-          <include name="tearDownApp"/>
-          <include name="TC_013_Verify_PasswordTextboxCharacterLimit"/>
-          <include name="StartApp"/>
-          <include name="TC_010_Verify_UsernameTextboxCharacterLimit"/>
+          <include name="TC_001_VerifyDownloadCallsModuleIsDisplayed"/>
+          <include name="TC_007_VerifyTargetIDTextboxCharacterLimit"/>
         </methods>
-      </class> <!-- Tests.LoginTest -->
+      </class> <!-- Tests.DownloadcallsTest -->
     </classes>
   </test> <!-- Regression Tests(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

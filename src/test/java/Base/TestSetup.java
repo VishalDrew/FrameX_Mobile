@@ -22,10 +22,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static Listeners.FrameX_Listeners.fileName;
+import static Modules.CallPlanModule.fetchTargetsFromDatabase;
 import static Utilities.Constants.Devicename;
 import static Utilities.Mailconfig.sendMailReport;
 import static Utilities.TestDataUtil.gettestdata;
-import static Utilities.Utils.*;
+import static Utilities.AppUtils.*;
 
 /**
  * TestSetup class for initializing and tearing down the test environment.
