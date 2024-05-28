@@ -3,6 +3,10 @@ package Tests;
 import Base.TestSetup;
 import Modules.Login_Module;
 import Pages.HomePage_page;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Step;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
@@ -19,6 +23,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 1, groups = {"smoke", "regression"},enabled = true)
+    @Description("Verify FrameX App with Valid Credentials")
+    @Step("Verify Login Functionality with Valid credentials")
+    @Severity(SeverityLevel.BLOCKER)
     public void TC_001_Verify_Login_With_Valid_Credentials() throws InterruptedException {
         JSONObject user1 = gettestdata("Login","User1");
         performLogin(user1);
@@ -33,6 +40,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing the test data.
      */
     @Test(priority = 2, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_002_Verify_Login_With_Invalid_Username() {
         JSONObject user2 = gettestdata("Login","User2");
         performLogin(user2);
@@ -46,6 +56,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing the test data.
      */
     @Test(priority = 3, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_003_Verify_Login_With_Invalid_Password() {
         JSONObject user3 = gettestdata("Login","User3");
         performLogin(user3);
@@ -59,6 +72,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 4, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_004_Verify_Login_With_Invalid_Project() {
         JSONObject user4 = gettestdata("Login","User4");
         performLogin(user4);
@@ -72,6 +88,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data
      */
     @Test(priority = 5, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_005_Verify_Login_With_Invalid_Mobile_Number() {
         JSONObject user5 = gettestdata("Login","User5");
         performLogin(user5);
@@ -84,6 +103,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 6, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_006_Verify_Login_Without_Entering_Username() {
         JSONObject user6 = gettestdata("Login","User6");
         performLogin(user6);
@@ -96,6 +118,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 7, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_007_Verify_Login_Without_Entering_Password() {
         JSONObject user7 = gettestdata("Login","User7");
         performLogin(user7);
@@ -108,6 +133,9 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 8, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_008_Verify_Login_Without_Entering_Project() {
         JSONObject user8 = gettestdata("Login","User8");
         performLogin(user8);
@@ -121,6 +149,9 @@ public class LoginTest extends TestSetup {
      *
      */
     @Test(priority = 9, groups = {"negative", "regression"},enabled = true)
+    @Description("Verify FrameX App with InValid Credentials")
+    @Step("Verify Login Functionality with InValid credentials")
+    @Severity(SeverityLevel.NORMAL)
     public void TC_009_Verify_Login_Without_Entering_Mobile_Number() {
         JSONObject user9 = gettestdata("Login","User9");
         performLogin(user9);
@@ -128,6 +159,9 @@ public class LoginTest extends TestSetup {
     }
 
     @Test(priority = 10, groups = {"regression"},enabled = true)
+    @Description("Verify Username Textbox Character Limit")
+    @Step("Verify Character Limit in Username Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_010_Verify_UsernameTextboxCharacterLimit() {
         JSONObject user10 = gettestdata("Login", "User10");
         validateMaxTextLimitInUsernameTextbox(user10.getString("username"), user10.getString("Limit"));
@@ -135,38 +169,59 @@ public class LoginTest extends TestSetup {
     }
 
     @Test(priority = 11, groups = {"regression"},enabled = true)
+    @Description("Verify Username Textbox accepts Special characters")
+    @Step("Verify with special charcters in Username Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters() {
         validateSpecialcharInUsernameTextbox(generateRandomSpecialCharacters(10));
     }
 
     @Test(priority = 12, groups = {"regression"},enabled = true)
+    @Description("Verify Username Textbox accepts Numeric values")
+    @Step("Verify with Numbers  in Username Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_012_Verify_UsernameTextboxAcceptsNumbers() {
         validateNumbersInUsernameTextbox(generateRandomNumber());
     }
 
     @Test(priority = 13, groups = {"regression"},enabled = true)
+    @Description("Verify Password Textbox Character Limit")
+    @Step("Verify Character Limit in Password Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_013_Verify_PasswordTextboxCharacterLimit() {
         JSONObject user13 = gettestdata("Login", "User13");
         validateMaxTextLimitInPasswordTextbox(user13.getString("password"),user13.getString("Limit"));
     }
 
     @Test(priority = 14, groups = {"regression"},enabled = true)
+    @Description("Verify Project Textbox Character Limit")
+    @Step("Verify Character Limit in Project Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_014_Verify_ProjectTextboxCharacterLimit() {
         JSONObject user14 = gettestdata("Login", "User14");
         validateMaxTextLimitInProjectTextbox( user14.getString("project"), user14.getString("Limit"));
     }
 
     @Test(priority = 15, groups = {"regression"},enabled = true)
+    @Description("Verify Project Textbox accepts Special characters")
+    @Step("Verify with special charcters in Project Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters() {
         validateSpecialcharInProjectTextbox(generateRandomSpecialCharacters(10));
     }
 
     @Test(priority = 16, groups = {"regression"},enabled = true)
+    @Description("Verify Project Textbox accepts Numeric values")
+    @Step("Verify with Numbers  in Project Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_016_Verify_ProjectTextboxAcceptsNumbers() {
         validateNumbersInProjectTextbox(generateRandomNumber());
     }
 
     @Test(priority = 17, groups = {"regression"},enabled = true)
+    @Description("Verify Mobile number Textbox Character Limit")
+    @Step("Verify Character Limit in MobileNo Field")
+    @Severity(SeverityLevel.MINOR)
     public void TC_017_Verify_MobileNumberTextboxCharacterLimit() {
         JSONObject user15 = gettestdata("Login", "User15");
         validateMaxTextLimitInMobilenoTextbox(user15.getString("Mobileno"), user15.getString("Limit"));

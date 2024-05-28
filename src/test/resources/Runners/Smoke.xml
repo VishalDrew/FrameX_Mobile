@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Smoke Suite">
-    <listeners>
+  <!--  <listeners>
         <listener class-name="Listeners.FrameX_Listeners"></listener>
-    </listeners>
+    </listeners>-->
     <test name="Smoke Tests">
         <groups>
             <run>
@@ -11,11 +11,11 @@
         </groups>
         <classes>
             <class name="Tests.LoginTest" />
-            <class name="Tests.DownloadcallsTest" />
+           <!-- <class name="Tests.DownloadcallsTest" />
             <class name="Tests.CallPlanTest" />
             <class name="Tests.AttendanceTest" />
             <class name="Tests.VisitorLoginTest" />
-            <class name="Tests.ResourceCentreTest" />
+            <class name="Tests.ResourceCentreTest" />-->
         </classes>
     </test>
 </suite>

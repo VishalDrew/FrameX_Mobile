@@ -23,8 +23,6 @@ X
 ,src/test/java/Modules/Attendance_Module.java,9\c\9cc0bb2877f031ed4c12e0ed1dc1b1ededc0168a
 _
 /src/test/java/Modules/Downloadcalls_Module.java,a\4\a4af10d2e7a50949ce29a03ea6b06b9bdec5fecf
-R
-"src/test/java/Utilities/Utils.java,5\b\5b94c25f1409e3553c607159be63d3393ad44b87
 S
 #src/test/java/Pages/Login_Page.java,0\1\01b2d9bc57457a73b693dc7a1d0fe7308f7aecba
 Z
@@ -51,12 +49,8 @@ w
 G.idea/sonarlint/issuestore/3/c/3c4e934388aa197578b724170644f3a9193e2244,c\f\cfd3ec5d892fc0b046f65da66fcc1e1b1c84414b
 Å
 Q.idea/sonarlint/securityhotspotstore/8/3/83e51f549eab3bbfe020e95bd3cb2845e9f722ed,c\c\cc04e89610ebc1cd532efcffb96ecf5078f0feaf
-w
-G.idea/sonarlint/issuestore/e/5/e59413f627d0f7f42a33450c4a2f57244dd2bb7d,7\b\7b6d6ede6c4a01383eb3b0e75417de9ddd3f7ffa
 ï
 e.idea/dataSources/54662f18-0c33-4e86-a193-c7174348181f/storage_v2/_src_/database/daburcsd.0vkSTQ.meta,2\5\2569c4d3b82ae101dadddc8e3b561bef63ac6004
-Å
-Q.idea/sonarlint/securityhotspotstore/e/5/e59413f627d0f7f42a33450c4a2f57244dd2bb7d,a\e\ae7bfaf60612a06c3f22e3ec0a1da73d4c11c4e6
 ö
 j.idea/dataSources/54662f18-0c33-4e86-a193-c7174348181f/storage_v2/_src_/database/framenew_main.ZQVStA.meta,b\a\ba5bf35b78564b90ec5a0aca5f2b632a38763a40
 ∑
@@ -580,8 +574,11 @@ G.idea/sonarlint/issuestore/8/3/83e51f549eab3bbfe020e95bd3cb2845e9f722ed,3\4\34
 -src/test/java/Utilities/JsonConfigReader.java,c\b\cb5b72679f5795bb061372217a3ae3c89b3a4497
 X
 (src/main/java/TestConfig/TestSuites.json,9\d\9d6e2449127ba1fa04605f750cb78568ccbffacc
-:
-
-log4j2.xml,e\b\ebe6a3928074fe7cd4e9c659afbc0076ea5c3914
 U
 %src/test/java/Utilities/AppUtils.java,c\d\cd91a3df69207cbc51899ff71542a2ab2d467945
+R
+"src/test/java/Utilities/Rough.java,e\5\e59413f627d0f7f42a33450c4a2f57244dd2bb7d
+r
+Ballure-results/c2141dc7-9edf-42b9-9c2d-0b0b1fcf896f-container.json,1\a\1a576284f8453f0eed11c3df9a0e4ee2c687c60d
+H
+allure-report/index.html,9\1\9146792892e4a6357e1964157aa76abe912b4556

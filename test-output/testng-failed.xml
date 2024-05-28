@@ -11,30 +11,89 @@
       </run>
     </groups>
     <classes>
+      <class name="Tests.DownloadcallsTest">
+        <methods>
+          <include name="TC_004_VerifyInvalidTargetDownload"/>
+          <include name="TC_001_VerifyDownloadCallsModuleIsDisplayed"/>
+          <include name="TC_002_VerifyCallsAreDownloaded"/>
+          <include name="TC_007_VerifyTargetIDTextboxCharacterLimit"/>
+          <include name="TC_003_VerifyDuplicateCallDownload"/>
+          <include name="TC_006_VerifySubmitButtonWithoutAddingTarget"/>
+          <include name="TC_005_VerifyRemoveButtonFunctionality"/>
+        </methods>
+      </class> <!-- Tests.DownloadcallsTest -->
+      <class name="Tests.ResourceCentreTest">
+        <methods>
+          <include name="TC007_VerifyXLSXFileDownloaded"/>
+          <include name="TC004_VerifyPDFFileDownloaded"/>
+          <include name="TC003_VerifyMP4FileDownloaded"/>
+          <include name="TC005_VerifyDOCXFileDownloaded"/>
+          <include name="TC002_VerifyPPTXFileDownloaded"/>
+          <include name="TC_001_Verify_ResourceCenter_Module_Displayed"/>
+          <include name="TC006_VerifyJPGFileDownloaded"/>
+        </methods>
+      </class> <!-- Tests.ResourceCentreTest -->
       <class name="Tests.LoginTest">
         <methods>
           <include name="TC_014_Verify_ProjectTextboxCharacterLimit"/>
+          <include name="TC_008_Verify_Login_Without_Entering_Project"/>
+          <include name="TC_004_Verify_Login_With_Invalid_Project"/>
           <include name="tearDownApp"/>
-          <include name="StartApp"/>
+          <include name="TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters"/>
+          <include name="TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters"/>
           <include name="TC_013_Verify_PasswordTextboxCharacterLimit"/>
           <include name="TC_010_Verify_UsernameTextboxCharacterLimit"/>
+          <include name="TC_009_Verify_Login_Without_Entering_Mobile_Number"/>
+          <include name="TC_017_Verify_MobileNumberTextboxCharacterLimit"/>
+          <include name="TC_003_Verify_Login_With_Invalid_Password"/>
+          <include name="TC_002_Verify_Login_With_Invalid_Username"/>
+          <include name="TC_016_Verify_ProjectTextboxAcceptsNumbers"/>
+          <include name="TC_001_Verify_Login_With_Valid_Credentials"/>
+          <include name="TC_006_Verify_Login_Without_Entering_Username"/>
+          <include name="TC_012_Verify_UsernameTextboxAcceptsNumbers"/>
+          <include name="TC_005_Verify_Login_With_Invalid_Mobile_Number"/>
+          <include name="StartApp"/>
+          <include name="TC_007_Verify_Login_Without_Entering_Password"/>
         </methods>
       </class> <!-- Tests.LoginTest -->
       <class name="Tests.VisitorLoginTest">
         <methods>
+          <include name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters"/>
           <include name="TC_006_VerifyVisitorNameTextboxCharacterLimit"/>
-          <include name="TC_012_VerifyRemarksTextboxCharacterLimit"/>
+          <include name="TC_002_VerifySubmitButtonWithoutEnteringFields"/>
+          <include name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters"/>
+          <include name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers"/>
           <include name="TC_009_VerifyDesignationTextboxCharacterLimit"/>
           <include name="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit"/>
+          <include name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers"/>
+          <include name="TC_012_VerifyRemarksTextboxCharacterLimit"/>
+          <include name="TC_014_Verify_RemarksTextboxAcceptsNumbers"/>
+          <include name="TC_015_Verify_Visitor_Upload"/>
+          <include name="TC_011_VerifyDesignationTextboxAcceptsNumbers"/>
+          <include name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters"/>
+          <include name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters"/>
           <include name="TC_001_VerifyVisitorLoginModuleDisplayed"/>
         </methods>
       </class> <!-- Tests.VisitorLoginTest -->
-      <class name="Tests.DownloadcallsTest">
+      <class name="Tests.CallPlanTest">
         <methods>
-          <include name="TC_001_VerifyDownloadCallsModuleIsDisplayed"/>
-          <include name="TC_007_VerifyTargetIDTextboxCharacterLimit"/>
+          <include name="TC_001_Verify_Call_Plan_Module_Displayed"/>
+          <include name="TC_005_Verify_Upload_Button_Without_Completing_Form"/>
+          <include name="tearDownApp"/>
+          <include name="TC_009_Verify_Call_Upload"/>
+          <include name="TC_003_Verify_5_Minute_Sync_Process"/>
+          <include name="StartApp"/>
+          <include name="TC_002_Verify_Sync_Button_Functionality"/>
         </methods>
-      </class> <!-- Tests.DownloadcallsTest -->
+      </class> <!-- Tests.CallPlanTest -->
+      <class name="Tests.AttendanceTest">
+        <methods>
+          <include name="TC_004_VerifyAttendanceRecordedInDatabase"/>
+          <include name="TC_003_VerifyAttendanceSubmission"/>
+          <include name="TC_002_VerifyAttendanceWithoutCapturingImage"/>
+          <include name="TC_001_VerifyAttendanceModuleDisplayed"/>
+        </methods>
+      </class> <!-- Tests.AttendanceTest -->
     </classes>
   </test> <!-- Regression Tests(failed) -->
 </suite> <!-- Failed suite [Regression Suite] -->

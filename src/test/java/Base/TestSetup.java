@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static Listeners.FrameX_Listeners.fileName;
+import static Listeners.FrameX_Listeners.ExtentReportfileName;
 import static Modules.CallPlanModule.fetchTargetsFromDatabase;
 import static Utilities.Constants.Devicename;
 import static Utilities.Mailconfig.sendMailReport;
@@ -37,12 +37,12 @@ public class TestSetup {
     public static AndroidDriver driver;
     private static AppiumDriverLocalService service;
     public static Logger log = Logger.getLogger(TestSetup.class);
-    private static DesiredCapabilities capabilities ;
+    private static DesiredCapabilities capabilities;
     public static String deviceModel;
-    public static HashMap<String,String> properties;
-    public static HashMap<String,String> sqlQueries;
+    public static HashMap<String, String> properties;
+    public static HashMap<String, String> sqlQueries;
 
-    public static JSONObject globalData = gettestdata("Login","User1");
+    public static JSONObject globalData = gettestdata("Login", "User1");
 
     static {
         initializeProperties();
@@ -50,6 +50,7 @@ public class TestSetup {
     }
 
     public static List<String> targets;
+
     static {
         try {
             targets = fetchTargetsFromDatabase(globalData.getString("username"));
@@ -62,7 +63,7 @@ public class TestSetup {
     /**
      * Starts the Appium service and initializes the AndroidDriver.
      *
-     * @throws IOException if an I/O error occurs while starting the app.
+     * @throws IOException      if an I/O error occurs while starting the app.
      * @throws RuntimeException if an error occurs while starting the app.
      */
     @BeforeSuite(alwaysRun = true)
@@ -80,7 +81,7 @@ public class TestSetup {
             setDesiredCapabilities();
             driver = new AndroidDriver(new URL(properties.get("Serverurl")), capabilities);
             deviceModel = driver.getCapabilities().getCapability("deviceModel").toString();
-            driver.manage().timeouts().implicitlyWait(Integer.parseInt(properties.get("Implicitywaittimeout")),TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Integer.parseInt(properties.get("Implicitywaittimeout")), TimeUnit.SECONDS);
             log.info("Appium server started successfully, and AndroidDriver initialized.");
         } catch (IOException e) {
             log.error("An error occurred while starting the app:", e);
@@ -96,6 +97,7 @@ public class TestSetup {
         try {
             closeDriver();
             stopAppiumService();
+            openAllureReport();
             handleEmailReport();
             openReportInBrowser();
             log.info("Test Execution Completed");
@@ -106,11 +108,10 @@ public class TestSetup {
     }
 
 
-
     /**
      * Sets the desired capabilities for the test setup.
-     * 
-     * @param props the properties containing the desired capabilities values
+     *
+     * @param props      the properties containing the desired capabilities values
      * @param Devicename the name of the device
      * @throws IllegalArgumentException if any of the desired capabilities values are invalid
      */
@@ -120,11 +121,11 @@ public class TestSetup {
         capabilities.setCapability("appPackage", properties.get("appPackage"));
         capabilities.setCapability("appActivity", properties.get("appActivity"));
         capabilities.setCapability("automationName", properties.get("automationName"));
-        capabilities.setCapability("autoGrantPermissions",Boolean.parseBoolean(properties.get("Autograntpermissions")));
-        capabilities.setCapability("skipDeviceInitialization",Boolean.parseBoolean(properties.get("skipDeviceInitialization")) );
+        capabilities.setCapability("autoGrantPermissions", Boolean.parseBoolean(properties.get("Autograntpermissions")));
+        capabilities.setCapability("skipDeviceInitialization", Boolean.parseBoolean(properties.get("skipDeviceInitialization")));
         capabilities.setCapability("skipServerInstallation", Boolean.parseBoolean(properties.get("skipServerInstallation")));
         capabilities.setCapability("ignoreUnimportantViews", Boolean.parseBoolean(properties.get("ignoreUnimportantViews")));
-        capabilities.setCapability("skipUnlock",Boolean.parseBoolean(properties.get("skipUnlock")));
+        capabilities.setCapability("skipUnlock", Boolean.parseBoolean(properties.get("skipUnlock")));
         capabilities.setCapability("app", properties.get("Apppath"));
         capabilities.setCapability("deviceName", Devicename);
         capabilities.setCapability("adbExecTimeout", "120000");
@@ -149,7 +150,7 @@ public class TestSetup {
     /**
      * Stops the Appium service.
      *
-     * @throws NullPointerException if the service is null.
+     * @throws NullPointerException  if the service is null.
      * @throws IllegalStateException if the service is not running.
      */
     private static void stopAppiumService() {
@@ -163,8 +164,8 @@ public class TestSetup {
 
     /**
      * Handles the email report.
-     * 
-     * @throws MessagingException if there is an error with the email messaging
+     *
+     * @throws MessagingException    if there is an error with the email messaging
      * @throws FileNotFoundException if the file for the email report is not found
      */
     private static void handleEmailReport() throws MessagingException, FileNotFoundException {
@@ -173,14 +174,13 @@ public class TestSetup {
         }
     }
 
-
     /**
      * Opens the report in the default web browser.
-     * 
+     *
      * @throws IOException if an error occurs while opening the report in the web browser.
      */
-    private  static void openReportInBrowser() {
-        File extentReport = new File(properties.get("TestReportspath") + fileName);
+    private static void openReportInBrowser() {
+        File extentReport = new File(properties.get("TestReportspath") + ExtentReportfileName);
         try {
             Desktop.getDesktop().browse(extentReport.toURI());
             log.info("Report opened in default web browser.");
@@ -207,6 +207,14 @@ public class TestSetup {
             throw new RuntimeException("Error loading queries file", e);
         }
     }
+
+    private static void openAllureReport() throws IOException {
+        String allureExecutable = "E:\\allure-2.29.0\\bin\\allure.bat";
+        String command = allureExecutable + " serve \"E:\\Automation Workspace\\FrameXMobile\\allure-results\"";
+        Runtime.getRuntime().exec(command);
+    }
+
+
 
 }
 

@@ -25,14 +25,15 @@ import static Utilities.AppUtils.screenshotName;
 
 public class FrameX_Listeners implements ITestListener, ISuiteListener {
     static Date d = new Date();
-    public static final String fileName = properties.get("Reportfilename") + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+    public static final String ExtentReportfileName = properties.get("Reportfilename") + d.toString().replace(":", "_").replace(" ", "_") + ".html";
+    public static final String AllureReportfileName = properties.get("AllureReportFilename") +"_"+ d.toString().replace(":", "_").replace(" ", "_") + ".html";
     public static boolean attachmentflag;
     public static ExtentReports extent;
     public static ExtentTest test;
 
     static {
         try {
-            extent = ExtentManager.createInstance(properties.get("TestReportspath") + fileName);
+            extent = ExtentManager.createInstance(properties.get("TestReportspath") + ExtentReportfileName);
         } catch (FileNotFoundException e) {
             log.error("Error creating ExtentReports instance:", e);
             throw new RuntimeException(e);

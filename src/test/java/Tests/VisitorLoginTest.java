@@ -34,7 +34,6 @@ public class VisitorLoginTest {
         validateErrorFields();
     }
 
-
     @Test(priority = 3,dependsOnMethods = { "TC_001_VerifyVisitorLoginModuleDisplayed" }, groups = {"regression"},enabled = true)
     public void TC_003_VerifyVisitorEmpIDTextboxCharacterLimit() throws InterruptedException {
         JSONObject charclimit = gettestdata("Visitor Login", "EmpID CharacterLimit");

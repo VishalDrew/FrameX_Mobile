@@ -1,31 +1,25 @@
 
-cWeb:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷Ãûÿÿÿÿ
-Z	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷Ãûÿÿÿÿ
->	Web:S18278")Remove this deprecated "align" attribute.(¤â¼æ
-HWeb:TableWithoutCaptionCheck8" Add a description to this table.(¤â¼æ
-:	Web:S52568"%Add "<th>" headers to this "<table>".(¤â¼æ
->	Web:S18278")Remove this deprecated "align" attribute.(¤â¼æ
-HWeb:TableWithoutCaptionCheckF" Add a description to this table.(ß¤€
-:	Web:S5256F"%Add "<th>" headers to this "<table>".(ß¤€
->	Web:S1827F")Remove this deprecated "width" attribute.(ß¤€
-C	Web:S1827G")Remove this deprecated "align" attribute.(„òÓ‚ıÿÿÿÿ
-C	Web:S1827J")Remove this deprecated "width" attribute.(­Òƒÿÿÿÿÿ
-C	Web:S1827K")Remove this deprecated "width" attribute.(‰¨€åøÿÿÿÿ
-HWeb:TableWithoutCaptionCheckT" Add a description to this table.(ÏßôØ
-:	Web:S5256T"%Add "<th>" headers to this "<table>".(ÏßôØ
->	Web:S1827T")Remove this deprecated "width" attribute.(ÏßôØ
->	Web:S1827U")Remove this deprecated "align" attribute.(ÿùÀ™
-C	Web:S1827X")Remove this deprecated "width" attribute.(­Òƒÿÿÿÿÿ
-C	Web:S1827Y")Remove this deprecated "width" attribute.(‰¨€åøÿÿÿÿ
-?	Web:S6844}"*Anchor tags should not be used as buttons.(®­¨È
-E	Web:S6844Á"*Anchor tags should not be used as buttons.(ã©³Ïÿÿÿÿÿ
-@	Web:S6844…"*Anchor tags should not be used as buttons.(•®Áë
-?	Web:S6844É"*Anchor tags should not be used as buttons.(ˆõ²K
-@	Web:S6844"*Anchor tags should not be used as buttons.(„ÛÑÌ
-E	Web:S6844Ñ"*Anchor tags should not be used as buttons.(õÀ“€ıÿÿÿÿ
-E	Web:S6844•"*Anchor tags should not be used as buttons.(ÈºçÌÿÿÿÿÿ
-@	Web:S6844Ù"*Anchor tags should not be used as buttons.(ô«ğà
-@	Web:S6844"*Anchor tags should not be used as buttons.(¶«í
-~javascript:S2703"]Add the "let", "const" or "var" keyword to this declaration of "current" to make it explicit.(èÜ»æıÿÿÿÿ
-sjavascript:S2703*"WAdd the "let", "const" or "var" keyword to this declaration of "d" to make it explicit.(ÔÃ‰ø
-xjavascript:S2703+"WAdd the "let", "const" or "var" keyword to this declaration of "i" to make it explicit.(£×åóÿÿÿÿÿ
+‰Web:DoctypePresenceCheck":Insert a <!DOCTYPE> declaration to before this <html> tag.(œ÷ÃûÿÿÿÿJ$0d3bfe22-d904-438e-9af3-59bddeb0e45c
+€	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷ÃûÿÿÿÿJ$c9c48ddc-6577-4a5c-9244-f04827a5118d
+d	Web:S18278")Remove this deprecated "align" attribute.(¤â¼æJ$5850d25d-fd49-4ca5-addb-dd5d6e58b82b
+`	Web:S52568"%Add "<th>" headers to this "<table>".(¤â¼æJ$1e75d61f-c2c5-49d4-a29b-627197db3663
+d	Web:S18278")Remove this deprecated "align" attribute.(¤â¼æJ$f996cdde-cd7d-4f9a-94d5-5676cba31199
+`	Web:S5256F"%Add "<th>" headers to this "<table>".(ß¤€J$93f1e288-dd54-40e6-b3f9-1ea598bcef47
+d	Web:S1827F")Remove this deprecated "width" attribute.(ß¤€J$01ad1515-358b-449c-924f-abde031b1a2f
+i	Web:S1827G")Remove this deprecated "align" attribute.(„òÓ‚ıÿÿÿÿJ$dd9aa5cb-f23e-4225-8eb7-4f8a516b28d2
+i	Web:S1827J")Remove this deprecated "width" attribute.(­ÒƒÿÿÿÿÿJ$1d054bfb-ce74-45c2-a9cd-66cf3be0a471
+i	Web:S1827K")Remove this deprecated "width" attribute.(‰¨€åøÿÿÿÿJ$1921a62a-4b7a-4f08-a2d9-2571bb1eee62
+`	Web:S5256T"%Add "<th>" headers to this "<table>".(ÏßôØJ$23bab3aa-919e-4a26-ab20-c8f6b009ba3f
+d	Web:S1827T")Remove this deprecated "width" attribute.(ÏßôØJ$8ffec7e8-9250-4412-a73a-eb26198df254
+d	Web:S1827U")Remove this deprecated "align" attribute.(ÿùÀ™J$857d212c-a5d2-41fa-9904-bb98cc2f53a6
+i	Web:S1827X")Remove this deprecated "width" attribute.(­ÒƒÿÿÿÿÿJ$b6f5b851-45c4-4ebc-9db2-8da850ac6a50
+i	Web:S1827Y")Remove this deprecated "width" attribute.(‰¨€åøÿÿÿÿJ$03fe2872-8364-4bb7-ba31-8298aec7411c
+e	Web:S6844}"*Anchor tags should not be used as buttons.(®­¨ÈJ$575637db-9c00-4393-bf67-fe59092d3308
+k	Web:S6844Á"*Anchor tags should not be used as buttons.(ã©³ÏÿÿÿÿÿJ$0df388e3-469c-479f-a74c-3d36cb9a08f4
+f	Web:S6844…"*Anchor tags should not be used as buttons.(•®ÁëJ$a9469240-452b-4afe-b3aa-41f902b6fe9e
+e	Web:S6844É"*Anchor tags should not be used as buttons.(ˆõ²KJ$bd04c6fd-e213-4e48-82a8-e5c6b8b1d14f
+f	Web:S6844"*Anchor tags should not be used as buttons.(„ÛÑÌJ$c662d0af-a39e-4cee-a2bf-37b696caed6f
+k	Web:S6844Ñ"*Anchor tags should not be used as buttons.(õÀ“€ıÿÿÿÿJ$288cc9d5-1737-4e3b-b3ea-b9a12305e1b5
+k	Web:S6844•"*Anchor tags should not be used as buttons.(ÈºçÌÿÿÿÿÿJ$1c73b2a4-2589-43fe-ba01-71be63f22f20
+f	Web:S6844Ù"*Anchor tags should not be used as buttons.(ô«ğàJ$1eee027d-997f-4499-a7d8-ea1a04b1941d
+f	Web:S6844"*Anchor tags should not be used as buttons.(¶«íJ$6f9e7e6e-f7cf-4eae-8515-043f34e7080e
