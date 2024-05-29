@@ -1,5 +1,6 @@
 package Base;
 
+import Utilities.Rough;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -21,10 +22,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static Listeners.FrameX_Listeners.AllureReportfileName;
 import static Listeners.FrameX_Listeners.ExtentReportfileName;
 import static Modules.CallPlanModule.fetchTargetsFromDatabase;
 import static Utilities.Constants.Devicename;
+import static Utilities.Constants.allureDirpath;
 import static Utilities.Mailconfig.sendMailReport;
+import static Utilities.Rough.generateAllureReport;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.AppUtils.*;
 
@@ -97,7 +101,7 @@ public class TestSetup {
         try {
             closeDriver();
             stopAppiumService();
-            openAllureReport();
+            generateAllureReport();
             handleEmailReport();
             openReportInBrowser();
             log.info("Test Execution Completed");
@@ -180,9 +184,9 @@ public class TestSetup {
      * @throws IOException if an error occurs while opening the report in the web browser.
      */
     private static void openReportInBrowser() {
-        File extentReport = new File(properties.get("TestReportspath") + ExtentReportfileName);
+        File allureReport = new File(allureDirpath+ AllureReportfileName);
         try {
-            Desktop.getDesktop().browse(extentReport.toURI());
+            Desktop.getDesktop().browse(allureReport.toURI());
             log.info("Report opened in default web browser.");
         } catch (IOException e) {
             log.error("Error opening report in default web browser.", e);
@@ -207,14 +211,6 @@ public class TestSetup {
             throw new RuntimeException("Error loading queries file", e);
         }
     }
-
-    private static void openAllureReport() throws IOException {
-        String allureExecutable = "E:\\allure-2.29.0\\bin\\allure.bat";
-        String command = allureExecutable + " serve \"E:\\Automation Workspace\\FrameXMobile\\allure-results\"";
-        Runtime.getRuntime().exec(command);
-    }
-
-
 
 }
 

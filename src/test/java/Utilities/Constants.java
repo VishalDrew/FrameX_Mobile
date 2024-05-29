@@ -15,6 +15,7 @@ public class Constants {
     public static final String TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\Testdatas.json";
     public static final String CALLPLAN_TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\CallPlandata.json";
     public static final String TESTSUITES_DATA_FILE = "./src/main/java/TestConfig/TestSuites.json";
+    public static final String allureDirpath = System.getProperty("user.dir") + "\\src\\test\\resources\\Allure Reports\\";
     public static final String framenewmainURL = "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=framenew_main;encrypt=true;trustServerCertificate=true";
     private static String databaseURL ;
 

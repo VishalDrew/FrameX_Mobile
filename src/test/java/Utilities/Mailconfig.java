@@ -11,8 +11,7 @@ import java.io.FileNotFoundException;
 import java.util.Properties;
 
 import static Base.TestSetup.log;
-import static Listeners.FrameX_Listeners.attachmentflag;
-import static Listeners.FrameX_Listeners.ExtentReportfileName;
+import static Listeners.FrameX_Listeners.*;
 import static Utilities.Constants.*;
 import static Utilities.AppUtils.generatedateandtime;
 import static Utilities.AppUtils.screenshotName;
@@ -59,7 +58,7 @@ public class Mailconfig {
 
             // Attach first file
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-            DataSource source = new FileDataSource(TestSetup.properties.get("TestReportspath")+ ExtentReportfileName);
+            DataSource source = new FileDataSource(allureDirpath+ AllureReportfileName);
             messageBodyPart2.setDataHandler(new DataHandler(source));
             messageBodyPart2.setFileName("Automation Test Report"+generatedateandtime()+".html");
 

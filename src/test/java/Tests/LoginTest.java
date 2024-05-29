@@ -23,8 +23,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 1, groups = {"smoke", "regression"},enabled = true)
-    @Description("Verify FrameX App with Valid Credentials")
-    @Step("Verify Login Functionality with Valid credentials")
+    @Description("Test to verify the login functionality of the FrameX App using valid credentials.")
+    @Step("Perform login using valid credentials and verify successful login.")
     @Severity(SeverityLevel.BLOCKER)
     public void TC_001_Verify_Login_With_Valid_Credentials() throws InterruptedException {
         JSONObject user1 = gettestdata("Login","User1");
@@ -40,8 +40,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing the test data.
      */
     @Test(priority = 2, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App using an invalid username.")
+    @Step("Perform login using an invalid username and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_002_Verify_Login_With_Invalid_Username() {
         JSONObject user2 = gettestdata("Login","User2");
@@ -56,8 +56,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing the test data.
      */
     @Test(priority = 3, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App using an invalid password.")
+    @Step("Perform login using an invalid password and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_003_Verify_Login_With_Invalid_Password() {
         JSONObject user3 = gettestdata("Login","User3");
@@ -72,8 +72,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 4, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App using an invalid project name.")
+    @Step("Perform login using an invalid project name and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_004_Verify_Login_With_Invalid_Project() {
         JSONObject user4 = gettestdata("Login","User4");
@@ -88,8 +88,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data
      */
     @Test(priority = 5, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App using an invalid mobile number.")
+    @Step("Perform login using an invalid mobile number and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_005_Verify_Login_With_Invalid_Mobile_Number() {
         JSONObject user5 = gettestdata("Login","User5");
@@ -103,8 +103,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 6, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App without entering a username.")
+    @Step("Attempt login without entering a username and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_006_Verify_Login_Without_Entering_Username() {
         JSONObject user6 = gettestdata("Login","User6");
@@ -118,8 +118,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 7, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App without entering a password.")
+    @Step("Attempt login without entering a password and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_007_Verify_Login_Without_Entering_Password() {
         JSONObject user7 = gettestdata("Login","User7");
@@ -133,8 +133,8 @@ public class LoginTest extends TestSetup {
      * @throws JSONException if there is an error in parsing JSON data.
      */
     @Test(priority = 8, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App without entering a project.")
+    @Step("Attempt login without entering a project and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_008_Verify_Login_Without_Entering_Project() {
         JSONObject user8 = gettestdata("Login","User8");
@@ -149,8 +149,8 @@ public class LoginTest extends TestSetup {
      *
      */
     @Test(priority = 9, groups = {"negative", "regression"},enabled = true)
-    @Description("Verify FrameX App with InValid Credentials")
-    @Step("Verify Login Functionality with InValid credentials")
+    @Description("Test to verify the login functionality of the FrameX App without entering a mobile number.")
+    @Step("Attempt login without entering a mobile number and verify the error message.")
     @Severity(SeverityLevel.NORMAL)
     public void TC_009_Verify_Login_Without_Entering_Mobile_Number() {
         JSONObject user9 = gettestdata("Login","User9");
@@ -159,8 +159,8 @@ public class LoginTest extends TestSetup {
     }
 
     @Test(priority = 10, groups = {"regression"},enabled = true)
-    @Description("Verify Username Textbox Character Limit")
-    @Step("Verify Character Limit in Username Field")
+    @Description("Test to verify the character limit of the username textbox in the FrameX App.")
+    @Step("Enter a username and verify that it respects the character limit.")
     @Severity(SeverityLevel.MINOR)
     public void TC_010_Verify_UsernameTextboxCharacterLimit() {
         JSONObject user10 = gettestdata("Login", "User10");
@@ -169,24 +169,24 @@ public class LoginTest extends TestSetup {
     }
 
     @Test(priority = 11, groups = {"regression"},enabled = true)
-    @Description("Verify Username Textbox accepts Special characters")
-    @Step("Verify with special charcters in Username Field")
+    @Description("Test to verify that the username textbox in the FrameX App accepts special characters.")
+    @Step("Enter special characters in the username textbox and verify that they are accepted.")
     @Severity(SeverityLevel.MINOR)
     public void TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters() {
         validateSpecialcharInUsernameTextbox(generateRandomSpecialCharacters(10));
     }
 
     @Test(priority = 12, groups = {"regression"},enabled = true)
-    @Description("Verify Username Textbox accepts Numeric values")
-    @Step("Verify with Numbers  in Username Field")
+    @Description("Test to verify that the username textbox in the FrameX App accepts numeric values.")
+    @Step("Enter numeric values in the username textbox and verify that they are accepted.")
     @Severity(SeverityLevel.MINOR)
     public void TC_012_Verify_UsernameTextboxAcceptsNumbers() {
         validateNumbersInUsernameTextbox(generateRandomNumber());
     }
 
     @Test(priority = 13, groups = {"regression"},enabled = true)
-    @Description("Verify Password Textbox Character Limit")
-    @Step("Verify Character Limit in Password Field")
+    @Description("Test to verify the character limit of the password textbox in the FrameX App.")
+    @Step("Enter a password and verify that it respects the character limit.")
     @Severity(SeverityLevel.MINOR)
     public void TC_013_Verify_PasswordTextboxCharacterLimit() {
         JSONObject user13 = gettestdata("Login", "User13");
@@ -194,8 +194,8 @@ public class LoginTest extends TestSetup {
     }
 
     @Test(priority = 14, groups = {"regression"},enabled = true)
-    @Description("Verify Project Textbox Character Limit")
-    @Step("Verify Character Limit in Project Field")
+    @Description("Test to verify the character limit of the project textbox in the FrameX App.")
+    @Step("Enter a project name and verify that it respects the character limit.")
     @Severity(SeverityLevel.MINOR)
     public void TC_014_Verify_ProjectTextboxCharacterLimit() {
         JSONObject user14 = gettestdata("Login", "User14");
@@ -203,24 +203,24 @@ public class LoginTest extends TestSetup {
     }
 
     @Test(priority = 15, groups = {"regression"},enabled = true)
-    @Description("Verify Project Textbox accepts Special characters")
-    @Step("Verify with special charcters in Project Field")
+    @Description("Test to verify that the project textbox in the FrameX App accepts special characters.")
+    @Step("Enter special characters in the project textbox and verify that they are accepted.")
     @Severity(SeverityLevel.MINOR)
     public void TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters() {
         validateSpecialcharInProjectTextbox(generateRandomSpecialCharacters(10));
     }
 
     @Test(priority = 16, groups = {"regression"},enabled = true)
-    @Description("Verify Project Textbox accepts Numeric values")
-    @Step("Verify with Numbers  in Project Field")
+    @Description("Test to verify that the project textbox in the FrameX App accepts numeric values.")
+    @Step("Enter numeric values in the project textbox and verify that they are accepted.")
     @Severity(SeverityLevel.MINOR)
     public void TC_016_Verify_ProjectTextboxAcceptsNumbers() {
         validateNumbersInProjectTextbox(generateRandomNumber());
     }
 
     @Test(priority = 17, groups = {"regression"},enabled = true)
-    @Description("Verify Mobile number Textbox Character Limit")
-    @Step("Verify Character Limit in MobileNo Field")
+    @Description("Test to verify the character limit of the mobile number textbox in the FrameX App.")
+    @Step("Enter a mobile number and verify that it respects the character limit.")
     @Severity(SeverityLevel.MINOR)
     public void TC_017_Verify_MobileNumberTextboxCharacterLimit() {
         JSONObject user15 = gettestdata("Login", "User15");
