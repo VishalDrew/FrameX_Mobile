@@ -104,7 +104,7 @@ public class VisitorLogin_Module {
 			scrollE2E("up");
 			click("ACCESSIBILITYID", "Visitor" + visitorlogindata.getString("Visitor"));
 			click("ACCESSIBILITYID", selectvisitordd);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed: Not all error messages are displayed in visitor login");
 		} else {
 			logAndReportSuccess("TestCase Passed : All error messages are displayed in visitor login");
 			click("ACCESSIBILITYID", "Visitor" + visitorlogindata.getString("Visitor"));
@@ -213,7 +213,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + Empid);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Character limit is not enforced. Entered text: " + Empid);
 		}
 	}
 
@@ -224,7 +224,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + Empid);
-			Assert.fail();
+			Assert.fail("TestCase Failed : Special characters are NOT allowed. Entered text: " + Empid);
 		}
 	}
 
@@ -235,7 +235,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + Empid);
-			Assert.fail();
+			Assert.fail("TestCase Failed : Numbers are NOT allowed. Entered text: " + Empid);
 		}
 	}
 
@@ -250,7 +250,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + visitorname);
-			Assert.fail();
+			Assert.fail("TestCase Failed :  Character limit is NOT enforced. Entered text: " + visitorname);
 		}
 	}
 
@@ -261,7 +261,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + visitorname);
-			Assert.fail();
+			Assert.fail("TestCase Failed : Special characters are NOT allowed. Entered text: " + visitorname);
 		}
 	}
 
@@ -272,7 +272,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + visitorname);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Numbers are NOT allowed. Entered text: " + visitorname);
 		}
 	}
 
@@ -286,7 +286,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + Designation);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Character limit is NOT enforced. Entered text: " + Designation);
 		}
 	}
 
@@ -298,7 +298,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + Designation);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed :  Special characters are NOT allowed. Entered text: " + Designation);
 		}
 	}
 
@@ -310,7 +310,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + Designation);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Numbers are NOT allowed. Entered text: " + Designation);
 		}
 	}
 
@@ -324,7 +324,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + remarks);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed :  Character limit is NOT enforced. Entered text: " + remarks);
 		}
 	}
 
@@ -336,7 +336,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + remarks);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed :  Special characters are NOT allowed. Entered text: " + remarks);
 		}
 	}
 
@@ -348,7 +348,7 @@ public class VisitorLogin_Module {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + remarks);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Numbers are NOT allowed. Entered text: " + remarks);
 		}
 		driver.hideKeyboard();
 		scrollE2E("down");

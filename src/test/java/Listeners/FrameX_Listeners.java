@@ -1,6 +1,8 @@
 package Listeners;
 
+import Base.TestSetup;
 import Utilities.AppUtils;
+import Utilities.Constants;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -13,8 +15,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -22,6 +23,8 @@ import static Base.TestSetup.log;
 
 import static Base.TestSetup.properties;
 import static Utilities.AppUtils.screenshotName;
+import static Utilities.Constants.allureReportDir;
+import static Utilities.Constants.command;
 
 public class FrameX_Listeners implements ITestListener, ISuiteListener {
     static Date d = new Date();
@@ -101,19 +104,74 @@ public class FrameX_Listeners implements ITestListener, ISuiteListener {
     }
 
     public static void logAndReportSuccess(String message) {
-        testReport.get().pass(formatData(message));
+        io.qameta.allure.Allure.step(message);;
         log.info(message);
     }
 
     public static void logAndinfo(String message) {
-        testReport.get().info(formatData(message));
+        io.qameta.allure.Allure.step(message);
         log.info(message);
     }
 
-    public static String logAndReportFailure(String message) {
-        testReport.get().fail(formatData(message));
+    public static void logAndReportFailure(String message) {
+        io.qameta.allure.Allure.step(message);
         log.error(message);
-        return message;
+    }
+
+
+    public static void generateAllureReport(){
+        try {
+            Process process = Runtime.getRuntime().exec(command);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+            BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            while ((line = errorReader.readLine()) != null) {
+                System.err.println(line);
+            }
+
+            // Wait for the process to complete
+            int exitCode = process.waitFor();
+            if (exitCode == 0) {
+                TestSetup.log.info("Allure report generated successfully.");
+                File oldFile = new File(allureReportDir + File.separator + "index.html");
+                File newFile = new File(allureReportDir + File.separator + AllureReportfileName);
+                if (oldFile.exists()) {
+                    if (oldFile.renameTo(newFile)) {
+                        TestSetup.log.info("Report renamed to " + AllureReportfileName);
+                    } else {
+                        TestSetup.log.error("Failed to rename report file.");
+                    }
+                } else {
+                    TestSetup.log.error("index.html file not found.");
+                }
+            } else {
+                TestSetup.log.error("Failed to generate Allure report. Exit code: " + exitCode);
+            }
+
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static void clearAllureResultsDirectory() {
+        File allureResultsDir = new File(Constants.allureResultsDir);
+        if (allureResultsDir.exists()) {
+            deleteDirectory(allureResultsDir);
+        }
+    }
+
+    private static void deleteDirectory(File directory) {
+        File[] allContents = directory.listFiles();
+        if (allContents != null) {
+            for (File file : allContents) {
+                deleteDirectory(file);
+            }
+        }
+        directory.delete();
     }
 
 }

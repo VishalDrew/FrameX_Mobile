@@ -65,7 +65,7 @@ public class Login_Module extends TestSetup {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + inputText);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Character limit is NOT enforced. Entered text: " + inputText);
 		}
 	}
 
@@ -76,7 +76,7 @@ public class Login_Module extends TestSetup {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Special characters are NOT allowed. Entered text: " + inputText);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Special characters are NOT allowed. Entered text: " + inputText);
 		}
 	}
 
@@ -87,7 +87,7 @@ public class Login_Module extends TestSetup {
 			Assert.assertTrue(true);
 		} else {
 			FrameX_Listeners.logAndReportFailure("Numbers are NOT allowed. Entered text: " + inputText);
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Numbers are not allowed. Entered text: " + inputText);
 		}
 	}
 

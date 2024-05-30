@@ -123,7 +123,7 @@ public class CallPlanModule extends TestSetup {
             Assert.assertTrue(true);
         } else {
             logAndReportFailure("TestCase Failed : 5 Minutes Sync is not working");
-            Assert.assertTrue(false,"TestCase Failed : 5 Minutes Sync is not working");
+            Assert.fail("TestCase Failed : 5 Minutes Sync is not working");
         }
     }
 
@@ -146,7 +146,7 @@ public class CallPlanModule extends TestSetup {
             Assert.assertTrue(true);
         } else {
             logAndReportFailure("TestCase Failed : First fill all categories data to upload is Not Displayed");
-            Assert.assertTrue(false);
+            Assert.fail("TestCase Failed : First fill all categories data to upload is Not Displayed");
         }
     }
 

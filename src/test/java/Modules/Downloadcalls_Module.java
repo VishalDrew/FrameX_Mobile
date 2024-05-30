@@ -195,7 +195,7 @@ public class Downloadcalls_Module extends TestSetup {
 			FrameX_Listeners.logAndReportFailure("Character limit is NOT enforced. Entered text: " + testtargetid);
 			click("ACCESSIBILITYID",cancelbtn);
 			driver.navigate().back();
-			Assert.assertTrue(false);
+			Assert.fail("TestCase Failed : Character limit is NOT enforced. Entered text: " + testtargetid);
 		}
 
 	}

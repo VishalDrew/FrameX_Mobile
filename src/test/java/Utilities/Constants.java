@@ -18,6 +18,10 @@ public class Constants {
     public static final String allureDirpath = System.getProperty("user.dir") + "\\src\\test\\resources\\Allure Reports\\";
     public static final String framenewmainURL = "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=framenew_main;encrypt=true;trustServerCertificate=true";
     private static String databaseURL ;
+    public static final String allureExecutable = "E:\\allure-2.29.0\\bin\\allure.bat";
+    public static final String  allureReportDir = System.getProperty("user.dir") + "\\src\\test\\resources\\Allure Reports";
+    public static final String  allureResultsDir = System.getProperty("user.dir") + "\\allure-results";
+    public static final String command = String.format("\"%s\" generate --clean --single-file -o \"%s\" \"%s\"", allureExecutable, allureReportDir, allureResultsDir);
 
     /**
      * Returns the production URL for connecting to the SQL Server database.

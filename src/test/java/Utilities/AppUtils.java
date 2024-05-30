@@ -308,17 +308,20 @@ public class AppUtils extends TestSetup {
      * @throws AssertionError if the assertion fails
      * @returns void
      */
-    public static void Assertion(String expected,String message){
+    public static void Assertion(String expected, String message) {
         try {
-            if(sourceExists(expected)){
-                Assert.assertTrue(true);
-                logAndReportSuccess("TestCase Passed : "+expected+" is Displayed");
-            }else{
-                Assert.assertTrue(false);
-                logAndReportFailure("TestCase Failed : "+message);
+            if (sourceExists(expected)) {
+                logAndReportSuccess("TestCase Passed : " + expected + " is Displayed");
+            } else {
+                logAndReportFailure("TestCase Failed : " + message);
+                if (sourceExists("Ok")) {
+                    click("ACCESSIBILITYID", "Ok");
+                }
+                Assert.fail("TestCase Failed : " + message);
             }
         } catch (AssertionError e) {
-            logAndReportFailure(formatData("TestCase Failed : "+message));
+            logAndReportFailure("Assertion Error: " + e.getMessage());
+            Assert.fail("TestCase Failed due to Assertion Error: " + e.getMessage());
         }
     }
 
@@ -328,7 +331,7 @@ public class AppUtils extends TestSetup {
         applogin(module);
         if(!sourceExists(module)){
             logAndReportFailure("TestCase Failed : "+module+" module is not displayed");
-            Assert.assertTrue(false);
+            Assert.fail("TestCase Failed : "+module+" module is not displayed");
         }else{
             logAndReportSuccess("TestCase Passed : "+module+" module is Displayed");
             Assert.assertTrue(true);

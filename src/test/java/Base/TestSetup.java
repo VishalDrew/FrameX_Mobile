@@ -22,13 +22,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static Listeners.FrameX_Listeners.AllureReportfileName;
-import static Listeners.FrameX_Listeners.ExtentReportfileName;
+import static Listeners.FrameX_Listeners.*;
 import static Modules.CallPlanModule.fetchTargetsFromDatabase;
 import static Utilities.Constants.Devicename;
 import static Utilities.Constants.allureDirpath;
 import static Utilities.Mailconfig.sendMailReport;
-import static Utilities.Rough.generateAllureReport;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.AppUtils.*;
 
@@ -75,6 +73,7 @@ public class TestSetup {
 
         try {
             PropertyConfigurator.configure(properties.get("Logpropertiesfilepath"));
+            clearAllureResultsDirectory();
             log.info("Starting the Appium service.");
             service = new AppiumServiceBuilder()
                     .withAppiumJS(new File(properties.get("Server")))

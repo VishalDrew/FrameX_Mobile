@@ -12,7 +12,6 @@ import static Utilities.Constants.*;
  * DBConfig class.
  */
 public class DatabaseUtility extends TestSetup {
-
     /**
      * Fetches data from the database based on the provided query.
      */
@@ -40,6 +39,7 @@ public class DatabaseUtility extends TestSetup {
             log.info("Data fetched successfully from the database");
             return dataList;
         } catch (SQLException  e) {
+            System.out.println("Error fetching data from the database: " + e.getMessage());
             log.error("Error fetching data from the database: " + e.getMessage());
         }
         return null;

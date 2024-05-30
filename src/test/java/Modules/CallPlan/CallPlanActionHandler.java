@@ -28,8 +28,6 @@ public class CallPlanActionHandler {
 
     public static boolean Uploadcallfunction(String starttime, String networkmode , String networkoffduration) throws Exception {
 
-        ExtentTest Uploadtest = extent.createTest("Target ID : " + targetid+" , Call Type : Upload");
-
         click("ACCESSIBILITYID",UploadcallButton);
         log.info("Upload call button is clicked");
         if (isElementDisplayed("ACCESSIBILITYID", Uploadcallconfirmpopup)) {
@@ -48,24 +46,21 @@ public class CallPlanActionHandler {
         if (waitForCallupload( "Target "+ targetid +" successfully uploaded")) {
             if(handleUploadSuccess()){
                 logAndReportSuccess(targetid +" Call Uploaded Successfully , Image Count : "+totalimagescaptured );
-                Uploadtest.pass(formatData(targetid +" Call Uploaded Successfully , Image Count : "+totalimagescaptured) );
                 driver.navigate().back();
                 return true;
             }else{
                 driver.navigate().back();
-                handleUploadFailure(Uploadtest);
+                handleUploadFailure();
                 return false;
             }
         } else {
-            handleUploadFailure(Uploadtest);
+            handleUploadFailure();
             log.warn("Timeout reached while waiting for message: '" + "Target "+ targetid +" successfully uploaded" + "'");
             return false;
         }
     }
 
     public static boolean closecallfunction(String networkmode, String networkoffduration) throws Exception {
-
-        ExtentTest closetest = extent.createTest("Target ID : " + targetid+" , Call Type : Close");
 
         click("ACCESSIBILITYID", CloseCallButton);
         log.info("Clicked on Close Call Button");
@@ -91,15 +86,14 @@ public class CallPlanActionHandler {
             if (waitForCallupload("Target " + targetid + "  Close Call  successfully uploaded")) {
                 if (handleUploadSuccess()) {
                     logAndReportSuccess(targetid + " Close Call Uploaded Successfully ");
-                    closetest.pass(formatData(targetid + " Close Call Uploaded Successfully"));
                     driver.navigate().back();
                     return true;
                 } else {
-                    handleUploadFailure(closetest);
+                    handleUploadFailure();
                     return false;
                 }
             } else {
-                handleUploadFailure(closetest);
+                handleUploadFailure();
                 return false;
             }
         }
@@ -107,9 +101,7 @@ public class CallPlanActionHandler {
     }
 
 
-    private static void handleUploadFailure(ExtentTest test) throws InterruptedException {
-        test.fail(formatData("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured));
-        getactivitylogpageScreenshot(test);
+    private static void handleUploadFailure() throws InterruptedException {
         sendDB();
         logAndReportFailure("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured);
     }

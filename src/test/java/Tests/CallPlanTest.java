@@ -51,8 +51,9 @@ public class CallPlanTest extends TestSetup {
             Assert.assertTrue(true);
             logAndReportSuccess("Sync Button is working correctly.");
         } else {
-            Assert.assertTrue(false);
             logAndReportFailure("Sync Button is not working.");
+            Assert.fail("TestCase Failed : Sync Button is not working");
+
         }
     }
 
