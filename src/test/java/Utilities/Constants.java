@@ -1,5 +1,7 @@
 package Utilities;
 
+import java.util.Date;
+
 import static Base.TestSetup.*;
 import static Utilities.AppUtils.generateFormattedDate;
 import static Utilities.AppUtils.getDeviceName;
@@ -22,6 +24,7 @@ public class Constants {
     public static final String  allureReportDir = System.getProperty("user.dir") + "\\src\\test\\resources\\Allure Reports";
     public static final String  allureResultsDir = System.getProperty("user.dir") + "\\allure-results";
     public static final String command = String.format("\"%s\" generate --clean --single-file -o \"%s\" \"%s\"", allureExecutable, allureReportDir, allureResultsDir);
+
 
     /**
      * Returns the production URL for connecting to the SQL Server database.

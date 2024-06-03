@@ -596,3 +596,9 @@ w
 G.idea/sonarlint/issuestore/f/9/f978e0f74a9cfb8ff035aacb86d9c69ee4c409b3,b\8\b889983b3beffdf4401a83e229f148dc2662d6ce
 w
 G.idea/sonarlint/issuestore/9/c/9cc0bb2877f031ed4c12e0ed1dc1b1ededc0168a,6\c\6c470a176aa0e5bdaeb3af1579bad69d3affb46e
+c
+3src/test/java/Listeners/FrameX_AllureListeners.java,0\7\07815d720ca9e6f1a52c85742b2277edd7b2f8e3
+X
+(src/test/java/Base/FrameX_Listeners.java,9\2\92577a0de13b21a754e89559bc95e5c15786a9ca
+Y
+)src/test/java/Modules/AllureListener.java,1\f\1f774f986fbe9bb43a04555d8c5341f0beafc2ab

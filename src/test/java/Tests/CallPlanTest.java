@@ -9,10 +9,9 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static Listeners.FrameX_Listeners.logAndReportFailure;
-import static Listeners.FrameX_Listeners.logAndReportSuccess;
+import static Base.FrameX_Listeners.logAndReportFailure;
+import static Base.FrameX_Listeners.logAndReportSuccess;
 import static Modules.CallPlanModule.*;
-import static Pages.CallPlan_page.*;
 import static Pages.HomePage_page.*;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.AppUtils.*;

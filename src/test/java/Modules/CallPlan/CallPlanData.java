@@ -88,7 +88,7 @@ public class CallPlanData {
     }
 
     public static String setcallplanscenarios(List<String> targetids) {
-        String[] callTypes = {"upload", "upload","close"};
+        String[] callTypes = {"Close", "Close","Close","Close"};
         String[] fieldTypes = {"Mandatory only", "All"};
         String[] networkModes = {"Enable", "Enable"};
         String[] durationInSeconds = {"5","2","10","15","8"};
@@ -100,7 +100,7 @@ public class CallPlanData {
         for (int i = 0; i < targetids.size(); i++) {
             String targetId = targetids.get(i);
             String callType = callTypes[random.nextInt(callTypes.length)];
-            String fields = callType.equals("upload") ? fieldTypes[random.nextInt(fieldTypes.length)] : null;
+            String fields = callType.equalsIgnoreCase("upload") ? fieldTypes[random.nextInt(fieldTypes.length)] : null;
             String networkMode = networkModes[random.nextInt(networkModes.length)];
             String duration = durationInSeconds[random.nextInt(durationInSeconds.length)];
 

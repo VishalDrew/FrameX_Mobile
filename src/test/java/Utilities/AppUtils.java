@@ -2,6 +2,7 @@ package Utilities;
 
 
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -17,7 +18,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.Assert;
 
-import static Listeners.FrameX_Listeners.*;
+import static Base.FrameX_Listeners.*;
 import static Pages.CallPlan_page.*;
 import static Pages.Login_Page.lgpage;
 import static Pages.Login_Page.menubutton;
@@ -29,10 +30,8 @@ import static Utilities.Constants.*;
  */
 public class AppUtils extends TestSetup {
 
-    public static String screenshotName;
     public static int totalimagescaptured;
     public  static boolean capturedDone;
-
 
     /**
      * Retrieves the name of the connected device.
@@ -64,23 +63,6 @@ public class AppUtils extends TestSetup {
 
         return null;
     }
-
-
-    /**
-     * Captures a screenshot of the current screen.
-     *
-     * @throws IOException if an I/O error occurs while capturing the screenshot.
-     */
-    public static void captureScreenshot() throws IOException {
-
-        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-        Date d = new Date();
-        screenshotName ="Screenshot_"+ d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
-        FileUtils.copyFile(scrFile, new File(properties.get("Screenshotpath") + screenshotName));
-    }
-
-
 
     /**
      * Generates a formatted date string based on the given format.

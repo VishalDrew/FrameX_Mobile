@@ -1,6 +1,6 @@
 package Base;
 
-import Utilities.Rough;
+import Utilities.Constants;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -11,6 +11,7 @@ import org.json.JSONObject;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
 import javax.mail.MessagingException;
 import java.awt.*;
@@ -22,7 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import static Listeners.FrameX_Listeners.*;
+import static Base.FrameX_Listeners.*;
 import static Modules.CallPlanModule.fetchTargetsFromDatabase;
 import static Utilities.Constants.Devicename;
 import static Utilities.Constants.allureDirpath;
@@ -34,7 +35,7 @@ import static Utilities.AppUtils.*;
  * TestSetup class for initializing and tearing down the test environment.
  *
  */
-
+@Listeners({FrameX_Listeners.class})
 public class TestSetup {
     public static AndroidDriver driver;
     private static AppiumDriverLocalService service;

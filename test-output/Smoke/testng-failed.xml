@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Smoke]" guice-stage="DEVELOPMENT" verbose="3">
   <listeners>
-    <listener class-name="Listeners.FrameX_Listeners"/>
+    <listener class-name="Base.FrameX_Listeners"/>
   </listeners>
   <test thread-count="5" name="LoginTest(failed)" verbose="3">
     <classes>

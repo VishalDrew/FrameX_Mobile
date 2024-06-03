@@ -6,15 +6,13 @@ import Utilities.AppUtils;
 import org.json.JSONObject;
 import org.testng.Assert;
 
-import java.text.MessageFormat;
 import java.util.*;
 
-import static Listeners.FrameX_Listeners.*;
+import static Base.FrameX_Listeners.*;
 import static Modules.CallPlan.CallPlanActionHandler.*;
 import static Modules.CallPlan.CallPlanData.generateCallPlanScenarios;
 import static Modules.CallPlan.CallPlanData.targetSize;
 import static Modules.CallPlan.DataBinder.dataBinder;
-import static Modules.CallPlan.DataBinder.fieldName;
 import static Modules.Downloadcalls_Module.storesForVisitorLogin;
 import static Modules.VisitorLogin_Module.downloadstores;
 import static Pages.CallPlan_page.*;
@@ -46,13 +44,14 @@ public class CallPlanModule extends TestSetup {
                 targetid = callPlanTestData.getString("Targetid");
                 if (callPlanTestData.getString("Call Type").equalsIgnoreCase("Upload")) {
                     fieldtypes = callPlanTestData.getString("Fields");
-                    validateUploadCall(callPlanTestData.getString("Call Type") ,callPlanTestData.getString("Network Mode"),callPlanTestData.getString("Disable Duration"),callPlanTestData.getString("Fields"));
+                    validateUploadCall(callPlanTestData.getString("Call Type"), callPlanTestData.getString("Network Mode"), callPlanTestData.getString("Disable Duration"), callPlanTestData.getString("Fields"));
                 } else {
-                    validateUploadCall(callPlanTestData.getString("Call Type") ,callPlanTestData.getString("Network Mode"),callPlanTestData.getString("Disable Duration"));
+                    validateUploadCall(callPlanTestData.getString("Call Type"), callPlanTestData.getString("Network Mode"), callPlanTestData.getString("Disable Duration"));
                 }
 
             }
         }
+
     }
 
     /**
@@ -179,7 +178,6 @@ public class CallPlanModule extends TestSetup {
 
     public static List<String> fetchTargetsFromDatabase(String username) throws Exception {
         try {
-
             String count = globalData.getString("Targets");
             String checkTodayCalls = "select * from Pjpplan where username = '"+username+"'";
             String updateTodayCallstoUnplanned = "update Pjpplan set Status = 'A' where username = '"+username+"' ";
@@ -196,7 +194,6 @@ public class CallPlanModule extends TestSetup {
         }
         return null;
     }
-
 
 
 }

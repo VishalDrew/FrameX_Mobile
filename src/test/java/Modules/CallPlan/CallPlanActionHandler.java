@@ -6,13 +6,14 @@ import Utilities.Constants;
 import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.Assert;
 
 import java.util.Base64;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import static Listeners.FrameX_Listeners.*;
+import static Base.FrameX_Listeners.*;
 import static Modules.CallPlanModule.driver;
 import static Modules.CallPlanModule.log;
 import static Modules.CallPlanModule.*;
@@ -103,16 +104,11 @@ public class CallPlanActionHandler {
 
     private static void handleUploadFailure() throws InterruptedException {
         sendDB();
+
         logAndReportFailure("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured);
     }
 
 
-    private static void captureAndAttachScreenshot(ExtentTest test) {
-        if (driver instanceof TakesScreenshot) {
-            byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            test.addScreenCaptureFromBase64String(Base64.getEncoder().encodeToString(screenshot), "Screenshot");
-        }
-    }
 
     // Helper method to capture close call image
     private static void captureCloseCallImage() {
@@ -182,13 +178,9 @@ public class CallPlanActionHandler {
         }
     }
 
-    private static void getactivitylogpageScreenshot(ExtentTest type) throws InterruptedException {
-        click("ACCESSIBILITYID", ActivityLog);
-        Thread.sleep(1000);
-        captureAndAttachScreenshot(type);
-    }
 
     private static void sendDB(){
+        click("ACCESSIBILITYID", ActivityLog);
         click("Xpath", activitylog_menubtn);
         click("ACCESSIBILITYID", Senddb_btn);
         String dbsize = gettext("id", dbSize);

@@ -2,7 +2,7 @@ package Modules;
 
 import Base.TestSetup;
 
-import static Listeners.FrameX_Listeners.*;
+import static Base.FrameX_Listeners.*;
 import static Pages.HomePage_page.ResourceCentre;
 import static Utilities.Actions.*;
 import static Utilities.AppUtils.*;

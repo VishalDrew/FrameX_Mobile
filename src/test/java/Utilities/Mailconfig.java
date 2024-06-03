@@ -11,10 +11,9 @@ import java.io.FileNotFoundException;
 import java.util.Properties;
 
 import static Base.TestSetup.log;
-import static Listeners.FrameX_Listeners.*;
+import static Base.FrameX_Listeners.*;
 import static Utilities.Constants.*;
 import static Utilities.AppUtils.generatedateandtime;
-import static Utilities.AppUtils.screenshotName;
 
 
 public class Mailconfig {
@@ -60,7 +59,7 @@ public class Mailconfig {
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
             DataSource source = new FileDataSource(allureDirpath+ AllureReportfileName);
             messageBodyPart2.setDataHandler(new DataHandler(source));
-            messageBodyPart2.setFileName("Automation Test Report"+generatedateandtime()+".html");
+            messageBodyPart2.setFileName("Automation Test Report_"+generatedateandtime()+".html");
 
 
             // Attach second file
@@ -73,7 +72,7 @@ public class Mailconfig {
                 messageBodyPart3 = new MimeBodyPart();
                 DataSource source2 = new FileDataSource(TestSetup.properties.get("Screenshotpath") + screenshotName);
                 messageBodyPart3.setDataHandler(new DataHandler(source2));
-                messageBodyPart3.setFileName("Screenshot "+generatedateandtime()+".jpg");
+                messageBodyPart3.setFileName(screenshotName+".jpg");
                 multipart.addBodyPart(messageBodyPart3);
             }
             message.setContent(multipart);

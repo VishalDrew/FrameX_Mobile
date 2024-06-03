@@ -1,14 +1,7 @@
 package Pages;
 
-import org.testng.Assert;
-
 import static Base.TestSetup.log;
-import static Listeners.FrameX_Listeners.logAndReportFailure;
-import static Listeners.FrameX_Listeners.logAndReportSuccess;
-import static Modules.Downloadcalls_Module.storesForVisitorLogin;
-import static Modules.VisitorLogin_Module.downloadstores;
 import static Pages.HomePage_page.Callplan;
-import static Pages.HomePage_page.DownloadCalls;
 import static Pages.Login_Page.lgpage;
 import static Pages.Login_Page.menubutton;
 import static Utilities.Actions.*;
