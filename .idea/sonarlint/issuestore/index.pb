@@ -31,10 +31,6 @@ W
 'src/test/java/Modules/Login_Module.java,9\a\9ad5be0afb83ce3333ea7268028576720b79aec8
 W
 'src/test/java/Utilities/Mailconfig.java,7\c\7c80974c838c5870e1ed36382ba75eb0224a6c34
-]
--src/test/java/Listeners/FrameX_Listeners.java,9\f\9fa3f52a973032b516ed10af16d32842b433bf16
-Z
-*src/test/java/Listeners/ExtentManager.java,b\2\b21166e2bcb45528cde7cb2b19a8c6331cd2b9d9
 ^
 .src/test/java/Modules/Resourcentre_Module.java,1\4\14c29e440009b0de789dfd09315a4e1f3a81adfa
 \
@@ -596,9 +592,7 @@ w
 G.idea/sonarlint/issuestore/f/9/f978e0f74a9cfb8ff035aacb86d9c69ee4c409b3,b\8\b889983b3beffdf4401a83e229f148dc2662d6ce
 w
 G.idea/sonarlint/issuestore/9/c/9cc0bb2877f031ed4c12e0ed1dc1b1ededc0168a,6\c\6c470a176aa0e5bdaeb3af1579bad69d3affb46e
-c
-3src/test/java/Listeners/FrameX_AllureListeners.java,0\7\07815d720ca9e6f1a52c85742b2277edd7b2f8e3
 X
 (src/test/java/Base/FrameX_Listeners.java,9\2\92577a0de13b21a754e89559bc95e5c15786a9ca
 Y
-)src/test/java/Modules/AllureListener.java,1\f\1f774f986fbe9bb43a04555d8c5341f0beafc2ab
+)src/main/java/SuiteConfig/TestSuites.json,8\2\824ff6106852251d9af201f92f75994528591753

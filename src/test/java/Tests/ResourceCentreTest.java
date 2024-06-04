@@ -5,6 +5,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import org.json.JSONObject;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static Modules.Resourcentre_Module.validateFiles;
@@ -38,7 +39,7 @@ public class ResourceCentreTest {
     @Severity(SeverityLevel.NORMAL)
     public static void TC002_VerifyPPTXFileDownloaded() throws Exception {
         JSONObject resourcecenterdata = gettestdata("ResourceCenter", "validatingpptx");
-        validateFiles(resourcecenterdata.getString("filename"));
+        Assert.assertTrue(validateFiles(resourcecenterdata.getString("filename")));
     }
 
     /**
@@ -52,7 +53,8 @@ public class ResourceCentreTest {
     @Severity(SeverityLevel.NORMAL)
     public static void TC003_VerifyMP4FileDownloaded() throws Exception {
         JSONObject resourcecenterdata = gettestdata("ResourceCenter", "validatingmp4");
-        validateFiles(resourcecenterdata.getString("filename"));
+        Assert.assertTrue(validateFiles(resourcecenterdata.getString("filename")));
+
     }
 
     /**
@@ -66,7 +68,7 @@ public class ResourceCentreTest {
     @Severity(SeverityLevel.NORMAL)
     public static void TC004_VerifyPDFFileDownloaded() throws Exception {
         JSONObject resourcecenterdata = gettestdata("ResourceCenter", "validatingpdf");
-        validateFiles(resourcecenterdata.getString("filename"));
+        Assert.assertTrue(validateFiles(resourcecenterdata.getString("filename")));
     }
 
     /**
@@ -80,7 +82,8 @@ public class ResourceCentreTest {
     @Severity(SeverityLevel.NORMAL)
     public static void TC005_VerifyDOCXFileDownloaded() throws Exception {
         JSONObject resourcecenterdata = gettestdata("ResourceCenter", "validatingdocx");
-        validateFiles(resourcecenterdata.getString("filename"));
+        Assert.assertTrue(validateFiles(resourcecenterdata.getString("filename")));
+
     }
 
     /**
@@ -94,7 +97,7 @@ public class ResourceCentreTest {
     @Severity(SeverityLevel.NORMAL)
     public static void TC006_VerifyJPGFileDownloaded() throws Exception {
         JSONObject resourcecenterdata = gettestdata("ResourceCenter", "validatingjpg");
-        validateFiles(resourcecenterdata.getString("filename"));
+        Assert.assertTrue(validateFiles(resourcecenterdata.getString("filename")));
     }
 
     /**
@@ -108,8 +111,7 @@ public class ResourceCentreTest {
     @Severity(SeverityLevel.NORMAL)
     public static void TC007_VerifyXLSXFileDownloaded() throws Exception {
         JSONObject resourcecenterdata = gettestdata("ResourceCenter", "validatingxlsx");
-        validateFiles(resourcecenterdata.getString("filename"));
+        Assert.assertTrue(validateFiles(resourcecenterdata.getString("filename")));
     }
-
 
 }

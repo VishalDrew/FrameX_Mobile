@@ -300,7 +300,6 @@ public class Actions extends TestSetup {
             File target = new File(properties.get("Screenshotpath") + result.getName() + ".png");
             FileUtils.copyFile(source, target);
         }
-
     }
 
 

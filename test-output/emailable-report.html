@@ -8,405 +8,135 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Smoke Suite</th></tr>
-<tr><td><a href="#t0">Smoke Tests</a></td><td class="num">0</td><td class="num attn">19</td><td class="num">0</td><td class="num">0</td><td class="num">79</td><td>smoke</td><td></td></tr>
+<tr><th colspan="8">Regression Suite</th></tr>
+<tr><td><a href="#t0">Regression Tests</a></td><td class="num">36</td><td class="num attn">14</td><td class="num">0</td><td class="num attn">5</td><td class="num">1,895,981</td><td>regression</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Smoke Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Smoke Tests &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">Tests.LoginTest</td><td><a href="#m0">StartApp</a></td><td rowspan="1">1717423249029</td><td rowspan="1">3321</td></tr><tr><th colspan="4">Smoke Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="3">Tests.AttendanceTest</td><td><a href="#m1">TC_001_VerifyAttendanceModuleDisplayed</a></td><td rowspan="1">1717423252493</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">TC_003_VerifyAttendanceSubmission</a></td><td rowspan="1">1717423252495</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">TC_004_VerifyAttendanceRecordedInDatabase</a></td><td rowspan="1">1717423252498</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="4">Tests.CallPlanTest</td><td><a href="#m4">TC_001_Verify_Call_Plan_Module_Displayed</a></td><td rowspan="1">1717423252481</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m5">TC_002_Verify_Sync_Button_Functionality</a></td><td rowspan="1">1717423252485</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m6">TC_003_Verify_5_Minute_Sync_Process</a></td><td rowspan="1">1717423252488</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m7">TC_009_Verify_Call_Upload</a></td><td rowspan="1">1717423252491</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="2">Tests.DownloadcallsTest</td><td><a href="#m8">TC_001_VerifyDownloadCallsModuleIsDisplayed</a></td><td rowspan="1">1717423252473</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">TC_002_VerifyCallsAreDownloaded</a></td><td rowspan="1">1717423252477</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">Tests.LoginTest</td><td><a href="#m10">TC_001_Verify_Login_With_Valid_Credentials</a></td><td rowspan="1">1717423252462</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td rowspan="7">Tests.ResourceCentreTest</td><td><a href="#m11">TC002_VerifyPPTXFileDownloaded</a></td><td rowspan="1">1717423252509</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m12">TC003_VerifyMP4FileDownloaded</a></td><td rowspan="1">1717423252512</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m13">TC004_VerifyPDFFileDownloaded</a></td><td rowspan="1">1717423252514</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m14">TC005_VerifyDOCXFileDownloaded</a></td><td rowspan="1">1717423252517</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m15">TC006_VerifyJPGFileDownloaded</a></td><td rowspan="1">1717423252519</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m16">TC007_VerifyXLSXFileDownloaded</a></td><td rowspan="1">1717423252521</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m17">TC_001_Verify_ResourceCenter_Module_Displayed</a></td><td rowspan="1">1717423252506</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="2">Tests.VisitorLoginTest</td><td><a href="#m18">TC_001_VerifyVisitorLoginModuleDisplayed</a></td><td rowspan="1">1717423252501</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td><a href="#m19">TC_015_Verify_Visitor_Upload</a></td><td rowspan="1">1717423252503</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Regression Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Tests.DownloadcallsTest</td><td><a href="#m0">TC_007_VerifyTargetIDTextboxCharacterLimit</a></td><td rowspan="1">1717482895063</td><td rowspan="1">4581</td></tr><tr class="failedodd"><td rowspan="3">Tests.LoginTest</td><td><a href="#m1">TC_010_Verify_UsernameTextboxCharacterLimit</a></td><td rowspan="1">1717482819432</td><td rowspan="1">2997</td></tr><tr class="failedodd"><td><a href="#m2">TC_013_Verify_PasswordTextboxCharacterLimit</a></td><td rowspan="1">1717482828802</td><td rowspan="1">2413</td></tr><tr class="failedodd"><td><a href="#m3">TC_014_Verify_ProjectTextboxCharacterLimit</a></td><td rowspan="1">1717482831985</td><td rowspan="1">2972</td></tr><tr class="failedeven"><td rowspan="1">Tests.VisitorLoginTest</td><td><a href="#m4">TC_001_VerifyVisitorLoginModuleDisplayed</a></td><td rowspan="1">1717484579564</td><td rowspan="1">2410</td></tr><tr><th colspan="4">Regression Tests &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="14">Tests.VisitorLoginTest</td><td><a href="#m5">TC_002_VerifySubmitButtonWithoutEnteringFields</a></td><td rowspan="1">1717484582425</td><td rowspan="1">1</td></tr><tr class="skippedeven"><td><a href="#m6">TC_003_VerifyVisitorEmpIDTextboxCharacterLimit</a></td><td rowspan="1">1717484582430</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m7">TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters</a></td><td rowspan="1">1717484582432</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m8">TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers</a></td><td rowspan="1">1717484582435</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m9">TC_006_VerifyVisitorNameTextboxCharacterLimit</a></td><td rowspan="1">1717484582436</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m10">TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters</a></td><td rowspan="1">1717484582437</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m11">TC_008_VerifyVisitorNameTextboxAcceptsNumbers</a></td><td rowspan="1">1717484582440</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m12">TC_009_VerifyDesignationTextboxCharacterLimit</a></td><td rowspan="1">1717484582442</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m13">TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters</a></td><td rowspan="1">1717484582444</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m14">TC_011_VerifyDesignationTextboxAcceptsNumbers</a></td><td rowspan="1">1717484582447</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m15">TC_012_VerifyRemarksTextboxCharacterLimit</a></td><td rowspan="1">1717484582449</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m16">TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters</a></td><td rowspan="1">1717484582451</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m17">TC_014_Verify_RemarksTextboxAcceptsNumbers</a></td><td rowspan="1">1717484582454</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m18">TC_015_Verify_Visitor_Upload</a></td><td rowspan="1">1717484582456</td><td rowspan="1">0</td></tr><tr><th colspan="4">Regression Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">Tests.AttendanceTest</td><td><a href="#m19">TC_001_VerifyAttendanceModuleDisplayed</a></td><td rowspan="1">1717484547910</td><td rowspan="1">1031</td></tr><tr class="passedeven"><td><a href="#m20">TC_002_VerifyAttendanceWithoutCapturingImage</a></td><td rowspan="1">1717484548943</td><td rowspan="1">6561</td></tr><tr class="passedeven"><td><a href="#m21">TC_003_VerifyAttendanceSubmission</a></td><td rowspan="1">1717484555505</td><td rowspan="1">23771</td></tr><tr class="passedeven"><td><a href="#m22">TC_004_VerifyAttendanceRecordedInDatabase</a></td><td rowspan="1">1717484579280</td><td rowspan="1">282</td></tr><tr class="passedodd"><td rowspan="5">Tests.CallPlanTest</td><td><a href="#m23">TC_001_Verify_Call_Plan_Module_Displayed</a></td><td rowspan="1">1717482900257</td><td rowspan="1">1392</td></tr><tr class="passedodd"><td><a href="#m24">TC_002_Verify_Sync_Button_Functionality</a></td><td rowspan="1">1717482901650</td><td rowspan="1">2877</td></tr><tr class="passedodd"><td><a href="#m25">TC_003_Verify_5_Minute_Sync_Process</a></td><td rowspan="1">1717482904528</td><td rowspan="1">2584</td></tr><tr class="passedodd"><td><a href="#m26">TC_005_Verify_Upload_Button_Without_Completing_Form</a></td><td rowspan="1">1717482907116</td><td rowspan="1">18320</td></tr><tr class="passedodd"><td><a href="#m27">TC_009_Verify_Call_Upload</a></td><td rowspan="1">1717482925437</td><td rowspan="1">1622470</td></tr><tr class="passedeven"><td rowspan="6">Tests.DownloadcallsTest</td><td><a href="#m28">TC_001_VerifyDownloadCallsModuleIsDisplayed</a></td><td rowspan="1">1717482845939</td><td rowspan="1">14187</td></tr><tr class="passedeven"><td><a href="#m29">TC_002_VerifyCallsAreDownloaded</a></td><td rowspan="1">1717482860131</td><td rowspan="1">12263</td></tr><tr class="passedeven"><td><a href="#m30">TC_003_VerifyDuplicateCallDownload</a></td><td rowspan="1">1717482872400</td><td rowspan="1">7233</td></tr><tr class="passedeven"><td><a href="#m31">TC_004_VerifyInvalidTargetDownload</a></td><td rowspan="1">1717482879637</td><td rowspan="1">7938</td></tr><tr class="passedeven"><td><a href="#m32">TC_005_VerifyRemoveButtonFunctionality</a></td><td rowspan="1">1717482887578</td><td rowspan="1">6313</td></tr><tr class="passedeven"><td><a href="#m33">TC_006_VerifySubmitButtonWithoutAddingTarget</a></td><td rowspan="1">1717482893895</td><td rowspan="1">1164</td></tr><tr class="passedodd"><td rowspan="14">Tests.LoginTest</td><td><a href="#m34">TC_001_Verify_Login_With_Valid_Credentials</a></td><td rowspan="1">1717482702405</td><td rowspan="1">17377</td></tr><tr class="passedodd"><td><a href="#m35">TC_002_Verify_Login_With_Invalid_Username</a></td><td rowspan="1">1717482719935</td><td rowspan="1">10727</td></tr><tr class="passedodd"><td><a href="#m36">TC_003_Verify_Login_With_Invalid_Password</a></td><td rowspan="1">1717482730670</td><td rowspan="1">14971</td></tr><tr class="passedodd"><td><a href="#m37">TC_004_Verify_Login_With_Invalid_Project</a></td><td rowspan="1">1717482745645</td><td rowspan="1">14422</td></tr><tr class="passedodd"><td><a href="#m38">TC_005_Verify_Login_With_Invalid_Mobile_Number</a></td><td rowspan="1">1717482760070</td><td rowspan="1">13001</td></tr><tr class="passedodd"><td><a href="#m39">TC_006_Verify_Login_Without_Entering_Username</a></td><td rowspan="1">1717482773072</td><td rowspan="1">11846</td></tr><tr class="passedodd"><td><a href="#m40">TC_007_Verify_Login_Without_Entering_Password</a></td><td rowspan="1">1717482784923</td><td rowspan="1">11397</td></tr><tr class="passedodd"><td><a href="#m41">TC_008_Verify_Login_Without_Entering_Project</a></td><td rowspan="1">1717482796323</td><td rowspan="1">11892</td></tr><tr class="passedodd"><td><a href="#m42">TC_009_Verify_Login_Without_Entering_Mobile_Number</a></td><td rowspan="1">1717482808219</td><td rowspan="1">11210</td></tr><tr class="passedodd"><td><a href="#m43">TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters</a></td><td rowspan="1">1717482823179</td><td rowspan="1">3016</td></tr><tr class="passedodd"><td><a href="#m44">TC_012_Verify_UsernameTextboxAcceptsNumbers</a></td><td rowspan="1">1717482826198</td><td rowspan="1">2601</td></tr><tr class="passedodd"><td><a href="#m45">TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters</a></td><td rowspan="1">1717482835581</td><td rowspan="1">2939</td></tr><tr class="passedodd"><td><a href="#m46">TC_016_Verify_ProjectTextboxAcceptsNumbers</a></td><td rowspan="1">1717482838522</td><td rowspan="1">3092</td></tr><tr class="passedodd"><td><a href="#m47">TC_017_Verify_MobileNumberTextboxCharacterLimit</a></td><td rowspan="1">1717482841618</td><td rowspan="1">4315</td></tr><tr class="passedeven"><td rowspan="7">Tests.ResourceCentreTest</td><td><a href="#m48">TC002_VerifyPPTXFileDownloaded</a></td><td rowspan="1">1717484583486</td><td rowspan="1">1842</td></tr><tr class="passedeven"><td><a href="#m49">TC003_VerifyMP4FileDownloaded</a></td><td rowspan="1">1717484585330</td><td rowspan="1">2579</td></tr><tr class="passedeven"><td><a href="#m50">TC004_VerifyPDFFileDownloaded</a></td><td rowspan="1">1717484587911</td><td rowspan="1">2631</td></tr><tr class="passedeven"><td><a href="#m51">TC005_VerifyDOCXFileDownloaded</a></td><td rowspan="1">1717484590545</td><td rowspan="1">2579</td></tr><tr class="passedeven"><td><a href="#m52">TC006_VerifyJPGFileDownloaded</a></td><td rowspan="1">1717484593126</td><td rowspan="1">2604</td></tr><tr class="passedeven"><td><a href="#m53">TC007_VerifyXLSXFileDownloaded</a></td><td rowspan="1">1717484595733</td><td rowspan="1">2610</td></tr><tr class="passedeven"><td><a href="#m54">TC_001_Verify_ResourceCenter_Module_Displayed</a></td><td rowspan="1">1717484582457</td><td rowspan="1">1026</td></tr></tbody>
 </table>
-<h2>Smoke Tests</h2><h3 id="m0">Tests.LoginTest#StartApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
+<h2>Regression Tests</h2><h3 id="m0">Tests.DownloadcallsTest#TC_007_VerifyTargetIDTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: TestCase Failed : Character limit is NOT enforced. Entered text: 86986978979798798797987978687687687
+	at Modules.Downloadcalls_Module.validateMaxTextLimitIntargetIDTextbox(Downloadcalls_Module.java:198)
+	at Tests.DownloadcallsTest.TC_007_VerifyTargetIDTextboxCharacterLimit(DownloadcallsTest.java:112)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Tests.AttendanceTest#TC_001_VerifyAttendanceModuleDisplayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tests.LoginTest#TC_010_Verify_UsernameTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: TestCase Failed : Character limit is NOT enforced. Entered text: thisisaverylongusernameexceedinglimits
+	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+	at Modules.Login_Module.validateMaxTextLimitInUsernameTextbox(Login_Module.java:102)
+	at Tests.LoginTest.TC_010_Verify_UsernameTextboxCharacterLimit(LoginTest.java:167)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Tests.AttendanceTest#TC_003_VerifyAttendanceSubmission</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method AttendanceTest.TC_003_VerifyAttendanceSubmission()[pri:3, instance:Tests.AttendanceTest@1817f1eb] depends on not successfully finished methods
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tests.LoginTest#TC_013_Verify_PasswordTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: TestCase Failed : Character limit is NOT enforced. Entered text: thisisaverylongusernameexceedinglimits
+	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+	at Modules.Login_Module.validateMaxTextLimitInPasswordTextbox(Login_Module.java:114)
+	at Tests.LoginTest.TC_013_Verify_PasswordTextboxCharacterLimit(LoginTest.java:193)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:34)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">Tests.LoginTest#TC_014_Verify_ProjectTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: TestCase Failed : Character limit is NOT enforced. Entered text: thisisaverylongusernameexceedinglimits
+	at Modules.Login_Module.validateMaxTextLimit(Login_Module.java:68)
+	at Modules.Login_Module.validateMaxTextLimitInProjectTextbox(Login_Module.java:118)
+	at Tests.LoginTest.TC_014_Verify_ProjectTextboxCharacterLimit(LoginTest.java:202)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:34)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Tests.VisitorLoginTest#TC_001_VerifyVisitorLoginModuleDisplayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: TestCase Failed : Visitor Login module is not displayed
+	at Utilities.AppUtils.verifyModuleDisplayedStatus(AppUtils.java:316)
+	at Tests.VisitorLoginTest.TC_001_VerifyVisitorLoginModuleDisplayed(VisitorLoginTest.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:34)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Tests.VisitorLoginTest#TC_002_VerifySubmitButtonWithoutEnteringFields</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_002_VerifySubmitButtonWithoutEnteringFields()[pri:2, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Tests.AttendanceTest#TC_004_VerifyAttendanceRecordedInDatabase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method AttendanceTest.TC_004_VerifyAttendanceRecordedInDatabase()[pri:4, instance:Tests.AttendanceTest@1817f1eb] depends on not successfully finished methods
+<h3 id="m6">Tests.VisitorLoginTest#TC_003_VerifyVisitorEmpIDTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_003_VerifyVisitorEmpIDTextboxCharacterLimit()[pri:3, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">Tests.CallPlanTest#TC_001_Verify_Call_Plan_Module_Displayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
-	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">Tests.CallPlanTest#TC_002_Verify_Sync_Button_Functionality</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CallPlanTest.TC_002_Verify_Sync_Button_Functionality()[pri:2, instance:Tests.CallPlanTest@54dcfa5a] depends on not successfully finished methods
+<h3 id="m7">Tests.VisitorLoginTest#TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters()[pri:4, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">Tests.CallPlanTest#TC_003_Verify_5_Minute_Sync_Process</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CallPlanTest.TC_003_Verify_5_Minute_Sync_Process()[pri:3, instance:Tests.CallPlanTest@54dcfa5a] depends on not successfully finished methods
+<h3 id="m8">Tests.VisitorLoginTest#TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers()[pri:5, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">Tests.CallPlanTest#TC_009_Verify_Call_Upload</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method CallPlanTest.TC_009_Verify_Call_Upload()[pri:5, instance:Tests.CallPlanTest@54dcfa5a] depends on not successfully finished methods
+<h3 id="m9">Tests.VisitorLoginTest#TC_006_VerifyVisitorNameTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_006_VerifyVisitorNameTextboxCharacterLimit()[pri:6, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">Tests.DownloadcallsTest#TC_001_VerifyDownloadCallsModuleIsDisplayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
-	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">Tests.DownloadcallsTest#TC_002_VerifyCallsAreDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method DownloadcallsTest.TC_002_VerifyCallsAreDownloaded()[pri:2, instance:Tests.DownloadcallsTest@6d23017e] depends on not successfully finished methods
+<h3 id="m10">Tests.VisitorLoginTest#TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters()[pri:7, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">Tests.LoginTest#TC_001_Verify_Login_With_Valid_Credentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
-	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">Tests.ResourceCentreTest#TC002_VerifyPPTXFileDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method ResourceCentreTest.TC002_VerifyPPTXFileDownloaded()[pri:2, instance:Tests.ResourceCentreTest@3a3e78f] depends on not successfully finished methods
+<h3 id="m11">Tests.VisitorLoginTest#TC_008_VerifyVisitorNameTextboxAcceptsNumbers</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_008_VerifyVisitorNameTextboxAcceptsNumbers()[pri:8, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">Tests.ResourceCentreTest#TC003_VerifyMP4FileDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method ResourceCentreTest.TC003_VerifyMP4FileDownloaded()[pri:3, instance:Tests.ResourceCentreTest@3a3e78f] depends on not successfully finished methods
+<h3 id="m12">Tests.VisitorLoginTest#TC_009_VerifyDesignationTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_009_VerifyDesignationTextboxCharacterLimit()[pri:9, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">Tests.ResourceCentreTest#TC004_VerifyPDFFileDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method ResourceCentreTest.TC004_VerifyPDFFileDownloaded()[pri:4, instance:Tests.ResourceCentreTest@3a3e78f] depends on not successfully finished methods
+<h3 id="m13">Tests.VisitorLoginTest#TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters()[pri:10, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">Tests.ResourceCentreTest#TC005_VerifyDOCXFileDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method ResourceCentreTest.TC005_VerifyDOCXFileDownloaded()[pri:5, instance:Tests.ResourceCentreTest@3a3e78f] depends on not successfully finished methods
+<h3 id="m14">Tests.VisitorLoginTest#TC_011_VerifyDesignationTextboxAcceptsNumbers</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_011_VerifyDesignationTextboxAcceptsNumbers()[pri:11, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">Tests.ResourceCentreTest#TC006_VerifyJPGFileDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method ResourceCentreTest.TC006_VerifyJPGFileDownloaded()[pri:6, instance:Tests.ResourceCentreTest@3a3e78f] depends on not successfully finished methods
+<h3 id="m15">Tests.VisitorLoginTest#TC_012_VerifyRemarksTextboxCharacterLimit</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_012_VerifyRemarksTextboxCharacterLimit()[pri:12, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">Tests.ResourceCentreTest#TC007_VerifyXLSXFileDownloaded</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method ResourceCentreTest.TC007_VerifyXLSXFileDownloaded()[pri:7, instance:Tests.ResourceCentreTest@3a3e78f] depends on not successfully finished methods
+<h3 id="m16">Tests.VisitorLoginTest#TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters()[pri:13, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">Tests.ResourceCentreTest#TC_001_Verify_ResourceCenter_Module_Displayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
-	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">Tests.VisitorLoginTest#TC_001_VerifyVisitorLoginModuleDisplayed</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: &apos;DESKTOP-OET6KL6&apos;, ip: &apos;192.168.0.148&apos;
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:229)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:80)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:92)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:117)
-	at Base.TestSetup.StartApp(TestSetup.java:86)
-	at Tests.Main.main(Main.java:34)
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:137)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:194)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	... 21 more
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)
-	... 25 more
-Caused by: java.io.UncheckedIOException: java.net.SocketException: Connection reset
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:73)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:49)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$null$0(AppiumCommandExecutor.java:199)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:99)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:124)
-	... 27 more
-Caused by: java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:259)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m19">Tests.VisitorLoginTest#TC_015_Verify_Visitor_Upload</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@767e20cf] depends on not successfully finished methods
+<h3 id="m17">Tests.VisitorLoginTest#TC_014_Verify_RemarksTextboxAcceptsNumbers</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_014_Verify_RemarksTextboxAcceptsNumbers()[pri:14, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at Tests.Main.main(Main.java:34)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">Tests.VisitorLoginTest#TC_015_Verify_Visitor_Upload</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method VisitorLoginTest.TC_015_Verify_Visitor_Upload()[pri:15, instance:Tests.VisitorLoginTest@4b41e4dd] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at Tests.Main.main(Main.java:34)
+... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">Tests.AttendanceTest#TC_001_VerifyAttendanceModuleDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">Tests.AttendanceTest#TC_002_VerifyAttendanceWithoutCapturingImage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">Tests.AttendanceTest#TC_003_VerifyAttendanceSubmission</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">Tests.AttendanceTest#TC_004_VerifyAttendanceRecordedInDatabase</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">Tests.CallPlanTest#TC_001_Verify_Call_Plan_Module_Displayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">Tests.CallPlanTest#TC_002_Verify_Sync_Button_Functionality</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">Tests.CallPlanTest#TC_003_Verify_5_Minute_Sync_Process</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">Tests.CallPlanTest#TC_005_Verify_Upload_Button_Without_Completing_Form</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">Tests.CallPlanTest#TC_009_Verify_Call_Upload</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">Tests.DownloadcallsTest#TC_001_VerifyDownloadCallsModuleIsDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">Tests.DownloadcallsTest#TC_002_VerifyCallsAreDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">Tests.DownloadcallsTest#TC_003_VerifyDuplicateCallDownload</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">Tests.DownloadcallsTest#TC_004_VerifyInvalidTargetDownload</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">Tests.DownloadcallsTest#TC_005_VerifyRemoveButtonFunctionality</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">Tests.DownloadcallsTest#TC_006_VerifySubmitButtonWithoutAddingTarget</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">Tests.LoginTest#TC_001_Verify_Login_With_Valid_Credentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">Tests.LoginTest#TC_002_Verify_Login_With_Invalid_Username</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">Tests.LoginTest#TC_003_Verify_Login_With_Invalid_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m37">Tests.LoginTest#TC_004_Verify_Login_With_Invalid_Project</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m38">Tests.LoginTest#TC_005_Verify_Login_With_Invalid_Mobile_Number</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">Tests.LoginTest#TC_006_Verify_Login_Without_Entering_Username</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">Tests.LoginTest#TC_007_Verify_Login_Without_Entering_Password</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">Tests.LoginTest#TC_008_Verify_Login_Without_Entering_Project</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">Tests.LoginTest#TC_009_Verify_Login_Without_Entering_Mobile_Number</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">Tests.LoginTest#TC_011_Verify_UsernameTextboxAcceptsSpecialCharacters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">Tests.LoginTest#TC_012_Verify_UsernameTextboxAcceptsNumbers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">Tests.LoginTest#TC_015_Verify_ProjectTextboxAcceptsSpecialCharacters</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m46">Tests.LoginTest#TC_016_Verify_ProjectTextboxAcceptsNumbers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">Tests.LoginTest#TC_017_Verify_MobileNumberTextboxCharacterLimit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">Tests.ResourceCentreTest#TC002_VerifyPPTXFileDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">Tests.ResourceCentreTest#TC003_VerifyMP4FileDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">Tests.ResourceCentreTest#TC004_VerifyPDFFileDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m51">Tests.ResourceCentreTest#TC005_VerifyDOCXFileDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">Tests.ResourceCentreTest#TC006_VerifyJPGFileDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m53">Tests.ResourceCentreTest#TC007_VerifyXLSXFileDownloaded</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m54">Tests.ResourceCentreTest#TC_001_Verify_ResourceCenter_Module_Displayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

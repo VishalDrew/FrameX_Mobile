@@ -104,10 +104,14 @@ public class CallPlanActionHandler {
 
     private static void handleUploadFailure() throws InterruptedException {
         sendDB();
+        captureAndReportFailure();
 
-        logAndReportFailure("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured);
     }
 
+    private static void captureAndReportFailure() {
+        logAndReportFailure("Failed to Upload call " + targetid + ", Image Count: " + totalimagescaptured);
+        AppUtils.captureScreenshot("UploadFailure_" + targetid);
+    }
 
 
     // Helper method to capture close call image
@@ -188,7 +192,6 @@ public class CallPlanActionHandler {
         click("ACCESSIBILITYID", mailsend_btn);
         if(waitForMessage(mailsuccess_msg)){
             logAndinfo("Mobile DB Sent Successfully");
-            driver.navigate().back();
         }
     }
 

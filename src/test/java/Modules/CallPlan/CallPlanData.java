@@ -80,19 +80,18 @@ public class CallPlanData {
         try (FileWriter fileWriter = new FileWriter(CALLPLAN_TEST_DATA_FILE)) {
             fileWriter.write(jsonData);
             log.info("JSON data has been written to the file successfully.");
-            return true; // Return true if file writing is successful
+            return true;
         } catch (IOException e) {
             log.error("Error writing JSON data to the file: " + e.getMessage());
-            return false; // Return false if an error occurs during file writing
+            return false;
         }
     }
 
     public static String setcallplanscenarios(List<String> targetids) {
-        String[] callTypes = {"Close", "Close","Close","Close"};
-        String[] fieldTypes = {"Mandatory only", "All"};
-        String[] networkModes = {"Enable", "Enable"};
-        String[] durationInSeconds = {"5","2","10","15","8"};
-
+        String[ ] callTypes = {"Close", "Close","Close"};
+        String[ ] fieldTypes = {"Mandatory only", "All"};
+        String[ ] networkModes = {"Enable", "Enable"};
+        String[ ] durationInSeconds = {"5","2","10","15","8"};
 
         List<JsonObject> callPlanDataList = new ArrayList<>();
         Random random = new Random();

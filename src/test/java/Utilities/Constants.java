@@ -1,7 +1,5 @@
 package Utilities;
 
-import java.util.Date;
-
 import static Base.TestSetup.*;
 import static Utilities.AppUtils.generateFormattedDate;
 import static Utilities.AppUtils.getDeviceName;
@@ -16,7 +14,7 @@ public class Constants {
     public static final String queryfilepath = System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\queries.sql";
     public static final String TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\Testdatas.json";
     public static final String CALLPLAN_TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\CallPlandata.json";
-    public static final String TESTSUITES_DATA_FILE = "./src/main/java/TestConfig/TestSuites.json";
+    public static final String TESTSUITES_DATA_FILE = "./src/main/java/SuiteConfig/TestSuites.json";
     public static final String allureDirpath = System.getProperty("user.dir") + "\\src\\test\\resources\\Allure Reports\\";
     public static final String framenewmainURL = "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=framenew_main;encrypt=true;trustServerCertificate=true";
     private static String databaseURL ;
@@ -28,10 +26,10 @@ public class Constants {
 
     /**
      * Returns the production URL for connecting to the SQL Server database.
-     * 
+     *
      * @return the production URL in the format "jdbc:sqlserver://65.1.119.118:1433;DatabaseName={project};encrypt=true;trustServerCertificate=true"
      * @throws JSONException if there is an error retrieving the project name from the globalproject object
-     * 
+     *
      * @param globalproject the JSONObject containing the project information
      */
     private static final String getProdUrl() {
@@ -40,7 +38,7 @@ public class Constants {
 
     /**
      * Returns the test server URL for connecting to the SQL Server database.
-     * 
+     *
      * @return the test server URL in the format "jdbc:sqlserver://192.168.0.124:1433;DatabaseName=<project>;encrypt=true;trustServerCertificate=true"
      * @throws JSONException if there is an error retrieving the project name from the global project object
      */

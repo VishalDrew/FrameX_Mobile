@@ -16,7 +16,7 @@ public class Main {
         String regressionSuite = "./src/test/resources/Runners/Regression.xml";
         String negativeSuite = "./src/test/resources/Runners/Negative.xml";
 
-        JsonConfigReader configReader = new JsonConfigReader(TESTSUITES_DATA_FILE);
+        JsonConfigReader configReader = new JsonConfigReader(Constants.TESTSUITES_DATA_FILE);
         List<String> suites = new ArrayList<>();
 
         if (configReader.isSuiteRunnable("SMOKE")) {

@@ -25,8 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 import static Base.FrameX_Listeners.*;
 import static Modules.CallPlanModule.fetchTargetsFromDatabase;
-import static Utilities.Constants.Devicename;
-import static Utilities.Constants.allureDirpath;
+import static Utilities.Constants.*;
 import static Utilities.Mailconfig.sendMailReport;
 import static Utilities.TestDataUtil.gettestdata;
 import static Utilities.AppUtils.*;
@@ -193,6 +192,7 @@ public class TestSetup {
             e.printStackTrace();
         }
     }
+
 
     private static void initializeProperties() {
         try {

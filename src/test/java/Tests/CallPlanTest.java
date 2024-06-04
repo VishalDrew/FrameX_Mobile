@@ -96,7 +96,7 @@ public class CallPlanTest extends TestSetup {
     @Step("Start the call upload process.")
     @Severity(SeverityLevel.BLOCKER)
     public static void TC_009_Verify_Call_Upload() throws Exception {
-        startCallProcess();
+       startCallProcess();
     }
 
 }

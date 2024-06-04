@@ -5,6 +5,7 @@ import Modules.CallPlan.CallPlanActionHandler;
 import Utilities.AppUtils;
 import org.json.JSONObject;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.util.*;
 
@@ -37,6 +38,10 @@ public class CallPlanModule extends TestSetup {
      * @throws Exception if an error occurs during the call process
      */
     public static void startCallProcess() throws Exception {
+
+        SoftAssert softAssert = new SoftAssert();
+
+
         if (generateCallPlanScenarios(targets)) {
             JSONObject callPlanTestData;
             for (int i = 1; i <= targetSize; i++) {
@@ -44,14 +49,13 @@ public class CallPlanModule extends TestSetup {
                 targetid = callPlanTestData.getString("Targetid");
                 if (callPlanTestData.getString("Call Type").equalsIgnoreCase("Upload")) {
                     fieldtypes = callPlanTestData.getString("Fields");
-                    validateUploadCall(callPlanTestData.getString("Call Type"), callPlanTestData.getString("Network Mode"), callPlanTestData.getString("Disable Duration"), callPlanTestData.getString("Fields"));
+                    softAssert.assertTrue(validateUploadCall(callPlanTestData.getString("Call Type"), callPlanTestData.getString("Network Mode"), callPlanTestData.getString("Disable Duration"), callPlanTestData.getString("Fields")),"Upload Call Failed : "+targetid) ;
                 } else {
-                    validateUploadCall(callPlanTestData.getString("Call Type"), callPlanTestData.getString("Network Mode"), callPlanTestData.getString("Disable Duration"));
+                    softAssert.assertTrue(validateUploadCall(callPlanTestData.getString("Call Type"), callPlanTestData.getString("Network Mode"), callPlanTestData.getString("Disable Duration")),"Close Call Failed : "+targetid);
                 }
-
             }
+            softAssert.assertAll();
         }
-
     }
 
     /**

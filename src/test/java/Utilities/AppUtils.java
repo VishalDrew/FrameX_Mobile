@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import Base.TestSetup;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Allure;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -114,6 +115,16 @@ public class AppUtils extends TestSetup {
         return formattedDateTime;
     }
 
+    public static void captureScreenshot(String screenshotName) {
+        try {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+            Allure.addAttachment(screenshotName, new ByteArrayInputStream(screenshot));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * Returns the current time of the device.
@@ -156,7 +167,7 @@ public class AppUtils extends TestSetup {
 
         Map<String, String> propertiesMap = null;
         try {
-            fileInputStream = new FileInputStream(configfilepath);
+            fileInputStream = new FileInputStream(Constants.configfilepath);
             properties.load(fileInputStream);
 
             String value = "";
@@ -196,6 +207,7 @@ public class AppUtils extends TestSetup {
      * @throws IOException if an I/O error occurs while reading the properties file
      */
     public static Map<String, String> loadQueries() throws IOException {
+
         Properties properties = new Properties();
         FileInputStream fileInputStream = null;
 

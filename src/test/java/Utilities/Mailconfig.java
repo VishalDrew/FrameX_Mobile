@@ -18,6 +18,8 @@ import static Utilities.AppUtils.generatedateandtime;
 
 public class Mailconfig {
 
+    private static  String mailpassword = "nvscghckuwobmhiv";
+
     public static void sendMailReport() throws MessagingException, FileNotFoundException {
         Properties properties = new Properties();
         properties.put("mail.smtp.host", TestSetup.properties.get("Host"));
@@ -34,7 +36,7 @@ public class Mailconfig {
         Session session = Session.getDefaultInstance(properties,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(TestSetup.properties.get("Sendermail"), TestSetup.properties.get("Senderpassword"));
+                        return new PasswordAuthentication(TestSetup.properties.get("Sendermail"), mailpassword);
 
                     }
                 });
@@ -57,7 +59,7 @@ public class Mailconfig {
 
             // Attach first file
             MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-            DataSource source = new FileDataSource(allureDirpath+ AllureReportfileName);
+            DataSource source = new FileDataSource(allureDirpath + AllureReportfileName);
             messageBodyPart2.setDataHandler(new DataHandler(source));
             messageBodyPart2.setFileName("Automation Test Report_"+generatedateandtime()+".html");
 
@@ -70,7 +72,7 @@ public class Mailconfig {
             MimeBodyPart messageBodyPart3= null;
             if(attachmentflag){
                 messageBodyPart3 = new MimeBodyPart();
-                DataSource source2 = new FileDataSource(TestSetup.properties.get("Screenshotpath") + screenshotName);
+                DataSource source2 = new FileDataSource(TestSetup.properties.get("Screenshotpath")  + screenshotName);
                 messageBodyPart3.setDataHandler(new DataHandler(source2));
                 messageBodyPart3.setFileName(screenshotName+".jpg");
                 multipart.addBodyPart(messageBodyPart3);
