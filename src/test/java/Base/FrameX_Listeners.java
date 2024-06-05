@@ -30,7 +30,6 @@ public class FrameX_Listeners implements ITestListener {
     static Date d = new Date();
     public static final String AllureReportfileName = properties.get("AllureReportFilename") + "_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
     public static ThreadLocal<String> currentTest = new ThreadLocal<>();
-    public static boolean attachmentflag;
     public static String screenshotName;
 
     @Override
@@ -56,7 +55,6 @@ public class FrameX_Listeners implements ITestListener {
         String logText = "TEST CASE: " + methodName.toUpperCase() + " FAILED";
         Allure.step(logText, Status.FAILED);
         takeScreenshot(result.getName());
-        attachmentflag = true;
         log.error("Test failed: " + methodName);
         log.error("Exception: ", result.getThrowable());
     }

@@ -28,20 +28,10 @@
       </class> <!-- Tests.DownloadcallsTest -->
       <class name="Tests.VisitorLoginTest">
         <methods>
-          <include name="TC_010_VerifyDesignationTextboxAcceptsSpecialCharacters"/>
           <include name="TC_006_VerifyVisitorNameTextboxCharacterLimit"/>
-          <include name="TC_002_VerifySubmitButtonWithoutEnteringFields"/>
-          <include name="TC_007_VerifyVisitorNameTextboxAcceptsSpecialCharacters"/>
-          <include name="TC_005_VerifyVisitorEmpIDTextboxAcceptsNumbers"/>
+          <include name="TC_012_VerifyRemarksTextboxCharacterLimit"/>
           <include name="TC_009_VerifyDesignationTextboxCharacterLimit"/>
           <include name="TC_003_VerifyVisitorEmpIDTextboxCharacterLimit"/>
-          <include name="TC_008_VerifyVisitorNameTextboxAcceptsNumbers"/>
-          <include name="TC_012_VerifyRemarksTextboxCharacterLimit"/>
-          <include name="TC_014_Verify_RemarksTextboxAcceptsNumbers"/>
-          <include name="TC_015_Verify_Visitor_Upload"/>
-          <include name="TC_011_VerifyDesignationTextboxAcceptsNumbers"/>
-          <include name="TC_004_VerifyVisitorEmpIDTextboxAcceptsSpecialCharacters"/>
-          <include name="TC_013_VerifyRemarksTextboxAcceptsSpecialCharacters"/>
           <include name="TC_001_VerifyVisitorLoginModuleDisplayed"/>
         </methods>
       </class> <!-- Tests.VisitorLoginTest -->

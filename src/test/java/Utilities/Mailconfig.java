@@ -63,20 +63,11 @@ public class Mailconfig {
             messageBodyPart2.setDataHandler(new DataHandler(source));
             messageBodyPart2.setFileName("Automation Test Report_"+generatedateandtime()+".html");
 
-
             // Attach second file
-
             Multipart multipart = new MimeMultipart();
             multipart.addBodyPart(messageBodyPart2);
             multipart.addBodyPart(messageBodyPart1);
-            MimeBodyPart messageBodyPart3= null;
-            if(attachmentflag){
-                messageBodyPart3 = new MimeBodyPart();
-                DataSource source2 = new FileDataSource(TestSetup.properties.get("Screenshotpath")  + screenshotName);
-                messageBodyPart3.setDataHandler(new DataHandler(source2));
-                messageBodyPart3.setFileName(screenshotName+".jpg");
-                multipart.addBodyPart(messageBodyPart3);
-            }
+
             message.setContent(multipart);
             Transport.send(message);
             log.info("Email sent");

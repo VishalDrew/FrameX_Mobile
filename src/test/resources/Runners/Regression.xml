@@ -11,11 +11,11 @@
         </groups>
         <classes>
             <class name="Tests.LoginTest" />
-           <!-- <class name="Tests.DownloadcallsTest" />
+            <class name="Tests.DownloadcallsTest" />
             <class name="Tests.CallPlanTest" />
             <class name="Tests.AttendanceTest" />
             <class name="Tests.VisitorLoginTest" />
-            <class name="Tests.ResourceCentreTest" />-->
+            <class name="Tests.ResourceCentreTest" />
         </classes>
     </test>
 </suite>
