@@ -52,7 +52,6 @@ public class CallPlanTest extends TestSetup {
         } else {
             logAndReportFailure("Sync Button is not working.");
             Assert.fail("TestCase Failed : Sync Button is not working");
-
         }
     }
 
@@ -70,6 +69,7 @@ public class CallPlanTest extends TestSetup {
         navigateto(Callplan);
         fiveminssync(callplandata.getString("expectedMessage"));
     }
+
 
     /**
      * Test case to verify the upload button functionality without completing the form.

@@ -64,6 +64,7 @@ public class AttendanceTest {
         }
     }
 
+
     /**
      * Test case to verify the attendance recorded in the database.
      * It depends on the successful execution of the TC_003_VerifyAttendanceSubmission test case.

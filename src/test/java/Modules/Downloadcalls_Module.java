@@ -2,6 +2,7 @@ package Modules;
 
 import Base.TestSetup;
 import Base.FrameX_Listeners;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import static Utilities.AppUtils.*;
  * Downloadcalls_Module class.
  */
 public class Downloadcalls_Module extends TestSetup {
+
 
 	private static boolean duplicateCallsTest;
 	public static boolean storesForVisitorLogin;

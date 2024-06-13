@@ -3,6 +3,7 @@ package Modules;
 import Base.TestSetup;
 import Modules.CallPlan.CallPlanActionHandler;
 import Utilities.AppUtils;
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -29,6 +30,7 @@ import static Utilities.AppUtils.*;
  */
 public class CallPlanModule extends TestSetup {
 
+
     public static String targetid;
     public static String fieldtypes;
 
@@ -40,7 +42,6 @@ public class CallPlanModule extends TestSetup {
     public static void startCallProcess() throws Exception {
 
         SoftAssert softAssert = new SoftAssert();
-
 
         if (generateCallPlanScenarios(targets)) {
             JSONObject callPlanTestData;

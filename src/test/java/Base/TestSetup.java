@@ -70,7 +70,6 @@ public class TestSetup {
      */
     @BeforeSuite(alwaysRun = true)
     public static void StartApp() throws IOException {
-
         try {
             PropertyConfigurator.configure(properties.get("Logpropertiesfilepath"));
             clearAllureResultsDirectory();
@@ -111,13 +110,7 @@ public class TestSetup {
     }
 
 
-    /**
-     * Sets the desired capabilities for the test setup.
-     *
-     * @param props      the properties containing the desired capabilities values
-     * @param Devicename the name of the device
-     * @throws IllegalArgumentException if any of the desired capabilities values are invalid
-     */
+
     private static void setDesiredCapabilities() {
         capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", properties.get("platformName"));

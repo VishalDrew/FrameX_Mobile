@@ -15,32 +15,10 @@
         <methods>
           <include name="TC_001_Verify_Call_Plan_Module_Displayed"/>
           <include name="tearDownApp"/>
-          <include name="TC_003_Verify_5_Minute_Sync_Process"/>
           <include name="TC_009_Verify_Call_Upload"/>
-          <include name="TC_002_Verify_Sync_Button_Functionality"/>
           <include name="StartApp"/>
         </methods>
       </class> <!-- Tests.CallPlanTest -->
-      <class name="Tests.LoginTest">
-        <methods>
-          <include name="TC_001_Verify_Login_With_Valid_Credentials"/>
-          <include name="tearDownApp"/>
-          <include name="StartApp"/>
-        </methods>
-      </class> <!-- Tests.LoginTest -->
-      <class name="Tests.DownloadcallsTest">
-        <methods>
-          <include name="TC_001_VerifyDownloadCallsModuleIsDisplayed"/>
-          <include name="TC_002_VerifyCallsAreDownloaded"/>
-        </methods>
-      </class> <!-- Tests.DownloadcallsTest -->
-      <class name="Tests.AttendanceTest">
-        <methods>
-          <include name="TC_004_VerifyAttendanceRecordedInDatabase"/>
-          <include name="TC_003_VerifyAttendanceSubmission"/>
-          <include name="TC_001_VerifyAttendanceModuleDisplayed"/>
-        </methods>
-      </class> <!-- Tests.AttendanceTest -->
       <class name="Tests.VisitorLoginTest">
         <methods>
           <include name="TC_015_Verify_Visitor_Upload"/>

@@ -143,6 +143,7 @@ public class DataBinder {
             driver.hideKeyboard();
         }
 */
+        Thread.sleep(600);
         if (sourceExists("Next")) {
             click("ACCESSIBILITYID", NextButton);
             log.info("Next button is clicked");

@@ -10,7 +10,7 @@ import static Utilities.AppUtils.getDeviceName;
 public class Constants {
 
     public static final String Devicename  = getDeviceName();
-    public static final String  configfilepath = System.getProperty("user.dir") + "\\src\\test\\resources\\Properties\\Config.properties";
+    public static final String  configfilepath = System.getProperty("user.dir") + "\\src\\test\\resources\\Properties\\TestConfig.properties";
     public static final String queryfilepath = System.getProperty("user.dir")+"\\src\\test\\resources\\Properties\\queries.sql";
     public static final String TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\Testdatas.json";
     public static final String CALLPLAN_TEST_DATA_FILE = System.getProperty("user.dir")+"\\src\\test\\resources\\Datas\\CallPlandata.json";

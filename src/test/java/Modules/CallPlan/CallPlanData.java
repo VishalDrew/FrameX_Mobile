@@ -88,7 +88,7 @@ public class CallPlanData {
     }
 
     public static String setcallplanscenarios(List<String> targetids) {
-        String[ ] callTypes = {"Upload", "Upload","Close"};
+        String[ ] callTypes = {"Upload", "Upload","Upload"};
         String[ ] fieldTypes = {"Mandatory only", "All"};
         String[ ] networkModes = {"Enable", "Enable"};
         String[ ] durationInSeconds = {"5","2","10","15","8"};

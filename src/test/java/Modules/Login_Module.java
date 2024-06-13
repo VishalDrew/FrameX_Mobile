@@ -2,6 +2,7 @@ package Modules;
 
 import Base.TestSetup;
 import Base.FrameX_Listeners;
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 import static Pages.Login_Page.*;
@@ -29,6 +30,9 @@ public class Login_Module extends TestSetup {
 			enter("Xpath", project, Project);
 			driver.hideKeyboard();
 			enter("Xpath", Mobiileno, Mobileno);
+			if(driver.isKeyboardShown()){
+				driver.hideKeyboard();
+			}
 			click("ACCESSIBILITYID", LoginButton);
 
 			log.info("Username: " + Username);

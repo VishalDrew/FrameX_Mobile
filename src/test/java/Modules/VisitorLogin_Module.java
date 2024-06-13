@@ -2,6 +2,7 @@ package Modules;
 
 import Base.FrameX_Listeners;
 import Utilities.AppUtils;
+import org.apache.log4j.Logger;
 import org.json.JSONObject;
 import org.testng.Assert;
 
@@ -23,6 +24,8 @@ import static io.appium.java_client.touch.offset.PointOption.point;
  * VisitorLogin_Module class.
  */
 public class VisitorLogin_Module {
+
+
 
 	private static JSONObject visitorlogindata = gettestdata("Visitor Login", "Visitor Upload");
 	private static JSONObject visitorLoginNegativeData = gettestdata("Visitor Login", "Visitor Upload errmsg");
